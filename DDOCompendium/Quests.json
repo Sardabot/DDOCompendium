@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "Name": "Free",
+    "Quests": [
+      {
+        "Id": 1,
+        "Name": "The Cannith Crystal",
+        "HeroicLevel": 1,
+        "Patron": "House Deneith",
+        "Favor": 2
+      },
+      {
+        "Id": 2,
+        "Name": "The Storehouse's Secret",
+        "HeroicLevel": 1,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Keep on the Borderlands",
+    "Quests": [
+      {
+        "Id": 1,
+        "Name": "Caged Beast",
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      {
+        "Id": 2,
+        "Name": "Obstructing the Orcs",
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      }
+    ]
+  }
+]
