@@ -29,16 +29,21 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tcTabs = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
+            this.tcTabs = new System.Windows.Forms.TabControl();
+            this.tabNotes = new System.Windows.Forms.TabPage();
+            this.tabNotes2 = new System.Windows.Forms.TabPage();
+            this.tabRefTables = new System.Windows.Forms.TabPage();
+            this.tabWilderness = new System.Windows.Forms.TabPage();
+            this.tabCharacters = new System.Windows.Forms.TabPage();
+            this.tabSagas = new System.Windows.Forms.TabPage();
+            this.tabSettings = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tcTabs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).BeginInit();
+            this.tcTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -58,10 +63,30 @@
             this.splitContainer1.SplitterDistance = 716;
             this.splitContainer1.TabIndex = 0;
             // 
+            // datagridQuests
+            // 
+            this.datagridQuests.AllowUserToAddRows = false;
+            this.datagridQuests.AllowUserToDeleteRows = false;
+            this.datagridQuests.AllowUserToResizeRows = false;
+            this.datagridQuests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridQuests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagridQuests.Location = new System.Drawing.Point(0, 0);
+            this.datagridQuests.Name = "datagridQuests";
+            this.datagridQuests.ReadOnly = true;
+            this.datagridQuests.Size = new System.Drawing.Size(716, 616);
+            this.datagridQuests.TabIndex = 0;
+            this.datagridQuests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagridQuests_CellClick);
+            // 
             // tcTabs
             // 
-            this.tcTabs.Controls.Add(this.tabPage1);
-            this.tcTabs.Controls.Add(this.tabPage2);
+            this.tcTabs.Controls.Add(this.tabNotes);
+            this.tcTabs.Controls.Add(this.tabNotes2);
+            this.tcTabs.Controls.Add(this.tabRefTables);
+            this.tcTabs.Controls.Add(this.tabWilderness);
+            this.tcTabs.Controls.Add(this.tabCharacters);
+            this.tcTabs.Controls.Add(this.tabSagas);
+            this.tcTabs.Controls.Add(this.tabSettings);
             this.tcTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcTabs.Location = new System.Drawing.Point(0, 0);
             this.tcTabs.Name = "tcTabs";
@@ -69,34 +94,71 @@
             this.tcTabs.Size = new System.Drawing.Size(513, 616);
             this.tcTabs.TabIndex = 0;
             // 
-            // tabPage1
+            // tabNotes
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(505, 590);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabNotes.Location = new System.Drawing.Point(4, 22);
+            this.tabNotes.Name = "tabNotes";
+            this.tabNotes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNotes.Size = new System.Drawing.Size(505, 590);
+            this.tabNotes.TabIndex = 0;
+            this.tabNotes.Text = "Notes";
+            this.tabNotes.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabNotes2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabNotes2.Location = new System.Drawing.Point(4, 22);
+            this.tabNotes2.Name = "tabNotes2";
+            this.tabNotes2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNotes2.Size = new System.Drawing.Size(505, 590);
+            this.tabNotes2.TabIndex = 1;
+            this.tabNotes2.Text = "Notes 2";
+            this.tabNotes2.UseVisualStyleBackColor = true;
             // 
-            // datagridQuests
+            // tabRefTables
             // 
-            this.datagridQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridQuests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagridQuests.Location = new System.Drawing.Point(0, 0);
-            this.datagridQuests.Name = "datagridQuests";
-            this.datagridQuests.Size = new System.Drawing.Size(716, 616);
-            this.datagridQuests.TabIndex = 0;
+            this.tabRefTables.Location = new System.Drawing.Point(4, 22);
+            this.tabRefTables.Name = "tabRefTables";
+            this.tabRefTables.Size = new System.Drawing.Size(505, 590);
+            this.tabRefTables.TabIndex = 2;
+            this.tabRefTables.Text = "Ref Tables";
+            this.tabRefTables.UseVisualStyleBackColor = true;
+            // 
+            // tabWilderness
+            // 
+            this.tabWilderness.Location = new System.Drawing.Point(4, 22);
+            this.tabWilderness.Name = "tabWilderness";
+            this.tabWilderness.Size = new System.Drawing.Size(505, 590);
+            this.tabWilderness.TabIndex = 3;
+            this.tabWilderness.Text = "Wilderness";
+            this.tabWilderness.UseVisualStyleBackColor = true;
+            // 
+            // tabCharacters
+            // 
+            this.tabCharacters.Location = new System.Drawing.Point(4, 22);
+            this.tabCharacters.Name = "tabCharacters";
+            this.tabCharacters.Size = new System.Drawing.Size(505, 590);
+            this.tabCharacters.TabIndex = 4;
+            this.tabCharacters.Text = "Characters";
+            this.tabCharacters.UseVisualStyleBackColor = true;
+            // 
+            // tabSagas
+            // 
+            this.tabSagas.Location = new System.Drawing.Point(4, 22);
+            this.tabSagas.Name = "tabSagas";
+            this.tabSagas.Size = new System.Drawing.Size(505, 590);
+            this.tabSagas.TabIndex = 5;
+            this.tabSagas.Text = "Sagas";
+            this.tabSagas.UseVisualStyleBackColor = true;
+            // 
+            // tabSettings
+            // 
+            this.tabSettings.Location = new System.Drawing.Point(4, 22);
+            this.tabSettings.Name = "tabSettings";
+            this.tabSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabSettings.Size = new System.Drawing.Size(505, 590);
+            this.tabSettings.TabIndex = 6;
+            this.tabSettings.Text = "Settings";
+            this.tabSettings.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -110,8 +172,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tcTabs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).EndInit();
+            this.tcTabs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,8 +183,13 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView datagridQuests;
         private System.Windows.Forms.TabControl tcTabs;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabNotes;
+        private System.Windows.Forms.TabPage tabNotes2;
+        private System.Windows.Forms.TabPage tabRefTables;
+        private System.Windows.Forms.TabPage tabWilderness;
+        private System.Windows.Forms.TabPage tabCharacters;
+        private System.Windows.Forms.TabPage tabSagas;
+        private System.Windows.Forms.TabPage tabSettings;
     }
 }
 

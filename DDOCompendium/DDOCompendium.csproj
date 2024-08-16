@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include=".editorconfig" />
+    <None Include="Characters.json" />
     <None Include="Quests.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
