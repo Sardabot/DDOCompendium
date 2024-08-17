@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
             this.tcTabs = new System.Windows.Forms.TabControl();
@@ -38,12 +39,19 @@
             this.tabCharacters = new System.Windows.Forms.TabPage();
             this.tabSagas = new System.Windows.Forms.TabPage();
             this.tabSettings = new System.Windows.Forms.TabPage();
+            this.contextmenuQuestCompletion = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsitemCasual = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsitemNormal = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsitemHard = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsitemElite = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsitemClear = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).BeginInit();
             this.tcTabs.SuspendLayout();
+            this.contextmenuQuestCompletion.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -76,7 +84,8 @@
             this.datagridQuests.ReadOnly = true;
             this.datagridQuests.Size = new System.Drawing.Size(716, 616);
             this.datagridQuests.TabIndex = 0;
-            this.datagridQuests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagridQuests_CellClick);
+            this.datagridQuests.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.DatagridQuests_CellContextMenuStripNeeded);
+            this.datagridQuests.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DatagridQuests_CellMouseClick);
             // 
             // tcTabs
             // 
@@ -160,6 +169,48 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
+            // contextmenuQuestCompletion
+            // 
+            this.contextmenuQuestCompletion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsitemCasual,
+            this.tsitemNormal,
+            this.tsitemHard,
+            this.tsitemElite,
+            this.tsitemClear});
+            this.contextmenuQuestCompletion.Name = "contextmenuQuestCompletion";
+            this.contextmenuQuestCompletion.Size = new System.Drawing.Size(181, 136);
+            this.contextmenuQuestCompletion.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextmenuQuestCompletion_ItemClicked);
+            // 
+            // tsitemCasual
+            // 
+            this.tsitemCasual.Name = "tsitemCasual";
+            this.tsitemCasual.Size = new System.Drawing.Size(180, 22);
+            this.tsitemCasual.Text = "Casual";
+            // 
+            // tsitemNormal
+            // 
+            this.tsitemNormal.Name = "tsitemNormal";
+            this.tsitemNormal.Size = new System.Drawing.Size(180, 22);
+            this.tsitemNormal.Text = "Normal";
+            // 
+            // tsitemHard
+            // 
+            this.tsitemHard.Name = "tsitemHard";
+            this.tsitemHard.Size = new System.Drawing.Size(180, 22);
+            this.tsitemHard.Text = "Hard";
+            // 
+            // tsitemElite
+            // 
+            this.tsitemElite.Name = "tsitemElite";
+            this.tsitemElite.Size = new System.Drawing.Size(180, 22);
+            this.tsitemElite.Text = "Elite";
+            // 
+            // tsitemClear
+            // 
+            this.tsitemClear.Name = "tsitemClear";
+            this.tsitemClear.Size = new System.Drawing.Size(180, 22);
+            this.tsitemClear.Text = "Clear";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,12 +219,14 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Main";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).EndInit();
             this.tcTabs.ResumeLayout(false);
+            this.contextmenuQuestCompletion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,6 +243,12 @@
         private System.Windows.Forms.TabPage tabCharacters;
         private System.Windows.Forms.TabPage tabSagas;
         private System.Windows.Forms.TabPage tabSettings;
+        private System.Windows.Forms.ContextMenuStrip contextmenuQuestCompletion;
+        private System.Windows.Forms.ToolStripMenuItem tsitemCasual;
+        private System.Windows.Forms.ToolStripMenuItem tsitemNormal;
+        private System.Windows.Forms.ToolStripMenuItem tsitemHard;
+        private System.Windows.Forms.ToolStripMenuItem tsitemElite;
+        private System.Windows.Forms.ToolStripMenuItem tsitemClear;
     }
 }
 

@@ -14,9 +14,15 @@ namespace DDOCompendium
 {
     public partial class Main : Form
     {
+        public string QuestsFilePath;
+        public string CharactersFilePath;
         public DataTable questsTable;
+        public DataView questsDataView;
         public Character[] characterData;
         public int SelectedCharacter = Properties.Settings.Default.SelectedCharacter;
+        public string SelectedDifficulty = "Elite";
+        public string LevelFilter = "All";
+        private DataGridViewCell ClickedCell;
         public Main()
         {
             InitializeComponent();
@@ -39,6 +45,7 @@ namespace DDOCompendium
                 }
                 else return false;
             }
+            //Properties.Settings.Default.questsFilePath = Application.ExecutablePath.Replace("DDOCompendium.exe", "Quests.json");
             using StreamReader reader = new(Properties.Settings.Default.questsFilePath);
             string importedJsonData = reader.ReadToEnd();
             reader.Close();
@@ -49,7 +56,7 @@ namespace DDOCompendium
                 return false;
             }
             // import user save data
-            string CharactersFilePath = Properties.Settings.Default.questsFilePath.Replace("Quests.json", "Characters.json");
+            CharactersFilePath = Properties.Settings.Default.questsFilePath.Replace("Quests.json", "Characters.json");
             using StreamReader reader2 = new(CharactersFilePath);
             importedJsonData = reader2.ReadToEnd();
             var importedCharData = JsonConvert.DeserializeObject<List<Character>>(importedJsonData);
@@ -82,17 +89,32 @@ namespace DDOCompendium
                     questsTable.Rows.Add(tempRow);
                 }
             }
+            questsDataView = new DataView(questsTable);
             BindingSource questsDataSource = new()
             {
-                DataSource = questsTable
+                DataSource = questsDataView
             };
             datagridQuests.DataSource = questsDataSource;
             // hide the ID and Wiki Name columns
-            datagridQuests.Columns[0].Visible = false;
-            datagridQuests.Columns[1].Visible = false;
+            datagridQuests.Columns[QUESTSGRID_ID_INDEX].Visible = false;
+            datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
+            datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
+            datagridQuests.Columns[QUESTSGRID_LEGENDARY_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
 
             return true;
         }
+
+        public const int QUESTSGRID_ID_INDEX = 0;
+        public const int QUESTSGRID_WIKI_INDEX = 1;
+        public const int QUESTSGRID_HEROIC_INDEX = 2;
+        public const int QUESTSGRID_EPIC_INDEX = 3;
+        public const int QUESTSGRID_LEGENDARY_INDEX = 4;
+        public const int QUESTSGRID_NAME_INDEX = 5;
+        public const int QUESTSGRID_PACK_INDEX = 6;
+        public const int QUESTSGRID_COMPLETED_INDEX = 7;
+        public const int QUESTSGRID_PATRON_INDEX = 8;
+        public const int QUESTSGRID_FAVOR_INDEX = 9;
+        public const int QUESTSGRID_STYLE_INDEX = 10;
 
         private DataTable MakeQuestsTable()
         {
@@ -125,24 +147,142 @@ namespace DDOCompendium
             var allCompletion = characterData[SelectedCharacter].QuestCompletion;
             var thisCompletion = allCompletion.Where(n => n.Split(' ')[0] == questID).FirstOrDefault();
             if (thisCompletion == "" || thisCompletion is null) return "";
-            switch (thisCompletion.Split(' ')[1])
+            else return thisCompletion.Split(' ')[1];
+        }
+
+        private void ChangeQuestCompletionStatus(DataGridViewCell thisCell)
+        {
+            string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
+            switch (thisCell.Value.ToString())
             {
-                case "N":
-                    return "Normal";
-                case "H":
-                    return "Hard";
-                case "E":
-                    return "Elite";
-                case "C":
-                    return "Casual";
+                case "Casual":
+                case "Normal":
+                case "Hard":
+                case "Elite":
+                    thisCell.Value = "";
+                    break;
                 default:
-                    return "";
+                    if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo")
+                    {
+                        thisCell.Value = "Casual";
+                    }
+                    else thisCell.Value = SelectedDifficulty;
+                    break;
+            }
+            int valindex = -1;
+            string foundval = "";
+            foreach (string thisval in characterData[SelectedCharacter].QuestCompletion)
+            {
+                if (thisval.Split(' ')[0] == QuestID)
+                {
+                    valindex = characterData[SelectedCharacter].QuestCompletion.IndexOf(thisval);
+                    foundval = thisval;
+                    break;
+                }
+            }
+            string newDiff = thisCell.Value.ToString();
+            if (newDiff == "")
+            {
+                if (valindex != -1) characterData[SelectedCharacter].QuestCompletion.Remove(foundval);
+            }
+            else
+            {
+                if (valindex == -1) characterData[SelectedCharacter].QuestCompletion.Add(QuestID + " " + thisCell.Value.ToString());
+                else characterData[SelectedCharacter].QuestCompletion[valindex] = QuestID + " " + thisCell.Value.ToString();
             }
         }
 
-        private void DatagridQuests_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DatagridQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            int thisRowIndex = e.RowIndex;
+            int thisColumnIndex = e.ColumnIndex;
+            if (e.Button == MouseButtons.Left)
+            {
+                switch (thisColumnIndex)
+                {
+                    case QUESTSGRID_COMPLETED_INDEX:
+                        if (thisRowIndex != -1)
+                        {
+                            // change completion status of this quest
+                            ChangeQuestCompletionStatus(datagridQuests.Rows[thisRowIndex].Cells[thisColumnIndex]);
+                        }
+                        break;
+                    case QUESTSGRID_EPIC_INDEX:
+                        switch (LevelFilter)
+                        {
+                            case "All":
+                            case "Legendary":
+                                LevelFilter = "Epic";
+                                questsDataView.RowFilter = "E > 19 AND L > 29";
+                                break;
+                            case "Epic":
+                                LevelFilter = "All";
+                                questsDataView.RowFilter = "";
+                                break;
+                        }
+                        break;
+                    case QUESTSGRID_LEGENDARY_INDEX:
+                        switch (LevelFilter)
+                        {
+                            case "All":
+                            case "Epic":
+                                LevelFilter = "Legendary";
+                                questsDataView.RowFilter = "L > 29";
+                                break;
+                            case "Legendary":
+                                LevelFilter = "All";
+                                questsDataView.RowFilter = "";
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
 
+            }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveCharacterData();
+        }
+
+        private void SaveCharacterData()
+        {
+            string exportData = JsonConvert.SerializeObject(characterData, Formatting.Indented);
+            using StreamWriter writer1 = new(CharactersFilePath);
+            writer1.Write(exportData);
+            writer1.Close();
+        }
+
+        private void DatagridQuests_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
+        {
+            if (e.ColumnIndex == QUESTSGRID_COMPLETED_INDEX && e.RowIndex != -1)
+            {
+                e.ContextMenuStrip = contextmenuQuestCompletion;
+                ClickedCell = datagridQuests.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
+        }
+
+        private void ContextmenuQuestCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripItem clickedItem = e.ClickedItem;
+            switch (clickedItem.Text)
+            {
+                case "Clear":
+                    SelectedDifficulty = "";
+                    break;
+                case "Casual":
+                case "Normal":
+                case "Hard":
+                case "Elite":
+                    SelectedDifficulty = clickedItem.Text;
+                    break;
+            }
+            ChangeQuestCompletionStatus(ClickedCell);
         }
     }
 
@@ -188,7 +328,7 @@ namespace DDOCompendium
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string[] QuestCompletion { get; set; }
-        public string[] PastLives { get; set; }
+        public List<string> QuestCompletion { get; set; }
+        public List<string> PastLives { get; set; }
     }
 }
