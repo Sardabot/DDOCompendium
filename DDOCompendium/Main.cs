@@ -14,6 +14,7 @@ namespace DDOCompendium
 {
     public partial class Main : Form
     {
+        public string DataFolderPath = Application.ExecutablePath.Replace("DDOCompendium.exe", "Data/");
         public string QuestsFilePath;
         public string CharactersFilePath;
         public DataTable questsTable;
@@ -33,22 +34,20 @@ namespace DDOCompendium
         private bool ImportData()
         {
             // import quest data
-            if (Properties.Settings.Default.questsFilePath == "")
-            {
-                OpenFileDialog filedialog = new()
-                {
-                    Title = "Find Quests.json"
-                };
-                if (filedialog.ShowDialog() == DialogResult.OK)
-                {
-                    Properties.Settings.Default.questsFilePath = filedialog.FileName;
-                }
-                else return false;
-            }
-            //Properties.Settings.Default.questsFilePath = Application.ExecutablePath.Replace("DDOCompendium.exe", "Quests.json");
-            using StreamReader reader = new(Properties.Settings.Default.questsFilePath);
-            string importedJsonData = reader.ReadToEnd();
-            reader.Close();
+            //if (Properties.Settings.Default.questsFilePath == "")
+            //{
+            //    OpenFileDialog filedialog = new()
+            //    {
+            //        Title = "Find Quests.json"
+            //    };
+            //    if (filedialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //        Properties.Settings.Default.questsFilePath = filedialog.FileName;
+            //    }
+            //    else return false;
+            //}
+            QuestsFilePath = DataFolderPath + "Quests.json";
+            string importedJsonData = ReadFromFile(QuestsFilePath);
             var importedQuestData = JsonConvert.DeserializeObject<List<QuestPack>>(importedJsonData);
             if (importedQuestData is null)
             {
@@ -56,9 +55,8 @@ namespace DDOCompendium
                 return false;
             }
             // import user save data
-            CharactersFilePath = Properties.Settings.Default.questsFilePath.Replace("Quests.json", "Characters.json");
-            using StreamReader reader2 = new(CharactersFilePath);
-            importedJsonData = reader2.ReadToEnd();
+            CharactersFilePath = DataFolderPath + "Characters.json";
+            importedJsonData = ReadFromFile(CharactersFilePath);
             var importedCharData = JsonConvert.DeserializeObject<List<Character>>(importedJsonData);
             if (importedCharData is null)
             {
@@ -101,6 +99,10 @@ namespace DDOCompendium
             datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
             datagridQuests.Columns[QUESTSGRID_LEGENDARY_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
 
+            // import the notes tabs
+            txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
+            txtNotes2.Text = ReadFromFile(DataFolderPath + "Notes2.txt");
+
             return true;
         }
 
@@ -137,9 +139,12 @@ namespace DDOCompendium
             return table;
         }
 
-        private void ChangeSelectedCharacter()
+        private void SelectedCharacterChanged()
         {
-
+            foreach (DataGridViewRow thisRow in datagridQuests.Rows)
+            {
+                thisRow.Cells[QUESTSGRID_COMPLETED_INDEX].Value = FindQuestCompletionStatus(thisRow.Cells[QUESTSGRID_ID_INDEX].Value.ToString());
+            }
         }
 
         private string FindQuestCompletionStatus(string questID)
@@ -159,7 +164,8 @@ namespace DDOCompendium
                 case "Normal":
                 case "Hard":
                 case "Elite":
-                    thisCell.Value = "";
+                    if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
+                    else thisCell.Value = SelectedDifficulty;
                     break;
                 default:
                     if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo")
@@ -247,15 +253,24 @@ namespace DDOCompendium
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SaveCharacterData();
+            WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
+            WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
+            WriteToFile(DataFolderPath + "Notes2.txt", txtNotes2.Text);
         }
 
-        private void SaveCharacterData()
+        private void WriteToFile(string filePath, string data)
         {
-            string exportData = JsonConvert.SerializeObject(characterData, Formatting.Indented);
-            using StreamWriter writer1 = new(CharactersFilePath);
-            writer1.Write(exportData);
-            writer1.Close();
+            using StreamWriter writer = new(filePath);
+            writer.Write(data);
+            writer.Close();
+        }
+
+        private string ReadFromFile(string filePath)
+        {
+            using StreamReader reader = new StreamReader(filePath);
+            string tempstr = reader.ReadToEnd();
+            reader.Close();
+            return tempstr;
         }
 
         private void DatagridQuests_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
@@ -264,6 +279,15 @@ namespace DDOCompendium
             {
                 e.ContextMenuStrip = contextmenuQuestCompletion;
                 ClickedCell = datagridQuests.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
+            else if (e.ColumnIndex == QUESTSGRID_COMPLETED_INDEX && e.RowIndex == -1)
+            {
+                e.ContextMenuStrip = contextmenuCharSelect;
+                contextmenuCharSelect.Items.Clear();
+                foreach (string thisCharName in characterData.Select(c => c.Name))
+                {
+                    contextmenuCharSelect.Items.Add(thisCharName);
+                }
             }
         }
 
@@ -283,6 +307,13 @@ namespace DDOCompendium
                     break;
             }
             ChangeQuestCompletionStatus(ClickedCell);
+        }
+
+        private void contextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripItem clickedItem = e.ClickedItem;
+            SelectedCharacter = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
+            SelectedCharacterChanged();
         }
     }
 

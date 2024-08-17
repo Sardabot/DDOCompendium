@@ -45,12 +45,17 @@
             this.tsitemHard = new System.Windows.Forms.ToolStripMenuItem();
             this.tsitemElite = new System.Windows.Forms.ToolStripMenuItem();
             this.tsitemClear = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNotes1 = new System.Windows.Forms.TextBox();
+            this.txtNotes2 = new System.Windows.Forms.TextBox();
+            this.contextmenuCharSelect = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).BeginInit();
             this.tcTabs.SuspendLayout();
+            this.tabNotes.SuspendLayout();
+            this.tabNotes2.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +110,7 @@
             // 
             // tabNotes
             // 
+            this.tabNotes.Controls.Add(this.txtNotes1);
             this.tabNotes.Location = new System.Drawing.Point(4, 22);
             this.tabNotes.Name = "tabNotes";
             this.tabNotes.Padding = new System.Windows.Forms.Padding(3);
@@ -115,6 +121,7 @@
             // 
             // tabNotes2
             // 
+            this.tabNotes2.Controls.Add(this.txtNotes2);
             this.tabNotes2.Location = new System.Drawing.Point(4, 22);
             this.tabNotes2.Name = "tabNotes2";
             this.tabNotes2.Padding = new System.Windows.Forms.Padding(3);
@@ -178,38 +185,66 @@
             this.tsitemElite,
             this.tsitemClear});
             this.contextmenuQuestCompletion.Name = "contextmenuQuestCompletion";
-            this.contextmenuQuestCompletion.Size = new System.Drawing.Size(181, 136);
+            this.contextmenuQuestCompletion.Size = new System.Drawing.Size(115, 114);
             this.contextmenuQuestCompletion.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextmenuQuestCompletion_ItemClicked);
             // 
             // tsitemCasual
             // 
             this.tsitemCasual.Name = "tsitemCasual";
-            this.tsitemCasual.Size = new System.Drawing.Size(180, 22);
+            this.tsitemCasual.Size = new System.Drawing.Size(114, 22);
             this.tsitemCasual.Text = "Casual";
             // 
             // tsitemNormal
             // 
             this.tsitemNormal.Name = "tsitemNormal";
-            this.tsitemNormal.Size = new System.Drawing.Size(180, 22);
+            this.tsitemNormal.Size = new System.Drawing.Size(114, 22);
             this.tsitemNormal.Text = "Normal";
             // 
             // tsitemHard
             // 
             this.tsitemHard.Name = "tsitemHard";
-            this.tsitemHard.Size = new System.Drawing.Size(180, 22);
+            this.tsitemHard.Size = new System.Drawing.Size(114, 22);
             this.tsitemHard.Text = "Hard";
             // 
             // tsitemElite
             // 
             this.tsitemElite.Name = "tsitemElite";
-            this.tsitemElite.Size = new System.Drawing.Size(180, 22);
+            this.tsitemElite.Size = new System.Drawing.Size(114, 22);
             this.tsitemElite.Text = "Elite";
             // 
             // tsitemClear
             // 
             this.tsitemClear.Name = "tsitemClear";
-            this.tsitemClear.Size = new System.Drawing.Size(180, 22);
+            this.tsitemClear.Size = new System.Drawing.Size(114, 22);
             this.tsitemClear.Text = "Clear";
+            // 
+            // txtNotes1
+            // 
+            this.txtNotes1.AcceptsReturn = true;
+            this.txtNotes1.AcceptsTab = true;
+            this.txtNotes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNotes1.Location = new System.Drawing.Point(3, 3);
+            this.txtNotes1.Multiline = true;
+            this.txtNotes1.Name = "txtNotes1";
+            this.txtNotes1.Size = new System.Drawing.Size(499, 584);
+            this.txtNotes1.TabIndex = 0;
+            // 
+            // txtNotes2
+            // 
+            this.txtNotes2.AcceptsReturn = true;
+            this.txtNotes2.AcceptsTab = true;
+            this.txtNotes2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNotes2.Location = new System.Drawing.Point(3, 3);
+            this.txtNotes2.Multiline = true;
+            this.txtNotes2.Name = "txtNotes2";
+            this.txtNotes2.Size = new System.Drawing.Size(499, 584);
+            this.txtNotes2.TabIndex = 0;
+            // 
+            // contextmenuCharSelect
+            // 
+            this.contextmenuCharSelect.Name = "contextmenuCharSelect";
+            this.contextmenuCharSelect.Size = new System.Drawing.Size(181, 26);
+            this.contextmenuCharSelect.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextmenuCharSelect_ItemClicked);
             // 
             // Main
             // 
@@ -226,6 +261,10 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridQuests)).EndInit();
             this.tcTabs.ResumeLayout(false);
+            this.tabNotes.ResumeLayout(false);
+            this.tabNotes.PerformLayout();
+            this.tabNotes2.ResumeLayout(false);
+            this.tabNotes2.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -249,6 +288,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsitemHard;
         private System.Windows.Forms.ToolStripMenuItem tsitemElite;
         private System.Windows.Forms.ToolStripMenuItem tsitemClear;
+        private System.Windows.Forms.TextBox txtNotes1;
+        private System.Windows.Forms.TextBox txtNotes2;
+        private System.Windows.Forms.ContextMenuStrip contextmenuCharSelect;
     }
 }
 

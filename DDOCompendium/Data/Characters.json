@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 0,
+    "Name": "Shatterer",
+    "QuestCompletion": [
+      "2-2 Hard",
+      "1-2 Hard"
+    ],
+    "PastLives": null
+  },
+  {
+    "Id": 1,
+    "Name": "Tyrmaeli",
+    "QuestCompletion": [
+      "2-1 Hard",
+      "1-1 Elite"
+    ],
+    "PastLives": null
+  }
+]
