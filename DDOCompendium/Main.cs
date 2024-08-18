@@ -20,7 +20,8 @@ namespace DDOCompendium
         public DataTable questsTable;
         public DataView questsDataView;
         public Character[] characterData;
-        public int SelectedCharacter = Properties.Settings.Default.SelectedCharacter;
+        public int SelectedCharacterID = Properties.Settings.Default.SelectedCharacter;
+        public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
         public string LevelFilter = "All";
         private DataGridViewCell ClickedCell;
@@ -84,6 +85,7 @@ namespace DDOCompendium
                     tempRow.SetField("Patron", thisQuest.Patron);
                     tempRow.SetField("Favor", thisQuest.Favor);
                     tempRow.SetField("Style", thisQuest.Style);
+                    tempRow.SetField("SortWithPack", thisQuest.SortWithPack);
                     questsTable.Rows.Add(tempRow);
                 }
             }
@@ -98,6 +100,9 @@ namespace DDOCompendium
             datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
             datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
             datagridQuests.Columns[QUESTSGRID_LEGENDARY_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
+            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
+            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+            datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
 
             // import the notes tabs
             txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
@@ -117,6 +122,7 @@ namespace DDOCompendium
         public const int QUESTSGRID_PATRON_INDEX = 8;
         public const int QUESTSGRID_FAVOR_INDEX = 9;
         public const int QUESTSGRID_STYLE_INDEX = 10;
+        public const int QUESTSGRID_PACKSORT_INDEX = 11;
 
         private DataTable MakeQuestsTable()
         {
@@ -135,26 +141,44 @@ namespace DDOCompendium
             table.Columns.Add(new DataColumn("Patron", typeof(string)));
             table.Columns.Add(new DataColumn("Favor", typeof(int)));
             table.Columns.Add(new DataColumn("Style", typeof(string)));
+            table.Columns.Add(new DataColumn("SortWithPack", typeof(string)));
 
             return table;
         }
 
+        /// <summary>
+        /// Updates the quests table with the completion information for the
+        /// newly selected character.  Also updates the column header text to the
+        /// name of the newly selected character.
+        /// </summary>
         private void SelectedCharacterChanged()
         {
-            foreach (DataGridViewRow thisRow in datagridQuests.Rows)
+            foreach (DataRow thisRow in questsTable.Rows)
             {
-                thisRow.Cells[QUESTSGRID_COMPLETED_INDEX].Value = FindQuestCompletionStatus(thisRow.Cells[QUESTSGRID_ID_INDEX].Value.ToString());
+                thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
             }
+            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
         }
 
+        /// <summary>
+        /// Searches characterData for the completion status of a quest.
+        /// Uses the currently selected character.
+        /// </summary>
+        /// <param name="questID">The ID to search for, ex. "1-4"</param>
+        /// <returns>A string representing the quest difficulty.</returns>
         private string FindQuestCompletionStatus(string questID)
         {
-            var allCompletion = characterData[SelectedCharacter].QuestCompletion;
+            var allCompletion = characterData[SelectedCharacterID].QuestCompletion;
             var thisCompletion = allCompletion.Where(n => n.Split(' ')[0] == questID).FirstOrDefault();
-            if (thisCompletion == "" || thisCompletion is null) return "";
+            if (thisCompletion is null || thisCompletion == "") return "";
             else return thisCompletion.Split(' ')[1];
         }
 
+        /// <summary>
+        /// Updates the text in the Quests datagridview completion column for a quest.
+        /// Also updates the associated entry in the characterData object.
+        /// </summary>
+        /// <param name="thisCell">The affected cell.</param>
         private void ChangeQuestCompletionStatus(DataGridViewCell thisCell)
         {
             string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
@@ -177,11 +201,11 @@ namespace DDOCompendium
             }
             int valindex = -1;
             string foundval = "";
-            foreach (string thisval in characterData[SelectedCharacter].QuestCompletion)
+            foreach (string thisval in characterData[SelectedCharacterID].QuestCompletion)
             {
                 if (thisval.Split(' ')[0] == QuestID)
                 {
-                    valindex = characterData[SelectedCharacter].QuestCompletion.IndexOf(thisval);
+                    valindex = characterData[SelectedCharacterID].QuestCompletion.IndexOf(thisval);
                     foundval = thisval;
                     break;
                 }
@@ -189,15 +213,21 @@ namespace DDOCompendium
             string newDiff = thisCell.Value.ToString();
             if (newDiff == "")
             {
-                if (valindex != -1) characterData[SelectedCharacter].QuestCompletion.Remove(foundval);
+                if (valindex != -1) characterData[SelectedCharacterID].QuestCompletion.Remove(foundval);
             }
             else
             {
-                if (valindex == -1) characterData[SelectedCharacter].QuestCompletion.Add(QuestID + " " + thisCell.Value.ToString());
-                else characterData[SelectedCharacter].QuestCompletion[valindex] = QuestID + " " + thisCell.Value.ToString();
+                if (valindex == -1) characterData[SelectedCharacterID].QuestCompletion.Add(QuestID + " " + thisCell.Value.ToString());
+                else characterData[SelectedCharacterID].QuestCompletion[valindex] = QuestID + " " + thisCell.Value.ToString();
             }
         }
 
+        /// <summary>
+        /// Handles various events that need to happen when some part
+        /// of the quests datagridview is clicked on.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DatagridQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int thisRowIndex = e.RowIndex;
@@ -214,12 +244,13 @@ namespace DDOCompendium
                         }
                         break;
                     case QUESTSGRID_EPIC_INDEX:
+                        // filter the shown quests to epic and above, or remove the filter
                         switch (LevelFilter)
                         {
                             case "All":
                             case "Legendary":
                                 LevelFilter = "Epic";
-                                questsDataView.RowFilter = "E > 19 AND L > 29";
+                                questsDataView.RowFilter = "E > 19 OR L > 29";
                                 break;
                             case "Epic":
                                 LevelFilter = "All";
@@ -228,6 +259,7 @@ namespace DDOCompendium
                         }
                         break;
                     case QUESTSGRID_LEGENDARY_INDEX:
+                        // filter the shown quests to legendary and above, or remove the filter
                         switch (LevelFilter)
                         {
                             case "All":
@@ -253,6 +285,7 @@ namespace DDOCompendium
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // save all our data back to the files
             WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
             WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
             WriteToFile(DataFolderPath + "Notes2.txt", txtNotes2.Text);
@@ -273,15 +306,25 @@ namespace DDOCompendium
             return tempstr;
         }
 
+        /// <summary>
+        /// Provides the appropriate context menu based on which column
+        /// of the quests datagridview was right-clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DatagridQuests_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
         {
             if (e.ColumnIndex == QUESTSGRID_COMPLETED_INDEX && e.RowIndex != -1)
             {
+                // right-clicked a non-header cell in the completion status column
+                // we want to provide options to change the selected difficulty
                 e.ContextMenuStrip = contextmenuQuestCompletion;
                 ClickedCell = datagridQuests.Rows[e.RowIndex].Cells[e.ColumnIndex];
             }
             else if (e.ColumnIndex == QUESTSGRID_COMPLETED_INDEX && e.RowIndex == -1)
             {
+                // right-clicked the header of the completion status column
+                // we want to provide options to change the selected character
                 e.ContextMenuStrip = contextmenuCharSelect;
                 contextmenuCharSelect.Items.Clear();
                 foreach (string thisCharName in characterData.Select(c => c.Name))
@@ -291,6 +334,12 @@ namespace DDOCompendium
             }
         }
 
+        /// <summary>
+        /// Changes the selected difficulty, then calls ChangeQuestCompletionStatus
+        /// on the cell the context menu came from to update the value.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ContextmenuQuestCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
@@ -309,10 +358,17 @@ namespace DDOCompendium
             ChangeQuestCompletionStatus(ClickedCell);
         }
 
+        /// <summary>
+        /// Updates the selected character, then calls SelectedCharacterChanged
+        /// to ensure items are updated appropriately.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void contextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
-            SelectedCharacter = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
+            SelectedCharacterName = clickedItem.Text;
+            SelectedCharacterID = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
             SelectedCharacterChanged();
         }
     }
@@ -330,17 +386,30 @@ namespace DDOCompendium
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        /// <summary>
+        /// WikiName is present if the wiki page is different from the quest name
+        /// </summary>
         public string? WikiName { get; set; }
-        // WikiName is present if the wiki page is different from the quest name
         public int? HeroicLevel { get; set; }
         public int? EpicLevel { get; set; }
         public int? LegLevel { get; set; }
         public string Patron { get; set; }
         public int Favor { get; set; }
         public string? Style { get; set; }
+        /// <summary>
+        /// SortWithPack is present if this quest should be grouped with a
+        /// different pack from the one it is included in.
+        /// This is mainly useful for F2P 'prologue' style quests.
+        /// </summary>
+        public string? SortWithPack { get; set; }
         // Style can be Solo, Raid, or null
     }
 
+    /// <summary>
+    /// A Wilderness object must have at least one
+    /// level range, and should have a map picture name
+    /// for each non-null level range.
+    /// </summary>
     public class Wilderness
     {
         public int Id { get; set; }
@@ -360,6 +429,22 @@ namespace DDOCompendium
         public int Id { get; set; }
         public string Name { get; set; }
         public List<string> QuestCompletion { get; set; }
+        public List<string> SagaCompletion { get; set; }
         public List<string> PastLives { get; set; }
+    }
+
+    public class SagaData
+    {
+        public Saga[] SagaInfos { get; set; }
+        public string[][][] SagaTables { get; set; }
+    }
+    public class Saga
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int SortLevel { get; set; }
+        public string NPC { get; set; }
+        public int TomeLevel { get; set; }
+        public string SpecialRewards { get; set; }
     }
 }

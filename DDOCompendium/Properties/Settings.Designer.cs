@@ -34,5 +34,17 @@ namespace DDOCompendium.Properties {
                 this["SelectedCharacter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Shatterer")]
+        public string SelectedCharacterName {
+            get {
+                return ((string)(this["SelectedCharacterName"]));
+            }
+            set {
+                this["SelectedCharacterName"] = value;
+            }
+        }
     }
 }

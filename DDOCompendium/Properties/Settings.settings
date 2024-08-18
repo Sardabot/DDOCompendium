@@ -5,5 +5,8 @@
     <Setting Name="SelectedCharacter" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="SelectedCharacterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Shatterer</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
