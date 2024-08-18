@@ -20,11 +20,19 @@ namespace DDOCompendium
         public DataTable questsTable;
         public DataView questsDataView;
         public Character[] characterData;
+        public List<DataTable> SagaTables = [];
+        public SagaData sagaData;
         public int SelectedCharacterID = Properties.Settings.Default.SelectedCharacter;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
         public string LevelFilter = "All";
         private DataGridViewCell ClickedCell;
+        public DataGridViewCellStyle darkgridcellstyle = new()
+        {
+            BackColor = Color.FromArgb(64, 64, 64),
+            ForeColor = Color.FromArgb(224, 224, 244)
+        };
+
         public Main()
         {
             InitializeComponent();
@@ -95,7 +103,7 @@ namespace DDOCompendium
                 DataSource = questsDataView
             };
             datagridQuests.DataSource = questsDataSource;
-            // hide the ID and Wiki Name columns
+            // make adjustments to grid settings
             datagridQuests.Columns[QUESTSGRID_ID_INDEX].Visible = false;
             datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
             datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -107,6 +115,40 @@ namespace DDOCompendium
             // import the notes tabs
             txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
             txtNotes2.Text = ReadFromFile(DataFolderPath + "Notes2.txt");
+
+            // import ref tables
+
+            // import wilderness tables
+
+            // setup characters tab
+
+            // import saga tables
+            importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
+            sagaData = JsonConvert.DeserializeObject<SagaData>(importedJsonData);
+            foreach (Saga thisSagaData in sagaData.SagaInfos)
+            {
+                DataTable table = MakeSagaTable(thisSagaData.Quests);
+                SagaTables.Add(table);
+                DataGridView thisdgview = new() {
+                    AllowUserToAddRows = false,
+                    AllowUserToDeleteRows = false,
+                    AllowUserToResizeRows = false,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                    BackgroundColor = SystemColors.ControlDarkDark,
+                    ColumnHeadersDefaultCellStyle = darkgridcellstyle,
+                    DefaultCellStyle = darkgridcellstyle,
+                    RowHeadersVisible = false,
+                    EnableHeadersVisualStyles = false,
+                    DataSource = new BindingSource { DataSource = table },
+                    Dock = DockStyle.Fill,
+                    ScrollBars = ScrollBars.None,
+                    ReadOnly = true,
+                };
+                tableLayoutPanelSagas.RowCount += 1;
+                tableLayoutPanelSagas.Controls.Add(thisdgview, 0, tableLayoutPanelSagas.RowCount - 1);
+            }
+
+            // setup settings tab
 
             return true;
         }
@@ -144,6 +186,33 @@ namespace DDOCompendium
             table.Columns.Add(new DataColumn("SortWithPack", typeof(string)));
 
             return table;
+        }
+
+        private DataTable MakeSagaTable(string[][] dataIn)
+        {
+            DataTable table = new DataTable();
+            bool firstRow = true;
+            foreach (string[] row in dataIn)
+            {
+                if (firstRow)
+                {
+                    foreach (string name in row) table.Columns.Add(new DataColumn(name, typeof(string)));
+                    firstRow = false;
+                }
+                else
+                {
+                    table.Rows.Add(row);
+                }
+            }
+            return table;
+        }
+
+        private void ResizeSagaGrids()
+        {
+            foreach (DataGridView thisdgview in tableLayoutPanelSagas.Controls)
+            {
+                thisdgview.Height = thisdgview.ColumnHeadersHeight + thisdgview.Rows.Cast<DataGridViewRow>().Sum(r => r.Height);
+            }
         }
 
         /// <summary>
@@ -371,6 +440,14 @@ namespace DDOCompendium
             SelectedCharacterID = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
             SelectedCharacterChanged();
         }
+
+        private void TcTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tcTabs.TabPages[tcTabs.SelectedIndex].Text == "Sagas")
+            {
+                ResizeSagaGrids();
+            }
+        }
     }
 
 #nullable enable
@@ -446,5 +523,6 @@ namespace DDOCompendium
         public string NPC { get; set; }
         public int TomeLevel { get; set; }
         public string SpecialRewards { get; set; }
+        public string[][] Quests { get; set; }
     }
 }

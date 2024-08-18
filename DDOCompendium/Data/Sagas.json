@@ -6,7 +6,20 @@
       "SortLevel": 3,
       "NPC": "Mattias Deckland",
       "TomeLevel": 1,
-      "SpecialRewards": "Saltmeadow Hay"
+      "SpecialRewards": "Saltmeadow Hay",
+      "Quests": [
+        [ "Lvl", "Quest", "The Haunting of Saltmarsh (Heroic)" ],
+        [ "3", "The Haunting of Saltmarsh" ],
+        [ "3", "Under the Cover of Darkness" ],
+        [ "3", "Danger at Dunwater" ],
+        [ "3", "The Final Enemy" ],
+        [ "3", "Swim at Your Own Risk" ],
+        [ "3", "Back to Basics" ],
+        [ "3", "What Sleeps Below" ],
+        [ "3", "The Hijacked Haul" ],
+        [ "3", "Rest for the Night" ],
+        [ "3", "Down You Go" ]
+      ]
     },
     {
       "Id": 2,
@@ -14,7 +27,20 @@
       "SortLevel": 4,
       "NPC": "Drell Jake",
       "TomeLevel": 1,
-      "SpecialRewards": ""
+      "SpecialRewards": "",
+      "Quests": [
+        [ "Lvl", "Quest", "The Pirates of the Thunder Sea (Heroic)" ],
+        [ "4", "Irestone Inlet" ],
+        [ "5", "The Legend of Two-Toed Tobias" ],
+        [ "5", "Prove Your Worth" ],
+        [ "5", "Ghost of a Chance" ],
+        [ "6", "The Trogolodytes' Get" ],
+        [ "7", "Old Grey Garl" ],
+        [ "7", "The Black Loch" ],
+        [ "7", "Storm the Beaches" ],
+        [ "7", "Bargain of Blood" ],
+        [ "7", "The Tide Turns" ]
+      ]
     },
     {
       "Id": 3,
@@ -22,7 +48,23 @@
       "SortLevel": 5,
       "NPC": "Gallant Twillford",
       "TomeLevel": 1,
-      "SpecialRewards": "Chunks of Ferrocrystal, Glamered Weapon Aura (E+)"
+      "SpecialRewards": "Chunks of Ferrocrystal, Glamered Weapon Aura (E+)",
+      "Quests": [
+        [ "Lvl", "Quest", "Fables of the Feywild (Heroic)" ],
+        [ "5", "The Endless Revels" ],
+        [ "5", "Witch Hunt" ],
+        [ "5", "Make Believe" ],
+        [ "5", "A Frosty Reception" ],
+        [ "5", "Wake Me Up Inside" ],
+        [ "6", "The Icemount Curse" ],
+        [ "6", "The Thornwright" ],
+        [ "6", "Needle in a Fey Stack" ],
+        [ "6", "Quid Pro Quo" ],
+        [ "6", "Immortality Lessons" ],
+        [ "5", "Combatting Corruption" ],
+        [ "5", "The Legend of the Lost Locket" ],
+        [ "6", "The Knight Who Cried Windmill" ]
+      ]
     },
     {
       "Id": 4,
@@ -30,7 +72,22 @@
       "SortLevel": 7,
       "NPC": "Yupan the Tale Weaver",
       "TomeLevel": 1,
-      "SpecialRewards": ""
+      "SpecialRewards": "",
+      "Quests": [
+        [ "Lvl", "Quest", "Isle of Dread (Heroic)" ],
+        [ "7", "Captive of the Hidden God" ],
+        [ "7", "The Curse and the Captive Crustacean" ],
+        [ "7", "Plundering Pirates' Point" ],
+        [ "7", "Bullywugs and Booby Traps" ],
+        [ "8", "Fall of the Forbidden Temple" ],
+        [ "7", "Wild Thing" ],
+        [ "7", "The Stone Crypt Chronicle" ],
+        [ "7", "All Hail the King" ],
+        [ "7", "Trials of the Triceratops" ],
+        [ "7", "The Trouble with Tar Pits" ],
+        [ "7", "Whispers of Return" ],
+        [ "7", "Spiders and Flies" ]
+      ]
     },
     {
       "Id": 5,
@@ -271,58 +328,20 @@
       "TomeLevel": 1,
       "SpecialRewards": "",
       "Quests": [
-        {
-          "Name": "Book Burning",
-          "Level": 13
-        },
-        {
-          "Name": "Death Hosts This Banquet",
-          "Level": 13
-        },
-        {
-          "Name": "Ettercap Incursion",
-          "Level": 13
-        },
-        {
-          "Name": "Oghma's Song",
-          "Level": 13
-        },
-        {
-          "Name": "Portal to Below",
-          "Level": 13
-        },
-        {
-          "Name": "Secrets of the Red Wizards",
-          "Level": 13
-        },
-        {
-          "Name": "Seeds of Decay",
-          "Level": 13
-        },
-        {
-          "Name": "The House of Gems",
-          "Level": 13
-        },
-        {
-          "Name": "The Key to the Mythal",
-          "Level": 13
-        },
-        {
-          "Name": "The Safehold",
-          "Level": 13
-        },
-        {
-          "Name": "The Zulkir's Plan",
-          "Level": 13
-        },
-        {
-          "Name": "Times Long Past",
-          "Level": 13
-        },
-        {
-          "Name": "Voices of the Dead",
-          "Level": 13
-        }
+        [ "Lvl", "Quest", "Magic of Myth Drannor (Heroic)" ],
+        [ "13", "Book Burning" ],
+        [ "13", "Death Hosts This Banquet" ],
+        [ "13", "Ettercap Incursion" ],
+        [ "13", "Oghma's Song" ],
+        [ "13", "Portal to Below" ],
+        [ "13", "Secrets of the Red Wizards" ],
+        [ "13", "Seeds of Decay" ],
+        [ "13", "The House of Gems" ],
+        [ "13", "The Key to the Mythal" ],
+        [ "13", "The Safehold" ],
+        [ "13", "The Zulkir's Plan" ],
+        [ "13", "Times Long Past" ],
+        [ "13", "Voices of the Dead" ]
       ]
     },
     {
@@ -333,58 +352,20 @@
       "TomeLevel": 3,
       "SpecialRewards": "",
       "Quests": [
-        {
-          "Name": "Book Burning",
-          "Level": 35
-        },
-        {
-          "Name": "Death Hosts This Banquet",
-          "Level": 35
-        },
-        {
-          "Name": "Ettercap Incursion",
-          "Level": 35
-        },
-        {
-          "Name": "Oghma's Song",
-          "Level": 35
-        },
-        {
-          "Name": "Portal to Below",
-          "Level": 35
-        },
-        {
-          "Name": "Secrets of the Red Wizards",
-          "Level": 35
-        },
-        {
-          "Name": "Seeds of Decay",
-          "Level": 35
-        },
-        {
-          "Name": "The House of Gems",
-          "Level": 35
-        },
-        {
-          "Name": "The Key to the Mythal",
-          "Level": 35
-        },
-        {
-          "Name": "The Safehold",
-          "Level": 35
-        },
-        {
-          "Name": "The Zulkir's Plan",
-          "Level": 35
-        },
-        {
-          "Name": "Times Long Past",
-          "Level": 35
-        },
-        {
-          "Name": "Voices of the Dead",
-          "Level": 35
-        }
+        [ "Lvl", "Quest", "Magic of Myth Drannor (Legendary)" ],
+        [ "35", "Book Burning" ],
+        [ "35", "Death Hosts This Banquet" ],
+        [ "35", "Ettercap Incursion" ],
+        [ "35", "Oghma's Song" ],
+        [ "35", "Portal to Below" ],
+        [ "35", "Secrets of the Red Wizards" ],
+        [ "35", "Seeds of Decay" ],
+        [ "35", "The House of Gems" ],
+        [ "35", "The Key to the Mythal" ],
+        [ "35", "The Safehold" ],
+        [ "35", "The Zulkir's Plan" ],
+        [ "35", "Times Long Past" ],
+        [ "35", "Voices of the Dead" ]
       ]
     }
   ],
