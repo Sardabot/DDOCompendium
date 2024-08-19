@@ -22,6 +22,7 @@ namespace DDOCompendium
         public Character[] characterData;
         public List<DataTable> SagaTables = [];
         public List<Saga> sagaData;
+        public bool SagasFormatted = false;
         public int SelectedCharacterID = Properties.Settings.Default.SelectedCharacter;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
@@ -31,6 +32,11 @@ namespace DDOCompendium
         {
             BackColor = Color.FromArgb(64, 64, 64),
             ForeColor = Color.FromArgb(224, 224, 244)
+        };
+        public DataGridViewCellStyle sagaNAcellstyle = new()
+        {
+            BackColor = SystemColors.ControlDarkDark,
+            ForeColor = SystemColors.ControlDarkDark
         };
 
         public Main()
@@ -137,7 +143,9 @@ namespace DDOCompendium
                     Dock = DockStyle.Fill,
                     ScrollBars = ScrollBars.None,
                     ReadOnly = true,
+                    Tag = thisSagaData.Id
                 };
+                thisdgview.CellMouseClick += DatagridSagas_CellMouseClick;
                 tableLayoutPanelSagas.RowCount += 1;
                 tableLayoutPanelSagas.Controls.Add(thisdgview, 0, tableLayoutPanelSagas.RowCount - 1);
             }
@@ -201,12 +209,24 @@ namespace DDOCompendium
             return table;
         }
 
-        private void ResizeSagaGrids()
+        private void FormatSagaGrids()
         {
             foreach (DataGridView thisdgview in tableLayoutPanelSagas.Controls)
             {
                 thisdgview.Height = thisdgview.ColumnHeadersHeight + thisdgview.Rows.Cast<DataGridViewRow>().Sum(r => r.Height);
+                foreach (DataGridViewColumn thisColumn in thisdgview.Columns)
+                {
+                    thisColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                foreach (DataGridViewRow thisRow in thisdgview.Rows)
+                {
+                    for (int i = 2; i < thisRow.Cells.Count; i++)
+                    {
+                        if (thisRow.Cells[i].Value.ToString() == "X") thisRow.Cells[i].Style = sagaNAcellstyle;
+                    }
+                }
             }
+            SagasFormatted = true;
         }
 
         /// <summary>
@@ -214,8 +234,14 @@ namespace DDOCompendium
         /// newly selected character.  Also updates the column header text to the
         /// name of the newly selected character.
         /// </summary>
-        private void SelectedCharacterChanged()
+        private void ChangeSelectedCharacter(int newChar)
         {
+            // do cleanup for old character
+
+
+            // update for new character
+            SelectedCharacterID = newChar;
+            SelectedCharacterName = characterData[newChar].Name;
             foreach (DataRow thisRow in questsTable.Rows)
             {
                 thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
@@ -246,23 +272,10 @@ namespace DDOCompendium
         private void ChangeQuestCompletionStatus(DataGridViewCell thisCell)
         {
             string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
-            switch (thisCell.Value.ToString())
-            {
-                case "Casual":
-                case "Normal":
-                case "Hard":
-                case "Elite":
-                    if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
-                    else thisCell.Value = SelectedDifficulty;
-                    break;
-                default:
-                    if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo")
-                    {
-                        thisCell.Value = "Casual";
-                    }
-                    else thisCell.Value = SelectedDifficulty;
-                    break;
-            }
+            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
+            else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo") thisCell.Value = "Casual";
+            else thisCell.Value = SelectedDifficulty;
+
             int valindex = -1;
             string foundval = "";
             foreach (string thisval in characterData[SelectedCharacterID].QuestCompletion)
@@ -341,14 +354,81 @@ namespace DDOCompendium
                         break;
                 }
             }
-            else if (e.Button == MouseButtons.Right)
-            {
+        }
 
+        /// <summary>
+        /// Handles various events that need to happen when some part
+        /// of the quests datagridview is clicked on.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DatagridSagas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView thisdgview = sender as DataGridView;
+            int thisRowIndex = e.RowIndex;
+            int thisColumnIndex = e.ColumnIndex;
+            if (e.Button == MouseButtons.Left)
+            {
+                switch (thisColumnIndex)
+                {
+                    case -1:
+                    case 0:
+                    case 1:
+                        break;
+                    default:
+                        // any other index is going to be a completion cell
+                        if (thisRowIndex != -1)
+                        {
+                            if (thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex].Value.ToString() == "X")
+                            {
+                                // don't do anything if it's a cell that isn't part of the saga
+                                break;
+                            }
+                            int sagaID = int.Parse((thisdgview.Tag as string).Split(',')[e.ColumnIndex - 2]);
+                            // change completion status of this quest
+                            ChangeSagaQuestCompletionStatus(sagaID, thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex]);
+                        }
+                        break;
+                }
             }
+        }
+
+        private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell)
+        {
+            //List<string>[] sagaArray = new List<string>[tableLayoutPanelSagas.RowCount];
+            //foreach (DataGridView thisSagaGrid in tableLayoutPanelSagas.Controls)
+            //{
+            //    for (int i = 2; i < thisSagaGrid.Columns.Count; i++)
+            //    {
+            //        var tempData = new List<string>();
+            //        foreach (DataGridViewRow thisRow in thisSagaGrid.Rows)
+            //        {
+            //            tempData.Add(thisRow.Cells[i].Value.ToString());
+            //        }
+            //        int sagaID = int.Parse((thisSagaGrid.Tag as string).Split(',')[i-2]);
+            //        if (sagaArray.Length <= sagaID) Array.Resize(ref sagaArray, sagaID + 1);
+            //        sagaArray[sagaID] = tempData;
+            //    }
+            //}
+            //characterData[SelectedCharacterID].SagaCompletion = sagaArray.ToList();
+            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
+            else thisCell.Value = SelectedDifficulty;
+
+            while (characterData[SelectedCharacterID].SagaCompletion.Count <= sagaID)
+            {
+                characterData[SelectedCharacterID].SagaCompletion.Add(new List<string>());
+            };
+            while (characterData[SelectedCharacterID].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
+            {
+                characterData[SelectedCharacterID].SagaCompletion[sagaID].Add("");
+            }
+            characterData[SelectedCharacterID].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // ensure saga completion data is updated for the current character
+            //UpdateSagaCompletionData();
             // save all our data back to the files
             WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
             WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
@@ -431,16 +511,15 @@ namespace DDOCompendium
         private void contextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
-            SelectedCharacterName = clickedItem.Text;
             SelectedCharacterID = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
-            SelectedCharacterChanged();
+            ChangeSelectedCharacter(SelectedCharacterID);
         }
 
         private void TcTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tcTabs.TabPages[tcTabs.SelectedIndex].Text == "Sagas")
+            if (tcTabs.TabPages[tcTabs.SelectedIndex].Text == "Sagas" && !SagasFormatted)
             {
-                ResizeSagaGrids();
+                FormatSagaGrids();
             }
         }
     }
@@ -501,14 +580,15 @@ namespace DDOCompendium
         public int Id { get; set; }
         public string Name { get; set; }
         public List<string> QuestCompletion { get; set; }
-        public List<string> SagaCompletion { get; set; }
+        public List<List<string>> SagaCompletion { get; set; }
         public List<string> PastLives { get; set; }
     }
 
     public class Saga
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string[] Name { get; set; }
+        public string[] WikiName { get; set; }
         public int SortLevel { get; set; }
         public string[] NPC { get; set; }
         public int[] TomeLevel { get; set; }

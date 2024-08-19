@@ -6,6 +6,9 @@
       "2-2 Hard",
       "1-2 Hard"
     ],
+    "SagaCompletion": [
+      []
+    ],
     "PastLives": null
   },
   {
@@ -14,6 +17,9 @@
     "QuestCompletion": [
       "2-1 Hard",
       "1-1 Elite"
+    ],
+    "SagaCompletion": [
+      []
     ],
     "PastLives": null
   }

@@ -1,6 +1,6 @@
 [
   {
-    "Id": 1,
+    "Id": "0",
     "Name": ["The Haunting of Saltmarsh (Heroic)"],
     "SortLevel": 3,
     "NPC": ["Mattias Deckland"],
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "Id": 2,
+    "Id": "1",
     "Name": ["The Pirates of the Thunder Sea (Heroic)"],
     "SortLevel": 4,
     "NPC": ["Drell Jake"],
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "Id": 3,
+    "Id": "2",
     "Name": ["Fables of the Feywild (Heroic)"],
     "SortLevel": 5,
     "NPC": ["Gallant Twillford"],
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "Id": 4,
+    "Id": "3",
     "Name": ["Isle of Dread (Heroic)"],
     "SortLevel": 7,
     "NPC": ["Yupan the Tale Weaver"],
@@ -89,7 +89,7 @@
     ]
   },
   {
-    "Id": 5,
+    "Id": "4",
     "Name": ["Mists of Ravenloft (Heroic)"],
     "SortLevel": 10,
     "NPC": ["Livius Lanston"],
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "Id": 6,
+    "Id": "5",
     "Name": ["In the Wastes of Gianthold (Heroic)"],
     "SortLevel": 13,
     "NPC": ["Tiragonis"],
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "Id": 7,
+    "Id": "6",
     "Name": ["Cogs Explorer Dungeons (Heroic)"],
     "SortLevel": 15,
     "NPC": ["Bellman Rulth"],
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "Id": 8,
+    "Id": "7",
     "Name": ["Masterminds of Sharn (Heroic)"],
     "SortLevel": 15,
     "NPC": ["Darius Benford"],
@@ -173,139 +173,311 @@
     ]
   },
   {
-    "Id": 9,
+    "Id": "8, 9",
     "Name": [ "Perils of Cormyr (Heroic)", "Honor of the Huntsilvers (Heroic)" ],
     "SortLevel": 19,
     "NPC": [ "Horton Waxley", "Antone Corluk" ],
     "TomeLevel": [2, 2],
     "SpecialRewards": ["", ""],
     "Quests": [
-
+      [ "Lvl", "Quest", "Perils of Cormyr (Heroic)", "Honor of the Huntsilvers (Heroic)" ],
+      [ "15", "Disciples of Shar", "", "X" ],
+      [ "15", "Escape Plan", "", "X" ],
+      [ "15", "Shadow of a Doubt", "", "X" ],
+      [ "16", "Friends in Low Places", "", "" ],
+      [ "16", "A Lesson in Deception", "", "" ],
+      [ "16", "The Thrill of the Hunt", "", "" ],
+      [ "16", "Army of Shadow", "", "" ],
+      [ "16", "Through a Mirror Darkly", "", "" ],
+      [ "17", "Outbreak", "", "X" ],
+      [ "17", "Overgrowth", "", "X" ],
+      [ "17", "Thorn and Paw", "", "X" ],
+      [ "17", "The Druid's Curse", "", "" ],
+      [ "18", "Detour", "", "" ],
+      [ "18", "Rest Stop", "", "" ],
+      [ "18", "Lost in the Swamp", "", "" ],
+      [ "18", "A Stay at the Inn", "", "" ],
+      [ "18", "The End of the Road", "", "" ],
+      [ "19", "The Tracker's Trap", "", "" ],
+      [ "19", "Lines of Supply", "", "" ],
+      [ "19", "Breaking the Ranks", "", "" ],
+      [ "19", "A Break in the Ice", "", "" ],
+      [ "19", "What Goes Up", "", "" ],
+      [ "19", "Murder by Night", "", "X" ],
+      [ "19", "The Riddle", "", "X" ]
     ]
   },
   {
-    "Id": 10,
+    "Id": "10",
     "Name": ["Vecna Unleashed (Heroic)"],
-    "SortLevel": 7,
+    "SortLevel": 18,
     "NPC": ["Aster the Trail-blazer"],
     "TomeLevel": [2],
     "SpecialRewards": [""],
     "Quests": [
-
+      [ "Lvl", "Quest", "Vecna Unleashed (Heroic)" ],
+      [ "18", "Turn the Page" ],
+      [ "18", "Grand Theft Aureon" ],
+      [ "18", "Vecna Unleashed" ],
+      [ "18", "The Bark and the Blade" ],
+      [ "18", "Enemy of my Enemy" ],
+      [ "18", "The Evil We Know" ],
+      [ "18", "Law and Order" ],
+      [ "18", "Taken in Hand" ],
+      [ "18", "Vecna Denied" ],
+      [ "18", "Paper Trail" ],
+      [ "18", "Party 101" ],
+      [ "18", "The Devils to Pay" ],
+      [ "18", "What Dreams May Come" ]
     ]
   },
   {
-    "Id": 12,
-    "Name": [ "The End of Eberron (Epic)", "The Planeswalker's Path (Epic)", "Menace of the Underdark (Epic)", "Perils of Cormyr (Epic)", "Honor of the Huntsilvers (Epic)" ],
+    "Id": "11, 12, 13, 14, 15",
+    "Name": [ "Eberron", "Planes", "Menace", "Cormyr", "Huntsilvers" ],
+    "WikiName": [ "The End of Eberron (Epic)", "The Planeswalker's Path (Epic)", "Menace of the Underdark (Epic)", "Perils of Cormyr (Epic)", "Honor of the Huntsilvers (Epic)" ],
     "SortLevel": 21,
     "NPC": [ "Gatekeeper Grazla", "Istine Madrovelle", "Lady Azana Winter", "Fidilee Fallowfield", "Belvedere Huntsilver" ],
     "TomeLevel": [ 3, 3, 3, 3, 3 ],
     "SpecialRewards": [ "", "", "", "", "" ],
     "Quests": [
-
+      [ "Lvl", "Quest", "Eberron", "Planes", "Menace", "Cormyr", "Huntsilvers" ],
+      [ "21", "The Lords of Dust", "", "X", "X", "X", "X" ],
+      [ "21", "Servants of the Overlord", "", "X", "X", "X", "X" ],
+      [ "21", "The Spinner of Shadows", "", "X", "X", "X", "X" ],
+      [ "21", "Beyond The Rift", "", "", "X", "X", "X" ],
+      [ "21", "Impossible Demands", "X", "X", "", "", "X" ],
+      [ "21", "The Unquiet Graves", "X", "X", "", "", "X" ],
+      [ "21", "The Lost Thread", "X", "", "", "", "X" ],
+      [ "21", "The Battle for Eveningstar", "X", "X", "", "", "X" ],
+      [ "22", "The House of Rusted Blades", "", "X", "", "X", "X" ],
+      [ "22", "The House of Broken Chains", "", "X", "", "X", "X" ],
+      [ "22", "The House of Death Undone", "", "X", "", "X", "X" ],
+      [ "22", "The Portal Opens", "", "X", "", "X", "X" ],
+      [ "22", "Don't Drink the Water", "X", "X", "", "X", "" ],
+      [ "22", "In the Belly of the Beast", "X", "X", "", "X", "" ],
+      [ "23", "Trial by Fury", "", "", "", "X", "X" ],
+      [ "23", "The Deal and the Demon", "", "", "", "X", "X" ],
+      [ "23", "Reclaiming the Rift", "", "", "", "X", "X" ],
+      [ "23", "Outbreak", "X", "X", "X", "", "X" ],
+      [ "23", "Overgrowth", "X", "X", "X", "", "X" ],
+      [ "23", "Thorn and Paw", "X", "X", "X", "", "X" ],
+      [ "23", "The Druid's Curse", "X", "X", "X", "", "" ],
+      [ "24", "Detour", "X", "", "X", "", "" ],
+      [ "24", "Rest Stop", "X", "", "X", "", "" ],
+      [ "24", "Lost at the Swamp", "X", "", "X", "", "" ],
+      [ "24", "A Stay at the Inn", "X", "", "X", "", "" ],
+      [ "24", "The End of the Road", "X", "", "X", "", "" ],
+      [ "26", "Friends in Low Places", "X", "X", "X", "", "" ],
+      [ "26", "A Lesson in Deception", "X", "X", "X", "", "" ],
+      [ "26", "The Thrill of the Hunt", "X", "X", "X", "", "" ],
+      [ "26", "Army of Shadow", "X", "X", "X", "", "" ],
+      [ "26", "Through a Mirror Darkly", "X", "", "X", "", "" ],
+      [ "27", "The Tracker's Trap", "X", "X", "X", "", "" ],
+      [ "27", "Lines of Supply", "X", "X", "X", "", "" ],
+      [ "27", "Breaking the Ranks", "X", "X", "X", "", "" ],
+      [ "27", "A Break in the Ice", "X", "X", "X", "", "" ],
+      [ "27", "What Goes Up", "X", "X", "X", "", "" ]
     ]
   },
   {
-    "Id": 17,
+    "Id": "16",
     "Name": ["The Pirates of the Thunder Sea (Epic)"],
     "SortLevel": 20,
     "NPC": ["Cassiopia Carragher"],
     "TomeLevel": [3],
     "SpecialRewards": [""],
     "Quests": [
-
+      [ "Lvl", "Quest", "The Pirates of the Thunder Sea (Epic)" ],
+      [ "20", "The Black Loch" ],
+      [ "20", "Storm the Beaches" ],
+      [ "20", "Bargain of Blood" ],
+      [ "20", "The Tide Turns" ],
+      [ "21", "Spies in the House" ],
+      [ "25", "A Legend Revisited" ],
+      [ "25", "Prove Your Worth" ],
+      [ "25", "Ghost of a Chance" ],
+      [ "25", "Old Tomb, New Tenants" ],
+      [ "25", "Precious Cargo" ]
     ]
   },
   {
-    "Id": 18,
+    "Id": "17",
     "Name": ["In the Wastes of Gianthold (Epic)"],
     "SortLevel": 24,
     "NPC": ["Paddrog"],
     "TomeLevel": [3],
     "SpecialRewards": [""],
     "Quests": [
-
+      [ "Lvl", "Quest", "In the Wastes of Gianthold (Epic)" ],
+      [ "24", "Feast or Famine" ],
+      [ "24", "Return to Cabal for One" ],
+      [ "24", "The Crucible" ],
+      [ "24", "The Maze of Madness" ],
+      [ "24", "Trial by Fire" ],
+      [ "24", "Return to Madstone Crater" ],
+      [ "24", "Foundation of Discord" ],
+      [ "24", "A Cry for Help" ],
+      [ "24", "Return to Prison of the Planes" ],
+      [ "24", "Return to Gianthold Tor" ]
     ]
   },
   {
-    "Id": 19,
+    "Id": "18",
     "Name": ["Mists of Ravenloft (Epic)"],
     "SortLevel": 31,
     "NPC": ["Lavinia Lanston"],
     "TomeLevel": [3],
     "SpecialRewards": ["Sentient Jewels, Accursed Cards"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Mists of Ravenloft (Epic)" ],
+      [ "31", "Into the Mists" ],
+      [ "31", "Death House" ],
+      [ "31", "Fresh-baked Dreams" ],
+      [ "32", "An Invitation to Dinner" ],
+      [ "31", "Oath of Vengeance" ],
+      [ "31", "A Raven at the Door" ],
+      [ "31", "Mad Tea Party" ],
+      [ "31", "Sealed in Amber" ],
+      [ "31", "The Final Vintage" ],
+      [ "32", "Wrath of the Earth" ],
+      [ "31", "Ravens' Bane" ],
+      [ "31", "Sunrise" ]
     ]
   },
   {
-    "Id": 20,
+    "Id": "19",
     "Name": ["The Haunting of Saltmarsh (Legendary)"],
     "SortLevel": 32,
     "NPC": ["Mara Deckland"],
     "TomeLevel": [3],
     "SpecialRewards": ["Saltmeadow Hay, Otherworldy Cards, Star Fragments (H+), Minor Artifact (H+), Spark of Logic (E+)"],
     "Quests": [
-
+      [ "Lvl", "Quest", "The Haunting of Saltmarsh (Legendary)" ],
+      [ "32", "The Haunting of Saltmarsh" ],
+      [ "32", "Under the Cover of Darkness" ],
+      [ "32", "Danger at Dunwater" ],
+      [ "32", "The Final Enemy" ],
+      [ "32", "Swim at Your Own Risk" ],
+      [ "32", "Back to Basics" ],
+      [ "32", "What Sleeps Below" ],
+      [ "32", "The Hijacked Haul" ],
+      [ "32", "Rest for the Night" ],
+      [ "32", "Down You Go" ]
     ]
   },
   {
-    "Id": 21,
+    "Id": "20",
     "Name": ["Cogs Explorer Dungeons (Epic)"],
     "SortLevel": 32,
     "NPC": ["Alle Latham"],
     "TomeLevel": [3],
     "SpecialRewards": ["Nearly Finished components, Uncanny Cards"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Cogs Explorer Dungeons (Heroic)" ],
+      [ "32", "Ruinous Schemes" ],
+      [ "32", "Roll Call" ],
+      [ "32", "Scavenger Hunt" ],
+      [ "32", "Thralls of the Fungus Lord" ],
+      [ "32", "Security Detail" ],
+      [ "32", "The Magma Must Flow" ],
+      [ "32", "Smash and Burn" ],
+      [ "32", "The Wraithcallers" ]
     ]
   },
   {
-    "Id": 22,
+    "Id": "21",
     "Name": ["Masterminds of Sharn (Legendary)"],
     "SortLevel": 32,
     "NPC": ["Cyrene Gorham"],
     "TomeLevel": [3],
     "SpecialRewards": ["Nearly Finished components, Uncanny Cards"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Masterminds of Sharn (Legendary)" ],
+      [ "32", "Lost at Sea" ],
+      [ "32", "A Sharn Welcome" ],
+      [ "32", "Red Rain" ],
+      [ "32", "Best Laid Plans" ],
+      [ "32", "The Same Old Song" ],
+      [ "32", "Just Business" ],
+      [ "32", "No Refunds" ],
+      [ "32", "House of Pain" ],
+      [ "32", "Blown Deadline" ],
+      [ "32", "Reach for the Sky" ]
     ]
   },
   {
-    "Id": 23,
+    "Id": "22",
     "Name": ["Fables of the Feywild (Legendary)"],
     "SortLevel": 32,
     "NPC": ["Amber Brightleaf"],
     "TomeLevel": [3],
     "SpecialRewards": ["Chunks of Ferrocrystal, Accursed Cards, Minor Artifact (H+), Glamered Weapon Aura (E+)"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Fables of the Feywild (Legendary)" ],
+      [ "32", "The Endless Revels" ],
+      [ "32", "Witch Hunt" ],
+      [ "32", "Make Believe" ],
+      [ "32", "A Frosty Reception" ],
+      [ "32", "Wake Me Up Inside" ],
+      [ "32", "The Icemount Curse" ],
+      [ "32", "The Thornwright" ],
+      [ "32", "Needle in a Fey Stack" ],
+      [ "32", "Quid Pro Quo" ],
+      [ "32", "Immortality Lessons" ],
+      [ "32", "Combatting Corruption" ],
+      [ "32", "The Legend of the Lost Locket" ],
+      [ "32", "The Knight Who Cried Windmill" ]
     ]
   },
   {
-    "Id": 24,
+    "Id": "23",
     "Name": ["Isle of Dread (Legendary)"],
     "SortLevel": 33,
     "NPC": ["Okmak the Tale-weaver"],
     "TomeLevel": [3],
     "SpecialRewards": ["Dinosaur Bone components, Otherworldly Cards, Minor Artifact (H+), Bonepicker (H+)"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Isle of Dread (Legendary)" ],
+      [ "33", "Captive of the Hidden God" ],
+      [ "33", "The Curse and the Captive Crustacean" ],
+      [ "33", "Plundering Pirates' Point" ],
+      [ "33", "Bullywugs and Booby Traps" ],
+      [ "34", "Fall of the Forbidden Temple" ],
+      [ "33", "Wild Thing" ],
+      [ "33", "The Stone Crypt Chronicle" ],
+      [ "33", "All Hail the King" ],
+      [ "33", "Trials of the Triceratops" ],
+      [ "33", "The Trouble with Tar Pits" ],
+      [ "33", "Whispers of Return" ],
+      [ "33", "Spiders and Flies" ]
     ]
   },
   {
-    "Id": 25,
+    "Id": "24",
     "Name": ["Vecna Unleashed (Legendary)"],
     "SortLevel": 33,
     "NPC": ["Orm the Trail-blazer"],
     "TomeLevel": [3],
     "SpecialRewards": ["Forbidden Cards, Minor Artifact (H+)"],
     "Quests": [
-
+      [ "Lvl", "Quest", "Vecna Unleashed (Legendary)" ],
+      [ "34", "Turn the Page" ],
+      [ "34", "Grand Theft Aureon" ],
+      [ "34", "Vecna Unleashed" ],
+      [ "34", "The Bark and the Blade" ],
+      [ "34", "Enemy of my Enemy" ],
+      [ "34", "The Evil We Know" ],
+      [ "34", "Law and Order" ],
+      [ "34", "Taken in Hand" ],
+      [ "34", "Vecna Denied" ],
+      [ "34", "Paper Trail" ],
+      [ "34", "Party 101" ],
+      [ "34", "The Devils to Pay" ],
+      [ "34", "What Dreams May Come" ]
     ]
   },
   {
-    "Id": 26,
+    "Id": "25",
     "Name": ["Magic of Myth Drannor (Heroic)"],
     "SortLevel": 13,
     "NPC": ["Hinnia Fernshadow"],
@@ -329,7 +501,7 @@
     ]
   },
   {
-    "Id": 27,
+    "Id": "26",
     "Name": ["Magic of Myth Drannor (Legendary)"],
     "SortLevel": 35,
     "NPC": ["Lothas Vinewall"],
