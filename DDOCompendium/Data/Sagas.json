@@ -1,376 +1,12 @@
-{
-  "SagaInfos": [
-    {
-      "Id": 1,
-      "Name": "The Haunting of Saltmarsh (Heroic)",
-      "SortLevel": 3,
-      "NPC": "Mattias Deckland",
-      "TomeLevel": 1,
-      "SpecialRewards": "Saltmeadow Hay",
-      "Quests": [
-        [ "Lvl", "Quest", "The Haunting of Saltmarsh (Heroic)" ],
-        [ "3", "The Haunting of Saltmarsh" ],
-        [ "3", "Under the Cover of Darkness" ],
-        [ "3", "Danger at Dunwater" ],
-        [ "3", "The Final Enemy" ],
-        [ "3", "Swim at Your Own Risk" ],
-        [ "3", "Back to Basics" ],
-        [ "3", "What Sleeps Below" ],
-        [ "3", "The Hijacked Haul" ],
-        [ "3", "Rest for the Night" ],
-        [ "3", "Down You Go" ]
-      ]
-    },
-    {
-      "Id": 2,
-      "Name": "The Pirates of the Thunder Sea (Heroic)",
-      "SortLevel": 4,
-      "NPC": "Drell Jake",
-      "TomeLevel": 1,
-      "SpecialRewards": "",
-      "Quests": [
-        [ "Lvl", "Quest", "The Pirates of the Thunder Sea (Heroic)" ],
-        [ "4", "Irestone Inlet" ],
-        [ "5", "The Legend of Two-Toed Tobias" ],
-        [ "5", "Prove Your Worth" ],
-        [ "5", "Ghost of a Chance" ],
-        [ "6", "The Trogolodytes' Get" ],
-        [ "7", "Old Grey Garl" ],
-        [ "7", "The Black Loch" ],
-        [ "7", "Storm the Beaches" ],
-        [ "7", "Bargain of Blood" ],
-        [ "7", "The Tide Turns" ]
-      ]
-    },
-    {
-      "Id": 3,
-      "Name": "Fables of the Feywild (Heroic)",
-      "SortLevel": 5,
-      "NPC": "Gallant Twillford",
-      "TomeLevel": 1,
-      "SpecialRewards": "Chunks of Ferrocrystal, Glamered Weapon Aura (E+)",
-      "Quests": [
-        [ "Lvl", "Quest", "Fables of the Feywild (Heroic)" ],
-        [ "5", "The Endless Revels" ],
-        [ "5", "Witch Hunt" ],
-        [ "5", "Make Believe" ],
-        [ "5", "A Frosty Reception" ],
-        [ "5", "Wake Me Up Inside" ],
-        [ "6", "The Icemount Curse" ],
-        [ "6", "The Thornwright" ],
-        [ "6", "Needle in a Fey Stack" ],
-        [ "6", "Quid Pro Quo" ],
-        [ "6", "Immortality Lessons" ],
-        [ "5", "Combatting Corruption" ],
-        [ "5", "The Legend of the Lost Locket" ],
-        [ "6", "The Knight Who Cried Windmill" ]
-      ]
-    },
-    {
-      "Id": 4,
-      "Name": "Isle of Dread (Heroic)",
-      "SortLevel": 7,
-      "NPC": "Yupan the Tale Weaver",
-      "TomeLevel": 1,
-      "SpecialRewards": "",
-      "Quests": [
-        [ "Lvl", "Quest", "Isle of Dread (Heroic)" ],
-        [ "7", "Captive of the Hidden God" ],
-        [ "7", "The Curse and the Captive Crustacean" ],
-        [ "7", "Plundering Pirates' Point" ],
-        [ "7", "Bullywugs and Booby Traps" ],
-        [ "8", "Fall of the Forbidden Temple" ],
-        [ "7", "Wild Thing" ],
-        [ "7", "The Stone Crypt Chronicle" ],
-        [ "7", "All Hail the King" ],
-        [ "7", "Trials of the Triceratops" ],
-        [ "7", "The Trouble with Tar Pits" ],
-        [ "7", "Whispers of Return" ],
-        [ "7", "Spiders and Flies" ]
-      ]
-    },
-    {
-      "Id": 5,
-      "Name": "Mists of Ravenloft (Heroic)",
-      "SortLevel": 10,
-      "NPC": "Livius Lanston",
-      "TomeLevel": 1,
-      "SpecialRewards": "Vistani Talismans",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 6,
-      "Name": "In the Wastes of Gianthold (Heroic)",
-      "SortLevel": 13,
-      "NPC": "Tiragonis",
-      "TomeLevel": 1,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 7,
-      "Name": "Cogs Explorer Dungeons (Heroic)",
-      "SortLevel": 15,
-      "NPC": "Bellman Rulth",
-      "TomeLevel": 1,
-      "SpecialRewards": "Nearly Finished components",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 8,
-      "Name": "Masterminds of Sharn (Heroic)",
-      "SortLevel": 15,
-      "NPC": "Darius Benford",
-      "TomeLevel": 1,
-      "SpecialRewards": "Nearly Finished components",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 9,
-      "Name": "Perils of Cormyr (Heroic)",
-      "SortLevel": 19,
-      "NPC": "Horton Waxley",
-      "TomeLevel": 2,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 10,
-      "Name": "Honor of the Huntsilvers (Heroic)",
-      "SortLevel": 19,
-      "NPC": "Antone Corluk",
-      "TomeLevel": 2,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 11,
-      "Name": "Vecna Unleashed (Heroic)",
-      "SortLevel": 7,
-      "NPC": "Aster the Trail-blazer",
-      "TomeLevel": 2,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 12,
-      "Name": "The End of Eberron (Epic)",
-      "SortLevel": 21,
-      "NPC": "Gatekeeper Grazla",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 13,
-      "Name": "The Planeswalker's Path (Epic)",
-      "SortLevel": 21,
-      "NPC": "Istine Madrovelle",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 14,
-      "Name": "Menace of the Underdark (Epic)",
-      "SortLevel": 21,
-      "NPC": "Lady Azana Winter",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 15,
-      "Name": "Perils of Cormyr (Epic)",
-      "SortLevel": 21,
-      "NPC": "Fidilee Fallowfield",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 16,
-      "Name": "Honor of the Huntsilvers (Epic)",
-      "SortLevel": 23,
-      "NPC": "Belvedere Huntsilver",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 17,
-      "Name": "The Pirates of the Thunder Sea (Epic)",
-      "SortLevel": 20,
-      "NPC": "Cassiopia Carragher",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 18,
-      "Name": "In the Wastes of Gianthold (Epic)",
-      "SortLevel": 24,
-      "NPC": "Paddrog",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 19,
-      "Name": "Mists of Ravenloft (Epic)",
-      "SortLevel": 31,
-      "NPC": "Lavinia Lanston",
-      "TomeLevel": 3,
-      "SpecialRewards": "Sentient Jewels, Accursed Cards",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 20,
-      "Name": "The Haunting of Saltmarsh (Legendary)",
-      "SortLevel": 32,
-      "NPC": "Mara Deckland",
-      "TomeLevel": 3,
-      "SpecialRewards": "Saltmeadow Hay, Otherworldy Cards, Star Fragments (H+), Minor Artifact (H+), Spark of Logic (E+)",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 21,
-      "Name": "Cogs Explorer Dungeons (Epic)",
-      "SortLevel": 32,
-      "NPC": "Alle Latham",
-      "TomeLevel": 3,
-      "SpecialRewards": "Nearly Finished components, Uncanny Cards",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 22,
-      "Name": "Masterminds of Sharn (Legendary)",
-      "SortLevel": 32,
-      "NPC": "Cyrene Gorham",
-      "TomeLevel": 3,
-      "SpecialRewards": "Nearly Finished components, Uncanny Cards",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 23,
-      "Name": "Fables of the Feywild (Legendary)",
-      "SortLevel": 32,
-      "NPC": "Amber Brightleaf",
-      "TomeLevel": 3,
-      "SpecialRewards": "Chunks of Ferrocrystal, Accursed Cards, Minor Artifact (H+), Glamered Weapon Aura (E+)",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 24,
-      "Name": "Isle of Dread (Legendary)",
-      "SortLevel": 33,
-      "NPC": "Okmak the Tale-weaver",
-      "TomeLevel": 3,
-      "SpecialRewards": "Dinosaur Bone components, Otherworldly Cards, Minor Artifact (H+), Bonepicker (H+)",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 25,
-      "Name": "Vecna Unleashed (Legendary)",
-      "SortLevel": 33,
-      "NPC": "Orm the Trail-blazer",
-      "TomeLevel": 3,
-      "SpecialRewards": "Forbidden Cards, Minor Artifact (H+)",
-      "Quests": [
-
-      ]
-    },
-    {
-      "Id": 26,
-      "Name": "Magic of Myth Drannor (Heroic)",
-      "SortLevel": 13,
-      "NPC": "Hinnia Fernshadow",
-      "TomeLevel": 1,
-      "SpecialRewards": "",
-      "Quests": [
-        [ "Lvl", "Quest", "Magic of Myth Drannor (Heroic)" ],
-        [ "13", "Book Burning" ],
-        [ "13", "Death Hosts This Banquet" ],
-        [ "13", "Ettercap Incursion" ],
-        [ "13", "Oghma's Song" ],
-        [ "13", "Portal to Below" ],
-        [ "13", "Secrets of the Red Wizards" ],
-        [ "13", "Seeds of Decay" ],
-        [ "13", "The House of Gems" ],
-        [ "13", "The Key to the Mythal" ],
-        [ "13", "The Safehold" ],
-        [ "13", "The Zulkir's Plan" ],
-        [ "13", "Times Long Past" ],
-        [ "13", "Voices of the Dead" ]
-      ]
-    },
-    {
-      "Id": 27,
-      "Name": "Magic of Myth Drannor (Legendary)",
-      "SortLevel": 35,
-      "NPC": "Lothas Vinewall",
-      "TomeLevel": 3,
-      "SpecialRewards": "",
-      "Quests": [
-        [ "Lvl", "Quest", "Magic of Myth Drannor (Legendary)" ],
-        [ "35", "Book Burning" ],
-        [ "35", "Death Hosts This Banquet" ],
-        [ "35", "Ettercap Incursion" ],
-        [ "35", "Oghma's Song" ],
-        [ "35", "Portal to Below" ],
-        [ "35", "Secrets of the Red Wizards" ],
-        [ "35", "Seeds of Decay" ],
-        [ "35", "The House of Gems" ],
-        [ "35", "The Key to the Mythal" ],
-        [ "35", "The Safehold" ],
-        [ "35", "The Zulkir's Plan" ],
-        [ "35", "Times Long Past" ],
-        [ "35", "Voices of the Dead" ]
-      ]
-    }
-  ],
-  "SagaTables": [
-    [
+[
+  {
+    "Id": 1,
+    "Name": ["The Haunting of Saltmarsh (Heroic)"],
+    "SortLevel": 3,
+    "NPC": ["Mattias Deckland"],
+    "TomeLevel": [1],
+    "SpecialRewards": ["Saltmeadow Hay"],
+    "Quests": [
       [ "Lvl", "Quest", "The Haunting of Saltmarsh (Heroic)" ],
       [ "3", "The Haunting of Saltmarsh" ],
       [ "3", "Under the Cover of Darkness" ],
@@ -382,8 +18,16 @@
       [ "3", "The Hijacked Haul" ],
       [ "3", "Rest for the Night" ],
       [ "3", "Down You Go" ]
-    ],
-    [
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": ["The Pirates of the Thunder Sea (Heroic)"],
+    "SortLevel": 4,
+    "NPC": ["Drell Jake"],
+    "TomeLevel": [1],
+    "SpecialRewards": [""],
+    "Quests": [
       [ "Lvl", "Quest", "The Pirates of the Thunder Sea (Heroic)" ],
       [ "4", "Irestone Inlet" ],
       [ "5", "The Legend of Two-Toed Tobias" ],
@@ -395,8 +39,16 @@
       [ "7", "Storm the Beaches" ],
       [ "7", "Bargain of Blood" ],
       [ "7", "The Tide Turns" ]
-    ],
-    [
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": ["Fables of the Feywild (Heroic)"],
+    "SortLevel": 5,
+    "NPC": ["Gallant Twillford"],
+    "TomeLevel": [1],
+    "SpecialRewards": ["Chunks of Ferrocrystal, Glamered Weapon Aura (E+)"],
+    "Quests": [
       [ "Lvl", "Quest", "Fables of the Feywild (Heroic)" ],
       [ "5", "The Endless Revels" ],
       [ "5", "Witch Hunt" ],
@@ -411,8 +63,16 @@
       [ "5", "Combatting Corruption" ],
       [ "5", "The Legend of the Lost Locket" ],
       [ "6", "The Knight Who Cried Windmill" ]
-    ],
-    [
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": ["Isle of Dread (Heroic)"],
+    "SortLevel": 7,
+    "NPC": ["Yupan the Tale Weaver"],
+    "TomeLevel": [1],
+    "SpecialRewards": [""],
+    "Quests": [
       [ "Lvl", "Quest", "Isle of Dread (Heroic)" ],
       [ "7", "Captive of the Hidden God" ],
       [ "7", "The Curse and the Captive Crustacean" ],
@@ -427,5 +87,269 @@
       [ "7", "Whispers of Return" ],
       [ "7", "Spiders and Flies" ]
     ]
-  ]
-}
+  },
+  {
+    "Id": 5,
+    "Name": ["Mists of Ravenloft (Heroic)"],
+    "SortLevel": 10,
+    "NPC": ["Livius Lanston"],
+    "TomeLevel": [1],
+    "SpecialRewards": ["Vistani Talismans"],
+    "Quests": [
+      [ "Lvl", "Quest", "Mists of Ravenloft (Heroic)" ],
+      [ "10", "Into the Mists" ],
+      [ "10", "Death House" ],
+      [ "10", "Fresh-baked Dreams" ],
+      [ "10", "An Invitation to Dinner" ],
+      [ "11", "Oath of Vengeance" ],
+      [ "11", "A Raven at the Door" ],
+      [ "11", "Mad Tea Party" ],
+      [ "11", "Sealed in Amber" ],
+      [ "12", "The Final Vintage" ],
+      [ "12", "Wrath of the Earth" ],
+      [ "12", "Ravens' Bane" ],
+      [ "12", "Sunrise" ]
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": ["In the Wastes of Gianthold (Heroic)"],
+    "SortLevel": 13,
+    "NPC": ["Tiragonis"],
+    "TomeLevel": [1],
+    "SpecialRewards": [""],
+    "Quests": [
+      [ "Lvl", "Quest", "In the Wastes of Gianthold (Heroic)" ],
+      [ "13", "Feast or Famine" ],
+      [ "14", "A Cabal for One" ],
+      [ "14", "The Crucible" ],
+      [ "13", "The Maze of Madness" ],
+      [ "13", "Trial by Fire" ],
+      [ "14", "Madstone Crater" ],
+      [ "13", "Foundation of Discord" ],
+      [ "13", "A Cry for Help" ],
+      [ "14", "The Prison of the Planes" ],
+      [ "14", "Gianthold Tor" ]
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": ["Cogs Explorer Dungeons (Heroic)"],
+    "SortLevel": 15,
+    "NPC": ["Bellman Rulth"],
+    "TomeLevel": [1],
+    "SpecialRewards": ["Nearly Finished components"],
+    "Quests": [
+      [ "Lvl", "Quest", "Cogs Explorer Dungeons (Heroic)" ],
+      [ "15", "Ruinous Schemes" ],
+      [ "16", "Roll Call" ],
+      [ "16", "Scavenger Hunt" ],
+      [ "15", "Thralls of the Fungus Lord" ],
+      [ "16", "Security Detail" ],
+      [ "16", "The Magma Must Flow" ],
+      [ "15", "Smash and Burn" ],
+      [ "15", "The Wraithcallers" ]
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": ["Masterminds of Sharn (Heroic)"],
+    "SortLevel": 15,
+    "NPC": ["Darius Benford"],
+    "TomeLevel": [1],
+    "SpecialRewards": ["Nearly Finished components"],
+    "Quests": [
+      [ "Lvl", "Quest", "Masterminds of Sharn (Heroic)" ],
+      [ "15", "Lost at Sea" ],
+      [ "15", "A Sharn Welcome" ],
+      [ "15", "Red Rain" ],
+      [ "15", "Best Laid Plans" ],
+      [ "15", "The Same Old Song" ],
+      [ "15", "Just Business" ],
+      [ "16", "No Refunds" ],
+      [ "16", "House of Pain" ],
+      [ "16", "Blown Deadline" ],
+      [ "16", "Reach for the Sky" ]
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": [ "Perils of Cormyr (Heroic)", "Honor of the Huntsilvers (Heroic)" ],
+    "SortLevel": 19,
+    "NPC": [ "Horton Waxley", "Antone Corluk" ],
+    "TomeLevel": [2, 2],
+    "SpecialRewards": ["", ""],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": ["Vecna Unleashed (Heroic)"],
+    "SortLevel": 7,
+    "NPC": ["Aster the Trail-blazer"],
+    "TomeLevel": [2],
+    "SpecialRewards": [""],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 12,
+    "Name": [ "The End of Eberron (Epic)", "The Planeswalker's Path (Epic)", "Menace of the Underdark (Epic)", "Perils of Cormyr (Epic)", "Honor of the Huntsilvers (Epic)" ],
+    "SortLevel": 21,
+    "NPC": [ "Gatekeeper Grazla", "Istine Madrovelle", "Lady Azana Winter", "Fidilee Fallowfield", "Belvedere Huntsilver" ],
+    "TomeLevel": [ 3, 3, 3, 3, 3 ],
+    "SpecialRewards": [ "", "", "", "", "" ],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 17,
+    "Name": ["The Pirates of the Thunder Sea (Epic)"],
+    "SortLevel": 20,
+    "NPC": ["Cassiopia Carragher"],
+    "TomeLevel": [3],
+    "SpecialRewards": [""],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 18,
+    "Name": ["In the Wastes of Gianthold (Epic)"],
+    "SortLevel": 24,
+    "NPC": ["Paddrog"],
+    "TomeLevel": [3],
+    "SpecialRewards": [""],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 19,
+    "Name": ["Mists of Ravenloft (Epic)"],
+    "SortLevel": 31,
+    "NPC": ["Lavinia Lanston"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Sentient Jewels, Accursed Cards"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 20,
+    "Name": ["The Haunting of Saltmarsh (Legendary)"],
+    "SortLevel": 32,
+    "NPC": ["Mara Deckland"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Saltmeadow Hay, Otherworldy Cards, Star Fragments (H+), Minor Artifact (H+), Spark of Logic (E+)"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 21,
+    "Name": ["Cogs Explorer Dungeons (Epic)"],
+    "SortLevel": 32,
+    "NPC": ["Alle Latham"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Nearly Finished components, Uncanny Cards"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 22,
+    "Name": ["Masterminds of Sharn (Legendary)"],
+    "SortLevel": 32,
+    "NPC": ["Cyrene Gorham"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Nearly Finished components, Uncanny Cards"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 23,
+    "Name": ["Fables of the Feywild (Legendary)"],
+    "SortLevel": 32,
+    "NPC": ["Amber Brightleaf"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Chunks of Ferrocrystal, Accursed Cards, Minor Artifact (H+), Glamered Weapon Aura (E+)"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 24,
+    "Name": ["Isle of Dread (Legendary)"],
+    "SortLevel": 33,
+    "NPC": ["Okmak the Tale-weaver"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Dinosaur Bone components, Otherworldly Cards, Minor Artifact (H+), Bonepicker (H+)"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 25,
+    "Name": ["Vecna Unleashed (Legendary)"],
+    "SortLevel": 33,
+    "NPC": ["Orm the Trail-blazer"],
+    "TomeLevel": [3],
+    "SpecialRewards": ["Forbidden Cards, Minor Artifact (H+)"],
+    "Quests": [
+
+    ]
+  },
+  {
+    "Id": 26,
+    "Name": ["Magic of Myth Drannor (Heroic)"],
+    "SortLevel": 13,
+    "NPC": ["Hinnia Fernshadow"],
+    "TomeLevel": [1],
+    "SpecialRewards": [""],
+    "Quests": [
+      [ "Lvl", "Quest", "Magic of Myth Drannor (Heroic)" ],
+      [ "13", "Book Burning" ],
+      [ "13", "Death Hosts This Banquet" ],
+      [ "13", "Ettercap Incursion" ],
+      [ "13", "Oghma's Song" ],
+      [ "13", "Portal to Below" ],
+      [ "13", "Secrets of the Red Wizards" ],
+      [ "13", "Seeds of Decay" ],
+      [ "13", "The House of Gems" ],
+      [ "13", "The Key to the Mythal" ],
+      [ "13", "The Safehold" ],
+      [ "13", "The Zulkir's Plan" ],
+      [ "13", "Times Long Past" ],
+      [ "13", "Voices of the Dead" ]
+    ]
+  },
+  {
+    "Id": 27,
+    "Name": ["Magic of Myth Drannor (Legendary)"],
+    "SortLevel": 35,
+    "NPC": ["Lothas Vinewall"],
+    "TomeLevel": [3],
+    "SpecialRewards": [""],
+    "Quests": [
+      [ "Lvl", "Quest", "Magic of Myth Drannor (Legendary)" ],
+      [ "35", "Book Burning" ],
+      [ "35", "Death Hosts This Banquet" ],
+      [ "35", "Ettercap Incursion" ],
+      [ "35", "Oghma's Song" ],
+      [ "35", "Portal to Below" ],
+      [ "35", "Secrets of the Red Wizards" ],
+      [ "35", "Seeds of Decay" ],
+      [ "35", "The House of Gems" ],
+      [ "35", "The Key to the Mythal" ],
+      [ "35", "The Safehold" ],
+      [ "35", "The Zulkir's Plan" ],
+      [ "35", "Times Long Past" ],
+      [ "35", "Voices of the Dead" ]
+    ]
+  }
+]

@@ -21,7 +21,7 @@ namespace DDOCompendium
         public DataView questsDataView;
         public Character[] characterData;
         public List<DataTable> SagaTables = [];
-        public SagaData sagaData;
+        public List<Saga> sagaData;
         public int SelectedCharacterID = Properties.Settings.Default.SelectedCharacter;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
@@ -42,19 +42,7 @@ namespace DDOCompendium
 
         private bool ImportData()
         {
-            // import quest data
-            //if (Properties.Settings.Default.questsFilePath == "")
-            //{
-            //    OpenFileDialog filedialog = new()
-            //    {
-            //        Title = "Find Quests.json"
-            //    };
-            //    if (filedialog.ShowDialog() == DialogResult.OK)
-            //    {
-            //        Properties.Settings.Default.questsFilePath = filedialog.FileName;
-            //    }
-            //    else return false;
-            //}
+            Text = "DDO Compendium - " + SelectedCharacterName;
             QuestsFilePath = DataFolderPath + "Quests.json";
             string importedJsonData = ReadFromFile(QuestsFilePath);
             var importedQuestData = JsonConvert.DeserializeObject<List<QuestPack>>(importedJsonData);
@@ -124,8 +112,14 @@ namespace DDOCompendium
 
             // import saga tables
             importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
-            sagaData = JsonConvert.DeserializeObject<SagaData>(importedJsonData);
-            foreach (Saga thisSagaData in sagaData.SagaInfos)
+            sagaData = JsonConvert.DeserializeObject<List<Saga>>(importedJsonData);
+            sagaData.Sort(delegate (Saga x, Saga y)
+            {
+                if (x.SortLevel == y.SortLevel) return 0;
+                else if (x.SortLevel < y.SortLevel) return -1;
+                else return 1;
+            });
+            foreach (Saga thisSagaData in sagaData)
             {
                 DataTable table = MakeSagaTable(thisSagaData.Quests);
                 SagaTables.Add(table);
@@ -227,6 +221,7 @@ namespace DDOCompendium
                 thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
             }
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+            Text = "DDO Compendium - " + SelectedCharacterName;
         }
 
         /// <summary>
@@ -510,19 +505,14 @@ namespace DDOCompendium
         public List<string> PastLives { get; set; }
     }
 
-    public class SagaData
-    {
-        public Saga[] SagaInfos { get; set; }
-        public string[][][] SagaTables { get; set; }
-    }
     public class Saga
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string[] Name { get; set; }
         public int SortLevel { get; set; }
-        public string NPC { get; set; }
-        public int TomeLevel { get; set; }
-        public string SpecialRewards { get; set; }
+        public string[] NPC { get; set; }
+        public int[] TomeLevel { get; set; }
+        public string[] SpecialRewards { get; set; }
         public string[][] Quests { get; set; }
     }
 }
