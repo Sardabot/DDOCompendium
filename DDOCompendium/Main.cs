@@ -19,11 +19,10 @@ namespace DDOCompendium
         public string CharactersFilePath;
         public DataTable questsTable;
         public DataView questsDataView;
-        public Character[] characterData;
+        public Dictionary<string, Character> characterData;
         public List<DataTable> SagaTables = [];
         public List<Saga> sagaData;
         public bool SagasFormatted = false;
-        public int SelectedCharacterID = Properties.Settings.Default.SelectedCharacter;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
         public string LevelFilter = "All";
@@ -60,13 +59,12 @@ namespace DDOCompendium
             // import user save data
             CharactersFilePath = DataFolderPath + "Characters.json";
             importedJsonData = ReadFromFile(CharactersFilePath);
-            var importedCharData = JsonConvert.DeserializeObject<List<Character>>(importedJsonData);
-            if (importedCharData is null)
+            characterData = JsonConvert.DeserializeObject<Dictionary<string, Character>>(importedJsonData);
+            if (characterData is null)
             {
                 MessageBox.Show("Couldn't retrieve data from Characters.json");
                 return false;
             }
-            characterData = importedCharData.ToArray();
 
             // unpack these into a table of quests
             questsTable = MakeQuestsTable();
@@ -234,14 +232,13 @@ namespace DDOCompendium
         /// newly selected character.  Also updates the column header text to the
         /// name of the newly selected character.
         /// </summary>
-        private void ChangeSelectedCharacter(int newChar)
+        private void ChangeSelectedCharacter(string newChar)
         {
             // do cleanup for old character
 
 
             // update for new character
-            SelectedCharacterID = newChar;
-            SelectedCharacterName = characterData[newChar].Name;
+            SelectedCharacterName = newChar;
             foreach (DataRow thisRow in questsTable.Rows)
             {
                 thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
@@ -258,10 +255,7 @@ namespace DDOCompendium
         /// <returns>A string representing the quest difficulty.</returns>
         private string FindQuestCompletionStatus(string questID)
         {
-            var allCompletion = characterData[SelectedCharacterID].QuestCompletion;
-            var thisCompletion = allCompletion.Where(n => n.Split(' ')[0] == questID).FirstOrDefault();
-            if (thisCompletion is null || thisCompletion == "") return "";
-            else return thisCompletion.Split(' ')[1];
+            return characterData[SelectedCharacterName].QuestCompletion.TryGetValue(questID, out var completion) ? completion : "";
         }
 
         /// <summary>
@@ -272,30 +266,22 @@ namespace DDOCompendium
         private void ChangeQuestCompletionStatus(DataGridViewCell thisCell)
         {
             string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
+
             if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
             else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo") thisCell.Value = "Casual";
             else thisCell.Value = SelectedDifficulty;
 
-            int valindex = -1;
-            string foundval = "";
-            foreach (string thisval in characterData[SelectedCharacterID].QuestCompletion)
+            if (thisCell.Value.ToString() == "")
             {
-                if (thisval.Split(' ')[0] == QuestID)
-                {
-                    valindex = characterData[SelectedCharacterID].QuestCompletion.IndexOf(thisval);
-                    foundval = thisval;
-                    break;
-                }
-            }
-            string newDiff = thisCell.Value.ToString();
-            if (newDiff == "")
-            {
-                if (valindex != -1) characterData[SelectedCharacterID].QuestCompletion.Remove(foundval);
+                characterData[SelectedCharacterName].QuestCompletion.Remove(QuestID);
             }
             else
             {
-                if (valindex == -1) characterData[SelectedCharacterID].QuestCompletion.Add(QuestID + " " + thisCell.Value.ToString());
-                else characterData[SelectedCharacterID].QuestCompletion[valindex] = QuestID + " " + thisCell.Value.ToString();
+                if (characterData[SelectedCharacterName].QuestCompletion.ContainsKey(QuestID))
+                {
+                    characterData[SelectedCharacterName].QuestCompletion[QuestID] = thisCell.Value.ToString();
+                }
+                else characterData[SelectedCharacterName].QuestCompletion.Add(QuestID, thisCell.Value.ToString());
             }
         }
 
@@ -395,34 +381,18 @@ namespace DDOCompendium
 
         private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell)
         {
-            //List<string>[] sagaArray = new List<string>[tableLayoutPanelSagas.RowCount];
-            //foreach (DataGridView thisSagaGrid in tableLayoutPanelSagas.Controls)
-            //{
-            //    for (int i = 2; i < thisSagaGrid.Columns.Count; i++)
-            //    {
-            //        var tempData = new List<string>();
-            //        foreach (DataGridViewRow thisRow in thisSagaGrid.Rows)
-            //        {
-            //            tempData.Add(thisRow.Cells[i].Value.ToString());
-            //        }
-            //        int sagaID = int.Parse((thisSagaGrid.Tag as string).Split(',')[i-2]);
-            //        if (sagaArray.Length <= sagaID) Array.Resize(ref sagaArray, sagaID + 1);
-            //        sagaArray[sagaID] = tempData;
-            //    }
-            //}
-            //characterData[SelectedCharacterID].SagaCompletion = sagaArray.ToList();
             if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
             else thisCell.Value = SelectedDifficulty;
 
-            while (characterData[SelectedCharacterID].SagaCompletion.Count <= sagaID)
+            if (!characterData[SelectedCharacterName].SagaCompletion.ContainsKey(sagaID))
             {
-                characterData[SelectedCharacterID].SagaCompletion.Add(new List<string>());
-            };
-            while (characterData[SelectedCharacterID].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
-            {
-                characterData[SelectedCharacterID].SagaCompletion[sagaID].Add("");
+                characterData[SelectedCharacterName].SagaCompletion.Add(sagaID, new List<string>());
             }
-            characterData[SelectedCharacterID].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
+            while (characterData[SelectedCharacterName].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
+            {
+                characterData[SelectedCharacterName].SagaCompletion[sagaID].Add("");
+            }
+            characterData[SelectedCharacterName].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -471,7 +441,7 @@ namespace DDOCompendium
                 // we want to provide options to change the selected character
                 e.ContextMenuStrip = contextmenuCharSelect;
                 contextmenuCharSelect.Items.Clear();
-                foreach (string thisCharName in characterData.Select(c => c.Name))
+                foreach (string thisCharName in characterData.Keys)
                 {
                     contextmenuCharSelect.Items.Add(thisCharName);
                 }
@@ -511,8 +481,8 @@ namespace DDOCompendium
         private void contextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
-            SelectedCharacterID = characterData.Where(item => item.Name == clickedItem.Text).FirstOrDefault().Id;
-            ChangeSelectedCharacter(SelectedCharacterID);
+            SelectedCharacterName = clickedItem.Text;
+            ChangeSelectedCharacter(SelectedCharacterName);
         }
 
         private void TcTabs_SelectedIndexChanged(object sender, EventArgs e)
@@ -577,11 +547,9 @@ namespace DDOCompendium
 
     public class Character
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public List<string> QuestCompletion { get; set; }
-        public List<List<string>> SagaCompletion { get; set; }
-        public List<string> PastLives { get; set; }
+        public Dictionary<string, string> QuestCompletion { get; set; }
+        public Dictionary<int, List<string>> SagaCompletion { get; set; }
+        public Dictionary<string, string> PastLives { get; set; }
     }
 
     public class Saga
