@@ -81,7 +81,7 @@ namespace DDOCompendium
                     tempRow.SetField("L", thisQuest.LegLevel);
                     tempRow.SetField("Name", thisQuest.Name);
                     tempRow.SetField("Pack", thisPack.Name);
-                    tempRow.SetField("Character", FindQuestCompletionStatus(tempID));
+                    tempRow.SetField("Character", "");
                     tempRow.SetField("Patron", thisQuest.Patron);
                     tempRow.SetField("Favor", thisQuest.Favor);
                     tempRow.SetField("Style", thisQuest.Style);
@@ -149,6 +149,9 @@ namespace DDOCompendium
             }
 
             // setup settings tab
+
+            // load character data into things
+            ChangeSelectedCharacter(SelectedCharacterName);
 
             return true;
         }
@@ -228,23 +231,43 @@ namespace DDOCompendium
         }
 
         /// <summary>
-        /// Updates the quests table with the completion information for the
+        /// Updates the various tables and tabs with information for the
         /// newly selected character.  Also updates the column header text to the
         /// name of the newly selected character.
         /// </summary>
         private void ChangeSelectedCharacter(string newChar)
         {
-            // do cleanup for old character
-
-
-            // update for new character
             SelectedCharacterName = newChar;
+            LoadQuestDataForCharacter();
+            LoadSagaDataForCharacter();
+            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+            Text = "DDO Compendium - " + SelectedCharacterName;
+        }
+
+        private void LoadQuestDataForCharacter()
+        {
             foreach (DataRow thisRow in questsTable.Rows)
             {
                 thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
             }
-            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
-            Text = "DDO Compendium - " + SelectedCharacterName;
+        }
+
+        private void LoadSagaDataForCharacter()
+        {
+            foreach (DataGridView thisSagadg in tableLayoutPanelSagas.Controls)
+            {
+                string[] gridIDs = (thisSagadg.Tag as string).Split(',');
+                for (int i = 0; i < gridIDs.Count(); i++)
+                {
+                    characterData[SelectedCharacterName].SagaCompletion.TryGetValue(int.Parse(gridIDs[i]), out List<string> charThisSagaData);
+                    if (charThisSagaData == null) charThisSagaData = new List<string>();
+                    for (int row = 0; row < thisSagadg.RowCount; row++)
+                    {
+                        if (row < charThisSagaData.Count) thisSagadg.Rows[row].Cells[2 + i].Value = charThisSagaData[row];
+                        else thisSagadg.Rows[row].Cells[2 + i].Value = "";
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -283,6 +306,22 @@ namespace DDOCompendium
                 }
                 else characterData[SelectedCharacterName].QuestCompletion.Add(QuestID, thisCell.Value.ToString());
             }
+        }
+
+        private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell)
+        {
+            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
+            else thisCell.Value = SelectedDifficulty;
+
+            if (!characterData[SelectedCharacterName].SagaCompletion.ContainsKey(sagaID))
+            {
+                characterData[SelectedCharacterName].SagaCompletion.Add(sagaID, new List<string>());
+            }
+            while (characterData[SelectedCharacterName].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
+            {
+                characterData[SelectedCharacterName].SagaCompletion[sagaID].Add("");
+            }
+            characterData[SelectedCharacterName].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
         }
 
         /// <summary>
@@ -377,22 +416,6 @@ namespace DDOCompendium
                         break;
                 }
             }
-        }
-
-        private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell)
-        {
-            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
-            else thisCell.Value = SelectedDifficulty;
-
-            if (!characterData[SelectedCharacterName].SagaCompletion.ContainsKey(sagaID))
-            {
-                characterData[SelectedCharacterName].SagaCompletion.Add(sagaID, new List<string>());
-            }
-            while (characterData[SelectedCharacterName].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
-            {
-                characterData[SelectedCharacterName].SagaCompletion[sagaID].Add("");
-            }
-            characterData[SelectedCharacterName].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -490,6 +513,7 @@ namespace DDOCompendium
             if (tcTabs.TabPages[tcTabs.SelectedIndex].Text == "Sagas" && !SagasFormatted)
             {
                 FormatSagaGrids();
+                LoadSagaDataForCharacter();
             }
         }
     }

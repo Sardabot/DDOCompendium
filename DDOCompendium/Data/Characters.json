@@ -4,7 +4,21 @@
       "2-2": "Hard",
       "1-2": "Hard"
     },
-    "SagaCompletion": {},
+    "SagaCompletion": {
+      "0": [
+        "Elite",
+        "",
+        "Elite"
+      ],
+      "1": [
+        "Elite",
+        "Elite",
+        "",
+        "Elite",
+        "",
+        "Elite"
+      ]
+    },
     "PastLives": {}
   },
   "Tyrmaeli": {
