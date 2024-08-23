@@ -19,7 +19,16 @@
         "Elite"
       ]
     },
-    "PastLives": {}
+    "PastLives": {
+      "Half-Elf": "2",
+      "Chaosmancer": "2"
+    },
+    "Tomes": {
+      "Fate": "2",
+      "Hide": "2",
+      "Heroic Learning": "Lesser",
+      "Epic Learning": "Greater"
+    }
   },
   "Tyrmaeli": {
     "QuestCompletion": {
@@ -27,6 +36,7 @@
       "1-1": "Elite"
     },
     "SagaCompletion": {},
-    "PastLives": {}
+    "PastLives": {},
+    "Tomes": {}
   }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,7 @@ namespace DDOCompendium
         public string SelectedDifficulty = "Elite";
         public string LevelFilter = "All";
         private DataGridViewCell ClickedCell;
+        private int ClickedSagaID;
         public DataGridViewCellStyle darkgridcellstyle = new()
         {
             BackColor = Color.FromArgb(64, 64, 64),
@@ -144,6 +146,7 @@ namespace DDOCompendium
                     Tag = thisSagaData.Id
                 };
                 thisdgview.CellMouseClick += DatagridSagas_CellMouseClick;
+                thisdgview.CellContextMenuStripNeeded += DatagridSagas_CellContextMenuStripNeeded;
                 tableLayoutPanelSagas.RowCount += 1;
                 tableLayoutPanelSagas.Controls.Add(thisdgview, 0, tableLayoutPanelSagas.RowCount - 1);
             }
@@ -240,6 +243,7 @@ namespace DDOCompendium
             SelectedCharacterName = newChar;
             LoadQuestDataForCharacter();
             LoadSagaDataForCharacter();
+            LoadPastLivesAndTomesForCharacter();
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
             Text = "DDO Compendium - " + SelectedCharacterName;
         }
@@ -270,6 +274,40 @@ namespace DDOCompendium
             }
         }
 
+        private void LoadPastLivesAndTomesForCharacter()
+        {
+            string tomeval;
+            string lifeval;
+            foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel1.Controls.OfType<NumericUpDown>())
+            {
+                var tomename = thisnumbox.Tag as string;
+                if (characterData[SelectedCharacterName].Tomes.TryGetValue(tomename, out tomeval))
+                {
+                    thisnumbox.Value = int.Parse(tomeval);
+                }
+                else thisnumbox.Value = 0;
+            }
+            if (characterData[SelectedCharacterName].Tomes.TryGetValue("Heroic Learning", out tomeval))
+            {
+                cmboHeroicLearning.Text = tomeval;
+            }
+            else cmboHeroicLearning.Text = "";
+            if (characterData[SelectedCharacterName].Tomes.TryGetValue("Epic Learning", out tomeval))
+            {
+                cmboEpicLearning.Text = tomeval;
+            }
+            else cmboEpicLearning.Text = "";
+            foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel2.Controls.OfType<NumericUpDown>())
+            {
+                var lifename = thisnumbox.Tag as string;
+                if (characterData[SelectedCharacterName].PastLives.TryGetValue(lifename, out lifeval))
+                {
+                    thisnumbox.Value = int.Parse(lifeval);
+                }
+                else thisnumbox.Value = 0;
+            }
+        }
+
         /// <summary>
         /// Searches characterData for the completion status of a quest.
         /// Uses the currently selected character.
@@ -286,13 +324,13 @@ namespace DDOCompendium
         /// Also updates the associated entry in the characterData object.
         /// </summary>
         /// <param name="thisCell">The affected cell.</param>
-        private void ChangeQuestCompletionStatus(DataGridViewCell thisCell)
+        private void ChangeQuestCompletionStatus(DataGridViewCell thisCell, string chosenDiff)
         {
             string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
 
-            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
+            if (thisCell.Value.ToString() == chosenDiff) thisCell.Value = "";
             else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo") thisCell.Value = "Casual";
-            else thisCell.Value = SelectedDifficulty;
+            else thisCell.Value = chosenDiff;
 
             if (thisCell.Value.ToString() == "")
             {
@@ -308,10 +346,10 @@ namespace DDOCompendium
             }
         }
 
-        private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell)
+        private void ChangeSagaQuestCompletionStatus(int sagaID, DataGridViewCell thisCell, string chosenDiff)
         {
-            if (thisCell.Value.ToString() == SelectedDifficulty) thisCell.Value = "";
-            else thisCell.Value = SelectedDifficulty;
+            if (thisCell.Value.ToString() == chosenDiff) thisCell.Value = "";
+            else thisCell.Value = chosenDiff;
 
             if (!characterData[SelectedCharacterName].SagaCompletion.ContainsKey(sagaID))
             {
@@ -342,7 +380,7 @@ namespace DDOCompendium
                         if (thisRowIndex != -1)
                         {
                             // change completion status of this quest
-                            ChangeQuestCompletionStatus(datagridQuests.Rows[thisRowIndex].Cells[thisColumnIndex]);
+                            ChangeQuestCompletionStatus(datagridQuests.Rows[thisRowIndex].Cells[thisColumnIndex], SelectedDifficulty);
                         }
                         break;
                     case QUESTSGRID_EPIC_INDEX:
@@ -411,7 +449,7 @@ namespace DDOCompendium
                             }
                             int sagaID = int.Parse((thisdgview.Tag as string).Split(',')[e.ColumnIndex - 2]);
                             // change completion status of this quest
-                            ChangeSagaQuestCompletionStatus(sagaID, thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex]);
+                            ChangeSagaQuestCompletionStatus(sagaID, thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex], SelectedDifficulty);
                         }
                         break;
                 }
@@ -472,6 +510,25 @@ namespace DDOCompendium
         }
 
         /// <summary>
+        /// Provides the appropriate context menu based on which column
+        /// of the quests datagridview was right-clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DatagridSagas_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
+        {
+            var thisdgv = sender as DataGridView;
+            if (e.ColumnIndex > 1 && e.RowIndex != -1)
+            {
+                // right-clicked a non-header cell in any completion status column
+                // we want to provide options to change the selected difficulty
+                e.ContextMenuStrip = contextmenuSagaCompletion;
+                ClickedCell = thisdgv.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                ClickedSagaID = int.Parse((thisdgv.Tag as string).Split(',')[ClickedCell.ColumnIndex - 2]);
+            }
+        }
+
+        /// <summary>
         /// Changes the selected difficulty, then calls ChangeQuestCompletionStatus
         /// on the cell the context menu came from to update the value.
         /// </summary>
@@ -480,19 +537,56 @@ namespace DDOCompendium
         private void ContextmenuQuestCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
+            string thisDiff;
             switch (clickedItem.Text)
             {
                 case "Clear":
-                    SelectedDifficulty = "";
+                    thisDiff = "";
                     break;
                 case "Casual":
                 case "Normal":
                 case "Hard":
                 case "Elite":
                     SelectedDifficulty = clickedItem.Text;
+                    thisDiff = SelectedDifficulty;
+                    break;
+                default:
+                    thisDiff = "";
                     break;
             }
-            ChangeQuestCompletionStatus(ClickedCell);
+            ChangeQuestCompletionStatus(ClickedCell, thisDiff);
+        }
+
+        private void contextmenuSagaCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripItem clickedItem = e.ClickedItem;
+            string thisDiff;
+            switch (clickedItem.Text)
+            {
+                case "Clear":
+                    thisDiff = "";
+                    break;
+                case "Casual":
+                case "Normal":
+                case "Hard":
+                case "Elite":
+                    SelectedDifficulty = clickedItem.Text;
+                    thisDiff = SelectedDifficulty;
+                    break;
+                default:
+                    thisDiff = "";
+                    break;
+            }
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    DataGridView thisdgv = owner.SourceControl as DataGridView;
+                }
+            }
+            ChangeSagaQuestCompletionStatus(ClickedSagaID, ClickedCell, thisDiff);
         }
 
         /// <summary>
@@ -515,6 +609,46 @@ namespace DDOCompendium
                 FormatSagaGrids();
                 LoadSagaDataForCharacter();
             }
+        }
+
+        private void NumTomes_ValueChanged(object sender, EventArgs e)
+        {
+            var thisNumBox = sender as NumericUpDown;
+            var tomename = thisNumBox.Tag as string;
+            if (characterData[SelectedCharacterName].Tomes.TryGetValue(tomename, out string _))
+            {
+                characterData[SelectedCharacterName].Tomes[tomename] = thisNumBox.Value.ToString();
+            }
+            else characterData[SelectedCharacterName].Tomes.Add(tomename, thisNumBox.Value.ToString());
+        }
+
+        private void NumPastLives_ValueChanged(object sender, EventArgs e)
+        {
+            var thisNumBox = sender as NumericUpDown;
+            var pastlifename = thisNumBox.Tag as string;
+            if (characterData[SelectedCharacterName].PastLives.TryGetValue(pastlifename, out string _))
+            {
+                characterData[SelectedCharacterName].PastLives[pastlifename] = thisNumBox.Value.ToString();
+            }
+            else characterData[SelectedCharacterName].PastLives.Add(pastlifename, thisNumBox.Value.ToString());
+        }
+
+        private void CmboHeroicLearning_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (characterData[SelectedCharacterName].Tomes.TryGetValue("Heroic Learning", out string _))
+            {
+                characterData[SelectedCharacterName].Tomes["Heroic Learning"] = cmboHeroicLearning.SelectedItem.ToString();
+            }
+            else characterData[SelectedCharacterName].Tomes.Add("Heroic Learning", cmboHeroicLearning.SelectedItem.ToString());
+        }
+
+        private void CmboEpicLearning_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (characterData[SelectedCharacterName].Tomes.TryGetValue("Epic Learning", out string _))
+            {
+                characterData[SelectedCharacterName].Tomes["Epic Learning"] = cmboEpicLearning.SelectedItem.ToString();
+            }
+            else characterData[SelectedCharacterName].Tomes.Add("Epic Learning", cmboEpicLearning.SelectedItem.ToString());
         }
     }
 
@@ -574,6 +708,7 @@ namespace DDOCompendium
         public Dictionary<string, string> QuestCompletion { get; set; }
         public Dictionary<int, List<string>> SagaCompletion { get; set; }
         public Dictionary<string, string> PastLives { get; set; }
+        public Dictionary<string, string> Tomes { get; set; }
     }
 
     public class Saga
