@@ -115,6 +115,8 @@ namespace DDOCompendium
             // import wilderness tables
 
             // setup characters tab
+            foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
+            cmboCharSelect.SelectedItem = SelectedCharacterName;
 
             // import saga tables
             importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
@@ -650,6 +652,37 @@ namespace DDOCompendium
             }
             else characterData[SelectedCharacterName].Tomes.Add("Epic Learning", cmboEpicLearning.SelectedItem.ToString());
         }
+
+        private void CmboCharSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeSelectedCharacter(cmboCharSelect.SelectedItem.ToString());
+        }
+
+        private void BtnAddChar_Click(object sender, EventArgs e)
+        {
+            string newcharname = Prompt.ShowDialog("New character name:", "Add New Character");
+            Character newchar = new()
+            {
+                QuestCompletion = [],
+                SagaCompletion = [],
+                PastLives = [],
+                Tomes = []
+            };
+            characterData.Add(newcharname, newchar);
+            cmboCharSelect.Items.Add(newcharname);
+            cmboCharSelect.Text = newcharname;
+        }
+
+        private void BtnDelChar_Click(object sender, EventArgs e)
+        {
+            var response = MessageBox.Show("Are you sure you want to delete " + SelectedCharacterName + "?  This is irreversible!", "Delete character?", MessageBoxButtons.OKCancel);
+            if (response == DialogResult.OK)
+            {
+                characterData.Remove(SelectedCharacterName);
+                cmboCharSelect.Items.Remove(SelectedCharacterName);
+                cmboCharSelect.SelectedIndex = 0;
+            }
+        }
     }
 
 #nullable enable
@@ -721,5 +754,30 @@ namespace DDOCompendium
         public int[] TomeLevel { get; set; }
         public string[] SpecialRewards { get; set; }
         public string[][] Quests { get; set; }
+    }
+
+    public static class Prompt
+    {
+        public static string ShowDialog(string text, string caption)
+        {
+            Form prompt = new()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterParent
+            };
+            Label textLabel = new() { Left = 50, Top = 20, Text = text };
+            TextBox textBox = new() { Left = 50, Top = 50, Width = 400 };
+            Button confirmation = new() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+        }
     }
 }

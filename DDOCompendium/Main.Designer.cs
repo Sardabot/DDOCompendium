@@ -3232,6 +3232,7 @@
             this.btnDelChar.TabIndex = 3;
             this.btnDelChar.Text = "Delete";
             this.btnDelChar.UseVisualStyleBackColor = true;
+            this.btnDelChar.Click += new System.EventHandler(this.BtnDelChar_Click);
             // 
             // btnAddChar
             // 
@@ -3243,6 +3244,7 @@
             this.btnAddChar.TabIndex = 2;
             this.btnAddChar.Text = "Add";
             this.btnAddChar.UseVisualStyleBackColor = true;
+            this.btnAddChar.Click += new System.EventHandler(this.BtnAddChar_Click);
             // 
             // lblCharSelect
             // 
@@ -3263,6 +3265,7 @@
             this.cmboCharSelect.Name = "cmboCharSelect";
             this.cmboCharSelect.Size = new System.Drawing.Size(121, 21);
             this.cmboCharSelect.TabIndex = 0;
+            this.cmboCharSelect.SelectedIndexChanged += new System.EventHandler(this.CmboCharSelect_SelectedIndexChanged);
             // 
             // tabSagas
             // 
