@@ -3352,7 +3352,7 @@
             // 
             this.contextmenuCharSelect.Name = "contextmenuCharSelect";
             this.contextmenuCharSelect.Size = new System.Drawing.Size(61, 4);
-            this.contextmenuCharSelect.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextmenuCharSelect_ItemClicked);
+            this.contextmenuCharSelect.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextmenuCharSelect_ItemClicked);
             // 
             // contextmenuSagaCompletion
             // 
@@ -3364,7 +3364,7 @@
             this.toolStripMenuItem5});
             this.contextmenuSagaCompletion.Name = "contextmenuQuestCompletion";
             this.contextmenuSagaCompletion.Size = new System.Drawing.Size(115, 114);
-            this.contextmenuSagaCompletion.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextmenuSagaCompletion_ItemClicked);
+            this.contextmenuSagaCompletion.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextmenuSagaCompletion_ItemClicked);
             // 
             // toolStripMenuItem1
             // 

@@ -1,8 +1,8 @@
 {
   "Shatterer": {
     "QuestCompletion": {
-      "2-2": "Hard",
-      "1-2": "Hard"
+      "Obstructing the Orcs": "Hard",
+      "The Storehouse's Secret": "Hard"
     },
     "SagaCompletion": {
       "0": [
@@ -32,8 +32,8 @@
   },
   "Tyrmaeli": {
     "QuestCompletion": {
-      "2-1": "Hard",
-      "1-1": "Elite"
+      "Caged Beast": "Hard",
+      "The Cannith Crystal": "Elite"
     },
     "SagaCompletion": {},
     "PastLives": {},

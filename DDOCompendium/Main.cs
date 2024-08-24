@@ -5,9 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -52,7 +50,7 @@ namespace DDOCompendium
             Text = "DDO Compendium - " + SelectedCharacterName;
             QuestsFilePath = DataFolderPath + "Quests.json";
             string importedJsonData = ReadFromFile(QuestsFilePath);
-            var importedQuestData = JsonConvert.DeserializeObject<List<QuestPack>>(importedJsonData);
+            var importedQuestData = JsonConvert.DeserializeObject<Dictionary<string, QuestPack>>(importedJsonData);
             if (importedQuestData is null)
             {
                 MessageBox.Show("Couldn't retrieve data from Quests.json");
@@ -70,24 +68,22 @@ namespace DDOCompendium
 
             // unpack these into a table of quests
             questsTable = MakeQuestsTable();
-            foreach (QuestPack thisPack in importedQuestData)
+            foreach (string thisPackName in importedQuestData.Keys)
             {
-                foreach (Quest thisQuest in thisPack.Quests)
+                foreach (string thisQuestName in importedQuestData[thisPackName].Quests.Keys)
                 {
                     DataRow tempRow = questsTable.NewRow();
-                    string tempID = thisPack.Id.ToString() + "-" + thisQuest.Id.ToString();
-                    tempRow.SetField("ID", tempID);
-                    tempRow.SetField("Wiki Name", thisQuest.WikiName);
-                    tempRow.SetField("H", thisQuest.HeroicLevel);
-                    tempRow.SetField("E", thisQuest.EpicLevel);
-                    tempRow.SetField("L", thisQuest.LegLevel);
-                    tempRow.SetField("Name", thisQuest.Name);
-                    tempRow.SetField("Pack", thisPack.Name);
+                    tempRow.SetField("H", importedQuestData[thisPackName].Quests[thisQuestName].HeroicLevel);
+                    tempRow.SetField("E", importedQuestData[thisPackName].Quests[thisQuestName].EpicLevel);
+                    tempRow.SetField("L", importedQuestData[thisPackName].Quests[thisQuestName].LegLevel);
+                    tempRow.SetField("Name", thisQuestName);
+                    tempRow.SetField("Pack", thisPackName);
                     tempRow.SetField("Character", "");
-                    tempRow.SetField("Patron", thisQuest.Patron);
-                    tempRow.SetField("Favor", thisQuest.Favor);
-                    tempRow.SetField("Style", thisQuest.Style);
-                    tempRow.SetField("SortWithPack", thisQuest.SortWithPack);
+                    tempRow.SetField("Patron", importedQuestData[thisPackName].Quests[thisQuestName].Patron);
+                    tempRow.SetField("Favor", importedQuestData[thisPackName].Quests[thisQuestName].Favor);
+                    tempRow.SetField("Style", importedQuestData[thisPackName].Quests[thisQuestName].Style);
+                    tempRow.SetField("SortWithPack", importedQuestData[thisPackName].Quests[thisQuestName].SortWithPack);
+                    tempRow.SetField("Wiki Name", importedQuestData[thisPackName].Quests[thisQuestName].WikiName);
                     questsTable.Rows.Add(tempRow);
                 }
             }
@@ -98,12 +94,11 @@ namespace DDOCompendium
             };
             datagridQuests.DataSource = questsDataSource;
             // make adjustments to grid settings
-            datagridQuests.Columns[QUESTSGRID_ID_INDEX].Visible = false;
-            datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
             datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
             datagridQuests.Columns[QUESTSGRID_LEGENDARY_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+            datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
             datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
 
             // import the notes tabs
@@ -161,27 +156,24 @@ namespace DDOCompendium
             return true;
         }
 
-        public const int QUESTSGRID_ID_INDEX = 0;
-        public const int QUESTSGRID_WIKI_INDEX = 1;
-        public const int QUESTSGRID_HEROIC_INDEX = 2;
-        public const int QUESTSGRID_EPIC_INDEX = 3;
-        public const int QUESTSGRID_LEGENDARY_INDEX = 4;
-        public const int QUESTSGRID_NAME_INDEX = 5;
-        public const int QUESTSGRID_PACK_INDEX = 6;
-        public const int QUESTSGRID_COMPLETED_INDEX = 7;
-        public const int QUESTSGRID_PATRON_INDEX = 8;
-        public const int QUESTSGRID_FAVOR_INDEX = 9;
-        public const int QUESTSGRID_STYLE_INDEX = 10;
-        public const int QUESTSGRID_PACKSORT_INDEX = 11;
+        public const int QUESTSGRID_HEROIC_INDEX = 0;
+        public const int QUESTSGRID_EPIC_INDEX = 1;
+        public const int QUESTSGRID_LEGENDARY_INDEX = 2;
+        public const int QUESTSGRID_NAME_INDEX = 3;
+        public const int QUESTSGRID_PACK_INDEX = 4;
+        public const int QUESTSGRID_COMPLETED_INDEX = 5;
+        public const int QUESTSGRID_PATRON_INDEX = 6;
+        public const int QUESTSGRID_FAVOR_INDEX = 7;
+        public const int QUESTSGRID_STYLE_INDEX = 8;
+        public const int QUESTSGRID_PACKSORT_INDEX = 9;
+        public const int QUESTSGRID_WIKI_INDEX = 10;
 
         private DataTable MakeQuestsTable()
         {
-            DataTable table = new DataTable
+            DataTable table = new()
             {
                 TableName = "Quests"
             };
-            table.Columns.Add(new DataColumn("ID", typeof(string)));
-            table.Columns.Add(new DataColumn("Wiki Name", typeof(string)));
             table.Columns.Add(new DataColumn("H", typeof(int)));
             table.Columns.Add(new DataColumn("E", typeof(int)));
             table.Columns.Add(new DataColumn("L", typeof(int)));
@@ -192,13 +184,14 @@ namespace DDOCompendium
             table.Columns.Add(new DataColumn("Favor", typeof(int)));
             table.Columns.Add(new DataColumn("Style", typeof(string)));
             table.Columns.Add(new DataColumn("SortWithPack", typeof(string)));
+            table.Columns.Add(new DataColumn("Wiki Name", typeof(string)));
 
             return table;
         }
 
         private DataTable MakeSagaTable(string[][] dataIn)
         {
-            DataTable table = new DataTable();
+            DataTable table = new();
             bool firstRow = true;
             foreach (string[] row in dataIn)
             {
@@ -254,7 +247,7 @@ namespace DDOCompendium
         {
             foreach (DataRow thisRow in questsTable.Rows)
             {
-                thisRow["Character"] = FindQuestCompletionStatus(thisRow["ID"].ToString());
+                thisRow["Character"] = FindQuestCompletionStatus(thisRow["Name"].ToString());
             }
         }
 
@@ -266,7 +259,7 @@ namespace DDOCompendium
                 for (int i = 0; i < gridIDs.Count(); i++)
                 {
                     characterData[SelectedCharacterName].SagaCompletion.TryGetValue(int.Parse(gridIDs[i]), out List<string> charThisSagaData);
-                    if (charThisSagaData == null) charThisSagaData = new List<string>();
+                    charThisSagaData ??= [];
                     for (int row = 0; row < thisSagadg.RowCount; row++)
                     {
                         if (row < charThisSagaData.Count) thisSagadg.Rows[row].Cells[2 + i].Value = charThisSagaData[row];
@@ -279,7 +272,6 @@ namespace DDOCompendium
         private void LoadPastLivesAndTomesForCharacter()
         {
             string tomeval;
-            string lifeval;
             foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel1.Controls.OfType<NumericUpDown>())
             {
                 var tomename = thisnumbox.Tag as string;
@@ -302,7 +294,7 @@ namespace DDOCompendium
             foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel2.Controls.OfType<NumericUpDown>())
             {
                 var lifename = thisnumbox.Tag as string;
-                if (characterData[SelectedCharacterName].PastLives.TryGetValue(lifename, out lifeval))
+                if (characterData[SelectedCharacterName].PastLives.TryGetValue(lifename, out string lifeval))
                 {
                     thisnumbox.Value = int.Parse(lifeval);
                 }
@@ -316,9 +308,9 @@ namespace DDOCompendium
         /// </summary>
         /// <param name="questID">The ID to search for, ex. "1-4"</param>
         /// <returns>A string representing the quest difficulty.</returns>
-        private string FindQuestCompletionStatus(string questID)
+        private string FindQuestCompletionStatus(string questName)
         {
-            return characterData[SelectedCharacterName].QuestCompletion.TryGetValue(questID, out var completion) ? completion : "";
+            return characterData[SelectedCharacterName].QuestCompletion.TryGetValue(questName, out var completion) ? completion : "";
         }
 
         /// <summary>
@@ -328,7 +320,7 @@ namespace DDOCompendium
         /// <param name="thisCell">The affected cell.</param>
         private void ChangeQuestCompletionStatus(DataGridViewCell thisCell, string chosenDiff)
         {
-            string QuestID = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_ID_INDEX].Value.ToString();
+            string QuestName = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_NAME_INDEX].Value.ToString();
 
             if (thisCell.Value.ToString() == chosenDiff) thisCell.Value = "";
             else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo") thisCell.Value = "Casual";
@@ -336,15 +328,15 @@ namespace DDOCompendium
 
             if (thisCell.Value.ToString() == "")
             {
-                characterData[SelectedCharacterName].QuestCompletion.Remove(QuestID);
+                characterData[SelectedCharacterName].QuestCompletion.Remove(QuestName);
             }
             else
             {
-                if (characterData[SelectedCharacterName].QuestCompletion.ContainsKey(QuestID))
+                if (characterData[SelectedCharacterName].QuestCompletion.ContainsKey(QuestName))
                 {
-                    characterData[SelectedCharacterName].QuestCompletion[QuestID] = thisCell.Value.ToString();
+                    characterData[SelectedCharacterName].QuestCompletion[QuestName] = thisCell.Value.ToString();
                 }
-                else characterData[SelectedCharacterName].QuestCompletion.Add(QuestID, thisCell.Value.ToString());
+                else characterData[SelectedCharacterName].QuestCompletion.Add(QuestName, thisCell.Value.ToString());
             }
         }
 
@@ -355,7 +347,7 @@ namespace DDOCompendium
 
             if (!characterData[SelectedCharacterName].SagaCompletion.ContainsKey(sagaID))
             {
-                characterData[SelectedCharacterName].SagaCompletion.Add(sagaID, new List<string>());
+                characterData[SelectedCharacterName].SagaCompletion.Add(sagaID, []);
             }
             while (characterData[SelectedCharacterName].SagaCompletion[sagaID].Count <= thisCell.RowIndex)
             {
@@ -477,7 +469,7 @@ namespace DDOCompendium
 
         private string ReadFromFile(string filePath)
         {
-            using StreamReader reader = new StreamReader(filePath);
+            using StreamReader reader = new(filePath);
             string tempstr = reader.ReadToEnd();
             reader.Close();
             return tempstr;
@@ -559,7 +551,7 @@ namespace DDOCompendium
             ChangeQuestCompletionStatus(ClickedCell, thisDiff);
         }
 
-        private void contextmenuSagaCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ContextmenuSagaCompletion_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
             string thisDiff;
@@ -579,15 +571,6 @@ namespace DDOCompendium
                     thisDiff = "";
                     break;
             }
-            ToolStripItem menuItem = sender as ToolStripItem;
-            if (menuItem != null)
-            {
-                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
-                if (owner != null)
-                {
-                    DataGridView thisdgv = owner.SourceControl as DataGridView;
-                }
-            }
             ChangeSagaQuestCompletionStatus(ClickedSagaID, ClickedCell, thisDiff);
         }
 
@@ -597,7 +580,7 @@ namespace DDOCompendium
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void contextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ContextmenuCharSelect_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem clickedItem = e.ClickedItem;
             SelectedCharacterName = clickedItem.Text;
@@ -688,16 +671,12 @@ namespace DDOCompendium
 #nullable enable
     public class QuestPack
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Quest[] Quests { get; set; }
+        public Dictionary<string, Quest> Quests { get; set; }
         public Wilderness[]? Wildernesses { get; set; }
     }
 
     public class Quest
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
         /// <summary>
         /// WikiName is present if the wiki page is different from the quest name
         /// </summary>
@@ -707,14 +686,17 @@ namespace DDOCompendium
         public int? LegLevel { get; set; }
         public string Patron { get; set; }
         public int Favor { get; set; }
+        /// <summary>
+        /// Style can be Solo or Raid where applicable, and null otherwise
+        /// </summary>
         public string? Style { get; set; }
         /// <summary>
         /// SortWithPack is present if this quest should be grouped with a
         /// different pack from the one it is included in.
         /// This is mainly useful for F2P 'prologue' style quests.
+        /// Doesn't have to be a real pack - ex. to group together the Waterworks quests.
         /// </summary>
         public string? SortWithPack { get; set; }
-        // Style can be Solo, Raid, or null
     }
 
     /// <summary>

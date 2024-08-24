@@ -1,44 +1,650 @@
-[
-  {
-    "Id": 1,
-    "Name": "Free",
-    "Quests": [
-      {
-        "Id": 1,
-        "Name": "The Cannith Crystal",
+{
+  "Free": {
+    "Quests": {
+      "The Cannith Crystal": {
         "HeroicLevel": 1,
         "Patron": "House Deneith",
-        "Favor": 2
+        "Favor": 2,
+        "SortWithPack": "Misery's Peak"
       },
-      {
-        "Id": 2,
-        "Name": "The Storehouse's Secret",
+      "The Storehouse's Secret": {
         "HeroicLevel": 1,
         "Patron": "The Coin Lords",
+        "Favor": 2,
+        "SortWithPack": "Misery's Peak"
+      },
+      "Heyton's Rest": {
+        "HeroicLevel": 1,
+        "Patron": "The Coin Lords",
+        "Favor": 2,
+        "SortWithPack": "Misery's Peak"
+      },
+      "The Collaborator": {
+        "HeroicLevel": 1,
+        "Patron": "The Coin Lords",
+        "Favor": 4,
+        "SortWithPack": "Misery's Peak"
+      },
+      "Stopping the Sahuagin": {
+        "HeroicLevel": 1,
+        "Patron": "The Coin Lords",
+        "Favor": 3,
+        "SortWithPack": "Misery's Peak"
+      },
+      "Redemption": {
+        "WikiName": "Redemption (quest)",
+        "HeroicLevel": 1,
+        "Patron": "The Coin Lords",
+        "Favor": 3,
+        "SortWithPack": "Misery's Peak"
+      },
+      "Necromancer's Doom": {
+        "HeroicLevel": 1,
+        "Patron": "House Jorasco",
         "Favor": 2
+      },
+      "Sacrifices": {
+        "HeroicLevel": 1,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Misery's Peak": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 2,
+        "SortWithPack": "Misery's Peak"
+      },
+      "Protect Baudry's Interests": {
+        "Name": "Protect Baudry's Interests",
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 2
+      },
+      "Retrieve the Stolen Goods": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "The Smuggler's Warehouse": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Bringing the Light": {
+        "HeroicLevel": 2,
+        "Patron": "The Silver Flame",
+        "Favor": 2
+      },
+      "The Kobolds' New Ringleader": {
+        "HeroicLevel": 2,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "Stealthy Reposession": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Garrison's Missing Pack": {
+        "HeroicLevel": 2,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "Recovering the Lost Tome": {
+        "HeroicLevel": 2,
+        "Patron": "The Coin Lords",
+        "Favor": 3
+      },
+      "Walk the Butcher's Path": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Durk's Got A Secret": {
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Haverdasher": {
+        "HeroicLevel": 2,
+        "Patron": "House Kundarak",
+        "Favor": 2
+      },
+      "The Miller's Debt": {
+        "HeroicLevel": 2,
+        "Patron": "The Coin Lords",
+        "Favor": 2,
+        "Style": "Solo"
+      },
+      "Arachnophobia": {
+        "HeroicLevel": 2,
+        "Patron": "The Coin Lords",
+        "Favor": 2,
+        "Style": "Solo"
+      },
+      "Information is Key": {
+        "HeroicLevel": 2,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Missing in Action": {
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 3
+      },
+      "The Sunken Sewer": {
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 3
+      },
+      "Redfang the Unruled": {
+        "HeroicLevel": 3,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "The Swiped Signet": {
+        "HeroicLevel": 3,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Home Sweet Sewer": {
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 2,
+        "Style": "Solo"
+      },
+      "An Explosive Situation": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "Kobold Assault": {
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 3
+      },
+      "Where There's Smoke...": {
+        "HeroicLevel": 3,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "The Captives": {
+        "HeroicLevel": 3,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Kobold's Den: Clan Gnashtooth": {
+        "WikiName": "The Kobold's Den: Clan Gnashtooth",
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 4,
+        "SortWithPack": "Waterworks"
+      },
+      "Kobold's Den: Rescuing Arlos": {
+        "WikiName": "The Kobold's Den: Rescuing Arlos",
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 4,
+        "SortWithPack": "Waterworks"
+      },
+      "Venn's Trail: Clan Tunnelworm": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 4,
+        "SortWithPack": "Waterworks"
+      },
+      "Venn's Trail: Venn's Fate": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 3,
+        "SortWithPack": "Waterworks"
+      },
+      "Irestone Inlet": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "Proof is in the Poison": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 5
+      },
+      "Freshen the Air": {
+        "HeroicLevel": 4,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Catastrophe": {
+        "HeroicLevel": 4,
+        "LegLevel": 34,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 3
+      },
+      "Rest for the Restless": {
+        "HeroicLevel": 4,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Depths of Despair": {
+        "HeroicLevel": 4,
+        "Patron": "House Deneith",
+        "Favor": 3
+      },
+      "The Depths of Darkness": {
+        "HeroicLevel": 4,
+        "Patron": "House Deneith",
+        "Favor": 3
+      },
+      "The Depths of Discord": {
+        "HeroicLevel": 5,
+        "Patron": "House Deneith",
+        "Favor": 3
+      },
+      "The Depths of Doom": {
+        "HeroicLevel": 5,
+        "Patron": "House Deneith",
+        "Favor": 3
+      },
+      "The Chamber of Insanity": {
+        "HeroicLevel": 5,
+        "Patron": "House Kundarak",
+        "Favor": 3
+      },
+      "The Lair of Summoning": {
+        "HeroicLevel": 5,
+        "Patron": "House Kundarak",
+        "Favor": 3
+      },
+      "Archer Point Defense": {
+        "HeroicLevel": 5,
+        "Patron": "The Coin Lords",
+        "Favor": 3
+      },
+      "Gladewatch Outpost Defense": {
+        "HeroicLevel": 6,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "The Forgotten Caverns": {
+        "HeroicLevel": 6,
+        "Patron": "House Kundarak",
+        "Favor": 4
+      },
+      "Ruined Halls": {
+        "HeroicLevel": 6,
+        "Patron": "House Kundarak",
+        "Favor": 4
+      },
+      "Redwillow's Ruins": {
+        "HeroicLevel": 6,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "Mirra's Sleepless Nights": {
+        "HeroicLevel": 6,
+        "Patron": "House Jorasco",
+        "Favor": 4
+      },
+      "Dead Predators": {
+        "HeroicLevel": 6,
+        "Patron": "House Jorasco",
+        "Favor": 4
+      },
+      "The Bounty Hunter": {
+        "HeroicLevel": 6,
+        "Patron": "House Deneith",
+        "Favor": 5
+      },
+      "Caged Trolls": {
+        "HeroicLevel": 6,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Purge the Heretics": {
+        "HeroicLevel": 6,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Dread Sea Scrolls": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "The Promise of Fire": {
+        "HeroicLevel": 6,
+        "EpicLevel": 27,
+        "Patron": "Morgrave University",
+        "Favor": 4
+      },
+      "The Tear of Dhakaan": {
+        "HeroicLevel": 7,
+        "Patron": "House Kundarak",
+        "Favor": 7
+      },
+      "Gwylan's Stand": {
+        "HeroicLevel": 7,
+        "Patron": "House Phiarlan",
+        "Favor": 6
+      },
+      "The Pit": {
+        "HeroicLevel": 7,
+        "Patron": "House Deneith",
+        "Favor": 9
+      },
+      "The Graverobber": {
+        "HeroicLevel": 7,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "Taming the Flames": {
+        "HeroicLevel": 7,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "Caverns of Korromar": {
+        "HeroicLevel": 8,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "The Faithful Departed": {
+        "HeroicLevel": 8,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Stromvauld's Mine": {
+        "HeroicLevel": 8,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "Stormcleave Outpost": {
+        "HeroicLevel": 8,
+        "Patron": "House Deneith",
+        "Favor": 6
+      },
+      "The Path to Madness": {
+        "HeroicLevel": 8,
+        "Patron": "House Jorasco",
+        "Favor": 3
+      },
+      "The Xorian Cipher": {
+        "HeroicLevel": 8,
+        "Patron": "House Jorasco",
+        "Favor": 7
+      },
+      "Haunted Library": {
+        "HeroicLevel": 8,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "The Church and the Cult": {
+        "HeroicLevel": 9,
+        "Patron": "The Silver Flame",
+        "Favor": 5
+      },
+      "Sykros' Jewel": {
+        "HeroicLevel": 10,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "Reclamation": {
+        "HeroicLevel": 10,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "Hiding in Plain Sight": {
+        "HeroicLevel": 10,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "Tempest's Spine": {
+        "HeroicLevel": 10,
+        "Patron": "House Jorasco",
+        "Favor": 6,
+        "Style": "Raid"
+      },
+      "The Spawn of Whisperdoom": {
+        "HeroicLevel": 11,
+        "Patron": "House Phiarlan",
+        "Favor": 6
+      },
+      "Dreams of Insanity": {
+        "HeroicLevel": 11,
+        "Patron": "House Jorasco",
+        "Favor": 6
+      },
+      "The Enemy Within": {
+        "HeroicLevel": 11,
+        "Patron": "House Jorasco",
+        "Favor": 8
+      },
+      "Made to Order": {
+        "HeroicLevel": 11,
+        "Patron": "House Kundarak",
+        "Favor": 6
+      },
+      "A Relic of a Sovereign Past": {
+        "HeroicLevel": 12,
+        "Patron": "House Deneith",
+        "Favor": 7
+      },
+      "Diplomatic Impunity": {
+        "HeroicLevel": 12,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Frame Work": {
+        "HeroicLevel": 12,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 5
+      },
+      "Eyes of Stone": {
+        "HeroicLevel": 12,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Invaders!": {
+        "HeroicLevel": 12,
+        "Patron": "The Coin Lords",
+        "Favor": 7
+      },
+      "Mired in Kobolds": {
+        "HeroicLevel": 13,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "Memoirs of an Illusory Larcener": {
+        "HeroicLevel": 13,
+        "LegLevel": 31,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Tower of Frost": {
+        "HeroicLevel": 14,
+        "EpicLevel": 28,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Acid Wit": {
+        "HeroicLevel": 15,
+        "Patron": "The Twelve",
+        "Favor": 6
+      },
+      "Delirium": {
+        "HeroicLevel": 15,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "Disciples of Shar": {
+        "HeroicLevel": 15,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 6,
+        "SortWithPack": "Shadowfell Conspiracy"
+      },
+      "Escape Plan": {
+        "HeroicLevel": 15,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 5,
+        "SortWithPack": "Shadowfell Conspiracy"
+      },
+      "Search and Rescue": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "Lost at Sea": {
+        "HeroicLevel": 15,
+        "EpicLevel": 32,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "The Lords of Dust": {
+        "HeroicLevel": 16,
+        "EpicLevel": 21,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      },
+      "Servants of the Overlord": {
+        "HeroicLevel": 16,
+        "EpicLevel": 21,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      },
+      "The Spinner of Shadows": {
+        "HeroicLevel": 16,
+        "EpicLevel": 21,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      },
+      "Beyond the Rift": {
+        "HeroicLevel": 16,
+        "EpicLevel": 21,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      },
+      "The Mask of Deception": {
+        "HeroicLevel": 16,
+        "LegLevel": 30,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "Good Intentions": {
+        "HeroicLevel": 17,
+        "LegLevel": 31,
+        "Patron": "The Free Agents",
+        "Favor": 7
+      },
+      "In the Demon's Den": {
+        "HeroicLevel": 18,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Kill Ten Rats": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "A Study in Sable": {
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 9
+      },
+      "Brothers of the Forge": {
+        "EpicLevel": 28,
+        "Patron": "House Cannith",
+        "Favor": 9
+      },
+      "Legendary Tempest's Spine": {
+        "LegLevel": 32,
+        "Patron": "House Jorasco",
+        "Favor": 11,
+        "Style": "Raid"
+      },
+      "Legendary Hound of Xoriat": {
+        "LegLevel": 32,
+        "Patron": "The Twelve",
+        "Favor": 12,
+        "Style": "Raid"
       }
-    ]
+    }
   },
-  {
-    "Id": 2,
-    "Name": "Keep on the Borderlands",
-    "Quests": [
-      {
-        "Id": 1,
-        "Name": "Caged Beast",
+  "Keep on the Borderlands": {
+    "Quests": {
+      "Caged Beast": {
         "HeroicLevel": 1,
         "EpicLevel": 21,
         "Patron": "The Gatekeepers",
         "Favor": 2
       },
-      {
-        "Id": 2,
-        "Name": "Obstructing the Orcs",
+      "Obstructing the Orcs": {
         "HeroicLevel": 1,
         "EpicLevel": 21,
         "Patron": "The Gatekeepers",
         "Favor": 2
       }
-    ]
+    }
+  },
+  "Delera's Tomb": {
+    "Quests": {
+      "Dead Girl's Spellbook": {
+        "WikiName": "Valak's Mausoleum",
+        "HeroicLevel": 6,
+        "Patron": "House Jorasco",
+        "Favor": 4
+      },
+      "The Keeper's Sanctuary": {
+        "HeroicLevel": 9,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "And the Dead Shall Rise...": {
+        "HeroicLevel": 11,
+        "Patron": "House Jorasco",
+        "Favor": 6
+      },
+      "From Beyond the Grave": {
+        "HeroicLevel": 11,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      }
+    }
+  },
+  "Shadowfell Conpiracy": {
+    "Quests": {
+      "Shadow of a Doubt": {
+        "HeroicLevel": 15,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 6
+      }
+    }
+  },
+  "Menace of the Underdark": {
+    "Quests": {
+      "Murder by Night": {
+        "HeroicLevel": 19,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 6
+      },
+      "The Riddle": {
+        "HeroicLevel": 19,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "Don't Drink the Water": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "In the Belly of the Beast": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      }
+    }
   }
-]
+}
