@@ -570,6 +570,26 @@
         "Patron": "The Twelve",
         "Favor": 12,
         "Style": "Raid"
+      },
+      "Pilgrims' Peril": {
+        "LegLevel": 34,
+        "Patron": "The Twelve",
+        "Favor": 9
+      },
+      "Stolen Power": {
+        "LegLevel": 34,
+        "Patron": "The Twelve",
+        "Favor": 9
+      },
+      "Horde of the Illithid Controller": {
+        "LegLevel": 34,
+        "Patron": "The Twelve",
+        "Favor": 9
+      },
+      "Astral Ambush": {
+        "LegLevel": 34,
+        "Patron": "The Twelve",
+        "Favor": 9
       }
     }
   },
@@ -1909,12 +1929,1109 @@
       }
     }
   },
+  "Attack on Stormreach": {
+    "Quests": {
+      "Assault on Summerfield": {
+        "HeroicLevel": 13,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 5
+      },
+      "Blockade Buster": {
+        "HeroicLevel": 13,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 5
+      },
+      "Undermine": {
+        "HeroicLevel": 13,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Siegebreaker": {
+        "HeroicLevel": 13,
+        "LegLevel": 34,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      }
+    }
+  },
+  "Ruins of Gianthold": {
+    "Quests": {
+      "Feast or Famine": {
+        "HeroicLevel": 13,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "Trial by Fire": {
+        "HeroicLevel": 13,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "The Maze of Madness": {
+        "HeroicLevel": 13,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "Foundation of Discord": {
+        "HeroicLevel": 13,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "A Cry for Help": {
+        "HeroicLevel": 13,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 7
+      },
+      "The Crucible": {
+        "HeroicLevel": 14,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      },
+      "Madstone Crater": {
+        "HeroicLevel": 14,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      },
+      "The Prison of the Planes": {
+        "HeroicLevel": 14,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "A Cabal for One": {
+        "HeroicLevel": 14,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6
+      },
+      "Gianthold Tor": {
+        "HeroicLevel": 14,
+        "EpicLevel": 24,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 7
+      },
+      "The Reaver's Fate": {
+        "HeroicLevel": 14,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 6,
+        "Style": "Raid"
+      },
+      "The Fall of Truth": {
+        "EpicLevel": 25,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Trials of the Archons": {
+    "Quests": {
+      "The Archons' Trial": {
+        "HeroicLevel": 13,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "Demon Assault": {
+        "HeroicLevel": 13,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "The Devil's Details": {
+        "HeroicLevel": 13,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "Defiler of the Just": {
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 9,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Magic of Myth Drannor": {
+    "Quests": {
+      "The Safehold": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Death Hosts This Banquet": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Oghma's Song": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "The Key to the Mythal": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 7
+      },
+      "Secrets of the Red Wizards": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 6
+      },
+      "The House of Gems": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Voices of the Dead": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Times Long Past": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 7
+      },
+      "The Zulkir's Plan": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 6
+      },
+      "Book Burning": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 4
+      },
+      "Ettercap Incursion": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Portal to Below": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      },
+      "Seeds of Decay": {
+        "HeroicLevel": 13,
+        "LegLevel": 35,
+        "Patron": "Cormanthor Elves",
+        "Favor": 5
+      }
+    }
+  },
+  "Devil's Gambit": {
+    "Quests": {
+      "Tavern Brawl": {
+        "WikiName": "Tavern Brawl (quest)",
+        "HeroicLevel": 14,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Grim and Barett": {
+        "HeroicLevel": 14,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "Subversion": {
+        "HeroicLevel": 14,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "Multitude of Menace": {
+        "HeroicLevel": 14,
+        "LegLevel": 30,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      }
+    }
+  },
+  "Disciples of Rage": {
+    "Quests": {
+      "Night Falls on Stormreach": {
+        "HeroicLevel": 14,
+        "LegLevel": 31,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "Quarantine": {
+        "HeroicLevel": 14,
+        "LegLevel": 31,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "The Madness of Crowds": {
+        "HeroicLevel": 14,
+        "LegLevel": 31,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "The Age of Rage": {
+        "HeroicLevel": 14,
+        "LegLevel": 31,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "Toxic Treatment": {
+        "HeroicLevel": 14,
+        "LegLevel": 31,
+        "Patron": "House Jorasco",
+        "Favor": 6
+      }
+    }
+  },
+  "Necropolis Part 4": {
+    "Quests": {
+      "Desecrated Temple of Vol": {
+        "HeroicLevel": 14,
+        "EpicLevel": 29,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Inferno of the Damned": {
+        "HeroicLevel": 14,
+        "EpicLevel": 29,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Flesh Maker's Laboratory": {
+        "HeroicLevel": 14,
+        "EpicLevel": 29,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Ghosts of Perdition": {
+        "HeroicLevel": 14,
+        "EpicLevel": 29,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Litany of the Dead": {
+        "HeroicLevel": 15,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Ascension Chamber": {
+        "HeroicLevel": 17,
+        "Patron": "The Silver Flame",
+        "Favor": 7,
+        "Style": "Raid"
+      },
+      "The Mark of Death": {
+        "LegLevel": 30,
+        "Patron": "The Silver Flame",
+        "Favor": 9
+      }
+    }
+  },
+  "Harbinger of Madness": {
+    "Quests": {
+      "Missing": {
+        "HeroicLevel": 15,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Sinister Storage": {
+        "HeroicLevel": 15,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "Fear Factory": {
+        "HeroicLevel": 15,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "In the Flesh": {
+        "HeroicLevel": 15,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      }
+    }
+  },
+  "Mines of Tethyamar": {
+    "Quests": {
+      "Third Time's A Charm": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 5
+      },
+      "Strike Back": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 5
+      },
+      "Graveyard Shift": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 5
+      },
+      "Records of the Past": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 5
+      },
+      "Desire in the Dark": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Harpers",
+        "Favor": 5
+      }
+    }
+  },
+  "Vale of Twilight": {
+    "Quests": {
+      "Creeping Death": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Twelve",
+        "Favor": 6
+      },
+      "To Curse the Sky": {
+        "HeroicLevel": 15,
+        "LegLevel": 31,
+        "Patron": "The Twelve",
+        "Favor": 6
+      },
+      "Running with the Devils": {
+        "HeroicLevel": 16,
+        "Patron": "The Twelve",
+        "Favor": 8
+      },
+      "Ritual Sacrifice": {
+        "HeroicLevel": 16,
+        "Patron": "The Twelve",
+        "Favor": 8
+      },
+      "Let Sleeping Dust Lie": {
+        "HeroicLevel": 16,
+        "Patron": "The Twelve",
+        "Favor": 8
+      },
+      "The Coalescence Chamber": {
+        "HeroicLevel": 16,
+        "Patron": "The Twelve",
+        "Favor": 8
+      },
+      "Rainbow in the Dark": {
+        "HeroicLevel": 16,
+        "Patron": "The Twelve",
+        "Favor": 8
+      },
+      "The Shroud": {
+        "HeroicLevel": 17,
+        "Patron": "The Twelve",
+        "Favor": 11,
+        "Style": "Raid"
+      },
+      "The Codex and the Shroud": {
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 14,
+        "Style": "Raid"
+      },
+      "Hound of Xoriat": {
+        "HeroicLevel": 18,
+        "Patron": "The Twelve",
+        "Favor": 9,
+        "Style": "Raid"
+      },
+      "A Vision of Destruction": {
+        "HeroicLevel": 18,
+        "Patron": "The Twelve",
+        "Favor": 9,
+        "Style": "Raid"
+      },
+      "Legendary Vision of Destruction": {
+        "LegLevel": 32,
+        "Patron": "The Twelve",
+        "Favor": 12,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Masterminds of Sharn": {
+    "Quests": {
+      "A Sharn Welcome": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Red Rain": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Best Laid Plans": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "The Same Old Song": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Just Business": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "No Refunds": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "House of Pain": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 7
+      },
+      "Blown Deadline": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "Reach for the Sky": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 7
+      },
+      "Too Hot to Handle": {
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 10,
+        "Style": "Raid"
+      },
+      "Project Nemesis": {
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 10,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Sharn: The Cogs": {
+    "Quests": {
+      "Smash and Burn": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Thralls of the Fungus Lord": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Scavenger Hunt": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "The Magma Must Flow": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Roll Call": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Security Detail": {
+        "HeroicLevel": 16,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 5
+      },
+      "Ruinous SChemes": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 4
+      },
+      "The Wraithcallers": {
+        "HeroicLevel": 15,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 4
+      }
+    }
+  },
+  "Grip of the Hidden Hand": {
+    "Quests": {
+      "Army of Eternal Night": {
+        "HeroicLevel": 16,
+        "LegLevel": 33,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Order in the Court!": {
+        "HeroicLevel": 16,
+        "LegLevel": 33,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Growing Pains": {
+        "HeroicLevel": 16,
+        "LegLevel": 33,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Three Paths to Battle": {
+        "HeroicLevel": 16,
+        "LegLevel": 33,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      },
+      "The Hand and the Eyes": {
+        "HeroicLevel": 16,
+        "LegLevel": 33,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      }
+    }
+  },
   "Shadowfell Conpiracy": {
     "Quests": {
       "Shadow of a Doubt": {
         "HeroicLevel": 15,
         "Patron": "Purple Dragon Knights",
         "Favor": 6
+      },
+      "Friends in Low Places": {
+        "HeroicLevel": 16,
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "A Lesson in Deception": {
+        "HeroicLevel": 16,
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "The Thrill of the Hunt": {
+        "HeroicLevel": 16,
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 6
+      },
+      "Army of Shadow": {
+        "HeroicLevel": 16,
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "Through a Mirror Darkly": {
+        "HeroicLevel": 16,
+        "EpicLevel": 26,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "The Tracker's Trap": {
+        "HeroicLevel": 19,
+        "EpicLevel": 27,
+        "Patron": "The Harpers",
+        "Favor": 6,
+        "SortWithPack": "The Storm Horns"
+      },
+      "Lines of Supply": {
+        "HeroicLevel": 19,
+        "EpicLevel": 27,
+        "Patron": "The Harpers",
+        "Favor": 6,
+        "SortWithPack": "The Storm Horns"
+      },
+      "Breaking the Ranks": {
+        "HeroicLevel": 19,
+        "EpicLevel": 27,
+        "Patron": "The Harpers",
+        "Favor": 6,
+        "SortWithPack": "The Storm Horns"
+      },
+      "A Break in the Ice": {
+        "HeroicLevel": 19,
+        "EpicLevel": 27,
+        "Patron": "The Harpers",
+        "Favor": 7,
+        "SortWithPack": "The Storm Horns"
+      },
+      "What Goes Up": {
+        "HeroicLevel": 19,
+        "EpicLevel": 27,
+        "Patron": "The Harpers",
+        "Favor": 7,
+        "SortWithPack": "The Storm Horns"
+      }
+    }
+  },
+  "The Soul Splitter": {
+    "Quests": {
+      "Finding Dorris": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 7
+      },
+      "Safety in Numbers": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "The Underlane Assignment": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "Members Only": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "The Offshore Account": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 6
+      },
+      "Soul Survivor": {
+        "HeroicLevel": 17,
+        "LegLevel": 32,
+        "Patron": "Sharn City Council",
+        "Favor": 7
+      }
+    }
+  },
+  "Reign of Madness": {
+    "Quests": {
+      "Acute Delirium": {
+        "HeroicLevel": 17,
+        "Patron": "The Twelve",
+        "Favor": 7
+      },
+      "The Sane Asylum": {
+        "HeroicLevel": 17,
+        "Patron": "The Twelve",
+        "Favor": 7
+      },
+      "The Lord of Stone": {
+        "HeroicLevel": 17,
+        "Patron": "The Twelve",
+        "Favor": 7
+      },
+      "The Lord of Eyes": {
+        "HeroicLevel": 17,
+        "Patron": "The Twelve",
+        "Favor": 7
+      }
+    }
+  },
+  "Reaver's Reach": {
+    "Quests": {
+      "Enter the Kobold": {
+        "HeroicLevel": 17,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      },
+      "Monastery of the Scorpion": {
+        "HeroicLevel": 17,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      },
+      "Prey on the Hunter": {
+        "HeroicLevel": 17,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      },
+      "Stealer of Souls": {
+        "HeroicLevel": 17,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 8
+      }
+    }
+  },
+  "Druid's Deep": {
+    "Quests": {
+      "Outbreak": {
+        "HeroicLevel": 17,
+        "EpicLevel": 23,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "Overgrowth": {
+        "HeroicLevel": 17,
+        "EpicLevel": 23,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "Thorn and Paw": {
+        "HeroicLevel": 17,
+        "EpicLevel": 23,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "The Druid's Curse": {
+        "HeroicLevel": 17,
+        "EpicLevel": 23,
+        "Patron": "The Harpers",
+        "Favor": 7
+      }
+    }
+  },
+  "High Road of Shadows": {
+    "Quests": {
+      "Detour": {
+        "HeroicLevel": 18,
+        "EpicLevel": 24,
+        "Patron": "The Harpers",
+        "Favor": 7
+      },
+      "Rest Stop": {
+        "HeroicLevel": 18,
+        "EpicLevel": 24,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "Lost in the Swamp": {
+        "HeroicLevel": 18,
+        "EpicLevel": 24,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "A Stay at the Inn": {
+        "HeroicLevel": 18,
+        "EpicLevel": 24,
+        "Patron": "The Harpers",
+        "Favor": 6
+      },
+      "The End of the Road": {
+        "HeroicLevel": 18,
+        "EpicLevel": 24,
+        "Patron": "The Harpers",
+        "Favor": 7
+      }
+    }
+  },
+  "Heart of Madness": {
+    "Quests": {
+      "Palace of Stone": {
+        "HeroicLevel": 18,
+        "EpicLevel": 26,
+        "Patron": "The Twelve",
+        "Favor": 7
+      },
+      "Fashion Madness": {
+        "HeroicLevel": 18,
+        "EpicLevel": 26,
+        "Patron": "The Twelve",
+        "Favor": 7
+      },
+      "Terminal Delirium": {
+        "HeroicLevel": 18,
+        "EpicLevel": 26,
+        "Patron": "The Twelve",
+        "Favor": 7
+      }
+    }
+  },
+  "Vecna Unleashed": {
+    "Quests": {
+      "Turn the Page": {
+        "WikiName": "Turn the Page (quest)",
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Grand Theft Aureon": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      },
+      "Vecna Unleashed": {
+        "WikiName": "Vecna Unleashed (quest)",
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "The Bark and the Blade": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      },
+      "Enemy of my Enemy": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "The Evil We Know": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Law and Order": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      },
+      "Taken in Hand": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Vecna Denied": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 7
+      },
+      "Paper Trail": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Party 101": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 5
+      },
+      "The Devils to Pay": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 5
+      },
+      "What Dreams May Come": {
+        "HeroicLevel": 18,
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 5
+      },
+      "Fire Over Morgrave": {
+        "LegLevel": 34,
+        "Patron": "Morgrave University",
+        "Favor": 9,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Slice of Life": {
+    "Quests": {
+      "Fred's First Date": {
+        "HeroicLevel": 18,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "This Old Haunt": {
+        "HeroicLevel": 18,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Too Many Cooks": {
+        "HeroicLevel": 18,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      }
+    }
+  },
+  "Path of Inspiration": {
+    "Quests": {
+      "Finding the Path": {
+        "HeroicLevel": 18,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Dream Conspiracy": {
+        "HeroicLevel": 18,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "The Shipwrecked Spy": {
+        "HeroicLevel": 18,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "I Dream of Jeets": {
+        "HeroicLevel": 18,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "The Mindsunder": {
+        "HeroicLevel": 18,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      }
+    }
+  },
+  "Dreaming Dark": {
+    "Quests": {
+      "Eye of the Titan": {
+        "HeroicLevel": 19,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Reclaiming Memories": {
+        "HeroicLevel": 19,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "Raiding the Giants' Vault": {
+        "HeroicLevel": 19,
+        "Patron": "The Coin Lords",
+        "Favor": 6,
+        "Style": "Solo"
+      },
+      "Mining for Ancient Secrets": {
+        "HeroicLevel": 19,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      },
+      "The Dreaming Dark": {
+        "WikiName": "The Dreaming Dark (quest)",
+        "HeroicLevel": 20,
+        "Patron": "The Coin Lords",
+        "Favor": 6
+      }
+    }
+  },
+  "Devils of Shavarath": {
+    "Quests": {
+      "The Weapons Shipment": {
+        "HeroicLevel": 19,
+        "Patron": "The Twelve",
+        "Favor": 6
+      },
+      "Wrath of the Flame": {
+        "HeroicLevel": 19,
+        "Patron": "The Twelve",
+        "Favor": 6
+      },
+      "A New Invasion": {
+        "HeroicLevel": 19,
+        "Patron": "The Yugoloth",
+        "Favor": 7
+      },
+      "Bastion of Power": {
+        "HeroicLevel": 19,
+        "Patron": "The Yugoloth",
+        "Favor": 7
+      },
+      "Genesis Point": {
+        "HeroicLevel": 19,
+        "Patron": "The Yugoloth",
+        "Favor": 8
+      },
+      "Sins of Attrition": {
+        "HeroicLevel": 19,
+        "Patron": "The Yugoloth",
+        "Favor": 7
+      },
+      "Tower of Despair": {
+        "HeroicLevel": 20,
+        "Patron": "The Yugoloth",
+        "Favor": 8,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Secrets of the Artificers": {
+    "Quests": {
+      "Blown to Bits": {
+        "HeroicLevel": 19,
+        "Patron": "House Cannith",
+        "Favor": 7
+      },
+      "Power Play": {
+        "HeroicLevel": 19,
+        "Patron": "House Cannith",
+        "Favor": 7
+      },
+      "Schemes of the Enemy": {
+        "HeroicLevel": 19,
+        "Patron": "House Cannith",
+        "Favor": 7
+      },
+      "The Master Artificer": {
+        "HeroicLevel": 19,
+        "EpicLevel": 22,
+        "Patron": "House Cannith",
+        "Favor": 7,
+        "Style": "Raid"
+      },
+      "Legendary Master Artificer": {
+        "LegLevel": 32,
+        "Patron": "House Cannith",
+        "Favor": 10,
+        "Style": "Raid"
+      },
+      "The Lord of Blades": {
+        "HeroicLevel": 20,
+        "EpicLevel": 22,
+        "Patron": "House Cannith",
+        "Favor": 7,
+        "Style": "Raid"
+      },
+      "Legendary Lord of Blades": {
+        "LegLevel": 32,
+        "Patron": "House Cannith",
+        "Favor": 10,
+        "Style": "Raid"
       }
     }
   },
@@ -1930,6 +3047,26 @@
         "Patron": "Purple Dragon Knights",
         "Favor": 7
       },
+      "Impossible Demands": {
+        "EpicLevel": 21,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "The Unquiet Graves": {
+        "EpicLevel": 21,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 7
+      },
+      "The Lost Thread": {
+        "EpicLevel": 21,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "The Battle for Eveningstar": {
+        "EpicLevel": 21,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
       "Don't Drink the Water": {
         "EpicLevel": 22,
         "Patron": "Purple Dragon Knights",
@@ -1939,6 +3076,72 @@
         "EpicLevel": 22,
         "Patron": "Purple Dragon Knights",
         "Favor": 8
+      },
+      "The House of Rusted Blades": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "The House of Broken Chains": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "The House of Death Undone": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "The Portal Opens": {
+        "EpicLevel": 22,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "Trial by Fury": {
+        "EpicLevel": 23,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "The Deal and the Demon": {
+        "EpicLevel": 23,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "Reclaiming the Rift": {
+        "EpicLevel": 23,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8
+      },
+      "Caught in the Web": {
+        "EpicLevel": 24,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 8,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Haunted Halls of Eveningstar": {
+    "Quests": {
+      "The Haunted Halls of Eveningstar": {
+        "EpicLevel": 28,
+        "Patron": "The Harpers",
+        "Favor": 9
+      }
+    }
+  },
+  "Shadow Under Thunderholme": {
+    "Quests": {
+      "Fire on Thunder Peak": {
+        "LegLevel": 30,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 9,
+        "Style": "Raid"
+      },
+      "Temple of the Deathwyrm": {
+        "LegLevel": 30,
+        "Patron": "Purple Dragon Knights",
+        "Favor": 9,
+        "Style": "Raid"
       }
     }
   }
