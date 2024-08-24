@@ -586,11 +586,560 @@
         "EpicLevel": 21,
         "Patron": "The Gatekeepers",
         "Favor": 2
+      },
+      "The Bugbear Bandits": {
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "The Hobgoblin Horde": {
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Total Chaos": {
+        "HeroicLevel": 2,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Treasure Hunt": {
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "Violent Delights": {
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "Watch Your Step": {
+        "HeroicLevel": 1,
+        "EpicLevel": 21,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      }
+    }
+  },
+  "Sinister Secret of Saltmarsh": {
+    "Quests": {
+      "The Haunting of Saltmarsh": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Under the Cover of Darkness": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "Danger at Dunwater": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "The Final Enemy": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Swim at Your Own Risk": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "Back to Basics": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "What Sleeps Below": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "The Hijacked Haul": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Rest for the Night": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Down You Go": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      }
+    }
+  },
+  "The Lost Gatekeepers": {
+    "Quests": {
+      "The Home of Memory": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Heart of the Problem": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "Rosemary's Ballad": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "The Sacred Bounty": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 2
+      },
+      "Housekeeping": {
+        "HeroicLevel": 3,
+        "LegLevel": 32,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      }
+    }
+  },
+  "Catacombs": {
+    "Quests": {
+      "The Friar's Niece": {
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 2
+      },
+      "Return to the Sanctuary": {
+        "WikiName": "To Find a Witness: Return to the Sanctuary",
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 3
+      },
+      "The Old Archives": {
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 3
+      },
+      "The Crypt of Gerard Dryden": {
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 4
+      },
+      "The Lower Cathedral": {
+        "WikiName": "Setting the Wards: The Lower Cathedral",
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 3
+      },
+      "The Patriarch's Crypt": {
+        "WikiName": "Setting the Wards: The Patriarchs' Crypt",
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 3
+      },
+      "Marguerite": {
+        "WikiName": "Endgame: Marguerite",
+        "HeroicLevel": 3,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 2
+      },
+      "The Archbishop's Fate": {
+        "WikiName": "Endgame: The Archbishop's Fate",
+        "HeroicLevel": 4,
+        "EpicLevel": 23,
+        "Patron": "The Silver Flame",
+        "Favor": 2
+      }
+    }
+  },
+  "Seal of Shan-To-Kor": {
+    "Quests": {
+      "Blockade": {
+        "WikiName": "The Cloven-jaw Scourge: Blockade",
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "The Caverns of Shaagh": {
+        "WikiName": "The Cloven-jaw Scourge: The Caverns of Shaagh",
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "Halls of Shan-To-Kor": {
+        "HeroicLevel": 5,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      },
+      "The Sacred Helm": {
+        "HeroicLevel": 3,
+        "Patron": "The Coin Lords",
+        "Favor": 4
+      }
+    }
+  },
+  "Tangleroot Gorge": {
+    "Quests": {
+      "First Strike": {
+        "HeroicLevel": 3,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Hobgoblins' Captives": {
+        "HeroicLevel": 3,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "Yarkuch's War Plans": {
+        "HeroicLevel": 4,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "Whisperdoom's Spawn": {
+        "HeroicLevel": 4,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Stronghold Key": {
+        "WikiName": "Deadly Package: The Stronghold Key",
+        "HeroicLevel": 5,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "Agent of the Darguul": {
+        "WikiName": "The Deadly Package: Agent of the Darguul",
+        "HeroicLevel": 5,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Way to Zulkash": {
+        "WikiName": "Doom of the Witch-Doctor: The Way to Zulkash",
+        "HeroicLevel": 6,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Zulkash, Herald of Woe": {
+        "WikiName": "Doom of the Witch-Doctor: Zulkash, Herald of Woe",
+        "HeroicLevel": 6,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "The Way to Yarkuch": {
+        "WikiName": "The Last Move: The Way to Yarkuch",
+        "HeroicLevel": 7,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "Yarkuch's Last Stand": {
+        "WikiName": "The Last Move: Yarkuch's Last Stand",
+        "HeroicLevel": 7,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      }
+    }
+  },
+  "Sharn Syndicate": {
+    "Quests": {
+      "Stand Your Ground": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "Dirty Laundry": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "The Stormreaver Fresco": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "The Bookbinder Rescue": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "Repossession": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      },
+      "Come Out and Slay": {
+        "HeroicLevel": 4,
+        "Patron": "The Coin Lords",
+        "Favor": 2
+      }
+    }
+  },
+  "Phiarlan Carnival": {
+    "Quests": {
+      "A Small Problem": {
+        "HeroicLevel": 5,
+        "EpicLevel": 20,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Partycrashers": {
+        "HeroicLevel": 5,
+        "EpicLevel": 20,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "The Snitch": {
+        "HeroicLevel": 5,
+        "EpicLevel": 20,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Under the Big Top": {
+        "HeroicLevel": 5,
+        "EpicLevel": 20,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      }
+    }
+  },
+  "Necropolis Part 1": {
+    "Quests": {
+      "Tomb of the Immortal Heart": {
+        "HeroicLevel": 5,
+        "Patron": "The Silver Flame",
+        "Favor": 4
+      },
+      "Tomb of the Crimson Heart": {
+        "HeroicLevel": 5,
+        "Patron": "The Silver Flame",
+        "Favor": 4
+      },
+      "Tomb of the Sanguine Heart": {
+        "HeroicLevel": 5,
+        "Patron": "The Silver Flame",
+        "Favor": 4
+      },
+      "Tomb of the Burning Heart": {
+        "HeroicLevel": 5,
+        "Patron": "The Silver Flame",
+        "Favor": 3
+      },
+      "The Bloody Crypt": {
+        "HeroicLevel": 6,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      }
+    }
+  },
+  "Fables of the Feywild": {
+    "Quests": {
+      "The Endless Revels": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "Witch Hunt": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "Make Believe": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "A Frosty Reception": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 4
+      },
+      "Wake Me Up Inside": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "The Icemount Curse": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 5
+      },
+      "The Thornwright": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "Needle in a Fey Stack": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 5
+      },
+      "Quid Pro Quo": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 4
+      },
+      "Immortality Lessons": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 5
+      },
+      "Combatting Corruption": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 2
+      },
+      "The Legend of the Lost Locket": {
+        "HeroicLevel": 5,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "The Knight Who Cried Windmill": {
+        "HeroicLevel": 6,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 3
+      },
+      "The Dryad and the Demigod": {
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 10,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Three-Barrel Cove": {
+    "Quests": {
+      "Guard Duty": {
+        "HeroicLevel": 5,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "The Legend of Two-Toed Tobias": {
+        "HeroicLevel": 5,
+        "EpicLevel": 25,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Prove Your Worth": {
+        "HeroicLevel": 5,
+        "EpicLevel": 25,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Ghost of a Chance": {
+        "HeroicLevel": 5,
+        "EpicLevel": 25,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Fire Caves: Stones Run Red": {
+        "WikiName": "The Stones Run Red",
+        "HeroicLevel": 5,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Fire Caves: Brood of Flame": {
+        "WikiName": "Brood of Flame",
+        "HeroicLevel": 5,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Garl's Tomb: The Troglodyte's Get": {
+        "WikiName": "The Troglodytes' Get",
+        "HeroicLevel": 6,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Garl's Tomb: Old Grey Garl": {
+        "WikiName": "Old Grey Garl",
+        "HeroicLevel": 7,
+        "EpicLevel": 25,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "The Scoundrel's Run": {
+        "HeroicLevel": 7,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "Precious Cargo": {
+        "EpicLevel": 25,
+        "Patron": "The Free Agents",
+        "Favor": 7
       }
     }
   },
   "Delera's Tomb": {
     "Quests": {
+      "The Mystery of Delera's Tomb": {
+        "HeroicLevel": 5,
+        "EpicLevel": 27,
+        "Patron": "House Jorasco",
+        "Favor": 4
+      },
+      "The Missing Party": {
+        "HeroicLevel": 7,
+        "EpicLevel": 27,
+        "Patron": "House Jorasco",
+        "Favor": 6
+      },
+      "Free Delera": {
+        "HeroicLevel": 7,
+        "EpicLevel": 27,
+        "Patron": "House Jorasco",
+        "Favor": 5
+      },
+      "Return to Delera's Tomb": {
+        "WikiName": "Return to Delera's Tomb (quest)",
+        "HeroicLevel": 6,
+        "EpicLevel": 27,
+        "Patron": "House Jorasco",
+        "Favor": 3
+      },
+      "Thrall of the Necromancer": {
+        "HeroicLevel": 8,
+        "EpicLevel": 27,
+        "Patron": "House Jorasco",
+        "Favor": 6
+      },
       "Dead Girl's Spellbook": {
         "WikiName": "Valak's Mausoleum",
         "HeroicLevel": 6,
@@ -611,6 +1160,752 @@
         "HeroicLevel": 11,
         "Patron": "House Jorasco",
         "Favor": 5
+      }
+    }
+  },
+  "Devil Assault": {
+    "Quests": {
+      "Devil Assault": {
+        "WikiName": "Devil Assault (quest)",
+        "HeroicLevel": 6,
+        "EpicLevel": 21,
+        "Patron": "The Coin Lords",
+        "Favor": 5
+      },
+      "The Chronoscope": {
+        "HeroicLevel": 6,
+        "EpicLevel": 21,
+        "Patron": "The Coin Lords",
+        "Favor": 5,
+        "Style": "Raid"
+      },
+      "The Chronoscope (Legendary)": {
+        "LegLevel": 32,
+        "Patron": "The Coin Lords",
+        "Favor": 5,
+        "Style": "Raid"
+      }
+    }
+  },
+  "White Plume Mountain": {
+    "Quests": {
+      "Kind of a Big Deal": {
+        "HeroicLevel": 6,
+        "EpicLevel": 21,
+        "Patron": "The Twelve",
+        "Favor": 4
+      },
+      "Another Man's Treasure": {
+        "HeroicLevel": 6,
+        "EpicLevel": 21,
+        "Patron": "The Twelve",
+        "Favor": 5
+      },
+      "Memory Lapse": {
+        "HeroicLevel": 6,
+        "EpicLevel": 23,
+        "Patron": "The Twelve",
+        "Favor": 4
+      },
+      "The Price of Freedom": {
+        "HeroicLevel": 6,
+        "EpicLevel": 25,
+        "Patron": "The Twelve",
+        "Favor": 5
+      },
+      "White Plume Mountain": {
+        "HeroicLevel": 9,
+        "LegLevel": 32,
+        "Patron": "The Twelve",
+        "Favor": 5
+      }
+    }
+  },
+  "Shadowdusk Isle": {
+    "Quests": {
+      "Freeing Achka": {
+        "WikiName": "The Iron Mines: Freeing Achka",
+        "HeroicLevel": 6,
+        "Patron": "House Deneith",
+        "Favor": 3
+      },
+      "Justice for Grust": {
+        "WikiName": "The Iron Mines: Justice for Grust",
+        "HeroicLevel": 6,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "The Trollish Scourge": {
+        "WikiName": "The Grey Moon's Den: The Trollish Scourge",
+        "HeroicLevel": 7,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Extermination": {
+        "WikiName": "The Grey Moon's Den: Extermination",
+        "HeroicLevel": 7,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Captives of the Cult": {
+        "WikiName": "The Temple Outpost: Captives of the Cult",
+        "HeroicLevel": 8,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "The Libram of the Six": {
+        "WikiName": "The Temple Outpost: The Libram of the Six",
+        "HeroicLevel": 8,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Cleansing the Temple": {
+        "WikiName": "The Fane of the Six: Cleansing the Temple",
+        "HeroicLevel": 9,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Fall of the Prelate": {
+        "WikiName": "The Fane of the Six: Fall of the Prelate",
+        "HeroicLevel": 9,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Quench the Flames": {
+        "WikiName": "The Sanctum: Quench the Flames",
+        "HeroicLevel": 10,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Church of the Fury": {
+        "WikiName": "The Sanctum: Church of the Fury",
+        "HeroicLevel": 10,
+        "Patron": "House Deneith",
+        "Favor": 4
+      }
+    }
+  },
+  "Temple of Elemental Evil": {
+    "Quests": {
+      "ToEE: First Level and Earth Temple": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Lower Temple Complex": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Air Node": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Earth Node": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Fire Node": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Water Node": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "ToEE: Depths of the Temple": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      }
+    }
+  },
+  "Hunter and Hunted": {
+    "Quests": {
+      "One Dame Thing After Another": {
+        "HeroicLevel": 7,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 4
+      },
+      "Through the Tulgey Wood": {
+        "HeroicLevel": 7,
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 5
+      },
+      "Hunt or Be Hunted": {
+        "LegLevel": 32,
+        "Patron": "The Summer Court",
+        "Favor": 10,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Sentinels of Stormreach": {
+    "Quests": {
+      "Bargain of Blood": {
+        "HeroicLevel": 7,
+        "EpicLevel": 20,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "The Black Loch": {
+        "HeroicLevel": 7,
+        "EpicLevel": 20,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "Storm the Beaches": {
+        "HeroicLevel": 7,
+        "EpicLevel": 20,
+        "Patron": "House Deneith",
+        "Favor": 4
+      },
+      "The Tide Turns": {
+        "HeroicLevel": 7,
+        "EpicLevel": 20,
+        "Patron": "House Deneith",
+        "Favor": 5
+      },
+      "Spies in the House": {
+        "HeroicLevel": 8,
+        "EpicLevel": 21,
+        "Patron": "House Deneith",
+        "Favor": 5
+      }
+    }
+  },
+  "The Isle of Dread": {
+    "Quests": {
+      "Captive of the Hidden God": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "The Curse and the Captive Crustacean": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Plundering Pirates' Point": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Bullywugs and Booby Traps": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "Fall of the Forbidden Temple": {
+        "HeroicLevel": 8,
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "Wild Thing": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 3
+      },
+      "The Stone Crypt Chronicles": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "All Hail the King": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Trials of the Triceratops": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "The Trouble with Tar Pits": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Whispers of Return": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Spiders and Flies": {
+        "HeroicLevel": 7,
+        "LegLevel": 33,
+        "Patron": "The Gatekeepers",
+        "Favor": 4
+      },
+      "Skeletons in the Closet": {
+        "LegLevel": 34,
+        "Patron": "The Gatekeepers",
+        "Favor": 10,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Against the Slave Lords": {
+    "Quests": {
+      "Slave Pits of the Undercity": {
+        "HeroicLevel": 8,
+        "LegLevel": 31,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      },
+      "Secret of the Slavers' Stockade": {
+        "HeroicLevel": 8,
+        "LegLevel": 31,
+        "Patron": "The Gatekeepers",
+        "Favor": 6
+      },
+      "Assault on the Aerie of the Slave Lords": {
+        "HeroicLevel": 8,
+        "LegLevel": 31,
+        "Patron": "The Gatekeepers",
+        "Favor": 5
+      }
+    }
+  },
+  "Necropolis Part 2": {
+    "Quests": {
+      "Tomb of the Shadow Guard": {
+        "HeroicLevel": 8,
+        "Patron": "The Silver Flame",
+        "Favor": 5
+      },
+      "Tomb of the Shadow King": {
+        "HeroicLevel": 8,
+        "Patron": "The Silver Flame",
+        "Favor": 5
+      },
+      "Tomb of the Shadow Knight": {
+        "HeroicLevel": 8,
+        "Patron": "The Silver Flame",
+        "Favor": 5
+      },
+      "Tomb of the Shadow Lord": {
+        "HeroicLevel": 8,
+        "Patron": "The Silver Flame",
+        "Favor": 5
+      },
+      "The Shadow Crypt": {
+        "HeroicLevel": 9,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      }
+    }
+  },
+  "Ruins of Threnal": {
+    "Quests": {
+      "In Need of Supplies": {
+        "HeroicLevel": 8,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Rescue": {
+        "HeroicLevel": 8,
+        "Patron": "House Phiarlan",
+        "Favor": 5
+      },
+      "Secure the Area": {
+        "HeroicLevel": 10,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "The Library of Threnal": {
+        "HeroicLevel": 9,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "Escort the Expedition": {
+        "HeroicLevel": 10,
+        "Patron": "House Phiarlan",
+        "Favor": 6
+      },
+      "Hold for Reinforcements": {
+        "HeroicLevel": 10,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      },
+      "The Missing Expedition": {
+        "HeroicLevel": 9,
+        "Patron": "House Phiarlan",
+        "Favor": 4
+      },
+      "Entering the Gate Chamber": {
+        "HeroicLevel": 9,
+        "Patron": "House Phiarlan",
+        "Favor": 5
+      },
+      "The Gate Chamber": {
+        "HeroicLevel": 10,
+        "Patron": "House Phiarlan",
+        "Favor": 3
+      }
+    }
+  },
+  "Vault of Night": {
+    "Quests": {
+      "Tharashk Arena": {
+        "HeroicLevel": 8,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "The Prisoner": {
+        "HeroicLevel": 8,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "Gateway to Khyber": {
+        "HeroicLevel": 9,
+        "Patron": "House Kundarak",
+        "Favor": 3
+      },
+      "The Jungle of Khyber": {
+        "HeroicLevel": 9,
+        "EpicLevel": 22,
+        "Patron": "House Kundarak",
+        "Favor": 9
+      },
+      "Haywire Foundry": {
+        "HeroicLevel": 9,
+        "EpicLevel": 22,
+        "Patron": "House Kundarak",
+        "Favor": 6
+      },
+      "The Vault of Night": {
+        "HeroicLevel": 10,
+        "EpicLevel": 22,
+        "Patron": "House Kundarak",
+        "Favor": 9,
+        "Style": "Raid"
+      },
+      "Plane of Night": {
+        "HeroicLevel": 10,
+        "EpicLevel": 22,
+        "Patron": "House Kundarak",
+        "Favor": 5,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Red Fens": {
+    "Quests": {
+      "The Last Stand": {
+        "HeroicLevel": 9,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 4
+      },
+      "Fathom the Depths": {
+        "HeroicLevel": 9,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      },
+      "The Claw of Vulkoor": {
+        "HeroicLevel": 9,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 4
+      },
+      "Into the Deep": {
+        "HeroicLevel": 9,
+        "EpicLevel": 21,
+        "Patron": "House Kundarak",
+        "Favor": 5
+      }
+    }
+  },
+  "The Restless Isles": {
+    "Quests": {
+      "Bring Me the Head of Ghola-Fan!": {
+        "HeroicLevel": 10,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Slavers of the Shrieking Isles": {
+        "HeroicLevel": 10,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "The Twilight Forge": {
+        "HeroicLevel": 11,
+        "Patron": "The Free Agents",
+        "Favor": 10,
+        "Style": "Raid"
+      },
+      "The Titan Awakes": {
+        "HeroicLevel": 12,
+        "Patron": "The Free Agents",
+        "Favor": 6,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Dragonblood Prophecy": {
+    "Quests": {
+      "The Newcomers": {
+        "HeroicLevel": 10,
+        "LegLevel": 31,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 5
+      },
+      "Black and Blue": {
+        "HeroicLevel": 10,
+        "LegLevel": 31,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 5
+      },
+      "Riding the Storm Out": {
+        "LegLevel": 32,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 10,
+        "Style": "Raid"
+      },
+      "Killing Time": {
+        "LegLevel": 32,
+        "Patron": "Agents of Argonnessen",
+        "Favor": 11,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Mists of Ravenloft": {
+    "Quests": {
+      "Into the Mists": {
+        "HeroicLevel": 10,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 3
+      },
+      "Death House": {
+        "HeroicLevel": 10,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 4
+      },
+      "Fresh-baked Dreams": {
+        "HeroicLevel": 10,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 4
+      },
+      "An Invitation to Dinner": {
+        "HeroicLevel": 10,
+        "LegLevel": 32,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "Oath of Vengeance": {
+        "HeroicLevel": 11,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "A Raven at the Door": {
+        "HeroicLevel": 11,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "Mad Tea Party": {
+        "HeroicLevel": 11,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "Sealed in Amber": {
+        "HeroicLevel": 11,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "The Final Vintage": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Keepers of the Feather",
+        "Favor": 4
+      },
+      "Wrath of the Earth": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Keepers of the Feather",
+        "Favor": 5
+      },
+      "Ravens' Bane": {
+        "HeroicLevel": 12,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 5
+      },
+      "Sunrise": {
+        "HeroicLevel": 12,
+        "LegLevel": 31,
+        "Patron": "Keepers of the Feather",
+        "Favor": 6
+      },
+      "The Curse of Strahd": {
+        "LegLevel": 32,
+        "Patron": "Keepers of the Feather",
+        "Favor": 10,
+        "Style": "Raid"
+      },
+      "Old Baba's Hut": {
+        "LegLevel": 32,
+        "Patron": "Keepers of the Feather",
+        "Favor": 9,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Demon Sands": {
+    "Quests": {
+      "Desert Caravan": {
+        "HeroicLevel": 11,
+        "Patron": "House Phiarlan",
+        "Favor": 5
+      },
+      "Purge the Fallen Shrine": {
+        "HeroicLevel": 11,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "The Chamber of Rahmat": {
+        "HeroicLevel": 10,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
+      "The Chamber of Kourush": {
+        "HeroicLevel": 11,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Maraud the Mines": {
+        "HeroicLevel": 11,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "Raid the Vulkoorim": {
+        "HeroicLevel": 11,
+        "Patron": "The Free Agents",
+        "Favor": 6
+      },
+      "An Offering of Blood": {
+        "HeroicLevel": 11,
+        "EpicLevel": 21,
+        "Patron": "The Free Agents",
+        "Favor": 8
+      },
+      "Chains of Flame": {
+        "HeroicLevel": 12,
+        "EpicLevel": 22,
+        "Patron": "The Free Agents",
+        "Favor": 7
+      },
+      "The Chamber of Raiyum": {
+        "HeroicLevel": 12,
+        "EpicLevel": 22,
+        "Patron": "The Free Agents",
+        "Favor": 8
+      },
+      "Against the Demon Queen": {
+        "WikiName": "Against the Demon Queen (quest)",
+        "HeroicLevel": 12,
+        "EpicLevel": 22,
+        "Patron": "The Free Agents",
+        "Favor": 8
+      },
+      "Zawabi's Revenge": {
+        "HeroicLevel": 12,
+        "EpicLevel": 22,
+        "Patron": "The Free Agents",
+        "Favor": 6,
+        "Style": "Raid"
+      }
+    }
+  },
+  "Necropolis Part 3": {
+    "Quests": {
+      "Tomb of the Blighted": {
+        "HeroicLevel": 11,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Tomb of the Unhallowed": {
+        "HeroicLevel": 11,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Tomb of the Forbidden": {
+        "HeroicLevel": 11,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "Tomb of the Tormented": {
+        "HeroicLevel": 11,
+        "Patron": "The Silver Flame",
+        "Favor": 6
+      },
+      "The Cursed Crypt": {
+        "HeroicLevel": 12,
+        "Patron": "The Silver Flame",
+        "Favor": 7
+      }
+    }
+  },
+  "Peril of the Planar Eyes": {
+    "Quests": {
+      "An Element of Chaos": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Morgrave University",
+        "Favor": 5
+      },
+      "Eye Know Whodunnit": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Morgrave University",
+        "Favor": 6
+      },
+      "Seizing the Dawn": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Morgrave University",
+        "Favor": 5
+      },
+      "Beautiful Nightmares": {
+        "HeroicLevel": 12,
+        "LegLevel": 32,
+        "Patron": "Morgrave University",
+        "Favor": 6
       }
     }
   },
