@@ -21,9 +21,13 @@ namespace DDOCompendium
         public Dictionary<string, Character> characterData;
         public List<DataTable> SagaTables = [];
         public List<Saga> sagaData;
+        public Dictionary<string, List<int?>> PackSortLevels = [];
         public bool SagasFormatted = false;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
+        /// <summary>
+        /// Can be All, Epic, or Legendary
+        /// </summary>
         public string LevelFilter = "All";
         private DataGridViewCell ClickedCell;
         private int ClickedSagaID;
@@ -68,38 +72,44 @@ namespace DDOCompendium
 
             // unpack these into a table of quests
             questsTable = MakeQuestsTable();
-            foreach (string thisPackName in importedQuestData.Keys)
+            foreach ((string thisPackName, QuestPack thisPack) in importedQuestData)
+            //foreach (string thisPackName in importedQuestData.Keys)
             {
-                foreach (string thisQuestName in importedQuestData[thisPackName].Quests.Keys)
+                PackSortLevels.Add(thisPackName, importedQuestData[thisPackName].SortLevels);
+
+                foreach ((string thisQuestName, Quest thisQuest) in thisPack.Quests)
+                //foreach (string thisQuestName in importedQuestData[thisPackName].Quests.Keys)
                 {
                     DataRow tempRow = questsTable.NewRow();
-                    tempRow.SetField("H", importedQuestData[thisPackName].Quests[thisQuestName].HeroicLevel);
-                    tempRow.SetField("E", importedQuestData[thisPackName].Quests[thisQuestName].EpicLevel);
-                    tempRow.SetField("L", importedQuestData[thisPackName].Quests[thisQuestName].LegLevel);
+                    tempRow.SetField("H", thisQuest.HeroicLevel);
+                    tempRow.SetField("E", thisQuest.EpicLevel);
+                    tempRow.SetField("L", thisQuest.LegLevel);
                     tempRow.SetField("Name", thisQuestName);
                     tempRow.SetField("Pack", thisPackName);
                     tempRow.SetField("Character", "");
-                    tempRow.SetField("Patron", importedQuestData[thisPackName].Quests[thisQuestName].Patron);
-                    tempRow.SetField("Favor", importedQuestData[thisPackName].Quests[thisQuestName].Favor);
-                    tempRow.SetField("Style", importedQuestData[thisPackName].Quests[thisQuestName].Style);
-                    tempRow.SetField("SortWithPack", importedQuestData[thisPackName].Quests[thisQuestName].SortWithPack);
-                    tempRow.SetField("Wiki Name", importedQuestData[thisPackName].Quests[thisQuestName].WikiName);
+                    tempRow.SetField("Patron", thisQuest.Patron);
+                    tempRow.SetField("Favor", thisQuest.Favor);
+                    tempRow.SetField("Style", thisQuest.Style);
+                    var sortpack = thisQuest.SortWithPack;
+                    if (sortpack == null) sortpack = thisPackName;
+                    else UpdatePackSortLevels(sortpack, thisQuest.HeroicLevel, thisQuest.EpicLevel, thisQuest.LegLevel);
+                    tempRow.SetField("SortWithPack", sortpack);
+                    tempRow.SetField("WikiName", thisQuest.WikiName);
                     questsTable.Rows.Add(tempRow);
                 }
             }
+            FinalizePackSortLevels();
             questsDataView = new DataView(questsTable);
+            questsDataView.Sort = "SortExpr ASC";
             BindingSource questsDataSource = new()
             {
                 DataSource = questsDataView
             };
             datagridQuests.DataSource = questsDataSource;
             // make adjustments to grid settings
-            datagridQuests.Columns[QUESTSGRID_EPIC_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
-            datagridQuests.Columns[QUESTSGRID_LEGENDARY_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
-            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].SortMode = DataGridViewColumnSortMode.NotSortable;
+            foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
             datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
-            datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
 
             // import the notes tabs
             txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
@@ -156,6 +166,58 @@ namespace DDOCompendium
             return true;
         }
 
+        private void UpdatePackSortLevels(string sortpack, int? heroicLevel, int? epicLevel, int? legLevel)
+        {
+            if (PackSortLevels.TryGetValue(sortpack, out List<int?> foundLevels))
+            {
+                if (heroicLevel.HasValue)
+                {
+                    foundLevels[0] = foundLevels[0].HasValue ? Math.Min(foundLevels[0].Value, heroicLevel.Value) : heroicLevel.Value;
+                }
+                if (epicLevel.HasValue)
+                {
+                    foundLevels[1] = foundLevels[1].HasValue ? Math.Min(foundLevels[1].Value, epicLevel.Value) : epicLevel.Value;
+                }
+                if (legLevel.HasValue)
+                {
+                    foundLevels[2] = foundLevels[2].HasValue ? Math.Min(foundLevels[2].Value, legLevel.Value) : legLevel.Value;
+                }
+                PackSortLevels[sortpack] = foundLevels;
+            }
+            else
+            {
+                PackSortLevels.Add(sortpack, [ heroicLevel, epicLevel, legLevel ]);
+            }
+        }
+
+        private void FinalizePackSortLevels()
+        {
+            var tempcopy = new List<string>(PackSortLevels.Keys);
+            foreach (string packName in tempcopy)
+            {
+                int? heroicLevel = PackSortLevels[packName][0];
+                int? epicLevel = PackSortLevels[packName][1];
+                int? legLevel = PackSortLevels[packName][2];
+
+
+                // at least one level should have value but do this just in case
+                if (!heroicLevel.HasValue && !epicLevel.HasValue && !legLevel.HasValue)
+                {
+                    heroicLevel = 1;
+                    epicLevel = 1;
+                    legLevel = 1;
+                }
+                // if no heroic level, replace with epic or leg level in that order
+                heroicLevel ??= epicLevel ?? legLevel;
+                // if no epic level, replace with leg or heroic level in that order
+                epicLevel ??= legLevel ?? heroicLevel;
+                // if no leg level, replace with epic level
+                legLevel ??= epicLevel;
+
+                PackSortLevels[packName] = [heroicLevel, epicLevel, legLevel];
+            }
+        }
+
         public const int QUESTSGRID_HEROIC_INDEX = 0;
         public const int QUESTSGRID_EPIC_INDEX = 1;
         public const int QUESTSGRID_LEGENDARY_INDEX = 2;
@@ -167,6 +229,7 @@ namespace DDOCompendium
         public const int QUESTSGRID_STYLE_INDEX = 8;
         public const int QUESTSGRID_PACKSORT_INDEX = 9;
         public const int QUESTSGRID_WIKI_INDEX = 10;
+        public const int QUESTSGRID_SORT_EXPR_INDEX = 11;
 
         private DataTable MakeQuestsTable()
         {
@@ -184,7 +247,8 @@ namespace DDOCompendium
             table.Columns.Add(new DataColumn("Favor", typeof(int)));
             table.Columns.Add(new DataColumn("Style", typeof(string)));
             table.Columns.Add(new DataColumn("SortWithPack", typeof(string)));
-            table.Columns.Add(new DataColumn("Wiki Name", typeof(string)));
+            table.Columns.Add(new DataColumn("WikiName", typeof(string)));
+            table.Columns.Add(new DataColumn("SortExpr", typeof(string)));
 
             return table;
         }
@@ -378,33 +442,45 @@ namespace DDOCompendium
                         }
                         break;
                     case QUESTSGRID_EPIC_INDEX:
-                        // filter the shown quests to epic and above, or remove the filter
-                        switch (LevelFilter)
-                        {
-                            case "All":
-                            case "Legendary":
-                                LevelFilter = "Epic";
-                                questsDataView.RowFilter = "E > 19 OR L > 29";
-                                break;
-                            case "Epic":
-                                LevelFilter = "All";
-                                questsDataView.RowFilter = "";
-                                break;
+                        if (thisRowIndex == -1)
+                        {    
+                            // filter the shown quests to epic and above, or remove the filter
+                            switch (LevelFilter)
+                            {
+                                case "All":
+                                case "Legendary":
+                                    LevelFilter = "Epic";
+                                    questsDataView.RowFilter = "E > 19 OR L > 29";
+                                    break;
+                                case "Epic":
+                                    LevelFilter = "All";
+                                    questsDataView.RowFilter = "";
+                                    break;
+                            }
                         }
                         break;
                     case QUESTSGRID_LEGENDARY_INDEX:
-                        // filter the shown quests to legendary and above, or remove the filter
-                        switch (LevelFilter)
+                        if (thisRowIndex == -1)
                         {
-                            case "All":
-                            case "Epic":
-                                LevelFilter = "Legendary";
-                                questsDataView.RowFilter = "L > 29";
-                                break;
-                            case "Legendary":
-                                LevelFilter = "All";
-                                questsDataView.RowFilter = "";
-                                break;
+                            // filter the shown quests to legendary and above, or remove the filter
+                            switch (LevelFilter)
+                            {
+                                case "All":
+                                case "Epic":
+                                    LevelFilter = "Legendary";
+                                    questsDataView.RowFilter = "L > 29";
+                                    break;
+                                case "Legendary":
+                                    LevelFilter = "All";
+                                    questsDataView.RowFilter = "";
+                                    break;
+                            }
+                        }
+                        break;
+                    case QUESTSGRID_PACK_INDEX:
+                        if (thisRowIndex == -1)
+                        {
+                            // sort by pack, substituting in SortWithPack where present
                         }
                         break;
                     default:
@@ -671,6 +747,19 @@ namespace DDOCompendium
 #nullable enable
     public class QuestPack
     {
+        /// <summary>
+        /// Should be an list of 3 ints representing Heroic, Epic, and Legendary levels
+        /// to use when sorting by pack.
+        /// Sorting by pack will normally take the first value, but if the table is filtered
+        /// to Epic+Leg or Leg quests it will use the second or third value respectively.
+        /// As such, a pack with no heroic quests should copy down the epic value, (or leg value
+        /// if it has no epic quests either).
+        /// A pack with no epic quests should copy down the leg value.
+        /// A pack with no legendary quests, or only heroic quests, should copy the highest
+        /// value up.  This value won't be used (as the quests will be filtered out anyways)
+        /// but must still be present for code reasons.
+        /// </summary>
+        public List<int?> SortLevels { get; set; }
         public Dictionary<string, Quest> Quests { get; set; }
         public Wilderness[]? Wildernesses { get; set; }
     }
@@ -678,7 +767,9 @@ namespace DDOCompendium
     public class Quest
     {
         /// <summary>
-        /// WikiName is present if the wiki page is different from the quest name
+        /// WikiName is present if the wiki page is different from the quest name.
+        /// This is what will be used by the url generator instead of the quest name
+        /// in that case.
         /// </summary>
         public string? WikiName { get; set; }
         public int? HeroicLevel { get; set; }
@@ -695,6 +786,8 @@ namespace DDOCompendium
         /// different pack from the one it is included in.
         /// This is mainly useful for F2P 'prologue' style quests.
         /// Doesn't have to be a real pack - ex. to group together the Waterworks quests.
+        /// Note that fake packs will have their sort levels dynamically generated based on
+        /// lowest level (per level range) of all quests assigned to the pack.
         /// </summary>
         public string? SortWithPack { get; set; }
     }
@@ -760,6 +853,15 @@ namespace DDOCompendium
             prompt.AcceptButton = confirmation;
 
             return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+        }
+    }
+
+    public static class KeyValuePairExtensions
+    {
+        public static void Deconstruct<Tkey, TValue>(this KeyValuePair<Tkey, TValue> keyValuePair, out Tkey key, out TValue value)
+        {
+            key = keyValuePair.Key;
+            value = keyValuePair.Value;
         }
     }
 }

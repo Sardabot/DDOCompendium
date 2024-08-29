@@ -1,5 +1,6 @@
 {
   "Free": {
+    "SortLevels": [ 1, 1, 1 ],
     "Quests": {
       "The Cannith Crystal": {
         "HeroicLevel": 1,
@@ -594,6 +595,7 @@
     }
   },
   "Keep on the Borderlands": {
+    "SortLevels": [ 1, 21, 21 ],
     "Quests": {
       "Caged Beast": {
         "HeroicLevel": 1,
@@ -646,6 +648,7 @@
     }
   },
   "Sinister Secret of Saltmarsh": {
+    "SortLevels": [ 3, 32, 32 ],
     "Quests": {
       "The Haunting of Saltmarsh": {
         "HeroicLevel": 3,
@@ -710,6 +713,7 @@
     }
   },
   "The Lost Gatekeepers": {
+    "SortLevels": [ 3, 32, 32 ],
     "Quests": {
       "The Home of Memory": {
         "HeroicLevel": 3,
@@ -744,6 +748,7 @@
     }
   },
   "Catacombs": {
+    "SortLevels": [ 3, 23, 23 ],
     "Quests": {
       "The Friar's Niece": {
         "HeroicLevel": 3,
@@ -801,6 +806,7 @@
     }
   },
   "Seal of Shan-To-Kor": {
+    "SortLevels": [ 3, 3, 3 ],
     "Quests": {
       "Blockade": {
         "WikiName": "The Cloven-jaw Scourge: Blockade",
@@ -827,6 +833,7 @@
     }
   },
   "Tangleroot Gorge": {
+    "SortLevels": [ 3, 3, 3 ],
     "Quests": {
       "First Strike": {
         "HeroicLevel": 3,
@@ -887,6 +894,7 @@
     }
   },
   "Sharn Syndicate": {
+    "SortLevels": [ 4, 4, 4 ],
     "Quests": {
       "Stand Your Ground": {
         "HeroicLevel": 4,
@@ -921,6 +929,7 @@
     }
   },
   "Phiarlan Carnival": {
+    "SortLevels": [ 5, 20, 20 ],
     "Quests": {
       "A Small Problem": {
         "HeroicLevel": 5,
@@ -949,6 +958,7 @@
     }
   },
   "Necropolis Part 1": {
+    "SortLevels": [ 5, 5, 5 ],
     "Quests": {
       "Tomb of the Immortal Heart": {
         "HeroicLevel": 5,
@@ -978,6 +988,7 @@
     }
   },
   "Fables of the Feywild": {
+    "SortLevels": [ 5, 32, 32 ],
     "Quests": {
       "The Endless Revels": {
         "HeroicLevel": 5,
@@ -1066,6 +1077,7 @@
     }
   },
   "Three-Barrel Cove": {
+    "SortLevels": [ 5, 25, 25 ],
     "Quests": {
       "Guard Duty": {
         "HeroicLevel": 5,
@@ -1128,6 +1140,7 @@
     }
   },
   "Delera's Tomb": {
+    "SortLevels": [ 5, 27, 27 ],
     "Quests": {
       "The Mystery of Delera's Tomb": {
         "HeroicLevel": 5,
@@ -1184,6 +1197,7 @@
     }
   },
   "Devil Assault": {
+    "SortLevels": [ 6, 21, 32 ],
     "Quests": {
       "Devil Assault": {
         "WikiName": "Devil Assault (quest)",
@@ -1208,6 +1222,7 @@
     }
   },
   "White Plume Mountain": {
+    "SortLevels": [ 6, 21, 32 ],
     "Quests": {
       "Kind of a Big Deal": {
         "HeroicLevel": 6,
@@ -1242,6 +1257,7 @@
     }
   },
   "Shadowdusk Isle": {
+    "SortLevels": [ 6, 6, 6 ],
     "Quests": {
       "Freeing Achka": {
         "WikiName": "The Iron Mines: Freeing Achka",
@@ -1306,6 +1322,7 @@
     }
   },
   "Temple of Elemental Evil": {
+    "SortLevels": [ 8, 34, 34 ],
     "Quests": {
       "ToEE: First Level and Earth Temple": {
         "HeroicLevel": 8,
@@ -1352,6 +1369,7 @@
     }
   },
   "Hunter and Hunted": {
+    "SortLevels": [ 7, 32, 32 ],
     "Quests": {
       "One Dame Thing After Another": {
         "HeroicLevel": 7,
@@ -1374,6 +1392,7 @@
     }
   },
   "Sentinels of Stormreach": {
+    "SortLevels": [ 7, 20, 20 ],
     "Quests": {
       "Bargain of Blood": {
         "HeroicLevel": 7,
@@ -1408,6 +1427,7 @@
     }
   },
   "The Isle of Dread": {
+    "SortLevels": [ 7, 33, 33 ],
     "Quests": {
       "Captive of the Hidden God": {
         "HeroicLevel": 7,
@@ -1490,6 +1510,7 @@
     }
   },
   "Against the Slave Lords": {
+    "SortLevels": [ 8, 31, 31 ],
     "Quests": {
       "Slave Pits of the Undercity": {
         "HeroicLevel": 8,
@@ -1512,6 +1533,7 @@
     }
   },
   "Necropolis Part 2": {
+    "SortLevels": [ 8, 8, 8 ],
     "Quests": {
       "Tomb of the Shadow Guard": {
         "HeroicLevel": 8,
@@ -1541,6 +1563,7 @@
     }
   },
   "Ruins of Threnal": {
+    "SortLevels": [ 8, 8, 8 ],
     "Quests": {
       "In Need of Supplies": {
         "HeroicLevel": 8,
@@ -1590,6 +1613,7 @@
     }
   },
   "Vault of Night": {
+    "SortLevels": [ 8, 21, 21 ],
     "Quests": {
       "Tharashk Arena": {
         "HeroicLevel": 8,
@@ -1637,6 +1661,7 @@
     }
   },
   "Red Fens": {
+    "SortLevels": [ 9, 21, 21 ],
     "Quests": {
       "The Last Stand": {
         "HeroicLevel": 9,
@@ -1665,6 +1690,7 @@
     }
   },
   "The Restless Isles": {
+    "SortLevels": [ 10, 10, 10 ],
     "Quests": {
       "Bring Me the Head of Ghola-Fan!": {
         "HeroicLevel": 10,
@@ -1691,6 +1717,7 @@
     }
   },
   "Dragonblood Prophecy": {
+    "SortLevels": [ 10, 31, 31 ],
     "Quests": {
       "The Newcomers": {
         "HeroicLevel": 10,
@@ -1719,6 +1746,7 @@
     }
   },
   "Mists of Ravenloft": {
+    "SortLevels": [ 10, 31, 31 ],
     "Quests": {
       "Into the Mists": {
         "HeroicLevel": 10,
@@ -1807,6 +1835,7 @@
     }
   },
   "Demon Sands": {
+    "SortLevels": [ 11, 21, 21 ],
     "Quests": {
       "Desert Caravan": {
         "HeroicLevel": 11,
@@ -1873,6 +1902,7 @@
     }
   },
   "Necropolis Part 3": {
+    "SortLevels": [ 11, 11, 11 ],
     "Quests": {
       "Tomb of the Blighted": {
         "HeroicLevel": 11,
@@ -1902,6 +1932,7 @@
     }
   },
   "Peril of the Planar Eyes": {
+    "SortLevels": [ 12, 32, 32 ],
     "Quests": {
       "An Element of Chaos": {
         "HeroicLevel": 12,
@@ -1930,6 +1961,7 @@
     }
   },
   "Attack on Stormreach": {
+    "SortLevels": [ 13, 34, 34 ],
     "Quests": {
       "Assault on Summerfield": {
         "HeroicLevel": 13,
@@ -1958,6 +1990,7 @@
     }
   },
   "Ruins of Gianthold": {
+    "SortLevels": [ 13, 24, 24 ],
     "Quests": {
       "Feast or Famine": {
         "HeroicLevel": 13,
@@ -2034,6 +2067,7 @@
     }
   },
   "Trials of the Archons": {
+    "SortLevels": [ 13, 30, 30 ],
     "Quests": {
       "The Archons' Trial": {
         "HeroicLevel": 13,
@@ -2062,6 +2096,7 @@
     }
   },
   "Magic of Myth Drannor": {
+    "SortLevels": [ 13, 35, 35 ],
     "Quests": {
       "The Safehold": {
         "HeroicLevel": 13,
@@ -2144,6 +2179,7 @@
     }
   },
   "Devil's Gambit": {
+    "SortLevels": [ 14, 30, 30 ],
     "Quests": {
       "Tavern Brawl": {
         "WikiName": "Tavern Brawl (quest)",
@@ -2173,6 +2209,7 @@
     }
   },
   "Disciples of Rage": {
+    "SortLevels": [ 14, 31, 31 ],
     "Quests": {
       "Night Falls on Stormreach": {
         "HeroicLevel": 14,
@@ -2207,6 +2244,7 @@
     }
   },
   "Necropolis Part 4": {
+    "SortLevels": [ 14, 29, 30 ],
     "Quests": {
       "Desecrated Temple of Vol": {
         "HeroicLevel": 14,
@@ -2251,6 +2289,7 @@
     }
   },
   "Harbinger of Madness": {
+    "SortLevels": [ 15, 15, 15 ],
     "Quests": {
       "Missing": {
         "HeroicLevel": 15,
@@ -2275,6 +2314,7 @@
     }
   },
   "Mines of Tethyamar": {
+    "SortLevels": [ 15, 31, 31 ],
     "Quests": {
       "Third Time's A Charm": {
         "HeroicLevel": 15,
@@ -2309,6 +2349,7 @@
     }
   },
   "Vale of Twilight": {
+    "SortLevels": [ 16, 31, 31 ],
     "Quests": {
       "Creeping Death": {
         "HeroicLevel": 15,
@@ -2380,6 +2421,7 @@
     }
   },
   "Masterminds of Sharn": {
+    "SortLevels": [ 15, 32, 32 ],
     "Quests": {
       "A Sharn Welcome": {
         "HeroicLevel": 15,
@@ -2450,6 +2492,7 @@
     }
   },
   "Sharn: The Cogs": {
+    "SortLevels": [ 15, 32, 32 ],
     "Quests": {
       "Smash and Burn": {
         "HeroicLevel": 15,
@@ -2502,6 +2545,7 @@
     }
   },
   "Grip of the Hidden Hand": {
+    "SortLevels": [ 16, 33, 33 ],
     "Quests": {
       "Army of Eternal Night": {
         "HeroicLevel": 16,
@@ -2536,6 +2580,7 @@
     }
   },
   "Shadowfell Conpiracy": {
+    "SortLevels": [ 16, 26, 26 ],
     "Quests": {
       "Shadow of a Doubt": {
         "HeroicLevel": 15,
@@ -2610,6 +2655,7 @@
     }
   },
   "The Soul Splitter": {
+    "SortLevels": [ 17, 32, 32 ],
     "Quests": {
       "Finding Dorris": {
         "HeroicLevel": 17,
@@ -2650,6 +2696,7 @@
     }
   },
   "Reign of Madness": {
+    "SortLevels": [ 17, 17, 17 ],
     "Quests": {
       "Acute Delirium": {
         "HeroicLevel": 17,
@@ -2674,6 +2721,7 @@
     }
   },
   "Reaver's Reach": {
+    "SortLevels": [ 17, 17, 17 ],
     "Quests": {
       "Enter the Kobold": {
         "HeroicLevel": 17,
@@ -2698,6 +2746,7 @@
     }
   },
   "Druid's Deep": {
+    "SortLevels": [ 17, 23, 23 ],
     "Quests": {
       "Outbreak": {
         "HeroicLevel": 17,
@@ -2726,6 +2775,7 @@
     }
   },
   "High Road of Shadows": {
+    "SortLevels": [ 18, 24, 24 ],
     "Quests": {
       "Detour": {
         "HeroicLevel": 18,
@@ -2760,6 +2810,7 @@
     }
   },
   "Heart of Madness": {
+    "SortLevels": [ 18, 26, 26 ],
     "Quests": {
       "Palace of Stone": {
         "HeroicLevel": 18,
@@ -2782,6 +2833,7 @@
     }
   },
   "Vecna Unleashed": {
+    "SortLevels": [ 18, 34, 34 ],
     "Quests": {
       "Turn the Page": {
         "WikiName": "Turn the Page (quest)",
@@ -2872,6 +2924,7 @@
     }
   },
   "Slice of Life": {
+    "SortLevels": [ 18, 18, 18 ],
     "Quests": {
       "Fred's First Date": {
         "HeroicLevel": 18,
@@ -2891,6 +2944,7 @@
     }
   },
   "Path of Inspiration": {
+    "SortLevels": [ 18, 18, 18 ],
     "Quests": {
       "Finding the Path": {
         "HeroicLevel": 18,
@@ -2920,6 +2974,7 @@
     }
   },
   "Dreaming Dark": {
+    "SortLevels": [ 19, 19, 19 ],
     "Quests": {
       "Eye of the Titan": {
         "HeroicLevel": 19,
@@ -2951,6 +3006,7 @@
     }
   },
   "Devils of Shavarath": {
+    "SortLevels": [ 19, 19, 19 ],
     "Quests": {
       "The Weapons Shipment": {
         "HeroicLevel": 19,
@@ -2991,6 +3047,7 @@
     }
   },
   "Secrets of the Artificers": {
+    "SortLevels": [ 19, 22, 32 ],
     "Quests": {
       "Blown to Bits": {
         "HeroicLevel": 19,
@@ -3036,6 +3093,7 @@
     }
   },
   "Menace of the Underdark": {
+    "SortLevels": [ 19, 21, 21 ],
     "Quests": {
       "Murder by Night": {
         "HeroicLevel": 19,
@@ -3121,6 +3179,7 @@
     }
   },
   "Haunted Halls of Eveningstar": {
+    "SortLevels": [ 28, 28, 28 ],
     "Quests": {
       "The Haunted Halls of Eveningstar": {
         "EpicLevel": 28,
@@ -3130,6 +3189,7 @@
     }
   },
   "Shadow Under Thunderholme": {
+    "SortLevels": [ 30, 30, 30 ],
     "Quests": {
       "Fire on Thunder Peak": {
         "LegLevel": 30,
