@@ -274,6 +274,7 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbxKeepFreeTogether = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -390,6 +391,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numArtificer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).BeginInit();
             this.tabSagas.SuspendLayout();
+            this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
             this.SuspendLayout();
@@ -3298,6 +3300,7 @@
             // tabSettings
             // 
             this.tabSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabSettings.Controls.Add(this.cbxKeepFreeTogether);
             this.tabSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabSettings.Location = new System.Drawing.Point(4, 25);
             this.tabSettings.Name = "tabSettings";
@@ -3395,6 +3398,18 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItem5.Text = "Clear";
+            // 
+            // cbxKeepFreeTogether
+            // 
+            this.cbxKeepFreeTogether.AutoSize = true;
+            this.cbxKeepFreeTogether.Checked = true;
+            this.cbxKeepFreeTogether.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxKeepFreeTogether.Location = new System.Drawing.Point(59, 122);
+            this.cbxKeepFreeTogether.Name = "cbxKeepFreeTogether";
+            this.cbxKeepFreeTogether.Size = new System.Drawing.Size(264, 17);
+            this.cbxKeepFreeTogether.TabIndex = 0;
+            this.cbxKeepFreeTogether.Text = "Keep free quests at the top when sorting by pack?";
+            this.cbxKeepFreeTogether.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -3528,6 +3543,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).EndInit();
             this.tabSagas.ResumeLayout(false);
             this.tabSagas.PerformLayout();
+            this.tabSettings.ResumeLayout(false);
+            this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -3778,6 +3795,7 @@
         private System.Windows.Forms.NumericUpDown numColorsoftheQueen;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.NumericUpDown numFastHealing;
+        private System.Windows.Forms.CheckBox cbxKeepFreeTogether;
     }
 }
 

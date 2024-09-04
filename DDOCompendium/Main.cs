@@ -29,6 +29,10 @@ namespace DDOCompendium
         /// Can be All, Epic, or Legendary
         /// </summary>
         public string LevelFilter = "All";
+        /// <summary>
+        /// Can be None, Pack, Level, Patron
+        /// </summary>
+        public string CurrentSort = "None";
         private DataGridViewCell ClickedCell;
         private int ClickedSagaID;
         public DataGridViewCellStyle darkgridcellstyle = new()
@@ -457,6 +461,7 @@ namespace DDOCompendium
                                     questsDataView.RowFilter = "";
                                     break;
                             }
+                            RefreshSortOrder();
                         }
                         break;
                     case QUESTSGRID_LEGENDARY_INDEX:
@@ -475,17 +480,54 @@ namespace DDOCompendium
                                     questsDataView.RowFilter = "";
                                     break;
                             }
+                            RefreshSortOrder();
                         }
                         break;
                     case QUESTSGRID_PACK_INDEX:
                         if (thisRowIndex == -1)
                         {
-                            // sort by pack, substituting in SortWithPack where present
+                            // sort by pack with respect to pack level
+                            SortQuestsByPack();
                         }
                         break;
                     default:
                         break;
                 }
+            }
+        }
+
+        private void SortQuestsByPack()
+        {
+            foreach (DataRow thisQuest in questsTable.Rows)
+            {
+                int filterindex = 0;
+                if (LevelFilter == "Epic") filterindex = 1;
+                else if (LevelFilter == "Legendary") filterindex = 2;
+                string sortpack = thisQuest["SortWithPack"].ToString();
+                string sortlevel = "";
+                if (!cbxKeepFreeTogether.Checked && sortpack == "Free")
+                {
+                    if (filterindex == 0) sortlevel = thisQuest["H"].ToString();
+                    if (filterindex == 1 || sortlevel == "") sortlevel = thisQuest["E"].ToString();
+                    if (filterindex == 2 || sortlevel == "") sortlevel = thisQuest["L"].ToString();
+                }
+                else sortlevel = PackSortLevels[sortpack][filterindex].ToString();
+                sortlevel = sortlevel.PadLeft(3, '0');
+                thisQuest["SortExpr"] = sortlevel + " " + sortpack;
+            }
+            CurrentSort = "Pack";
+        }
+
+        private void RefreshSortOrder()
+        {
+            switch (CurrentSort)
+            {
+                case "Pack":
+                    {
+                        SortQuestsByPack();
+                        break;
+                    }
+                default: break;
             }
         }
 
@@ -528,8 +570,6 @@ namespace DDOCompendium
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // ensure saga completion data is updated for the current character
-            //UpdateSagaCompletionData();
             // save all our data back to the files
             WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
             WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
