@@ -1,124 +1,124 @@
 {
-  "Cormanthor Elves": [
-    [ 75, "+1 to saves vs spells" ],
-    [ 150, "+5 HP" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "Agents of Argonnessen": [
-    [ 75, "Choice of: Siberys Dragonshards, Blood of Dragons, Collapsed Portable Hole, or Velah, The Red Dragon cookies" ],
-    [ 150, "+5 HP" ],
-    [ 400, "+2 to saves vs dragons" ],
-    [ 700, "(Unreachable)" ]
-  ],
-  "House Cannith": [
-    [ 50, "Access to patron vendor" ],
-    [ 150, "Artificer class unlock" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "The Coin Lords": [
-    [ 75, "Character inventory tab" ],
-    [ 150, "Character inventory tab (costs 1 Collapsed Portable Hole + 10k plat, or 6 Astral Shards)" ],
-    [ 400, "+2 to Diplomacy and Intimidate" ],
-    [ 700, "(Unreachable)" ]
-  ],
-  "House Deneith": [
-    [ 75, "Access to patron vendor, +2 to Intimidate and Search" ],
-    [ 150, "Extra items at patron vendor, +5 HP" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "The Free Agents": [
-    [ 75, "Access to patron vendor" ],
-    [ 150, "Extra items at patron vendor" ],
-    [ 400, "Access to repair service with lower chance of permanent damage" ],
-    [ 700, "Falconry universal enhancement tree unlock" ],
-    [ 1000, "(Unreachable)" ]
-  ],
-  "The Gatekeepers": [
-    [ 75, "+2 to Spot and Concentration" ],
-    [ 150, "+5 HP" ],
-    [ 400, "Horizon Walker universal enhancement tree unlock" ],
-    [ 700, "+2 to saves vs extraplanar creatures" ],
-    [ 1000, "(Unreachable)" ]
-  ],
-  "The Harpers": [
-    [ 125, "Lesser Harper Pin, +2 to Perform and Bluff" ],
-    [ 250, "Greater Harper Pin, +5 HP" ],
-    [ 310, "Harper Agent universal enhancement tree unlock" ],
-    [ 500, "(Unreachable)" ]
-  ],
-  "House Jorasco": [
-    [ 75, "Access to some 1hr divine buffs, +2 to Heal and Diplomacy" ],
-    [ 150, "Access to more 1hr divine buffs, +5 HP" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "Keepers of the Feather": [
-    [ 60, "+2 to saves vs undead" ],
-    [ 120, "Small Augment Bag" ],
-    [ 180, "Vistani Knife Fighter universal enhancement tree unlock" ],
-    [ 240, "+2 to Listen and Hide" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "House Kundarak": [
-    [ 75, "Can purchase +20 character bank slots for 20k plat" ],
-    [ 150, "Can purchase +20 further character bank slots for 20k plat" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "Morgrave University": [
-    [ 75, "+2 to Search and Spellcraft" ],
-    [ 150, "+5 HP" ],
-    [ 400, "+2 to saves vs magical beasts" ],
-    [ 450, "+2 to Use Magic Device" ],
-    [ 600, "(Unreachable)" ]
-  ],
-  "House Phiarlan": [
-    [ 75, "Access to 1h arcane buffs, +2 to Hide and Perform" ],
-    [ 150, "Clicky item for +50% public movement speed" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "Purple Dragon Knights": [
-    [ 125, "Key to Eveningstar (teleport)" ],
-    [ 250, "Spotted Wolf Pup pet certificate, +5 HP" ],
-    [ 375, "Ability to add set bonus to certain items" ],
-    [ 500, "+2 to saves vs Evil creatures" ],
-    [ 800, "(Unreachable)" ]
-  ],
-  "Sharn City Council": [
-    [ 75, "+2 to Bluff and Haggle" ],
-    [ 150, "+5 HP" ],
-    [ 225, "Inquisitive universal enhancement tree unlock" ],
-    [ 450, "(Unreachable)" ]
-  ],
-  "The Silver Flame": [
-    [ 75, "Spiritbinders offer services at half cost" ],
-    [ 150, "Double passive tavern regeneration" ],
-    [ 400, "Access to patron vendor" ],
-    [ 700, "(Unreachable)" ]
-  ],
-  "The Summer Court": [
-    [ 45, "+2 to saves vs fey creatures" ],
-    [ 90, "+5 HP" ],
-    [ 135, "Feydark Illusionist universal enhancement tree unlock" ],
-    [ 180, "+2 to Diplomacy and Perform" ],
-    [ 400, "(Unreachable)" ]
-  ],
-  "The Twelve": [
-    [ 40, "Crafting altar and shard vendor in Meridia" ],
-    [ 100, "Large Ingredients Bag" ],
-    [ 400, "+2 to saves vs spells" ],
-    [ 700, "(Unreachable)" ]
-  ],
-  "The Yugoloth": [
-    [ 75, "Access to essence potion vendor" ],
-    [ 300, "(Unreachable)" ]
-  ],
-  "Total": [
-    [ 400, "Warforged race unlock" ],
-    [ 1000, "Veteran status (Level 4)" ],
-    [ 1750, "32 point build option, choice of +2 ability tome" ],
-    [ 2500, "Favored Soul class unlock" ],
-    [ 3000, "Veteran status (Level 7)" ],
-    [ 5000, "Choice of +5 ability tome" ],
-    [ 7500, "Choice of +8 ability tome" ],
-    [ 10000, "(Unreachable)" ]
-  ]
+  "Cormanthor Elves": {
+    "75": "+1 to saves vs spells",
+    "150": "+5 HP",
+    "400": "(Unreachable)"
+  },
+  "Agents of Argonnessen": {
+    "75": "Choice of: Siberys Dragonshards, Blood of Dragons, Collapsed Portable Hole, or Velah, The Red Dragon cookies",
+    "150": "+5 HP",
+    "400": "+2 to saves vs dragons",
+    "700": "(Unreachable)"
+  },
+  "House Cannith": {
+    "50": "Access to patron vendor",
+    "150": "Artificer class unlock",
+    "400": "(Unreachable)"
+  },
+  "The Coin Lords": {
+    "75": "Character inventory tab",
+    "150": "Character inventory tab (costs 1 Collapsed Portable Hole + 10k plat, or 6 Astral Shards)",
+    "400": "+2 to Diplomacy and Intimidate",
+    "700": "(Unreachable)"
+  },
+  "House Deneith": {
+    "75": "Access to patron vendor, +2 to Intimidate and Search",
+    "150": "Extra items at patron vendor, +5 HP",
+    "400": "(Unreachable)"
+  },
+  "The Free Agents": {
+    "75": "Access to patron vendor",
+    "150": "Extra items at patron vendor",
+    "400": "Access to repair service with lower chance of permanent damage",
+    "700": "Falconry universal enhancement tree unlock",
+    "1000": "(Unreachable)"
+  },
+  "The Gatekeepers": {
+    "75": "+2 to Spot and Concentration",
+    "150": "+5 HP",
+    "400": "Horizon Walker universal enhancement tree unlock",
+    "700": "+2 to saves vs extraplanar creatures",
+    "1000": "(Unreachable)"
+  },
+  "The Harpers": {
+    "125": "Lesser Harper Pin, +2 to Perform and Bluff",
+    "250": "Greater Harper Pin, +5 HP",
+    "310": "Harper Agent universal enhancement tree unlock",
+    "500": "(Unreachable)"
+  },
+  "House Jorasco": {
+    "75": "Access to some 1hr divine buffs, +2 to Heal and Diplomacy",
+    "150": "Access to more 1hr divine buffs, +5 HP",
+    "400": "(Unreachable)"
+  },
+  "Keepers of the Feather": {
+    "60": "+2 to saves vs undead",
+    "120": "Small Augment Bag",
+    "180": "Vistani Knife Fighter universal enhancement tree unlock",
+    "240": "+2 to Listen and Hide",
+    "400": "(Unreachable)"
+  },
+  "House Kundarak": {
+    "75": "Can purchase +20 character bank slots for 20k plat",
+    "150": "Can purchase +20 further character bank slots for 20k plat",
+    "400": "(Unreachable)"
+  },
+  "Morgrave University": {
+    "75": "+2 to Search and Spellcraft",
+    "150": "+5 HP",
+    "400": "+2 to saves vs magical beasts",
+    "450": "+2 to Use Magic Device",
+    "600": "(Unreachable)"
+  },
+  "House Phiarlan": {
+    "75": "Access to 1h arcane buffs, +2 to Hide and Perform",
+    "150": "Clicky item for +50% public movement speed",
+    "400": "(Unreachable)"
+  },
+  "Purple Dragon Knights": {
+    "125": "Key to Eveningstar (teleport)",
+    "250": "Spotted Wolf Pup pet certificate, +5 HP",
+    "375": "Ability to add set bonus to certain items",
+    "500": "+2 to saves vs Evil creatures",
+    "800": "(Unreachable)"
+  },
+  "Sharn City Council": {
+    "75": "+2 to Bluff and Haggle",
+    "150": "+5 HP",
+    "225": "Inquisitive universal enhancement tree unlock",
+    "450": "(Unreachable)"
+  },
+  "The Silver Flame": {
+    "75": "Spiritbinders offer services at half cost",
+    "150": "Double passive tavern regeneration",
+    "400": "Access to patron vendor",
+    "700": "(Unreachable)"
+  },
+  "The Summer Court": {
+    "45": "+2 to saves vs fey creatures",
+    "90": "+5 HP",
+    "135": "Feydark Illusionist universal enhancement tree unlock",
+    "180": "+2 to Diplomacy and Perform",
+    "400": "(Unreachable)"
+  },
+  "The Twelve": {
+    "40": "Crafting altar and shard vendor in Meridia",
+    "100": "Large Ingredients Bag",
+    "400": "+2 to saves vs spells",
+    "700": "(Unreachable)"
+  },
+  "The Yugoloth": {
+    "75": "Access to essence potion vendor",
+    "300": "(Unreachable)"
+  },
+  "Total": {
+    "400": "Warforged race unlock",
+    "1000": "Veteran status (Level 4)",
+    "1750": "32 point build option, choice of +2 ability tome",
+    "2500": "Favored Soul class unlock",
+    "3000": "Veteran status (Level 7)",
+    "5000": "Choice of +5 ability tome",
+    "7500": "Choice of +8 ability tome",
+    "10000": "(Unreachable)"
+  }
 }

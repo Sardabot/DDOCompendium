@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace DDOCompendium
         public List<DataTable> SagaTables = [];
         public List<Saga> sagaData;
         public Dictionary<string, List<int?>> PackSortLevels = [];
+        public Dictionary<string, Dictionary<int, string>> patronData = [];
         public bool SagasFormatted = false;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
@@ -123,6 +125,11 @@ namespace DDOCompendium
 
             // import wilderness tables
 
+            // import patrons data
+            importedJsonData = ReadFromFile(DataFolderPath + "Patrons.json");
+            patronData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<int, string>>>(importedJsonData);
+            CreatePatronsPanel();
+
             // setup characters tab
             foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
             cmboCharSelect.SelectedItem = SelectedCharacterName;
@@ -168,6 +175,25 @@ namespace DDOCompendium
             ChangeSelectedCharacter(SelectedCharacterName);
 
             return true;
+        }
+
+        private void CreatePatronsPanel()
+        {
+            int verticalPos = 10;
+            foreach ((string thisPatronName, Dictionary<int, string> thisPatronRewards) in patronData)
+            {
+                Label thisLabel = new()
+                {
+                    Text = thisPatronName,
+                    Width = 150,
+                    TextAlign = ContentAlignment.TopRight,
+                    // create the font object for this
+                };
+                tabCharFavor.Controls.Add(thisLabel);
+                thisLabel.Location = new Point(20, verticalPos);
+
+                verticalPos += 25; // increase pos so next line is below this one
+            }
         }
 
         private void UpdatePackSortLevels(string sortpack, int? heroicLevel, int? epicLevel, int? legLevel)
@@ -340,7 +366,7 @@ namespace DDOCompendium
         private void LoadPastLivesAndTomesForCharacter()
         {
             string tomeval;
-            foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel1.Controls.OfType<NumericUpDown>())
+            foreach (NumericUpDown thisnumbox in tabCharTomes.Controls.OfType<NumericUpDown>())
             {
                 var tomename = thisnumbox.Tag as string;
                 if (characterData[SelectedCharacterName].Tomes.TryGetValue(tomename, out tomeval))
@@ -359,7 +385,7 @@ namespace DDOCompendium
                 cmboEpicLearning.Text = tomeval;
             }
             else cmboEpicLearning.Text = "";
-            foreach (NumericUpDown thisnumbox in splitContainerCharacters.Panel2.Controls.OfType<NumericUpDown>())
+            foreach (NumericUpDown thisnumbox in tabCharLives.Controls.OfType<NumericUpDown>())
             {
                 var lifename = thisnumbox.Tag as string;
                 if (characterData[SelectedCharacterName].PastLives.TryGetValue(lifename, out string lifeval))

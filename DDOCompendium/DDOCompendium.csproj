@@ -77,6 +77,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlockProgressBar\Block.cs" />
+    <Compile Include="BlockProgressBar\BlockedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BlockProgressBar\BlockedProgressBar.Designer.cs">
+      <DependentUpon>BlockedProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlockProgressBar\BlockList.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
