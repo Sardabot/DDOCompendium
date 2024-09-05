@@ -774,6 +774,11 @@ namespace DDOCompendium
 
         private void BtnDelChar_Click(object sender, EventArgs e)
         {
+            if (characterData.Count <= 1)
+            {
+                MessageBox.Show("Can't delete the only character!  Create a new one first if you want to delete this one.");
+                return;
+            }
             var response = MessageBox.Show("Are you sure you want to delete " + SelectedCharacterName + "?  This is irreversible!", "Delete character?", MessageBoxButtons.OKCancel);
             if (response == DialogResult.OK)
             {

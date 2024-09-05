@@ -56,7 +56,11 @@
         "SortWithPack": "Misery's Peak"
       },
       "Protect Baudry's Interests": {
-        "Name": "Protect Baudry's Interests",
+        "HeroicLevel": 2,
+        "Patron": "The Free Agents",
+        "Favor": 2
+      },
+      "Stop Hazadill's Shipment": {
         "HeroicLevel": 2,
         "Patron": "The Free Agents",
         "Favor": 2
@@ -114,13 +118,13 @@
       "The Miller's Debt": {
         "HeroicLevel": 2,
         "Patron": "The Coin Lords",
-        "Favor": 2,
+        "Favor": 4,
         "Style": "Solo"
       },
       "Arachnophobia": {
         "HeroicLevel": 2,
         "Patron": "The Coin Lords",
-        "Favor": 2,
+        "Favor": 4,
         "Style": "Solo"
       },
       "Information is Key": {
@@ -151,7 +155,7 @@
       "Home Sweet Sewer": {
         "HeroicLevel": 3,
         "Patron": "The Coin Lords",
-        "Favor": 2,
+        "Favor": 4,
         "Style": "Solo"
       },
       "An Explosive Situation": {
@@ -2989,7 +2993,7 @@
       "Raiding the Giants' Vault": {
         "HeroicLevel": 19,
         "Patron": "The Coin Lords",
-        "Favor": 6,
+        "Favor": 12,
         "Style": "Solo"
       },
       "Mining for Ancient Secrets": {
