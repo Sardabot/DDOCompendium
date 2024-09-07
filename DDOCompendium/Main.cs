@@ -24,6 +24,8 @@ namespace DDOCompendium
         public List<Saga> sagaData;
         public Dictionary<string, List<int?>> PackSortLevels = [];
         public Dictionary<string, Dictionary<int, string>> patronData = [];
+        public Dictionary<string, int> totalFavorData = [];
+        private TableLayoutPanel tableLayoutPanelPatrons;
         public bool SagasFormatted = false;
         public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
@@ -125,14 +127,15 @@ namespace DDOCompendium
 
             // import wilderness tables
 
+            // setup characters tab
+            foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
+            cmboCharSelect.SelectedItem = SelectedCharacterName;
+
             // import patrons data
             importedJsonData = ReadFromFile(DataFolderPath + "Patrons.json");
             patronData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<int, string>>>(importedJsonData);
             CreatePatronsPanel();
-
-            // setup characters tab
-            foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
-            cmboCharSelect.SelectedItem = SelectedCharacterName;
+            UpdateFavorTotals();
 
             // import saga tables
             importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
@@ -179,9 +182,18 @@ namespace DDOCompendium
 
         private void CreatePatronsPanel()
         {
-            int verticalPos = 10;
+            tableLayoutPanelPatrons = new TableLayoutPanel()
+            {
+                RowCount = patronData.Count,
+                ColumnCount = 2,
+                AutoSizeMode = AutoSizeMode.GrowOnly,
+                AutoSize = true,
+            };
+            tabCharFavor.Controls.Add(tableLayoutPanelPatrons);
+            tableLayoutPanelPatrons.Location = new System.Drawing.Point(20, 40);
             foreach ((string thisPatronName, Dictionary<int, string> thisPatronRewards) in patronData)
             {
+                totalFavorData.Add(thisPatronName, 0);
                 Label thisLabel = new()
                 {
                     Text = thisPatronName,
@@ -189,10 +201,42 @@ namespace DDOCompendium
                     TextAlign = ContentAlignment.TopRight,
                     // create the font object for this
                 };
-                tabCharFavor.Controls.Add(thisLabel);
-                thisLabel.Location = new Point(20, verticalPos);
+                
+                tableLayoutPanelPatrons.Controls.Add(thisLabel);
+                tableLayoutPanelPatrons.Controls.Add(new Label());
+            }
+        }
 
-                verticalPos += 25; // increase pos so next line is below this one
+        private void UpdateFavorTotals()
+        {
+            foreach (string n in totalFavorData.Keys.ToList()) { totalFavorData[n] = 0; };
+            foreach (DataRow row in questsTable.Rows)
+            {
+                int thisFavor = 0;
+                int thisBaseFavor = int.Parse(row[QUESTSGRID_FAVOR_INDEX].ToString());
+                switch (row[QUESTSGRID_COMPLETED_INDEX].ToString())
+                {
+                    case "Casual":
+                        thisFavor = thisBaseFavor / 2;
+                        break;
+                    case "Normal":
+                        thisFavor = thisBaseFavor;
+                        break;
+                    case "Hard":
+                        thisFavor = thisBaseFavor * 2;
+                        break;
+                    case "Elite":
+                        thisFavor = thisBaseFavor * 3;
+                        break;
+                    default:
+                        break;
+                }
+                totalFavorData[row[QUESTSGRID_PATRON_INDEX].ToString()] += thisFavor;
+                totalFavorData["Total"] += thisFavor;
+            }
+            for (int i = 0; i < patronData.Count; i++)
+            {
+                tableLayoutPanelPatrons.GetControlFromPosition(1, i).Text = totalFavorData[tableLayoutPanelPatrons.GetControlFromPosition(0, i).Text].ToString();
             }
         }
 
@@ -812,6 +856,11 @@ namespace DDOCompendium
                 cmboCharSelect.Items.Remove(SelectedCharacterName);
                 cmboCharSelect.SelectedIndex = 0;
             }
+        }
+
+        private void BtnUpdateFavorTotals_Click(object sender, EventArgs e)
+        {
+            UpdateFavorTotals();
         }
     }
 
