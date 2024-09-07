@@ -485,19 +485,19 @@
     "SpecialRewards": [""],
     "Quests": [
       [ "Lvl", "Quest", "Magic of Myth Drannor (Heroic)" ],
-      [ "13", "Book Burning" ],
-      [ "13", "Death Hosts This Banquet" ],
-      [ "13", "Ettercap Incursion" ],
-      [ "13", "Oghma's Song" ],
-      [ "13", "Portal to Below" ],
-      [ "13", "Secrets of the Red Wizards" ],
-      [ "13", "Seeds of Decay" ],
-      [ "13", "The House of Gems" ],
-      [ "13", "The Key to the Mythal" ],
       [ "13", "The Safehold" ],
-      [ "13", "The Zulkir's Plan" ],
+      [ "13", "Death Hosts This Banquet" ],
+      [ "13", "Oghma's Song" ],
+      [ "13", "The Key to the Mythal" ],
+      [ "13", "Secrets of the Red Wizards" ],
+      [ "13", "The House of Gems" ],
+      [ "13", "Voices of the Dead" ],
       [ "13", "Times Long Past" ],
-      [ "13", "Voices of the Dead" ]
+      [ "13", "The Zulkir's Plan" ],
+      [ "13", "Book Burning" ],
+      [ "13", "Ettercap Incursion" ],
+      [ "13", "Portal to Below" ],
+      [ "13", "Seeds of Decay" ]
     ]
   },
   {
@@ -509,19 +509,19 @@
     "SpecialRewards": [""],
     "Quests": [
       [ "Lvl", "Quest", "Magic of Myth Drannor (Legendary)" ],
-      [ "35", "Book Burning" ],
-      [ "35", "Death Hosts This Banquet" ],
-      [ "35", "Ettercap Incursion" ],
-      [ "35", "Oghma's Song" ],
-      [ "35", "Portal to Below" ],
-      [ "35", "Secrets of the Red Wizards" ],
-      [ "35", "Seeds of Decay" ],
-      [ "35", "The House of Gems" ],
-      [ "35", "The Key to the Mythal" ],
       [ "35", "The Safehold" ],
-      [ "35", "The Zulkir's Plan" ],
+      [ "35", "Death Hosts This Banquet" ],
+      [ "35", "Oghma's Song" ],
+      [ "35", "The Key to the Mythal" ],
+      [ "35", "Secrets of the Red Wizards" ],
+      [ "35", "The House of Gems" ],
+      [ "35", "Voices of the Dead" ],
       [ "35", "Times Long Past" ],
-      [ "35", "Voices of the Dead" ]
+      [ "35", "The Zulkir's Plan" ],
+      [ "35", "Book Burning" ],
+      [ "35", "Ettercap Incursion" ],
+      [ "35", "Portal to Below" ],
+      [ "35", "Seeds of Decay" ]
     ]
   }
 ]
