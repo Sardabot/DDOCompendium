@@ -596,6 +596,28 @@
         "Patron": "The Twelve",
         "Favor": 9
       }
+    },
+    "Wildernesses": {
+      "Korthos Island": {
+        "HeroicLevelRange": "1 (1-3)",
+        "HeroicMap": "Map_of_Korthos_Island"
+      },
+      "The Cerulean Hills": {
+        "HeroicLevelRange": "3 (1-6)",
+        "HeroicMap": "Map_of_The_Cerulean_Hills"
+      },
+      "The Waterworks": {
+        "HeroicLevelRange": "3 (1-6)",
+        "HeroicMap": "Map_of_The_Waterworks"
+      },
+      "Searing Heights": {
+        "HeroicLevelRange": "6 (4-10)",
+        "HeroicMap": "Map_of_Searing_Heights"
+      },
+      "Ataraxia's Haven": {
+        "HeroicLevelRange": "10 (7-14)",
+        "HeroicMap": "Map_of_The_Cerulean_Hills"
+      }
     }
   },
   "Keep on the Borderlands": {
@@ -648,6 +670,14 @@
         "EpicLevel": 21,
         "Patron": "The Gatekeepers",
         "Favor": 2
+      }
+    },
+    "Wildernesses": {
+      "The Borderlands": {
+        "HeroicLevelRange": "1 (1-3)",
+        "EpicLevelRange": "21 (20-25)",
+        "HeroicMap": "Map_of_the_Borderlands",
+        "EpicMap": "Map_of_the_Borderlands"
       }
     }
   },
@@ -713,6 +743,14 @@
         "LegLevel": 32,
         "Patron": "The Gatekeepers",
         "Favor": 3
+      }
+    },
+    "Wildernesses": {
+      "Saltmarsh": {
+        "HeroicLevelRange": "3 (1-6)",
+        "LegLevelRange": "32 (20-36)",
+        "HeroicMap": "Map_of_Saltmarsh",
+        "LegMap": "Map_of_Saltmarsh"
       }
     }
   },
@@ -894,6 +932,12 @@
         "HeroicLevel": 7,
         "Patron": "House Phiarlan",
         "Favor": 4
+      }
+    },
+    "Wildernesses": {
+      "Tangleroot Gorge": {
+        "HeroicLevelRange": "4 (2-7)",
+        "HeroicMap": "Map_of_Tangleroot_Gorge"
       }
     }
   },
@@ -1078,6 +1122,14 @@
         "Favor": 10,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "The Feywild": {
+        "HeroicLevelRange": "5 (3-8)",
+        "LegLevelRange": "32 (20-36)",
+        "HeroicMap": "Map_of_the_Feywild",
+        "LegMap": "Map_of_the_Feywild"
+      }
     }
   },
   "Three-Barrel Cove": {
@@ -1140,6 +1192,14 @@
         "EpicLevel": 25,
         "Patron": "The Free Agents",
         "Favor": 7
+      }
+    },
+    "Wildernesses": {
+      "Three-Barrel_Cove": {
+        "HeroicLevelRange": "5 (3-8)",
+        "EpicLevelRange": "25 (20-29)",
+        "HeroicMap": "Map_of_Three-Barrel_Cove",
+        "EpicMap": "Map_of_Three-Barrel_Cove_(epic)"
       }
     }
   },
@@ -1260,7 +1320,7 @@
       }
     }
   },
-  "Shadowdusk Isle": {
+  "Sorrowdusk Isle": {
     "SortLevels": [ 6, 6, 6 ],
     "Quests": {
       "Freeing Achka": {
@@ -1322,6 +1382,12 @@
         "HeroicLevel": 10,
         "Patron": "House Deneith",
         "Favor": 4
+      }
+    },
+    "Wildernesses": {
+      "Sorrowdusk Isle": {
+        "HeroicLevelRange": "7 (4-11)",
+        "HeroicMap": "Map_of_Sorrowdusk_Isle"
       }
     }
   },
@@ -1511,6 +1577,14 @@
         "Favor": 10,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "Isle of Dread": {
+        "HeroicLevelRange": "7 (4-11)",
+        "LegLevelRange": "32 (20-36)",
+        "HeroicMap": "Map_of_Isle_of_Dread",
+        "LegMap": "Map_of_Isle_of_Dread"
+      }
     }
   },
   "Against the Slave Lords": {
@@ -1691,6 +1765,12 @@
         "Patron": "House Kundarak",
         "Favor": 5
       }
+    },
+    "Wildernesses": {
+      "The Red Fens": {
+        "HeroicLevelRange": "9 (6-13)",
+        "HeroicMap": "Map_of_The_Red_Fens"
+      }
     }
   },
   "The Restless Isles": {
@@ -1717,6 +1797,12 @@
         "Patron": "The Free Agents",
         "Favor": 6,
         "Style": "Raid"
+      }
+    },
+    "Wildernesses": {
+      "The Restless Isles": {
+        "HeroicLevelRange": "10 (7-14)",
+        "HeroicMap": "Map_of_The_Restless_Isles"
       }
     }
   },
@@ -1836,6 +1922,14 @@
         "Favor": 9,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "Barovia": {
+        "HeroicLevelRange": "10 (7-14)",
+        "LegLevelRange": "31 (20-35)",
+        "HeroicMap": "Map_of_The_Land_of_Barovia",
+        "LegMap": "Map_of_The_Land_of_Barovia"
+      }
     }
   },
   "Demon Sands": {
@@ -1902,6 +1996,12 @@
         "Patron": "The Free Agents",
         "Favor": 6,
         "Style": "Raid"
+      }
+    },
+    "Wildernesses": {
+      "Sands of Menechtarun": {
+        "HeroicLevelRange": "11 (8-15)",
+        "HeroicMap": "Map_of_Sands_of_Menechtarun"
       }
     }
   },
@@ -2068,6 +2168,15 @@
         "Favor": 8,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "Ruins of Gianthold": {
+        "WikiName": "Ruins of Gianthold (heroic)",
+        "HeroicLevelRange": "13 (10-18)",
+        "EpicLevelRange": "24 (20-28)",
+        "HeroicMap": "Map_of_Ruins_of_Gianthold_(heroic)",
+        "EpicMap": "Map_of_Ruins_of_Gianthold_(epic)"
+      }
     }
   },
   "Trials of the Archons": {
@@ -2180,6 +2289,14 @@
         "Patron": "Cormanthor Elves",
         "Favor": 5
       }
+    },
+    "Wildernesses": {
+      "Myth Drannor": {
+        "HeroicLevelRange": "13 (?-?)",
+        "LegLevelRange": "34 (20-38)",
+        "HeroicMap": "Map_of_Ruins_of_Myth_Drannor",
+        "LegMap": "Map_of_Ruins_of_Myth_Drannor"
+      }
     }
   },
   "Devil's Gambit": {
@@ -2289,6 +2406,15 @@
         "LegLevel": 30,
         "Patron": "The Silver Flame",
         "Favor": 9
+      }
+    },
+    "Wildernesses": {
+      "Orchard of the Macabre": {
+        "WikiName": "Orchard of the Macabre (heroic)",
+        "HeroicLevelRange": "14 (10-19)",
+        "EpicLevelRange": "29 (20-29)",
+        "HeroicMap": "Map_of_Orchard_of_the_Macabre_(heroic)",
+        "EpicMap": "Map_of_Orchard_of_the_Macabre_(epic)"
       }
     }
   },
@@ -2422,6 +2548,20 @@
         "Favor": 12,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "The Vale of Twilight": {
+        "HeroicLevelRange": "16 (12-21)",
+        "HeroicMap": "Map_of_The_Vale_of_Twilight"
+      },
+      "The Subterrane - Central": {
+        "HeroicLevelRange": "16 (12-21)",
+        "HeroicMap": "Map_of_The_Subterrane_-_Central"
+      },
+      "The Subterrane - East": {
+        "HeroicLevelRange": "16 (12-21)",
+        "HeroicMap": "Map_of_The_Subterrane_-_East"
+      }
     }
   },
   "Masterminds of Sharn": {
@@ -2492,6 +2632,14 @@
         "Patron": "Sharn City Council",
         "Favor": 10,
         "Style": "Raid"
+      }
+    },
+    "Wildernesses": {
+      "The Cogs": {
+        "HeroicLevelRange": "15 (11-20)",
+        "LegLevelRange": "32 (20-36)",
+        "HeroicMap": "Map_of_The_Cogs",
+        "LegMap": "Map_of_The_Cogs"
       }
     }
   },
@@ -2656,6 +2804,20 @@
         "Favor": 7,
         "SortWithPack": "The Storm Horns"
       }
+    },
+    "Wildernesses": {
+      "Wheloon Prison": {
+        "HeroicLevelRange": "15 (11-20)",
+        "EpicLevelRange": "25 (21-29)",
+        "HeroicMap": "Map_of_Wheloon_Prison_(heroic)",
+        "EpicMap": "Map_of_Wheloon_Prison_(epic)"
+      },
+      "The Storm Horns": {
+        "HeroicLevelRange": "19 (15-24)",
+        "EpicLevelRange": "27 (20-29)",
+        "HeroicMap": "Map_of_The_Storm_Horns_(heroic)",
+        "EpicMap": "Map_of_The_Storm_Horns_(epic)"
+      }
     }
   },
   "The Soul Splitter": {
@@ -2747,6 +2909,24 @@
         "Patron": "Agents of Argonnessen",
         "Favor": 8
       }
+    },
+    "Wildernesses": {
+      "Aussircaex's Valley": {
+        "HeroicLevelRange": "17 (13-22)",
+        "HeroicMap": "Map_of_Aussircaex's_Valley"
+      },
+      "Soami Gardens": {
+        "HeroicLevelRange": "17 (13-22)",
+        "HeroicMap": "Map_of_Soami_Gardens"
+      },
+      "Mount Reysalon": {
+        "HeroicLevelRange": "17 (13-22)",
+        "HeroicMap": "Map_of_Mount_Reysalon"
+      },
+      "Eerie Forest": {
+        "HeroicLevelRange": "17 (13-22)",
+        "HeroicMap": "Map_of_Eerie_Forest"
+      }
     }
   },
   "Druid's Deep": {
@@ -2810,6 +2990,14 @@
         "EpicLevel": 24,
         "Patron": "The Harpers",
         "Favor": 7
+      }
+    },
+    "Wildernesses": {
+      "The High Road": {
+        "HeroicLevelRange": "18 (14-23)",
+        "EpicLevelRange": "24 (20-28)",
+        "HeroicMap": "Map_of_the_High_Road",
+        "EpicMap": "Map_of_the_High_Road"
       }
     }
   },
@@ -3048,6 +3236,12 @@
         "Favor": 8,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "Devil Battlefield": {
+        "HeroicLevelRange": "19 (15-24)",
+        "HeroicMap": "Map_of_Devil_Battlefield"
+      }
     }
   },
   "Secrets of the Artificers": {
@@ -3093,6 +3287,20 @@
         "Patron": "House Cannith",
         "Favor": 10,
         "Style": "Raid"
+      }
+    },
+    "Wildernesses": {
+      "House Cannith Manufactuary": {
+        "HeroicLevelRange": "19 (15-24)",
+        "HeroicMap": "Map_of_House_Cannith_Manufactuary"
+      },
+      "Artificer Workshops": {
+        "HeroicLevelRange": "20 (16-24)",
+        "HeroicMap": "Map_of_Artificer_Workshops"
+      },
+      "Research Facility": {
+        "HeroicLevelRange": "20 (16-24)",
+        "HeroicMap": "Map_of_Research Facility"
       }
     }
   },
@@ -3180,6 +3388,24 @@
         "Favor": 8,
         "Style": "Raid"
       }
+    },
+    "Wildernesses": {
+      "The King's Forest": {
+        "EpicLevelRange": "21 (20-25)",
+        "EpicMap": "Map_of_The_King's_Forest"
+      },
+      "The Underdark": {
+        "EpicLevelRange": "22 (20-26)",
+        "EpicMap": "Map_of_The_Underdark"
+      },
+      "Sschindylryn": {
+        "EpicLevelRange": "22 (20-26)",
+        "EpicMap": "Map_of_Sschindylryn"
+      },
+      "The Demonweb": {
+        "EpicLevelRange": "23 (20-27)",
+        "EpicMap": "Map_of_The_Demonweb"
+      }
     }
   },
   "Haunted Halls of Eveningstar": {
@@ -3206,6 +3432,12 @@
         "Patron": "Purple Dragon Knights",
         "Favor": 9,
         "Style": "Raid"
+      }
+    },
+    "Wildernesses": {
+      "The Ruins of Thunderholme": {
+        "EpicLevelRange": "29 (20-29)",
+        "EpicMap": "Map_of_The_Ruins_of_Thunderholme"
       }
     }
   }

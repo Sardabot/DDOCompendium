@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -19,6 +16,7 @@ namespace DDOCompendium
         public string CharactersFilePath;
         public DataTable questsTable;
         public DataView questsDataView;
+        public DataTable wildTable;
         public Dictionary<string, Character> characterData;
         public List<DataTable> SagaTables = [];
         public List<Saga> sagaData;
@@ -83,15 +81,14 @@ namespace DDOCompendium
                 return false;
             }
 
-            // unpack these into a table of quests
+            // unpack these into the quests and wildernesses tables
             questsTable = MakeQuestsTable();
+            wildTable = MakeWildernessesTable();
             foreach ((string thisPackName, QuestPack thisPack) in importedQuestData)
-            //foreach (string thisPackName in importedQuestData.Keys)
             {
                 PackSortLevels.Add(thisPackName, importedQuestData[thisPackName].SortLevels);
 
                 foreach ((string thisQuestName, Quest thisQuest) in thisPack.Quests)
-                //foreach (string thisQuestName in importedQuestData[thisPackName].Quests.Keys)
                 {
                     DataRow tempRow = questsTable.NewRow();
                     tempRow.SetField("H", thisQuest.HeroicLevel);
@@ -110,6 +107,21 @@ namespace DDOCompendium
                     tempRow.SetField("WikiName", thisQuest.WikiName);
                     questsTable.Rows.Add(tempRow);
                 }
+
+                if (thisPack.Wildernesses is null) continue;
+                foreach ((string thisWildernessName, Wilderness thisWilderness) in thisPack.Wildernesses)
+                {
+                    DataRow tempRow = wildTable.NewRow();
+                    tempRow.SetField("Name", thisWildernessName);
+                    tempRow.SetField("H", thisWilderness.HeroicLevelRange ?? "");
+                    tempRow.SetField("E", thisWilderness.EpicLevelRange ?? "");
+                    tempRow.SetField("L", thisWilderness.LegLevelRange ?? "");
+                    tempRow.SetField("HMap", thisWilderness.HeroicMap ?? "");
+                    tempRow.SetField("EMap", thisWilderness.EpicMap ?? "");
+                    tempRow.SetField("LMap", thisWilderness.LegMap ?? "");
+                    tempRow.SetField("WikiName", thisWilderness.WikiName ?? "");
+                    wildTable.Rows.Add(tempRow);
+                }
             }
             FinalizePackSortLevels();
             questsDataView = new DataView(questsTable);
@@ -119,6 +131,7 @@ namespace DDOCompendium
                 DataSource = questsDataView
             };
             datagridQuests.DataSource = questsDataSource;
+            datagridWildernesses.DataSource = wildTable;
             // make adjustments to grid settings
             foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
@@ -328,6 +341,24 @@ namespace DDOCompendium
             table.Columns.Add(new DataColumn("SortWithPack", typeof(string)));
             table.Columns.Add(new DataColumn("WikiName", typeof(string)));
             table.Columns.Add(new DataColumn("SortExpr", typeof(string)));
+
+            return table;
+        }
+
+        private DataTable MakeWildernessesTable()
+        {
+            DataTable table = new()
+            {
+                TableName = "Wildernesses"
+            };
+            table.Columns.Add(new DataColumn("Name", typeof(string)));
+            table.Columns.Add(new DataColumn("H", typeof(string)));
+            table.Columns.Add(new DataColumn("E", typeof(string)));
+            table.Columns.Add(new DataColumn("L", typeof(string)));
+            table.Columns.Add(new DataColumn("HMap", typeof(string)));
+            table.Columns.Add(new DataColumn("EMap", typeof(string)));
+            table.Columns.Add(new DataColumn("LMap", typeof(string)));
+            table.Columns.Add(new DataColumn("WikiName", typeof(string)));
 
             return table;
         }
@@ -868,9 +899,14 @@ namespace DDOCompendium
             UpdateFavorTotals();
         }
 
-        private void cbxKeepFreeTogether_CheckedChanged(object sender, EventArgs e)
+        private void CbxKeepFreeTogether_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.KeepFreeQuestsChecked = cbxKeepFreeTogether.Checked;
+        }
+
+        private void ToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            
         }
     }
 
@@ -891,7 +927,7 @@ namespace DDOCompendium
         /// </summary>
         public List<int?> SortLevels { get; set; }
         public Dictionary<string, Quest> Quests { get; set; }
-        public Wilderness[]? Wildernesses { get; set; }
+        public Dictionary<string, Wilderness>? Wildernesses { get; set; }
     }
 
     public class Quest
@@ -929,8 +965,6 @@ namespace DDOCompendium
     /// </summary>
     public class Wilderness
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
         public string? WikiName { get; set; }
         public string? HeroicLevelRange { get; set; }
         public string? EpicLevelRange { get; set; }

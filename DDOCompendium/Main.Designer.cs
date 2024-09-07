@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
             this.tcTabs = new System.Windows.Forms.TabControl();
@@ -284,6 +287,8 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.datagridWildernesses = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -292,6 +297,7 @@
             this.tcTabs.SuspendLayout();
             this.tabNotes.SuspendLayout();
             this.tabNotes2.SuspendLayout();
+            this.tabWilderness.SuspendLayout();
             this.tabCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitcontainerCharacters)).BeginInit();
             this.splitcontainerCharacters.Panel1.SuspendLayout();
@@ -407,6 +413,7 @@
             this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -491,6 +498,7 @@
             // 
             // tabNotes
             // 
+            this.tabNotes.AutoScroll = true;
             this.tabNotes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabNotes.Controls.Add(this.txtNotes1);
             this.tabNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -517,6 +525,7 @@
             // 
             // tabNotes2
             // 
+            this.tabNotes2.AutoScroll = true;
             this.tabNotes2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabNotes2.Controls.Add(this.txtNotes2);
             this.tabNotes2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -543,6 +552,7 @@
             // 
             // tabRefTables
             // 
+            this.tabRefTables.AutoScroll = true;
             this.tabRefTables.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabRefTables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabRefTables.Location = new System.Drawing.Point(4, 25);
@@ -553,7 +563,9 @@
             // 
             // tabWilderness
             // 
+            this.tabWilderness.AutoScroll = true;
             this.tabWilderness.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabWilderness.Controls.Add(this.datagridWildernesses);
             this.tabWilderness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabWilderness.Location = new System.Drawing.Point(4, 25);
             this.tabWilderness.Name = "tabWilderness";
@@ -3411,6 +3423,7 @@
             // 
             // tabSettings
             // 
+            this.tabSettings.AutoScroll = true;
             this.tabSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabSettings.Controls.Add(this.cbxKeepFreeTogether);
             this.tabSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -3432,7 +3445,7 @@
             this.cbxKeepFreeTogether.TabIndex = 0;
             this.cbxKeepFreeTogether.Text = "Keep free quests at the top when sorting by pack?";
             this.cbxKeepFreeTogether.UseVisualStyleBackColor = true;
-            this.cbxKeepFreeTogether.CheckedChanged += new System.EventHandler(this.cbxKeepFreeTogether_CheckedChanged);
+            this.cbxKeepFreeTogether.CheckedChanged += new System.EventHandler(this.CbxKeepFreeTogether_CheckedChanged);
             // 
             // contextmenuQuestCompletion
             // 
@@ -3524,6 +3537,53 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItem5.Text = "Clear";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
+            // 
+            // datagridWildernesses
+            // 
+            this.datagridWildernesses.AllowUserToAddRows = false;
+            this.datagridWildernesses.AllowUserToDeleteRows = false;
+            this.datagridWildernesses.AllowUserToResizeRows = false;
+            this.datagridWildernesses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridWildernesses.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.datagridWildernesses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle5;
+            this.datagridWildernesses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagridWildernesses.EnableHeadersVisualStyles = false;
+            this.datagridWildernesses.Location = new System.Drawing.Point(0, 0);
+            this.datagridWildernesses.Name = "datagridWildernesses";
+            this.datagridWildernesses.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.datagridWildernesses.RowHeadersVisible = false;
+            this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
+            this.datagridWildernesses.TabIndex = 1;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3544,6 +3604,7 @@
             this.tabNotes.PerformLayout();
             this.tabNotes2.ResumeLayout(false);
             this.tabNotes2.PerformLayout();
+            this.tabWilderness.ResumeLayout(false);
             this.tabCharacters.ResumeLayout(false);
             this.splitcontainerCharacters.Panel1.ResumeLayout(false);
             this.splitcontainerCharacters.Panel1.PerformLayout();
@@ -3664,6 +3725,7 @@
             this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3922,6 +3984,8 @@
         private System.Windows.Forms.Label lblIconicLives;
         private System.Windows.Forms.Label lblArchetypeLives;
         private System.Windows.Forms.Button btnUpdateFavorTotals;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridView datagridWildernesses;
     }
 }
 
