@@ -265,6 +265,7 @@
             this.numDrow = new System.Windows.Forms.NumericUpDown();
             this.label98 = new System.Windows.Forms.Label();
             this.tabCharFavor = new System.Windows.Forms.TabPage();
+            this.btnUpdateFavorTotals = new System.Windows.Forms.Button();
             this.tabCharExtra = new System.Windows.Forms.TabPage();
             this.tabSagas = new System.Windows.Forms.TabPage();
             this.tableLayoutPanelSagas = new System.Windows.Forms.TableLayoutPanel();
@@ -283,7 +284,6 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUpdateFavorTotals = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -3358,6 +3358,18 @@
             this.tabCharFavor.TabIndex = 3;
             this.tabCharFavor.Text = "Favor Totals";
             // 
+            // btnUpdateFavorTotals
+            // 
+            this.btnUpdateFavorTotals.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateFavorTotals.ForeColor = System.Drawing.Color.Gray;
+            this.btnUpdateFavorTotals.Location = new System.Drawing.Point(123, 3);
+            this.btnUpdateFavorTotals.Name = "btnUpdateFavorTotals";
+            this.btnUpdateFavorTotals.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateFavorTotals.TabIndex = 3;
+            this.btnUpdateFavorTotals.Text = "Update";
+            this.btnUpdateFavorTotals.UseVisualStyleBackColor = true;
+            this.btnUpdateFavorTotals.Click += new System.EventHandler(this.BtnUpdateFavorTotals_Click);
+            // 
             // tabCharExtra
             // 
             this.tabCharExtra.AutoScroll = true;
@@ -3420,6 +3432,7 @@
             this.cbxKeepFreeTogether.TabIndex = 0;
             this.cbxKeepFreeTogether.Text = "Keep free quests at the top when sorting by pack?";
             this.cbxKeepFreeTogether.UseVisualStyleBackColor = true;
+            this.cbxKeepFreeTogether.CheckedChanged += new System.EventHandler(this.cbxKeepFreeTogether_CheckedChanged);
             // 
             // contextmenuQuestCompletion
             // 
@@ -3510,18 +3523,6 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItem5.Text = "Clear";
-            // 
-            // btnUpdateFavorTotals
-            // 
-            this.btnUpdateFavorTotals.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateFavorTotals.ForeColor = System.Drawing.Color.Gray;
-            this.btnUpdateFavorTotals.Location = new System.Drawing.Point(123, 3);
-            this.btnUpdateFavorTotals.Name = "btnUpdateFavorTotals";
-            this.btnUpdateFavorTotals.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdateFavorTotals.TabIndex = 3;
-            this.btnUpdateFavorTotals.Text = "Update";
-            this.btnUpdateFavorTotals.UseVisualStyleBackColor = true;
-            this.btnUpdateFavorTotals.Click += new System.EventHandler(this.BtnUpdateFavorTotals_Click);
             // 
             // Main
             // 

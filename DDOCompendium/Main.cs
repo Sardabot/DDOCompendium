@@ -27,7 +27,7 @@ namespace DDOCompendium
         public Dictionary<string, int> totalFavorData = [];
         private TableLayoutPanel tableLayoutPanelPatrons;
         public bool SagasFormatted = false;
-        public string SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
+        public string SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
         /// <summary>
         /// Can be All, Epic, or Legendary
@@ -59,6 +59,11 @@ namespace DDOCompendium
 
         private bool ImportData()
         {
+            // update settings
+            SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
+            cbxKeepFreeTogether.Checked = Properties.Settings.Default.KeepFreeQuestsChecked;
+
+            // grab quests data
             Text = "DDO Compendium - " + SelectedCharacterName;
             QuestsFilePath = DataFolderPath + "Quests.json";
             string importedJsonData = ReadFromFile(QuestsFilePath);
@@ -861,6 +866,11 @@ namespace DDOCompendium
         private void BtnUpdateFavorTotals_Click(object sender, EventArgs e)
         {
             UpdateFavorTotals();
+        }
+
+        private void cbxKeepFreeTogether_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.KeepFreeQuestsChecked = cbxKeepFreeTogether.Checked;
         }
     }
 

@@ -52,7 +52,7 @@
       "Misery's Peak": {
         "HeroicLevel": 2,
         "Patron": "The Free Agents",
-        "Favor": 2,
+        "Favor": 4,
         "SortWithPack": "Misery's Peak"
       },
       "Protect Baudry's Interests": {
@@ -1338,7 +1338,7 @@
         "HeroicLevel": 8,
         "LegLevel": 34,
         "Patron": "The Gatekeepers",
-        "Favor": 5
+        "Favor": 6
       },
       "ToEE: Air Node": {
         "HeroicLevel": 8,

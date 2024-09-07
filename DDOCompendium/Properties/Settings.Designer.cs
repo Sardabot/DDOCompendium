@@ -34,5 +34,17 @@ namespace DDOCompendium.Properties {
                 this["SelectedCharacterName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool KeepFreeQuestsChecked {
+            get {
+                return ((bool)(this["KeepFreeQuestsChecked"]));
+            }
+            set {
+                this["KeepFreeQuestsChecked"] = value;
+            }
+        }
     }
 }
