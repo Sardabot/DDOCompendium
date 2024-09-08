@@ -80,6 +80,7 @@ namespace DDOCompendium
                 MessageBox.Show("Couldn't retrieve data from Characters.json");
                 return false;
             }
+            if (!characterData.ContainsKey(SelectedCharacterName)) SelectedCharacterName = characterData.Keys.ToList()[0];
 
             // unpack these into the quests and wildernesses tables
             questsTable = MakeQuestsTable();
@@ -497,7 +498,11 @@ namespace DDOCompendium
             string QuestName = datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_NAME_INDEX].Value.ToString();
 
             if (thisCell.Value.ToString() == chosenDiff) thisCell.Value = "";
-            else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo") thisCell.Value = "Casual";
+            else if (datagridQuests.Rows[thisCell.RowIndex].Cells[QUESTSGRID_STYLE_INDEX].Value.ToString() == "Solo")
+            {
+                if (thisCell.Value.ToString() == "Casual" || chosenDiff == "") thisCell.Value = "";
+                else thisCell.Value = "Casual";
+            }
             else thisCell.Value = chosenDiff;
 
             if (thisCell.Value.ToString() == "")
