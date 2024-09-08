@@ -40,7 +40,8 @@ namespace DDOCompendium
         public DataGridViewCellStyle darkgridcellstyle = new()
         {
             BackColor = Color.FromArgb(64, 64, 64),
-            ForeColor = Color.FromArgb(224, 224, 244)
+            ForeColor = Color.FromArgb(224, 224, 244),
+            Font = new Font("Calibri", 11, FontStyle.Regular),
         };
         public DataGridViewCellStyle sagaNAcellstyle = new()
         {
@@ -133,6 +134,8 @@ namespace DDOCompendium
             };
             datagridQuests.DataSource = questsDataSource;
             datagridWildernesses.DataSource = wildTable;
+            datagridWildernesses.DefaultCellStyle = darkgridcellstyle;
+            datagridWildernesses.ColumnHeadersDefaultCellStyle = darkgridcellstyle;
             // make adjustments to grid settings
             foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
@@ -216,13 +219,13 @@ namespace DDOCompendium
                 Label thisLabel = new()
                 {
                     Text = thisPatronName,
-                    Width = 150,
+                    Width = 200,
                     TextAlign = ContentAlignment.TopRight,
-                    // create the font object for this
+                    Font = new Font("Calibri", 12, FontStyle.Regular)
                 };
                 
                 tableLayoutPanelPatrons.Controls.Add(thisLabel);
-                tableLayoutPanelPatrons.Controls.Add(new Label());
+                tableLayoutPanelPatrons.Controls.Add(new Label { Font = new Font("Calibri", 12, FontStyle.Regular)});
             }
         }
 

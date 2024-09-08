@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
             this.tcTabs = new System.Windows.Forms.TabControl();
@@ -44,6 +44,7 @@
             this.txtNotes2 = new System.Windows.Forms.TextBox();
             this.tabRefTables = new System.Windows.Forms.TabPage();
             this.tabWilderness = new System.Windows.Forms.TabPage();
+            this.datagridWildernesses = new System.Windows.Forms.DataGridView();
             this.tabCharacters = new System.Windows.Forms.TabPage();
             this.splitcontainerCharacters = new System.Windows.Forms.SplitContainer();
             this.lblCharSelect = new System.Windows.Forms.Label();
@@ -288,7 +289,6 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.datagridWildernesses = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -298,6 +298,7 @@
             this.tabNotes.SuspendLayout();
             this.tabNotes2.SuspendLayout();
             this.tabWilderness.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).BeginInit();
             this.tabCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitcontainerCharacters)).BeginInit();
             this.splitcontainerCharacters.Panel1.SuspendLayout();
@@ -413,7 +414,6 @@
             this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -442,36 +442,36 @@
             this.datagridQuests.AllowUserToResizeRows = false;
             this.datagridQuests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridQuests.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.datagridQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle8;
             this.datagridQuests.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridQuests.EnableHeadersVisualStyles = false;
             this.datagridQuests.Location = new System.Drawing.Point(0, 0);
             this.datagridQuests.Name = "datagridQuests";
             this.datagridQuests.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.datagridQuests.RowHeadersVisible = false;
             this.datagridQuests.Size = new System.Drawing.Size(771, 661);
             this.datagridQuests.TabIndex = 0;
@@ -516,6 +516,7 @@
             this.txtNotes1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtNotes1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNotes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNotes1.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotes1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.txtNotes1.Location = new System.Drawing.Point(3, 3);
             this.txtNotes1.Multiline = true;
@@ -543,6 +544,7 @@
             this.txtNotes2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtNotes2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNotes2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNotes2.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotes2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNotes2.Location = new System.Drawing.Point(3, 3);
             this.txtNotes2.Multiline = true;
@@ -572,6 +574,47 @@
             this.tabWilderness.Size = new System.Drawing.Size(719, 632);
             this.tabWilderness.TabIndex = 3;
             this.tabWilderness.Text = "Wilderness";
+            // 
+            // datagridWildernesses
+            // 
+            this.datagridWildernesses.AllowUserToAddRows = false;
+            this.datagridWildernesses.AllowUserToDeleteRows = false;
+            this.datagridWildernesses.AllowUserToResizeRows = false;
+            this.datagridWildernesses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.datagridWildernesses.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.datagridWildernesses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle11;
+            this.datagridWildernesses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagridWildernesses.EnableHeadersVisualStyles = false;
+            this.datagridWildernesses.Location = new System.Drawing.Point(0, 0);
+            this.datagridWildernesses.Name = "datagridWildernesses";
+            this.datagridWildernesses.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.datagridWildernesses.RowHeadersVisible = false;
+            this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
+            this.datagridWildernesses.TabIndex = 1;
             // 
             // tabCharacters
             // 
@@ -764,7 +807,7 @@
             "",
             "Lesser",
             "Greater"});
-            this.cmboEpicLearning.Location = new System.Drawing.Point(100, 270);
+            this.cmboEpicLearning.Location = new System.Drawing.Point(73, 268);
             this.cmboEpicLearning.Name = "cmboEpicLearning";
             this.cmboEpicLearning.Size = new System.Drawing.Size(77, 21);
             this.cmboEpicLearning.TabIndex = 123;
@@ -779,7 +822,7 @@
             "",
             "Lesser",
             "Greater"});
-            this.cmboHeroicLearning.Location = new System.Drawing.Point(100, 243);
+            this.cmboHeroicLearning.Location = new System.Drawing.Point(73, 241);
             this.cmboHeroicLearning.Name = "cmboHeroicLearning";
             this.cmboHeroicLearning.Size = new System.Drawing.Size(77, 21);
             this.cmboHeroicLearning.TabIndex = 122;
@@ -788,11 +831,11 @@
             // numStr
             // 
             this.numStr.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numStr.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numStr.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numStr.Location = new System.Drawing.Point(86, 21);
             this.numStr.Name = "numStr";
-            this.numStr.Size = new System.Drawing.Size(35, 23);
+            this.numStr.Size = new System.Drawing.Size(35, 26);
             this.numStr.TabIndex = 3;
             this.numStr.Tag = "Str";
             this.numStr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -801,41 +844,41 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(70, 271);
+            this.label35.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(37, 269);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(28, 15);
+            this.label35.Size = new System.Drawing.Size(33, 18);
             this.label35.TabIndex = 121;
             this.label35.Text = "Epic";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 23);
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 15);
+            this.label1.Size = new System.Drawing.Size(25, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Str";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(56, 245);
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(22, 243);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 15);
+            this.label11.Size = new System.Drawing.Size(48, 18);
             this.label11.TabIndex = 120;
             this.label11.Text = "Heroic";
             // 
             // numDex
             // 
             this.numDex.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDex.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDex.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numDex.Location = new System.Drawing.Point(86, 45);
             this.numDex.Name = "numDex";
-            this.numDex.Size = new System.Drawing.Size(35, 23);
+            this.numDex.Size = new System.Drawing.Size(35, 26);
             this.numDex.TabIndex = 5;
             this.numDex.Tag = "Dex";
             this.numDex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -844,41 +887,41 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(71, 223);
+            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(32, 219);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 15);
+            this.label8.Size = new System.Drawing.Size(120, 18);
             this.label8.TabIndex = 119;
             this.label8.Text = "Tomes of Learning";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 46);
+            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 15);
+            this.label2.Size = new System.Drawing.Size(32, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Dex";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(533, 287);
+            this.label29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(521, 288);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 15);
+            this.label29.Size = new System.Drawing.Size(94, 18);
             this.label29.TabIndex = 118;
             this.label29.Text = "Move Silently";
             // 
             // numCon
             // 
             this.numCon.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numCon.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numCon.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numCon.Location = new System.Drawing.Point(86, 69);
             this.numCon.Name = "numCon";
-            this.numCon.Size = new System.Drawing.Size(35, 23);
+            this.numCon.Size = new System.Drawing.Size(35, 26);
             this.numCon.TabIndex = 7;
             this.numCon.Tag = "Con";
             this.numCon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -887,41 +930,41 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(582, 263);
+            this.label30.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(578, 263);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 15);
+            this.label30.Size = new System.Drawing.Size(37, 18);
             this.label30.TabIndex = 117;
             this.label30.Text = "Hide";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 70);
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 15);
+            this.label3.Size = new System.Drawing.Size(32, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Con";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(550, 215);
+            this.label31.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(543, 216);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(64, 15);
+            this.label31.Size = new System.Drawing.Size(72, 18);
             this.label31.TabIndex = 116;
             this.label31.Text = "Open Lock";
             // 
             // numInt
             // 
             this.numInt.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numInt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numInt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numInt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numInt.Location = new System.Drawing.Point(86, 93);
             this.numInt.Name = "numInt";
-            this.numInt.Size = new System.Drawing.Size(35, 23);
+            this.numInt.Size = new System.Drawing.Size(35, 26);
             this.numInt.TabIndex = 9;
             this.numInt.Tag = "Int";
             this.numInt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -930,41 +973,41 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(529, 191);
+            this.label32.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(516, 191);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(85, 15);
+            this.label32.Size = new System.Drawing.Size(99, 18);
             this.label32.TabIndex = 115;
             this.label32.Text = "Disable Device";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(61, 94);
+            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(59, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 15);
+            this.label4.Size = new System.Drawing.Size(25, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Int";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(582, 167);
+            this.label33.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(579, 168);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 15);
+            this.label33.Size = new System.Drawing.Size(36, 18);
             this.label33.TabIndex = 114;
             this.label33.Text = "Spot";
             // 
             // numWis
             // 
             this.numWis.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numWis.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numWis.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numWis.Location = new System.Drawing.Point(86, 117);
             this.numWis.Name = "numWis";
-            this.numWis.Size = new System.Drawing.Size(35, 23);
+            this.numWis.Size = new System.Drawing.Size(35, 26);
             this.numWis.TabIndex = 11;
             this.numWis.Tag = "Wis";
             this.numWis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -973,41 +1016,41 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(571, 143);
+            this.label34.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(566, 143);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(43, 15);
+            this.label34.Size = new System.Drawing.Size(49, 18);
             this.label34.TabIndex = 113;
             this.label34.Text = "Search";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 118);
+            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 15);
+            this.label5.Size = new System.Drawing.Size(32, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "Wis";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(572, 95);
+            this.label36.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(567, 96);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(42, 15);
+            this.label36.Size = new System.Drawing.Size(48, 18);
             this.label36.TabIndex = 111;
             this.label36.Text = "Repair";
             // 
             // numCha
             // 
             this.numCha.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numCha.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numCha.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numCha.Location = new System.Drawing.Point(86, 141);
             this.numCha.Name = "numCha";
-            this.numCha.Size = new System.Drawing.Size(35, 23);
+            this.numCha.Size = new System.Drawing.Size(35, 26);
             this.numCha.TabIndex = 13;
             this.numCha.Tag = "Cha";
             this.numCha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1016,41 +1059,41 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(583, 71);
+            this.label37.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(579, 72);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(31, 15);
+            this.label37.Size = new System.Drawing.Size(36, 18);
             this.label37.TabIndex = 110;
             this.label37.Text = "Heal";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(56, 143);
+            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(53, 143);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 15);
+            this.label6.Size = new System.Drawing.Size(31, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "Cha";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(557, 47);
+            this.label38.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(548, 49);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(57, 15);
+            this.label38.Size = new System.Drawing.Size(67, 18);
             this.label38.TabIndex = 109;
             this.label38.Text = "Spellcraft";
             // 
             // numRacialAP
             // 
             this.numRacialAP.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numRacialAP.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numRacialAP.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRacialAP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numRacialAP.Location = new System.Drawing.Point(280, 21);
             this.numRacialAP.Name = "numRacialAP";
-            this.numRacialAP.Size = new System.Drawing.Size(35, 23);
+            this.numRacialAP.Size = new System.Drawing.Size(35, 26);
             this.numRacialAP.TabIndex = 15;
             this.numRacialAP.Tag = "Racial AP";
             this.numRacialAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1059,41 +1102,41 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(529, 23);
+            this.label39.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(519, 23);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(85, 15);
+            this.label39.Size = new System.Drawing.Size(96, 18);
             this.label39.TabIndex = 108;
             this.label39.Text = "Concentration";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(222, 23);
+            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(214, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 15);
+            this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 16;
             this.label12.Text = "Racial AP";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(391, 287);
+            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(387, 288);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 15);
+            this.label16.Size = new System.Drawing.Size(45, 18);
             this.label16.TabIndex = 107;
             this.label16.Text = "Listen";
             // 
             // numUniversalAP
             // 
             this.numUniversalAP.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numUniversalAP.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUniversalAP.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numUniversalAP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numUniversalAP.Location = new System.Drawing.Point(280, 45);
             this.numUniversalAP.Name = "numUniversalAP";
-            this.numUniversalAP.Size = new System.Drawing.Size(35, 23);
+            this.numUniversalAP.Size = new System.Drawing.Size(35, 26);
             this.numUniversalAP.TabIndex = 17;
             this.numUniversalAP.Tag = "Universal AP";
             this.numUniversalAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1102,21 +1145,21 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(388, 263);
+            this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(382, 263);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 15);
+            this.label19.Size = new System.Drawing.Size(50, 18);
             this.label19.TabIndex = 106;
             this.label19.Text = "Haggle";
             // 
             // numFate
             // 
             this.numFate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numFate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numFate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numFate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numFate.Location = new System.Drawing.Point(280, 93);
             this.numFate.Name = "numFate";
-            this.numFate.Size = new System.Drawing.Size(35, 23);
+            this.numFate.Size = new System.Drawing.Size(35, 26);
             this.numFate.TabIndex = 21;
             this.numFate.Tag = "Fate";
             this.numFate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1125,21 +1168,21 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(378, 239);
+            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(373, 239);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 15);
+            this.label20.Size = new System.Drawing.Size(59, 18);
             this.label20.TabIndex = 105;
             this.label20.Text = "Perform";
             // 
             // numDestiny
             // 
             this.numDestiny.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDestiny.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDestiny.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDestiny.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numDestiny.Location = new System.Drawing.Point(280, 117);
             this.numDestiny.Name = "numDestiny";
-            this.numDestiny.Size = new System.Drawing.Size(35, 23);
+            this.numDestiny.Size = new System.Drawing.Size(35, 26);
             this.numDestiny.TabIndex = 23;
             this.numDestiny.Tag = "Destiny";
             this.numDestiny.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1148,21 +1191,21 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(397, 215);
+            this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(392, 215);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 15);
+            this.label21.Size = new System.Drawing.Size(40, 18);
             this.label21.TabIndex = 104;
             this.label21.Text = "UMD";
             // 
             // numBalance
             // 
             this.numBalance.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numBalance.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBalance.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numBalance.Location = new System.Drawing.Point(434, 21);
             this.numBalance.Name = "numBalance";
-            this.numBalance.Size = new System.Drawing.Size(35, 23);
+            this.numBalance.Size = new System.Drawing.Size(35, 26);
             this.numBalance.TabIndex = 27;
             this.numBalance.Tag = "Balance";
             this.numBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1171,21 +1214,21 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(367, 178);
+            this.label22.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(359, 181);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 15);
+            this.label22.Size = new System.Drawing.Size(73, 18);
             this.label22.TabIndex = 103;
             this.label22.Text = "Intimidate";
             // 
             // numJump
             // 
             this.numJump.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numJump.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numJump.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numJump.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numJump.Location = new System.Drawing.Point(434, 45);
             this.numJump.Name = "numJump";
-            this.numJump.Size = new System.Drawing.Size(35, 23);
+            this.numJump.Size = new System.Drawing.Size(35, 26);
             this.numJump.TabIndex = 29;
             this.numJump.Tag = "Jump";
             this.numJump.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1194,21 +1237,21 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(368, 154);
+            this.label23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(359, 155);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(63, 15);
+            this.label23.Size = new System.Drawing.Size(73, 18);
             this.label23.TabIndex = 102;
             this.label23.Text = "Diplomacy";
             // 
             // numSwim
             // 
             this.numSwim.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numSwim.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSwim.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSwim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numSwim.Location = new System.Drawing.Point(434, 69);
             this.numSwim.Name = "numSwim";
-            this.numSwim.Size = new System.Drawing.Size(35, 23);
+            this.numSwim.Size = new System.Drawing.Size(35, 26);
             this.numSwim.TabIndex = 31;
             this.numSwim.Tag = "Swim";
             this.numSwim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1217,21 +1260,21 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(399, 131);
+            this.label24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(395, 131);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(32, 15);
+            this.label24.Size = new System.Drawing.Size(37, 18);
             this.label24.TabIndex = 101;
             this.label24.Text = "Bluff";
             // 
             // numTumble
             // 
             this.numTumble.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numTumble.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numTumble.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTumble.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numTumble.Location = new System.Drawing.Point(434, 93);
             this.numTumble.Name = "numTumble";
-            this.numTumble.Size = new System.Drawing.Size(35, 23);
+            this.numTumble.Size = new System.Drawing.Size(35, 26);
             this.numTumble.TabIndex = 33;
             this.numTumble.Tag = "Tumble";
             this.numTumble.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1240,21 +1283,21 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(384, 95);
+            this.label25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(378, 95);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 15);
+            this.label25.Size = new System.Drawing.Size(54, 18);
             this.label25.TabIndex = 100;
             this.label25.Text = "Tumble";
             // 
             // numBluff
             // 
             this.numBluff.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numBluff.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBluff.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBluff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numBluff.Location = new System.Drawing.Point(434, 129);
             this.numBluff.Name = "numBluff";
-            this.numBluff.Size = new System.Drawing.Size(35, 23);
+            this.numBluff.Size = new System.Drawing.Size(35, 26);
             this.numBluff.TabIndex = 37;
             this.numBluff.Tag = "Bluff";
             this.numBluff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1263,21 +1306,21 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(394, 71);
+            this.label26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(390, 71);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 15);
+            this.label26.Size = new System.Drawing.Size(42, 18);
             this.label26.TabIndex = 99;
             this.label26.Text = "Swim";
             // 
             // numConcentration
             // 
             this.numConcentration.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numConcentration.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numConcentration.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numConcentration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numConcentration.Location = new System.Drawing.Point(617, 21);
             this.numConcentration.Name = "numConcentration";
-            this.numConcentration.Size = new System.Drawing.Size(35, 23);
+            this.numConcentration.Size = new System.Drawing.Size(35, 26);
             this.numConcentration.TabIndex = 39;
             this.numConcentration.Tag = "Concentration";
             this.numConcentration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1286,21 +1329,21 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(395, 47);
+            this.label27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(391, 47);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 15);
+            this.label27.Size = new System.Drawing.Size(41, 18);
             this.label27.TabIndex = 98;
             this.label27.Text = "Jump";
             // 
             // numSpellcraft
             // 
             this.numSpellcraft.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numSpellcraft.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSpellcraft.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSpellcraft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numSpellcraft.Location = new System.Drawing.Point(617, 45);
             this.numSpellcraft.Name = "numSpellcraft";
-            this.numSpellcraft.Size = new System.Drawing.Size(35, 23);
+            this.numSpellcraft.Size = new System.Drawing.Size(35, 26);
             this.numSpellcraft.TabIndex = 41;
             this.numSpellcraft.Tag = "Spellcraft";
             this.numSpellcraft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1309,21 +1352,21 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(383, 23);
+            this.label28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(376, 23);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(48, 15);
+            this.label28.Size = new System.Drawing.Size(56, 18);
             this.label28.TabIndex = 97;
             this.label28.Text = "Balance";
             // 
             // numHeal
             // 
             this.numHeal.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numHeal.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHeal.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHeal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numHeal.Location = new System.Drawing.Point(617, 69);
             this.numHeal.Name = "numHeal";
-            this.numHeal.Size = new System.Drawing.Size(35, 23);
+            this.numHeal.Size = new System.Drawing.Size(35, 26);
             this.numHeal.TabIndex = 43;
             this.numHeal.Tag = "Heal";
             this.numHeal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1332,21 +1375,21 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(245, 287);
+            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(241, 287);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(32, 15);
+            this.label18.Size = new System.Drawing.Size(37, 18);
             this.label18.TabIndex = 96;
             this.label18.Text = "MRR";
             // 
             // numRepair
             // 
             this.numRepair.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numRepair.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numRepair.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRepair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numRepair.Location = new System.Drawing.Point(617, 93);
             this.numRepair.Name = "numRepair";
-            this.numRepair.Size = new System.Drawing.Size(35, 23);
+            this.numRepair.Size = new System.Drawing.Size(35, 26);
             this.numRepair.TabIndex = 45;
             this.numRepair.Tag = "Repair";
             this.numRepair.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1355,21 +1398,21 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(249, 263);
+            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(246, 263);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 15);
+            this.label17.Size = new System.Drawing.Size(32, 18);
             this.label17.TabIndex = 95;
             this.label17.Text = "PRR";
             // 
             // numSearch
             // 
             this.numSearch.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numSearch.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numSearch.Location = new System.Drawing.Point(617, 141);
             this.numSearch.Name = "numSearch";
-            this.numSearch.Size = new System.Drawing.Size(35, 23);
+            this.numSearch.Size = new System.Drawing.Size(35, 26);
             this.numSearch.TabIndex = 49;
             this.numSearch.Tag = "Search";
             this.numSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1378,21 +1421,21 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(208, 214);
+            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(199, 215);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 15);
+            this.label15.Size = new System.Drawing.Size(79, 18);
             this.label15.TabIndex = 93;
             this.label15.Text = "Spellpower";
             // 
             // numMeleePower
             // 
             this.numMeleePower.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numMeleePower.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMeleePower.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMeleePower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numMeleePower.Location = new System.Drawing.Point(280, 165);
             this.numMeleePower.Name = "numMeleePower";
-            this.numMeleePower.Size = new System.Drawing.Size(35, 23);
+            this.numMeleePower.Size = new System.Drawing.Size(35, 26);
             this.numMeleePower.TabIndex = 51;
             this.numMeleePower.Tag = "Melee Power";
             this.numMeleePower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1401,21 +1444,21 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(191, 191);
+            this.label14.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(181, 191);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 15);
+            this.label14.Size = new System.Drawing.Size(97, 18);
             this.label14.TabIndex = 92;
             this.label14.Text = "Ranged Power";
             // 
             // numRangedPower
             // 
             this.numRangedPower.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numRangedPower.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numRangedPower.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRangedPower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numRangedPower.Location = new System.Drawing.Point(280, 189);
             this.numRangedPower.Name = "numRangedPower";
-            this.numRangedPower.Size = new System.Drawing.Size(35, 23);
+            this.numRangedPower.Size = new System.Drawing.Size(35, 26);
             this.numRangedPower.TabIndex = 53;
             this.numRangedPower.Tag = "Ranged Power";
             this.numRangedPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1424,21 +1467,21 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(196, 167);
+            this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(186, 167);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 15);
+            this.label13.Size = new System.Drawing.Size(92, 18);
             this.label13.TabIndex = 91;
             this.label13.Text = "Melee Power";
             // 
             // numSpellpower
             // 
             this.numSpellpower.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numSpellpower.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSpellpower.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSpellpower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numSpellpower.Location = new System.Drawing.Point(280, 213);
             this.numSpellpower.Name = "numSpellpower";
-            this.numSpellpower.Size = new System.Drawing.Size(35, 23);
+            this.numSpellpower.Size = new System.Drawing.Size(35, 26);
             this.numSpellpower.TabIndex = 55;
             this.numSpellpower.Tag = "Spellpower";
             this.numSpellpower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1447,21 +1490,21 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(229, 119);
+            this.label10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(223, 119);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
+            this.label10.Size = new System.Drawing.Size(55, 18);
             this.label10.TabIndex = 89;
             this.label10.Text = "Destiny";
             // 
             // numPRR
             // 
             this.numPRR.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numPRR.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPRR.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPRR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numPRR.Location = new System.Drawing.Point(280, 261);
             this.numPRR.Name = "numPRR";
-            this.numPRR.Size = new System.Drawing.Size(35, 23);
+            this.numPRR.Size = new System.Drawing.Size(35, 26);
             this.numPRR.TabIndex = 59;
             this.numPRR.Tag = "PRR";
             this.numPRR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1470,21 +1513,21 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(246, 95);
+            this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(243, 95);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 15);
+            this.label9.Size = new System.Drawing.Size(35, 18);
             this.label9.TabIndex = 88;
             this.label9.Text = "Fate";
             // 
             // numMRR
             // 
             this.numMRR.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numMRR.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMRR.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMRR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numMRR.Location = new System.Drawing.Point(280, 285);
             this.numMRR.Name = "numMRR";
-            this.numMRR.Size = new System.Drawing.Size(35, 23);
+            this.numMRR.Size = new System.Drawing.Size(35, 26);
             this.numMRR.TabIndex = 61;
             this.numMRR.Tag = "MRR";
             this.numMRR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1493,21 +1536,21 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(202, 47);
+            this.label7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(191, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.Size = new System.Drawing.Size(87, 18);
             this.label7.TabIndex = 86;
             this.label7.Text = "Universal AP";
             // 
             // numDiplomacy
             // 
             this.numDiplomacy.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDiplomacy.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDiplomacy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDiplomacy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numDiplomacy.Location = new System.Drawing.Point(434, 153);
             this.numDiplomacy.Name = "numDiplomacy";
-            this.numDiplomacy.Size = new System.Drawing.Size(35, 23);
+            this.numDiplomacy.Size = new System.Drawing.Size(35, 26);
             this.numDiplomacy.TabIndex = 63;
             this.numDiplomacy.Tag = "Diplomacy";
             this.numDiplomacy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1516,11 +1559,11 @@
             // numMoveSilently
             // 
             this.numMoveSilently.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numMoveSilently.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMoveSilently.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMoveSilently.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numMoveSilently.Location = new System.Drawing.Point(617, 285);
             this.numMoveSilently.Name = "numMoveSilently";
-            this.numMoveSilently.Size = new System.Drawing.Size(35, 23);
+            this.numMoveSilently.Size = new System.Drawing.Size(35, 26);
             this.numMoveSilently.TabIndex = 85;
             this.numMoveSilently.Tag = "Move Silently";
             this.numMoveSilently.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1529,11 +1572,11 @@
             // numIntimidate
             // 
             this.numIntimidate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numIntimidate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numIntimidate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numIntimidate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numIntimidate.Location = new System.Drawing.Point(434, 177);
             this.numIntimidate.Name = "numIntimidate";
-            this.numIntimidate.Size = new System.Drawing.Size(35, 23);
+            this.numIntimidate.Size = new System.Drawing.Size(35, 26);
             this.numIntimidate.TabIndex = 65;
             this.numIntimidate.Tag = "Intimidate";
             this.numIntimidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1542,11 +1585,11 @@
             // numHide
             // 
             this.numHide.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numHide.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHide.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numHide.Location = new System.Drawing.Point(617, 261);
             this.numHide.Name = "numHide";
-            this.numHide.Size = new System.Drawing.Size(35, 23);
+            this.numHide.Size = new System.Drawing.Size(35, 26);
             this.numHide.TabIndex = 83;
             this.numHide.Tag = "Hide";
             this.numHide.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1555,11 +1598,11 @@
             // numUMD
             // 
             this.numUMD.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numUMD.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUMD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numUMD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numUMD.Location = new System.Drawing.Point(434, 213);
             this.numUMD.Name = "numUMD";
-            this.numUMD.Size = new System.Drawing.Size(35, 23);
+            this.numUMD.Size = new System.Drawing.Size(35, 26);
             this.numUMD.TabIndex = 67;
             this.numUMD.Tag = "UMD";
             this.numUMD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1568,11 +1611,11 @@
             // numOpenLock
             // 
             this.numOpenLock.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numOpenLock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOpenLock.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOpenLock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numOpenLock.Location = new System.Drawing.Point(617, 213);
             this.numOpenLock.Name = "numOpenLock";
-            this.numOpenLock.Size = new System.Drawing.Size(35, 23);
+            this.numOpenLock.Size = new System.Drawing.Size(35, 26);
             this.numOpenLock.TabIndex = 79;
             this.numOpenLock.Tag = "Open Lock";
             this.numOpenLock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1581,11 +1624,11 @@
             // numPerform
             // 
             this.numPerform.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numPerform.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPerform.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPerform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numPerform.Location = new System.Drawing.Point(434, 237);
             this.numPerform.Name = "numPerform";
-            this.numPerform.Size = new System.Drawing.Size(35, 23);
+            this.numPerform.Size = new System.Drawing.Size(35, 26);
             this.numPerform.TabIndex = 69;
             this.numPerform.Tag = "Perform";
             this.numPerform.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1594,11 +1637,11 @@
             // numDisableDevice
             // 
             this.numDisableDevice.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDisableDevice.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDisableDevice.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDisableDevice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numDisableDevice.Location = new System.Drawing.Point(617, 189);
             this.numDisableDevice.Name = "numDisableDevice";
-            this.numDisableDevice.Size = new System.Drawing.Size(35, 23);
+            this.numDisableDevice.Size = new System.Drawing.Size(35, 26);
             this.numDisableDevice.TabIndex = 77;
             this.numDisableDevice.Tag = "Disable Device";
             this.numDisableDevice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1607,11 +1650,11 @@
             // numHaggle
             // 
             this.numHaggle.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numHaggle.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHaggle.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHaggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numHaggle.Location = new System.Drawing.Point(434, 261);
             this.numHaggle.Name = "numHaggle";
-            this.numHaggle.Size = new System.Drawing.Size(35, 23);
+            this.numHaggle.Size = new System.Drawing.Size(35, 26);
             this.numHaggle.TabIndex = 71;
             this.numHaggle.Tag = "Haggle";
             this.numHaggle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1620,11 +1663,11 @@
             // numSpot
             // 
             this.numSpot.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numSpot.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSpot.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSpot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numSpot.Location = new System.Drawing.Point(617, 165);
             this.numSpot.Name = "numSpot";
-            this.numSpot.Size = new System.Drawing.Size(35, 23);
+            this.numSpot.Size = new System.Drawing.Size(35, 26);
             this.numSpot.TabIndex = 75;
             this.numSpot.Tag = "Spot";
             this.numSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1633,11 +1676,11 @@
             // numListen
             // 
             this.numListen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numListen.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numListen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numListen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numListen.Location = new System.Drawing.Point(434, 285);
             this.numListen.Name = "numListen";
-            this.numListen.Size = new System.Drawing.Size(35, 23);
+            this.numListen.Size = new System.Drawing.Size(35, 26);
             this.numListen.TabIndex = 73;
             this.numListen.Tag = "Listen";
             this.numListen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3543,47 +3586,6 @@
             this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
             // 
-            // datagridWildernesses
-            // 
-            this.datagridWildernesses.AllowUserToAddRows = false;
-            this.datagridWildernesses.AllowUserToDeleteRows = false;
-            this.datagridWildernesses.AllowUserToResizeRows = false;
-            this.datagridWildernesses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.datagridWildernesses.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.datagridWildernesses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle5;
-            this.datagridWildernesses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagridWildernesses.EnableHeadersVisualStyles = false;
-            this.datagridWildernesses.Location = new System.Drawing.Point(0, 0);
-            this.datagridWildernesses.Name = "datagridWildernesses";
-            this.datagridWildernesses.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.datagridWildernesses.RowHeadersVisible = false;
-            this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
-            this.datagridWildernesses.TabIndex = 1;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3605,6 +3607,7 @@
             this.tabNotes2.ResumeLayout(false);
             this.tabNotes2.PerformLayout();
             this.tabWilderness.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).EndInit();
             this.tabCharacters.ResumeLayout(false);
             this.splitcontainerCharacters.Panel1.ResumeLayout(false);
             this.splitcontainerCharacters.Panel1.PerformLayout();
@@ -3725,7 +3728,6 @@
             this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datagridWildernesses)).EndInit();
             this.ResumeLayout(false);
 
         }
