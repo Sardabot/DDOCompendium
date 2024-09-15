@@ -27,14 +27,21 @@ namespace DDOCompendium
         public bool SagasFormatted = false;
         public string SelectedCharacterName;
         public string SelectedDifficulty = "Elite";
-        /// <summary>
-        /// Can be All, Epic, or Legendary
-        /// </summary>
-        public string LevelFilter = "All";
-        /// <summary>
-        /// Can be None, Pack, Level, Patron
-        /// </summary>
-        public string CurrentSort = "None";
+        public LevelFilters LevelFilter = LevelFilters.All;
+        public enum LevelFilters
+        {
+            All,
+            Epic,
+            Legendary
+        }
+        public SortNames CurrentSort = SortNames.None;
+        public enum SortNames
+        {
+            None,
+            Pack,
+            Level,
+            Patron
+        }
         private DataGridViewCell ClickedCell;
         private int ClickedSagaID;
         public DataGridViewCellStyle darkgridcellstyle = new()
@@ -140,6 +147,15 @@ namespace DDOCompendium
             foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
             datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
+            // apply saved filter and sort
+            if (Enum.TryParse(Properties.Settings.Default["SavedFilter"].ToString(), out LevelFilters savedFilter))
+            {
+                ApplyQuestsFilter(savedFilter);
+            }
+            if (Enum.TryParse(Properties.Settings.Default["SavedSort"].ToString(), out SortNames savedSortName))
+            {
+                ApplyQuestsSort(savedSortName);
+            }
 
             // import the notes tabs
             txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
@@ -418,6 +434,7 @@ namespace DDOCompendium
             LoadSagaDataForCharacter();
             LoadPastLivesAndTomesForCharacter();
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+            Properties.Settings.Default["SelectedCharacterName"] = SelectedCharacterName;
             Text = "DDO Compendium - " + SelectedCharacterName;
         }
 
@@ -565,17 +582,15 @@ namespace DDOCompendium
                             // filter the shown quests to epic and above, or remove the filter
                             switch (LevelFilter)
                             {
-                                case "All":
-                                case "Legendary":
-                                    LevelFilter = "Epic";
-                                    questsDataView.RowFilter = "E > 19 OR L > 29";
+                                case LevelFilters.All:
+                                case LevelFilters.Legendary:
+                                    ApplyQuestsFilter(LevelFilters.Epic);
                                     break;
-                                case "Epic":
-                                    LevelFilter = "All";
-                                    questsDataView.RowFilter = "";
+                                case LevelFilters.Epic:
+                                    ApplyQuestsFilter(LevelFilters.All);
                                     break;
                             }
-                            RefreshSortOrder();
+                            ApplyQuestsSort();
                         }
                         break;
                     case QUESTSGRID_LEGENDARY_INDEX:
@@ -584,17 +599,15 @@ namespace DDOCompendium
                             // filter the shown quests to legendary and above, or remove the filter
                             switch (LevelFilter)
                             {
-                                case "All":
-                                case "Epic":
-                                    LevelFilter = "Legendary";
-                                    questsDataView.RowFilter = "L > 29";
+                                case LevelFilters.All:
+                                case LevelFilters.Epic:
+                                    ApplyQuestsFilter(LevelFilters.Legendary);
                                     break;
-                                case "Legendary":
-                                    LevelFilter = "All";
-                                    questsDataView.RowFilter = "";
+                                case LevelFilters.Legendary:
+                                    ApplyQuestsFilter(LevelFilters.All);
                                     break;
                             }
-                            RefreshSortOrder();
+                            ApplyQuestsSort();
                         }
                         break;
                     case QUESTSGRID_PACK_INDEX:
@@ -610,39 +623,65 @@ namespace DDOCompendium
             }
         }
 
+        private void ApplyQuestsFilter(LevelFilters filtername)
+        {
+            switch (filtername)
+            {
+                case LevelFilters.All:
+                    questsDataView.RowFilter = "";
+                    LevelFilter = LevelFilters.All;
+                    break;
+                case LevelFilters.Epic:
+                    questsDataView.RowFilter = "E > 19 OR L > 29";
+                    LevelFilter = LevelFilters.Epic;
+                    break;
+                case LevelFilters.Legendary:
+                    questsDataView.RowFilter = "L > 29";
+                    LevelFilter = LevelFilters.Legendary;
+                    break;
+                default:
+                    break;
+            }
+            Properties.Settings.Default["SavedFilter"] = filtername.ToString();
+        }
+
+        private void ApplyQuestsSort(SortNames? sortname = null)
+        {
+            if (!sortname.HasValue)
+            {
+                ApplyQuestsSort(CurrentSort);
+                Properties.Settings.Default["SavedSort"] = CurrentSort.ToString();
+            }
+            else
+            {
+                switch (sortname)
+                {
+                    case SortNames.Pack:
+                        SortQuestsByPack();
+                        break;
+                    default: break;
+                }
+                Properties.Settings.Default["SavedSort"] = sortname.ToString();
+            }
+        }
+
         private void SortQuestsByPack()
         {
             foreach (DataRow thisQuest in questsTable.Rows)
             {
-                int filterindex = 0;
-                if (LevelFilter == "Epic") filterindex = 1;
-                else if (LevelFilter == "Legendary") filterindex = 2;
                 string sortpack = thisQuest["SortWithPack"].ToString();
                 string sortlevel = "";
                 if (!cbxKeepFreeTogether.Checked && sortpack == "Free")
                 {
-                    if (filterindex == 0) sortlevel = thisQuest["H"].ToString();
-                    if (filterindex == 1 || sortlevel == "") sortlevel = thisQuest["E"].ToString();
-                    if (filterindex == 2 || sortlevel == "") sortlevel = thisQuest["L"].ToString();
+                    if (LevelFilter == LevelFilters.All) sortlevel = thisQuest["H"].ToString();
+                    if (LevelFilter == LevelFilters.Epic || sortlevel == "") sortlevel = thisQuest["E"].ToString();
+                    if (LevelFilter == LevelFilters.Legendary || sortlevel == "") sortlevel = thisQuest["L"].ToString();
                 }
-                else sortlevel = PackSortLevels[sortpack][filterindex].ToString();
+                else sortlevel = PackSortLevels[sortpack][(int)LevelFilter].ToString();
                 sortlevel = sortlevel.PadLeft(3, '0');
                 thisQuest["SortExpr"] = sortlevel + " " + sortpack;
             }
-            CurrentSort = "Pack";
-        }
-
-        private void RefreshSortOrder()
-        {
-            switch (CurrentSort)
-            {
-                case "Pack":
-                    {
-                        SortQuestsByPack();
-                        break;
-                    }
-                default: break;
-            }
+            CurrentSort = SortNames.Pack;
         }
 
         /// <summary>
@@ -688,6 +727,7 @@ namespace DDOCompendium
             WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
             WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
             WriteToFile(DataFolderPath + "Notes2.txt", txtNotes2.Text);
+            Properties.Settings.Default.Save();
         }
 
         private void WriteToFile(string filePath, string data)
@@ -909,7 +949,7 @@ namespace DDOCompendium
 
         private void CbxKeepFreeTogether_CheckedChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.KeepFreeQuestsChecked = cbxKeepFreeTogether.Checked;
+            Properties.Settings.Default["KeepFreeQuestsChecked"] = cbxKeepFreeTogether.Checked;
         }
 
         private void ToolTip1_Popup(object sender, PopupEventArgs e)

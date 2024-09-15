@@ -46,5 +46,29 @@ namespace DDOCompendium.Properties {
                 this["KeepFreeQuestsChecked"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("All")]
+        public string SavedFilter {
+            get {
+                return ((string)(this["SavedFilter"]));
+            }
+            set {
+                this["SavedFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None")]
+        public string SavedSort {
+            get {
+                return ((string)(this["SavedSort"]));
+            }
+            set {
+                this["SavedSort"] = value;
+            }
+        }
     }
 }
