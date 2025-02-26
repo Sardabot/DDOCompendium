@@ -131,6 +131,8 @@
             this.numSpot = new System.Windows.Forms.NumericUpDown();
             this.numListen = new System.Windows.Forms.NumericUpDown();
             this.tabCharLives = new System.Windows.Forms.TabPage();
+            this.label57 = new System.Windows.Forms.Label();
+            this.numDragonDisciple = new System.Windows.Forms.NumericUpDown();
             this.lblEpicLives = new System.Windows.Forms.Label();
             this.lblRaceLives = new System.Windows.Forms.Label();
             this.lblIconicLives = new System.Windows.Forms.Label();
@@ -343,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSpot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numListen)).BeginInit();
             this.tabCharLives.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDragonDisciple)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAncientPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numArtificer)).BeginInit();
@@ -1689,6 +1692,8 @@
             // tabCharLives
             // 
             this.tabCharLives.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabCharLives.Controls.Add(this.label57);
+            this.tabCharLives.Controls.Add(this.numDragonDisciple);
             this.tabCharLives.Controls.Add(this.lblEpicLives);
             this.tabCharLives.Controls.Add(this.lblRaceLives);
             this.tabCharLives.Controls.Add(this.lblIconicLives);
@@ -1832,6 +1837,28 @@
             this.tabCharLives.Size = new System.Drawing.Size(711, 534);
             this.tabCharLives.TabIndex = 2;
             this.tabCharLives.Text = "Past Lives";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(130, 258);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(90, 15);
+            this.label57.TabIndex = 183;
+            this.label57.Text = "Dragon Disciple";
+            // 
+            // numDragonDisciple
+            // 
+            this.numDragonDisciple.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numDragonDisciple.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDragonDisciple.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numDragonDisciple.Location = new System.Drawing.Point(223, 257);
+            this.numDragonDisciple.Name = "numDragonDisciple";
+            this.numDragonDisciple.Size = new System.Drawing.Size(35, 23);
+            this.numDragonDisciple.TabIndex = 182;
+            this.numDragonDisciple.Tag = "Dragon Disciple";
+            this.numDragonDisciple.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblEpicLives
             // 
@@ -3655,6 +3682,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numListen)).EndInit();
             this.tabCharLives.ResumeLayout(false);
             this.tabCharLives.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDragonDisciple)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAncientPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numArtificer)).EndInit();
@@ -3988,6 +4016,8 @@
         private System.Windows.Forms.Button btnUpdateFavorTotals;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridView datagridWildernesses;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.NumericUpDown numDragonDisciple;
     }
 }
 

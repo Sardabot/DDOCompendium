@@ -976,6 +976,35 @@
       }
     }
   },
+  "Fall of the Night Brigade": {
+    "SortLevels": [ 4, 34, 34 ],
+    "Quests": {
+      "Rats in a Cage": {
+        "HeroicLevel": 4,
+        "LegLevel": 34,
+        "Patron": "The Harpers",
+        "Favor": 3
+      },
+      "The Wizard's Labyrinth": {
+        "HeroicLevel": 4,
+        "LegLevel": 34,
+        "Patron": "The Harpers",
+        "Favor": 3
+      },
+      "The Knife's Edge": {
+        "HeroicLevel": 4,
+        "LegLevel": 34,
+        "Patron": "The Harpers",
+        "Favor": 3
+      },
+      "The Darkness and the Light": {
+        "HeroicLevel": 4,
+        "LegLevel": 35,
+        "Patron": "The Harpers",
+        "Favor": 4
+      }
+    }
+  },
   "Phiarlan Carnival": {
     "SortLevels": [ 5, 20, 20 ],
     "Quests": {

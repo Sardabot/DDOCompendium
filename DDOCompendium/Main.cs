@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace DDOCompendium
 {
@@ -617,6 +618,15 @@ namespace DDOCompendium
                             SortQuestsByPack();
                         }
                         break;
+                    case QUESTSGRID_NAME_INDEX:
+                        if (thisRowIndex != -1)
+                        {
+                            // open a wiki link
+                            string pagename = datagridQuests.Rows[thisRowIndex].Cells[QUESTSGRID_WIKI_INDEX].Value.ToString();
+                            if (pagename == "") pagename = datagridQuests.Rows[thisRowIndex].Cells[QUESTSGRID_NAME_INDEX].Value.ToString();
+                            OpenWikiLink(pagename);
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -743,6 +753,12 @@ namespace DDOCompendium
             string tempstr = reader.ReadToEnd();
             reader.Close();
             return tempstr;
+        }
+
+        private void OpenWikiLink(string pagename)
+        {
+            string newurl = @"https://ddowiki.com/page/" + pagename.Replace(" ", "_");
+            Process.Start(new ProcessStartInfo { FileName = newurl, UseShellExecute = true });
         }
 
         /// <summary>
