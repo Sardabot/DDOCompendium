@@ -13,6 +13,7 @@ namespace DDOCompendium
     public partial class Main : Form
     {
         public string DataFolderPath = Application.ExecutablePath.Replace("DDOCompendium.exe", "Data/");
+        public string SaveFolderPath = Application.ExecutablePath.Replace("DDOCompendium.exe", "Save/");
         public string QuestsFilePath;
         public string CharactersFilePath;
         public DataTable questsTable;
@@ -81,7 +82,7 @@ namespace DDOCompendium
                 return false;
             }
             // import user save data
-            CharactersFilePath = DataFolderPath + "Characters.json";
+            CharactersFilePath = SaveFolderPath + "Characters.json";
             importedJsonData = ReadFromFile(CharactersFilePath);
             characterData = JsonConvert.DeserializeObject<Dictionary<string, Character>>(importedJsonData);
             if (characterData is null)
@@ -159,8 +160,8 @@ namespace DDOCompendium
             }
 
             // import the notes tabs
-            txtNotes1.Text = ReadFromFile(DataFolderPath + "Notes.txt");
-            txtNotes2.Text = ReadFromFile(DataFolderPath + "Notes2.txt");
+            txtNotes1.Text = ReadFromFile(SaveFolderPath + "Notes.txt");
+            txtNotes2.Text = ReadFromFile(SaveFolderPath + "Notes2.txt");
 
             // import ref tables
 
@@ -735,8 +736,8 @@ namespace DDOCompendium
         {
             // save all our data back to the files
             WriteToFile(CharactersFilePath, JsonConvert.SerializeObject(characterData, Formatting.Indented));
-            WriteToFile(DataFolderPath + "Notes.txt", txtNotes1.Text);
-            WriteToFile(DataFolderPath + "Notes2.txt", txtNotes2.Text);
+            WriteToFile(SaveFolderPath + "Notes.txt", txtNotes1.Text);
+            WriteToFile(SaveFolderPath + "Notes2.txt", txtNotes2.Text);
             Properties.Settings.Default.Save();
         }
 

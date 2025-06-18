@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
             this.tcTabs = new System.Windows.Forms.TabControl();
@@ -291,6 +291,10 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.numDarkBargainer = new System.Windows.Forms.NumericUpDown();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.numDhampir = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -417,6 +421,8 @@
             this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -445,36 +451,36 @@
             this.datagridQuests.AllowUserToResizeRows = false;
             this.datagridQuests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridQuests.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datagridQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle2;
             this.datagridQuests.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridQuests.EnableHeadersVisualStyles = false;
             this.datagridQuests.Location = new System.Drawing.Point(0, 0);
             this.datagridQuests.Name = "datagridQuests";
             this.datagridQuests.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datagridQuests.RowHeadersVisible = false;
             this.datagridQuests.Size = new System.Drawing.Size(771, 661);
             this.datagridQuests.TabIndex = 0;
@@ -585,36 +591,36 @@
             this.datagridWildernesses.AllowUserToResizeRows = false;
             this.datagridWildernesses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridWildernesses.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridWildernesses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle5;
             this.datagridWildernesses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridWildernesses.EnableHeadersVisualStyles = false;
             this.datagridWildernesses.Location = new System.Drawing.Point(0, 0);
             this.datagridWildernesses.Name = "datagridWildernesses";
             this.datagridWildernesses.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.datagridWildernesses.RowHeadersVisible = false;
             this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
             this.datagridWildernesses.TabIndex = 1;
@@ -1692,6 +1698,10 @@
             // tabCharLives
             // 
             this.tabCharLives.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabCharLives.Controls.Add(this.numDarkBargainer);
+            this.tabCharLives.Controls.Add(this.label61);
+            this.tabCharLives.Controls.Add(this.label68);
+            this.tabCharLives.Controls.Add(this.numDhampir);
             this.tabCharLives.Controls.Add(this.label57);
             this.tabCharLives.Controls.Add(this.numDragonDisciple);
             this.tabCharLives.Controls.Add(this.lblEpicLives);
@@ -2834,7 +2844,7 @@
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(438, 403);
+            this.label85.Location = new System.Drawing.Point(438, 427);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(40, 15);
             this.label85.TabIndex = 134;
@@ -2858,7 +2868,7 @@
             this.numTabaxi.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTabaxi.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTabaxi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTabaxi.Location = new System.Drawing.Point(481, 401);
+            this.numTabaxi.Location = new System.Drawing.Point(481, 425);
             this.numTabaxi.Name = "numTabaxi";
             this.numTabaxi.Size = new System.Drawing.Size(35, 23);
             this.numTabaxi.TabIndex = 133;
@@ -2880,7 +2890,7 @@
             // 
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(435, 378);
+            this.label86.Location = new System.Drawing.Point(435, 402);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(43, 15);
             this.label86.TabIndex = 132;
@@ -2891,7 +2901,7 @@
             this.numRazorclaw.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numRazorclaw.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRazorclaw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numRazorclaw.Location = new System.Drawing.Point(361, 113);
+            this.numRazorclaw.Location = new System.Drawing.Point(361, 137);
             this.numRazorclaw.Name = "numRazorclaw";
             this.numRazorclaw.Size = new System.Drawing.Size(35, 23);
             this.numRazorclaw.TabIndex = 79;
@@ -2904,7 +2914,7 @@
             this.numShifter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numShifter.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numShifter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numShifter.Location = new System.Drawing.Point(481, 377);
+            this.numShifter.Location = new System.Drawing.Point(481, 401);
             this.numShifter.Name = "numShifter";
             this.numShifter.Size = new System.Drawing.Size(35, 23);
             this.numShifter.TabIndex = 131;
@@ -2916,7 +2926,7 @@
             // 
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(297, 114);
+            this.label82.Location = new System.Drawing.Point(297, 138);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(61, 15);
             this.label82.TabIndex = 80;
@@ -2926,7 +2936,7 @@
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(412, 354);
+            this.label87.Location = new System.Drawing.Point(412, 378);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(66, 15);
             this.label87.TabIndex = 130;
@@ -2937,7 +2947,7 @@
             this.numScoundrel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numScoundrel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numScoundrel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numScoundrel.Location = new System.Drawing.Point(361, 137);
+            this.numScoundrel.Location = new System.Drawing.Point(361, 161);
             this.numScoundrel.Name = "numScoundrel";
             this.numScoundrel.Size = new System.Drawing.Size(35, 23);
             this.numScoundrel.TabIndex = 81;
@@ -2950,7 +2960,7 @@
             this.numWarforged.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numWarforged.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWarforged.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numWarforged.Location = new System.Drawing.Point(481, 353);
+            this.numWarforged.Location = new System.Drawing.Point(481, 377);
             this.numWarforged.Name = "numWarforged";
             this.numWarforged.Size = new System.Drawing.Size(35, 23);
             this.numWarforged.TabIndex = 129;
@@ -2962,7 +2972,7 @@
             // 
             this.label81.AutoSize = true;
             this.label81.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(297, 138);
+            this.label81.Location = new System.Drawing.Point(297, 162);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(61, 15);
             this.label81.TabIndex = 82;
@@ -2972,7 +2982,7 @@
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(432, 331);
+            this.label88.Location = new System.Drawing.Point(432, 355);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(46, 15);
             this.label88.TabIndex = 128;
@@ -2983,7 +2993,7 @@
             this.numMorninglord.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numMorninglord.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMorninglord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numMorninglord.Location = new System.Drawing.Point(361, 161);
+            this.numMorninglord.Location = new System.Drawing.Point(361, 185);
             this.numMorninglord.Name = "numMorninglord";
             this.numMorninglord.Size = new System.Drawing.Size(35, 23);
             this.numMorninglord.TabIndex = 83;
@@ -2996,7 +3006,7 @@
             this.numTiefling.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTiefling.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTiefling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTiefling.Location = new System.Drawing.Point(481, 329);
+            this.numTiefling.Location = new System.Drawing.Point(481, 353);
             this.numTiefling.Name = "numTiefling";
             this.numTiefling.Size = new System.Drawing.Size(35, 23);
             this.numTiefling.TabIndex = 127;
@@ -3008,7 +3018,7 @@
             // 
             this.label80.AutoSize = true;
             this.label80.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(283, 162);
+            this.label80.Location = new System.Drawing.Point(283, 186);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(75, 15);
             this.label80.TabIndex = 84;
@@ -3018,7 +3028,7 @@
             // 
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(432, 306);
+            this.label89.Location = new System.Drawing.Point(432, 330);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(46, 15);
             this.label89.TabIndex = 126;
@@ -3029,7 +3039,7 @@
             this.numPDK.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numPDK.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPDK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numPDK.Location = new System.Drawing.Point(361, 233);
+            this.numPDK.Location = new System.Drawing.Point(361, 257);
             this.numPDK.Name = "numPDK";
             this.numPDK.Size = new System.Drawing.Size(35, 23);
             this.numPDK.TabIndex = 89;
@@ -3042,7 +3052,7 @@
             this.numHuman.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numHuman.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHuman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numHuman.Location = new System.Drawing.Point(481, 305);
+            this.numHuman.Location = new System.Drawing.Point(481, 329);
             this.numHuman.Name = "numHuman";
             this.numHuman.Size = new System.Drawing.Size(35, 23);
             this.numHuman.TabIndex = 125;
@@ -3054,7 +3064,7 @@
             // 
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(329, 234);
+            this.label77.Location = new System.Drawing.Point(329, 258);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(29, 15);
             this.label77.TabIndex = 90;
@@ -3064,7 +3074,7 @@
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(427, 282);
+            this.label90.Location = new System.Drawing.Point(427, 306);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(51, 15);
             this.label90.TabIndex = 124;
@@ -3075,7 +3085,7 @@
             this.numTrailblazer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTrailblazer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTrailblazer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTrailblazer.Location = new System.Drawing.Point(361, 257);
+            this.numTrailblazer.Location = new System.Drawing.Point(361, 281);
             this.numTrailblazer.Name = "numTrailblazer";
             this.numTrailblazer.Size = new System.Drawing.Size(35, 23);
             this.numTrailblazer.TabIndex = 91;
@@ -3088,7 +3098,7 @@
             this.numHalfOrc.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numHalfOrc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHalfOrc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numHalfOrc.Location = new System.Drawing.Point(481, 281);
+            this.numHalfOrc.Location = new System.Drawing.Point(481, 305);
             this.numHalfOrc.Name = "numHalfOrc";
             this.numHalfOrc.Size = new System.Drawing.Size(35, 23);
             this.numHalfOrc.TabIndex = 123;
@@ -3100,7 +3110,7 @@
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(296, 258);
+            this.label76.Location = new System.Drawing.Point(296, 282);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(62, 15);
             this.label76.TabIndex = 92;
@@ -3110,7 +3120,7 @@
             // 
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(433, 258);
+            this.label91.Location = new System.Drawing.Point(433, 282);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(45, 15);
             this.label91.TabIndex = 122;
@@ -3121,7 +3131,7 @@
             this.numBladeforged.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numBladeforged.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBladeforged.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numBladeforged.Location = new System.Drawing.Point(361, 281);
+            this.numBladeforged.Location = new System.Drawing.Point(361, 305);
             this.numBladeforged.Name = "numBladeforged";
             this.numBladeforged.Size = new System.Drawing.Size(35, 23);
             this.numBladeforged.TabIndex = 93;
@@ -3134,7 +3144,7 @@
             this.numHalfElf.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numHalfElf.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHalfElf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numHalfElf.Location = new System.Drawing.Point(481, 257);
+            this.numHalfElf.Location = new System.Drawing.Point(481, 281);
             this.numHalfElf.Name = "numHalfElf";
             this.numHalfElf.Size = new System.Drawing.Size(35, 23);
             this.numHalfElf.TabIndex = 121;
@@ -3146,7 +3156,7 @@
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(285, 282);
+            this.label75.Location = new System.Drawing.Point(285, 306);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(73, 15);
             this.label75.TabIndex = 94;
@@ -3156,7 +3166,7 @@
             // 
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(431, 234);
+            this.label92.Location = new System.Drawing.Point(431, 258);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(47, 15);
             this.label92.TabIndex = 120;
@@ -3167,7 +3177,7 @@
             this.numScourge.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numScourge.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numScourge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numScourge.Location = new System.Drawing.Point(361, 305);
+            this.numScourge.Location = new System.Drawing.Point(361, 329);
             this.numScourge.Name = "numScourge";
             this.numScourge.Size = new System.Drawing.Size(35, 23);
             this.numScourge.TabIndex = 95;
@@ -3180,7 +3190,7 @@
             this.numHalfling.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numHalfling.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHalfling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numHalfling.Location = new System.Drawing.Point(481, 233);
+            this.numHalfling.Location = new System.Drawing.Point(481, 257);
             this.numHalfling.Name = "numHalfling";
             this.numHalfling.Size = new System.Drawing.Size(35, 23);
             this.numHalfling.TabIndex = 119;
@@ -3192,7 +3202,7 @@
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(308, 306);
+            this.label74.Location = new System.Drawing.Point(308, 330);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(50, 15);
             this.label74.TabIndex = 96;
@@ -3202,7 +3212,7 @@
             // 
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(431, 211);
+            this.label93.Location = new System.Drawing.Point(431, 235);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(47, 15);
             this.label93.TabIndex = 118;
@@ -3213,7 +3223,7 @@
             this.numShadarkai.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numShadarkai.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numShadarkai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numShadarkai.Location = new System.Drawing.Point(361, 329);
+            this.numShadarkai.Location = new System.Drawing.Point(361, 353);
             this.numShadarkai.Name = "numShadarkai";
             this.numShadarkai.Size = new System.Drawing.Size(35, 23);
             this.numShadarkai.TabIndex = 97;
@@ -3226,7 +3236,7 @@
             this.numGnome.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numGnome.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numGnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numGnome.Location = new System.Drawing.Point(481, 209);
+            this.numGnome.Location = new System.Drawing.Point(481, 233);
             this.numGnome.Name = "numGnome";
             this.numGnome.Size = new System.Drawing.Size(35, 23);
             this.numGnome.TabIndex = 117;
@@ -3238,7 +3248,7 @@
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(295, 331);
+            this.label73.Location = new System.Drawing.Point(295, 355);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(63, 15);
             this.label73.TabIndex = 98;
@@ -3248,7 +3258,7 @@
             // 
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.Location = new System.Drawing.Point(458, 187);
+            this.label94.Location = new System.Drawing.Point(458, 211);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(20, 15);
             this.label94.TabIndex = 116;
@@ -3259,7 +3269,7 @@
             this.numChaosmancer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numChaosmancer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numChaosmancer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numChaosmancer.Location = new System.Drawing.Point(361, 353);
+            this.numChaosmancer.Location = new System.Drawing.Point(361, 377);
             this.numChaosmancer.Name = "numChaosmancer";
             this.numChaosmancer.Size = new System.Drawing.Size(35, 23);
             this.numChaosmancer.TabIndex = 99;
@@ -3272,7 +3282,7 @@
             this.numElf.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numElf.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numElf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numElf.Location = new System.Drawing.Point(481, 185);
+            this.numElf.Location = new System.Drawing.Point(481, 209);
             this.numElf.Name = "numElf";
             this.numElf.Size = new System.Drawing.Size(35, 23);
             this.numElf.TabIndex = 115;
@@ -3284,7 +3294,7 @@
             // 
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(278, 354);
+            this.label72.Location = new System.Drawing.Point(278, 378);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(80, 15);
             this.label72.TabIndex = 100;
@@ -3294,7 +3304,7 @@
             // 
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(434, 162);
+            this.label95.Location = new System.Drawing.Point(434, 186);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(44, 15);
             this.label95.TabIndex = 114;
@@ -3305,7 +3315,7 @@
             this.numDeepGnome.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDeepGnome.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDeepGnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDeepGnome.Location = new System.Drawing.Point(361, 401);
+            this.numDeepGnome.Location = new System.Drawing.Point(361, 425);
             this.numDeepGnome.Name = "numDeepGnome";
             this.numDeepGnome.Size = new System.Drawing.Size(35, 23);
             this.numDeepGnome.TabIndex = 103;
@@ -3318,7 +3328,7 @@
             this.numEladrin.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numEladrin.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEladrin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numEladrin.Location = new System.Drawing.Point(481, 161);
+            this.numEladrin.Location = new System.Drawing.Point(481, 185);
             this.numEladrin.Name = "numEladrin";
             this.numEladrin.Size = new System.Drawing.Size(35, 23);
             this.numEladrin.TabIndex = 113;
@@ -3330,7 +3340,7 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(279, 403);
+            this.label70.Location = new System.Drawing.Point(279, 427);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(79, 15);
             this.label70.TabIndex = 104;
@@ -3340,7 +3350,7 @@
             // 
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.Location = new System.Drawing.Point(438, 138);
+            this.label96.Location = new System.Drawing.Point(438, 162);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(40, 15);
             this.label96.TabIndex = 112;
@@ -3364,7 +3374,7 @@
             this.numDwarf.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDwarf.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDwarf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDwarf.Location = new System.Drawing.Point(481, 137);
+            this.numDwarf.Location = new System.Drawing.Point(481, 161);
             this.numDwarf.Name = "numDwarf";
             this.numDwarf.Size = new System.Drawing.Size(35, 23);
             this.numDwarf.TabIndex = 111;
@@ -3386,7 +3396,7 @@
             // 
             this.label97.AutoSize = true;
             this.label97.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.Location = new System.Drawing.Point(441, 114);
+            this.label97.Location = new System.Drawing.Point(441, 138);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(37, 15);
             this.label97.TabIndex = 110;
@@ -3397,7 +3407,7 @@
             this.numDragonborn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDragonborn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDragonborn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDragonborn.Location = new System.Drawing.Point(481, 89);
+            this.numDragonborn.Location = new System.Drawing.Point(481, 113);
             this.numDragonborn.Name = "numDragonborn";
             this.numDragonborn.Size = new System.Drawing.Size(35, 23);
             this.numDragonborn.TabIndex = 107;
@@ -3410,7 +3420,7 @@
             this.numDrow.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDrow.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDrow.Location = new System.Drawing.Point(481, 113);
+            this.numDrow.Location = new System.Drawing.Point(481, 137);
             this.numDrow.Name = "numDrow";
             this.numDrow.Size = new System.Drawing.Size(35, 23);
             this.numDrow.TabIndex = 109;
@@ -3422,7 +3432,7 @@
             // 
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(406, 90);
+            this.label98.Location = new System.Drawing.Point(406, 114);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(72, 15);
             this.label98.TabIndex = 108;
@@ -3613,6 +3623,50 @@
             this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
             // 
+            // numDarkBargainer
+            // 
+            this.numDarkBargainer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numDarkBargainer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDarkBargainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numDarkBargainer.Location = new System.Drawing.Point(361, 89);
+            this.numDarkBargainer.Name = "numDarkBargainer";
+            this.numDarkBargainer.Size = new System.Drawing.Size(35, 23);
+            this.numDarkBargainer.TabIndex = 184;
+            this.numDarkBargainer.Tag = "DarkBargainer";
+            this.numDarkBargainer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(271, 90);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(87, 15);
+            this.label61.TabIndex = 185;
+            this.label61.Text = "Dark Bargainer";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(424, 90);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(54, 15);
+            this.label68.TabIndex = 187;
+            this.label68.Text = "Dhampir";
+            // 
+            // numDhampir
+            // 
+            this.numDhampir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numDhampir.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDhampir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numDhampir.Location = new System.Drawing.Point(481, 89);
+            this.numDhampir.Name = "numDhampir";
+            this.numDhampir.Size = new System.Drawing.Size(35, 23);
+            this.numDhampir.TabIndex = 186;
+            this.numDhampir.Tag = "Dhampir";
+            this.numDhampir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3756,6 +3810,8 @@
             this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4018,6 +4074,10 @@
         private System.Windows.Forms.DataGridView datagridWildernesses;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.NumericUpDown numDragonDisciple;
+        private System.Windows.Forms.NumericUpDown numDarkBargainer;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.NumericUpDown numDhampir;
     }
 }
 

@@ -467,6 +467,12 @@
         "Patron": "The Free Agents",
         "Favor": 6
       },
+      "Dinosaur Crisis": {
+        "HeroicLevel": 13,
+        "EpicLevel": 28,
+        "Patron": "The Free Agents",
+        "Favor": 5
+      },
       "Tower of Frost": {
         "HeroicLevel": 14,
         "EpicLevel": 28,
@@ -938,6 +944,29 @@
       "Tangleroot Gorge": {
         "HeroicLevelRange": "4 (2-7)",
         "HeroicMap": "Map_of_Tangleroot_Gorge"
+      }
+    }
+  },
+  "Tavern Tales": {
+    "SortLevels": [ 3, 28, 35 ],
+    "Quests": {
+      "Sleeping with the Fishes": {
+        "HeroicLevel": 3,
+        "LegLevel": 35,
+        "Patron": "The Free Agents",
+        "Favor": 4
+      },
+      "The Covered Culvert": {
+        "HeroicLevel": 4,
+        "LegLevel": 35,
+        "Patron": "The Free Agents",
+        "Favor": 3
+      },
+      "Toil and Trouble": {
+        "HeroicLevel": 5,
+        "EpicLevel": 28,
+        "Patron": "The Harpers",
+        "Favor": 3
       }
     }
   },
