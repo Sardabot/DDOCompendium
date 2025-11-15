@@ -728,7 +728,7 @@ namespace DDOCompendium
                             var response = MessageBox.Show("Clear completion status for this saga?", "Saga Clear", MessageBoxButtons.YesNo);
                             if (response == DialogResult.Yes)
                             {
-                                for (int i = 0; i < thisdgview.RowCount -1; i++)
+                                for (int i = 0; i < thisdgview.RowCount; i++)
                                 {
                                     if (thisdgview.Rows[i].Cells[thisColumnIndex].Value.ToString() != "X")
                                     {
