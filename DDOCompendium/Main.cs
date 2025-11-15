@@ -149,6 +149,12 @@ namespace DDOCompendium
             foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
             datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
             datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
+            datagridQuests.Columns[QUESTSGRID_SORT_EXPR_INDEX].Visible = false;
+            datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
+            datagridWildernesses.Columns[4].Visible = false;
+            datagridWildernesses.Columns[5].Visible = false;
+            datagridWildernesses.Columns[6].Visible = false;
+            datagridWildernesses.Columns[7].Visible = false;
             // apply saved filter and sort
             if (Enum.TryParse(Properties.Settings.Default["SavedFilter"].ToString(), out LevelFilters savedFilter))
             {
@@ -716,6 +722,24 @@ namespace DDOCompendium
                         break;
                     default:
                         // any other index is going to be a completion cell
+                        if (thisRowIndex == -1)
+                        {
+                            //clicking on the name of a saga lets you clear it
+                            var response = MessageBox.Show("Clear completion status for this saga?", "Saga Clear", MessageBoxButtons.YesNo);
+                            if (response == DialogResult.Yes)
+                            {
+                                for (int i = 0; i < thisdgview.RowCount -1; i++)
+                                {
+                                    if (thisdgview.Rows[i].Cells[thisColumnIndex].Value.ToString() != "X")
+                                    {
+                                        // don't do anything if it's a cell that isn't part of the saga
+                                        int sagaID = int.Parse((thisdgview.Tag as string).Split(',')[e.ColumnIndex - 2]);
+                                        // change completion status of this quest for this saga
+                                        ChangeSagaQuestCompletionStatus(sagaID, thisdgview.Rows[i].Cells[thisColumnIndex], "");
+                                    }
+                                }
+                            }
+                        }
                         if (thisRowIndex != -1)
                         {
                             if (thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex].Value.ToString() == "X")
@@ -724,9 +748,56 @@ namespace DDOCompendium
                                 break;
                             }
                             int sagaID = int.Parse((thisdgview.Tag as string).Split(',')[e.ColumnIndex - 2]);
-                            // change completion status of this quest
+                            // change completion status of this quest for this saga
                             ChangeSagaQuestCompletionStatus(sagaID, thisdgview.Rows[thisRowIndex].Cells[thisColumnIndex], SelectedDifficulty);
                         }
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Handles events for clicking on the Wildernesses datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void datagridWildernesses_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView thisdgview = sender as DataGridView;
+            int thisRowIndex = e.RowIndex;
+            int thisColumnIndex = e.ColumnIndex;
+            if (e.Button == MouseButtons.Left)
+            {
+                switch (thisColumnIndex)
+                {
+                    case -1:
+                    case 0:
+                        break;
+                    case 1:
+                        //Heroic Map
+                        if (thisRowIndex != -1)
+                        {
+                            string pagename = datagridWildernesses.Rows[thisRowIndex].Cells[4].Value.ToString();
+                            if (pagename != "") OpenWikiLink(pagename);
+                        }
+                        break;
+                    case 2:
+                        //Epic Map
+                        if (thisRowIndex != -1)
+                        {
+                            string pagename = datagridWildernesses.Rows[thisRowIndex].Cells[5].Value.ToString();
+                            if (pagename != "") OpenWikiLink(pagename);
+                        }
+                        break;
+                    case 3:
+                        //Legendary Map
+                        if (thisRowIndex != -1)
+                        {
+                            string pagename = datagridWildernesses.Rows[thisRowIndex].Cells[6].Value.ToString();
+                            if (pagename != "") OpenWikiLink(pagename);
+                        }
+                        break;
+                    default:
                         break;
                 }
             }

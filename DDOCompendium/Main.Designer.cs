@@ -131,6 +131,10 @@
             this.numSpot = new System.Windows.Forms.NumericUpDown();
             this.numListen = new System.Windows.Forms.NumericUpDown();
             this.tabCharLives = new System.Windows.Forms.TabPage();
+            this.numDarkBargainer = new System.Windows.Forms.NumericUpDown();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.numDhampir = new System.Windows.Forms.NumericUpDown();
             this.label57 = new System.Windows.Forms.Label();
             this.numDragonDisciple = new System.Windows.Forms.NumericUpDown();
             this.lblEpicLives = new System.Windows.Forms.Label();
@@ -291,10 +295,6 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.numDarkBargainer = new System.Windows.Forms.NumericUpDown();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.numDhampir = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -349,6 +349,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSpot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numListen)).BeginInit();
             this.tabCharLives.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDragonDisciple)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAncientPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).BeginInit();
@@ -421,8 +423,6 @@
             this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -624,6 +624,7 @@
             this.datagridWildernesses.RowHeadersVisible = false;
             this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
             this.datagridWildernesses.TabIndex = 1;
+            this.datagridWildernesses.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridWildernesses_CellMouseClick);
             // 
             // tabCharacters
             // 
@@ -1847,6 +1848,50 @@
             this.tabCharLives.Size = new System.Drawing.Size(711, 534);
             this.tabCharLives.TabIndex = 2;
             this.tabCharLives.Text = "Past Lives";
+            // 
+            // numDarkBargainer
+            // 
+            this.numDarkBargainer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numDarkBargainer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDarkBargainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numDarkBargainer.Location = new System.Drawing.Point(361, 89);
+            this.numDarkBargainer.Name = "numDarkBargainer";
+            this.numDarkBargainer.Size = new System.Drawing.Size(35, 23);
+            this.numDarkBargainer.TabIndex = 184;
+            this.numDarkBargainer.Tag = "DarkBargainer";
+            this.numDarkBargainer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(271, 90);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(87, 15);
+            this.label61.TabIndex = 185;
+            this.label61.Text = "Dark Bargainer";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(424, 90);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(54, 15);
+            this.label68.TabIndex = 187;
+            this.label68.Text = "Dhampir";
+            // 
+            // numDhampir
+            // 
+            this.numDhampir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numDhampir.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDhampir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numDhampir.Location = new System.Drawing.Point(481, 89);
+            this.numDhampir.Name = "numDhampir";
+            this.numDhampir.Size = new System.Drawing.Size(35, 23);
+            this.numDhampir.TabIndex = 186;
+            this.numDhampir.Tag = "Dhampir";
+            this.numDhampir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label57
             // 
@@ -3623,50 +3668,6 @@
             this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
             // 
-            // numDarkBargainer
-            // 
-            this.numDarkBargainer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDarkBargainer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDarkBargainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDarkBargainer.Location = new System.Drawing.Point(361, 89);
-            this.numDarkBargainer.Name = "numDarkBargainer";
-            this.numDarkBargainer.Size = new System.Drawing.Size(35, 23);
-            this.numDarkBargainer.TabIndex = 184;
-            this.numDarkBargainer.Tag = "DarkBargainer";
-            this.numDarkBargainer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(271, 90);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(87, 15);
-            this.label61.TabIndex = 185;
-            this.label61.Text = "Dark Bargainer";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(424, 90);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(54, 15);
-            this.label68.TabIndex = 187;
-            this.label68.Text = "Dhampir";
-            // 
-            // numDhampir
-            // 
-            this.numDhampir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.numDhampir.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDhampir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDhampir.Location = new System.Drawing.Point(481, 89);
-            this.numDhampir.Name = "numDhampir";
-            this.numDhampir.Size = new System.Drawing.Size(35, 23);
-            this.numDhampir.TabIndex = 186;
-            this.numDhampir.Tag = "Dhampir";
-            this.numDhampir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3736,6 +3737,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numListen)).EndInit();
             this.tabCharLives.ResumeLayout(false);
             this.tabCharLives.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDragonDisciple)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAncientPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAlchemist)).EndInit();
@@ -3810,8 +3813,6 @@
             this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numDarkBargainer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDhampir)).EndInit();
             this.ResumeLayout(false);
 
         }

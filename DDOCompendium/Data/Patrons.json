@@ -38,7 +38,7 @@
     "150": "Can purchase +20 further character bank slots for 20k plat",
     "400": "(Unreachable)"
   },
-  "Keepers of the Feather": {
+  "Keepers of Barovia": {
     "60": "+2 to saves vs undead",
     "120": "Small Augment Bag",
     "180": "Vistani Knife Fighter universal enhancement tree unlock",
@@ -90,6 +90,11 @@
     "90": "+5 HP",
     "135": "Feydark Illusionist universal enhancement tree unlock",
     "180": "+2 to Diplomacy and Perform",
+    "400": "(Unreachable)"
+  },
+  "Keepers of Lamordia": {
+    "75": "+5% Fortification Bypass",
+    "150": "+5 HP",
     "400": "(Unreachable)"
   },
   "The Harpers": {
