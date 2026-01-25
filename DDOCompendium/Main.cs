@@ -67,161 +67,172 @@ namespace DDOCompendium
 
         private bool ImportData()
         {
-            // update settings
-            SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
-            cbxKeepFreeTogether.Checked = Properties.Settings.Default.KeepFreeQuestsChecked;
-
-            // grab quests data
-            Text = "DDO Compendium - " + SelectedCharacterName;
-            QuestsFilePath = DataFolderPath + "Quests.json";
-            string importedJsonData = ReadFromFile(QuestsFilePath);
-            var importedQuestData = JsonConvert.DeserializeObject<Dictionary<string, QuestPack>>(importedJsonData);
-            if (importedQuestData is null)
+            try
             {
-                MessageBox.Show("Couldn't retrieve data from Quests.json");
-                return false;
-            }
-            // import user save data
-            CharactersFilePath = SaveFolderPath + "Characters.json";
-            importedJsonData = ReadFromFile(CharactersFilePath);
-            characterData = JsonConvert.DeserializeObject<Dictionary<string, Character>>(importedJsonData);
-            if (characterData is null)
-            {
-                MessageBox.Show("Couldn't retrieve data from Characters.json");
-                return false;
-            }
-            if (!characterData.ContainsKey(SelectedCharacterName)) SelectedCharacterName = characterData.Keys.ToList()[0];
+                // update settings
+                SelectedCharacterName = Properties.Settings.Default.SelectedCharacterName;
+                cbxKeepFreeTogether.Checked = Properties.Settings.Default.KeepFreeQuestsChecked;
 
-            // unpack these into the quests and wildernesses tables
-            questsTable = MakeQuestsTable();
-            wildTable = MakeWildernessesTable();
-            foreach ((string thisPackName, QuestPack thisPack) in importedQuestData)
-            {
-                PackSortLevels.Add(thisPackName, importedQuestData[thisPackName].SortLevels);
-
-                foreach ((string thisQuestName, Quest thisQuest) in thisPack.Quests)
+                // grab quests data
+                Text = "DDO Compendium - " + SelectedCharacterName;
+                QuestsFilePath = DataFolderPath + "Quests.json";
+                string importedJsonData = ReadFromFile(QuestsFilePath);
+                var importedQuestData = JsonConvert.DeserializeObject<Dictionary<string, QuestPack>>(importedJsonData);
+                if (importedQuestData is null)
                 {
-                    DataRow tempRow = questsTable.NewRow();
-                    tempRow.SetField("H", thisQuest.HeroicLevel);
-                    tempRow.SetField("E", thisQuest.EpicLevel);
-                    tempRow.SetField("L", thisQuest.LegLevel);
-                    tempRow.SetField("Name", thisQuestName);
-                    tempRow.SetField("Pack", thisPackName);
-                    tempRow.SetField("Character", "");
-                    tempRow.SetField("Patron", thisQuest.Patron);
-                    tempRow.SetField("Favor", thisQuest.Favor);
-                    tempRow.SetField("Style", thisQuest.Style);
-                    var sortpack = thisQuest.SortWithPack;
-                    if (sortpack == null) sortpack = thisPackName;
-                    else UpdatePackSortLevels(sortpack, thisQuest.HeroicLevel, thisQuest.EpicLevel, thisQuest.LegLevel);
-                    tempRow.SetField("SortWithPack", sortpack);
-                    tempRow.SetField("WikiName", thisQuest.WikiName);
-                    questsTable.Rows.Add(tempRow);
+                    MessageBox.Show("Couldn't retrieve data from Quests.json");
+                    return false;
                 }
-
-                if (thisPack.Wildernesses is null) continue;
-                foreach ((string thisWildernessName, Wilderness thisWilderness) in thisPack.Wildernesses)
+                // import user save data
+                CharactersFilePath = SaveFolderPath + "Characters.json";
+                importedJsonData = ReadFromFile(CharactersFilePath);
+                characterData = JsonConvert.DeserializeObject<Dictionary<string, Character>>(importedJsonData);
+                if (characterData is null)
                 {
-                    DataRow tempRow = wildTable.NewRow();
-                    tempRow.SetField("Name", thisWildernessName);
-                    tempRow.SetField("H", thisWilderness.HeroicLevelRange ?? "");
-                    tempRow.SetField("E", thisWilderness.EpicLevelRange ?? "");
-                    tempRow.SetField("L", thisWilderness.LegLevelRange ?? "");
-                    tempRow.SetField("HMap", thisWilderness.HeroicMap ?? "");
-                    tempRow.SetField("EMap", thisWilderness.EpicMap ?? "");
-                    tempRow.SetField("LMap", thisWilderness.LegMap ?? "");
-                    tempRow.SetField("WikiName", thisWilderness.WikiName ?? "");
-                    wildTable.Rows.Add(tempRow);
+                    MessageBox.Show("Couldn't retrieve data from Characters.json");
+                    return false;
                 }
-            }
-            FinalizePackSortLevels();
-            questsDataView = new DataView(questsTable);
-            questsDataView.Sort = "SortExpr ASC";
-            BindingSource questsDataSource = new()
-            {
-                DataSource = questsDataView
-            };
-            datagridQuests.DataSource = questsDataSource;
-            datagridWildernesses.DataSource = wildTable;
-            datagridWildernesses.DefaultCellStyle = darkgridcellstyle;
-            datagridWildernesses.ColumnHeadersDefaultCellStyle = darkgridcellstyle;
-            // make adjustments to grid settings
-            foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
-            datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
-            datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
-            datagridQuests.Columns[QUESTSGRID_SORT_EXPR_INDEX].Visible = false;
-            datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
-            datagridWildernesses.Columns[4].Visible = false;
-            datagridWildernesses.Columns[5].Visible = false;
-            datagridWildernesses.Columns[6].Visible = false;
-            datagridWildernesses.Columns[7].Visible = false;
-            // apply saved filter and sort
-            if (Enum.TryParse(Properties.Settings.Default["SavedFilter"].ToString(), out LevelFilters savedFilter))
-            {
-                ApplyQuestsFilter(savedFilter);
-            }
-            if (Enum.TryParse(Properties.Settings.Default["SavedSort"].ToString(), out SortNames savedSortName))
-            {
-                ApplyQuestsSort(savedSortName);
-            }
+                if (!characterData.ContainsKey(SelectedCharacterName)) SelectedCharacterName = characterData.Keys.ToList()[0];
 
-            // import the notes tabs
-            txtNotes1.Text = ReadFromFile(SaveFolderPath + "Notes.txt");
-            txtNotes2.Text = ReadFromFile(SaveFolderPath + "Notes2.txt");
+                // unpack these into the quests and wildernesses tables
+                questsTable = MakeQuestsTable();
+                wildTable = MakeWildernessesTable();
+                foreach ((string thisPackName, QuestPack thisPack) in importedQuestData)
+                {
+                    if (!PackSortLevels.ContainsKey(thisPackName))
+                        PackSortLevels.Add(thisPackName, importedQuestData[thisPackName].SortLevels);
 
-            // import ref tables
+                    foreach ((string thisQuestName, Quest thisQuest) in thisPack.Quests)
+                    {
+                        DataRow tempRow = questsTable.NewRow();
+                        tempRow.SetField("H", thisQuest.HeroicLevel);
+                        tempRow.SetField("E", thisQuest.EpicLevel);
+                        tempRow.SetField("L", thisQuest.LegLevel);
+                        tempRow.SetField("Name", thisQuestName);
+                        tempRow.SetField("Pack", thisPackName);
+                        tempRow.SetField("Character", "");
+                        tempRow.SetField("Patron", thisQuest.Patron);
+                        tempRow.SetField("Favor", thisQuest.Favor);
+                        tempRow.SetField("Style", thisQuest.Style);
+                        var sortpack = thisQuest.SortWithPack;
+                        if (sortpack == null) sortpack = thisPackName;
+                        else UpdatePackSortLevels(sortpack, thisQuest.HeroicLevel, thisQuest.EpicLevel, thisQuest.LegLevel);
+                        tempRow.SetField("SortWithPack", sortpack);
+                        tempRow.SetField("WikiName", thisQuest.WikiName);
+                        questsTable.Rows.Add(tempRow);
+                    }
 
-            // import wilderness tables
-
-            // setup characters tab
-            foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
-            cmboCharSelect.SelectedItem = SelectedCharacterName;
-
-            // import patrons data
-            importedJsonData = ReadFromFile(DataFolderPath + "Patrons.json");
-            patronData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<int, string>>>(importedJsonData);
-            CreatePatronsPanel();
-            UpdateFavorTotals();
-
-            // import saga tables
-            importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
-            sagaData = JsonConvert.DeserializeObject<List<Saga>>(importedJsonData);
-            sagaData.Sort(delegate (Saga x, Saga y)
-            {
-                if (x.SortLevel == y.SortLevel) return 0;
-                else if (x.SortLevel < y.SortLevel) return -1;
-                else return 1;
-            });
-            foreach (Saga thisSagaData in sagaData)
-            {
-                DataTable table = MakeSagaTable(thisSagaData.Quests);
-                SagaTables.Add(table);
-                DataGridView thisdgview = new() {
-                    AllowUserToAddRows = false,
-                    AllowUserToDeleteRows = false,
-                    AllowUserToResizeRows = false,
-                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
-                    BackgroundColor = SystemColors.ControlDarkDark,
-                    ColumnHeadersDefaultCellStyle = darkgridcellstyle,
-                    DefaultCellStyle = darkgridcellstyle,
-                    RowHeadersVisible = false,
-                    EnableHeadersVisualStyles = false,
-                    DataSource = new BindingSource { DataSource = table },
-                    Dock = DockStyle.Fill,
-                    ScrollBars = ScrollBars.None,
-                    ReadOnly = true,
-                    Tag = thisSagaData.Id
+                    if (thisPack.Wildernesses is null) continue;
+                    foreach ((string thisWildernessName, Wilderness thisWilderness) in thisPack.Wildernesses)
+                    {
+                        DataRow tempRow = wildTable.NewRow();
+                        tempRow.SetField("Name", thisWildernessName);
+                        tempRow.SetField("H", thisWilderness.HeroicLevelRange ?? "");
+                        tempRow.SetField("E", thisWilderness.EpicLevelRange ?? "");
+                        tempRow.SetField("L", thisWilderness.LegLevelRange ?? "");
+                        tempRow.SetField("HMap", thisWilderness.HeroicMap ?? "");
+                        tempRow.SetField("EMap", thisWilderness.EpicMap ?? "");
+                        tempRow.SetField("LMap", thisWilderness.LegMap ?? "");
+                        tempRow.SetField("WikiName", thisWilderness.WikiName ?? "");
+                        wildTable.Rows.Add(tempRow);
+                    }
+                }
+                FinalizePackSortLevels();
+                questsDataView = new DataView(questsTable);
+                questsDataView.Sort = "SortExpr ASC";
+                BindingSource questsDataSource = new()
+                {
+                    DataSource = questsDataView
                 };
-                thisdgview.CellMouseClick += DatagridSagas_CellMouseClick;
-                thisdgview.CellContextMenuStripNeeded += DatagridSagas_CellContextMenuStripNeeded;
-                tableLayoutPanelSagas.RowCount += 1;
-                tableLayoutPanelSagas.Controls.Add(thisdgview, 0, tableLayoutPanelSagas.RowCount - 1);
+                datagridQuests.DataSource = questsDataSource;
+                datagridWildernesses.DataSource = wildTable;
+                datagridWildernesses.DefaultCellStyle = darkgridcellstyle;
+                datagridWildernesses.ColumnHeadersDefaultCellStyle = darkgridcellstyle;
+                // make adjustments to grid settings
+                foreach (DataGridViewColumn column in datagridQuests.Columns) column.SortMode = DataGridViewColumnSortMode.Programmatic;
+                datagridQuests.Columns[QUESTSGRID_COMPLETED_INDEX].HeaderText = SelectedCharacterName;
+                datagridQuests.Columns[QUESTSGRID_WIKI_INDEX].Visible = false;
+                datagridQuests.Columns[QUESTSGRID_SORT_EXPR_INDEX].Visible = false;
+                datagridQuests.Columns[QUESTSGRID_PACKSORT_INDEX].Visible = false;
+                datagridWildernesses.Columns[4].Visible = false;
+                datagridWildernesses.Columns[5].Visible = false;
+                datagridWildernesses.Columns[6].Visible = false;
+                datagridWildernesses.Columns[7].Visible = false;
+                // apply saved filter and sort
+                if (Enum.TryParse(Properties.Settings.Default["SavedFilter"].ToString(), out LevelFilters savedFilter))
+                {
+                    ApplyQuestsFilter(savedFilter);
+                }
+                if (Enum.TryParse(Properties.Settings.Default["SavedSort"].ToString(), out SortNames savedSortName))
+                {
+                    ApplyQuestsSort(savedSortName);
+                }
+
+                // import the notes tabs
+                txtNotes1.Text = ReadFromFile(SaveFolderPath + "Notes.txt");
+                txtNotes2.Text = ReadFromFile(SaveFolderPath + "Notes2.txt");
+
+                // import ref tables
+
+                // import wilderness tables
+
+                // setup characters tab
+                foreach (string charname in characterData.Keys) cmboCharSelect.Items.Add(charname);
+                cmboCharSelect.SelectedItem = SelectedCharacterName;
+
+                // import patrons data
+                importedJsonData = ReadFromFile(DataFolderPath + "Patrons.json");
+                patronData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<int, string>>>(importedJsonData);
+                CreatePatronsPanel();
+                UpdateFavorTotals();
+
+                // import saga tables
+                importedJsonData = ReadFromFile(DataFolderPath + "Sagas.json");
+                sagaData = JsonConvert.DeserializeObject<List<Saga>>(importedJsonData);
+                sagaData.Sort(delegate (Saga x, Saga y)
+                {
+                    if (x.SortLevel == y.SortLevel) return 0;
+                    else if (x.SortLevel < y.SortLevel) return -1;
+                    else return 1;
+                });
+                foreach (Saga thisSagaData in sagaData)
+                {
+                    DataTable table = MakeSagaTable(thisSagaData.Quests);
+                    SagaTables.Add(table);
+                    DataGridView thisdgview = new()
+                    {
+                        AllowUserToAddRows = false,
+                        AllowUserToDeleteRows = false,
+                        AllowUserToResizeRows = false,
+                        AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                        BackgroundColor = SystemColors.ControlDarkDark,
+                        ColumnHeadersDefaultCellStyle = darkgridcellstyle,
+                        DefaultCellStyle = darkgridcellstyle,
+                        RowHeadersVisible = false,
+                        EnableHeadersVisualStyles = false,
+                        DataSource = new BindingSource { DataSource = table },
+                        Dock = DockStyle.Fill,
+                        ScrollBars = ScrollBars.None,
+                        ReadOnly = true,
+                        Tag = thisSagaData.Id
+                    };
+                    thisdgview.CellMouseClick += DatagridSagas_CellMouseClick;
+                    thisdgview.CellContextMenuStripNeeded += DatagridSagas_CellContextMenuStripNeeded;
+                    tableLayoutPanelSagas.RowCount += 1;
+                    tableLayoutPanelSagas.Controls.Add(thisdgview, 0, tableLayoutPanelSagas.RowCount - 1);
+                }
+
+                // setup settings tab
+
+                // load character data into things
+                ChangeSelectedCharacter(SelectedCharacterName);
             }
 
-            // setup settings tab
-
-            // load character data into things
-            ChangeSelectedCharacter(SelectedCharacterName);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error importing data!");
+                return false;
+            }
 
             return true;
         }
