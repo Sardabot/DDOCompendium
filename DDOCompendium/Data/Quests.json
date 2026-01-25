@@ -382,6 +382,12 @@
         "Patron": "House Jorasco",
         "Favor": 5
       },
+      "Body and Mind": {
+        "HeroicLevel": 8,
+        "Patron": "Keepers of Lamordia",
+        "Favor": 5,
+        "SortWithPack": "The Chill of Ravenloft"
+      },
       "The Church and the Cult": {
         "HeroicLevel": 9,
         "Patron": "The Silver Flame",
@@ -509,7 +515,7 @@
       },
       "Lost at Sea": {
         "HeroicLevel": 15,
-        "EpicLevel": 32,
+        "LegLevel": 32,
         "Patron": "The Free Agents",
         "Favor": 5
       },
@@ -1546,7 +1552,7 @@
         "Patron": "The Gatekeepers",
         "Favor": 3
       },
-      "The Stone Crypt Chronicles": {
+      "The Stone Crypt Chronicle": {
         "HeroicLevel": 7,
         "LegLevel": 33,
         "Patron": "The Gatekeepers",
@@ -2837,7 +2843,7 @@
           "Patron": "Sharn City Council",
           "Favor": 5
         },
-        "Ruinous SChemes": {
+        "Ruinous Schemes": {
           "HeroicLevel": 15,
           "LegLevel": 32,
           "Patron": "Sharn City Council",
@@ -3551,7 +3557,7 @@
         },
         "The Underdark": {
           "EpicLevelRange": "22 (20-26)",
-          "EpicMap": "Map_of_The_Underdark"
+          "EpicMap": "Underdark_map_with_pathing_overlay"
         },
         "Sschindylryn": {
           "EpicLevelRange": "22 (20-26)",
