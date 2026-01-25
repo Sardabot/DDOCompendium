@@ -116,7 +116,7 @@ namespace DDOCompendium
                         tempRow.SetField("Style", thisQuest.Style);
                         var sortpack = thisQuest.SortWithPack;
                         if (sortpack == null) sortpack = thisPackName;
-                        else UpdatePackSortLevels(sortpack, thisQuest.HeroicLevel, thisQuest.EpicLevel, thisQuest.LegLevel);
+                        UpdatePackSortLevels(sortpack, thisQuest.HeroicLevel, thisQuest.EpicLevel, thisQuest.LegLevel);
                         tempRow.SetField("SortWithPack", sortpack);
                         tempRow.SetField("WikiName", thisQuest.WikiName);
                         questsTable.Rows.Add(tempRow);
@@ -572,6 +572,18 @@ namespace DDOCompendium
                 characterData[SelectedCharacterName].SagaCompletion[sagaID].Add("");
             }
             characterData[SelectedCharacterName].SagaCompletion[sagaID][thisCell.RowIndex] = thisCell.Value.ToString();
+        }
+
+        /// <summary>
+        /// Clears all completion status for the selected saga for the current character.  (NOT IMPLEMENTED YET)
+        /// </summary>
+        /// <param name="sagaID"></param>
+        /// <param name="updatePanel">If true, updates the Sagas panel.  Set to false if clearing more sagas.</param>
+        private void ClearSagaQuestCompletionStatus(int sagaID, bool updatePanel)
+        {
+            characterData[SelectedCharacterName].SagaCompletion.Remove(sagaID);
+
+            if (updatePanel) LoadSagaDataForCharacter();
         }
 
         /// <summary>
@@ -1038,6 +1050,18 @@ namespace DDOCompendium
                 characterData.Remove(SelectedCharacterName);
                 cmboCharSelect.Items.Remove(SelectedCharacterName);
                 cmboCharSelect.SelectedIndex = 0;
+            }
+        }
+        
+        private void btnReincarnateChar_Click(object sender, EventArgs e)
+        {
+            var response = MessageBox.Show("Clear all quests and saga progress for character " + SelectedCharacterName + " ?", "Reincarnate", MessageBoxButtons.YesNo);
+            if (response == DialogResult.Yes)
+            {
+                characterData[SelectedCharacterName].SagaCompletion.Clear();
+                characterData[SelectedCharacterName].QuestCompletion.Clear();
+                LoadQuestDataForCharacter();
+                LoadSagaDataForCharacter();
             }
         }
 
