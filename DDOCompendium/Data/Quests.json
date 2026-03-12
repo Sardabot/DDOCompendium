@@ -384,6 +384,7 @@
       },
       "Body and Mind": {
         "HeroicLevel": 8,
+        "LegLevel":  36,
         "Patron": "Keepers of Lamordia",
         "Favor": 5,
         "SortWithPack": "The Chill of Ravenloft"
@@ -466,12 +467,6 @@
         "HeroicLevel": 13,
         "Patron": "The Free Agents",
         "Favor": 5
-      },
-      "Memoirs of an Illusory Larcener": {
-        "HeroicLevel": 13,
-        "LegLevel": 31,
-        "Patron": "The Free Agents",
-        "Favor": 6
       },
       "Dinosaur Crisis": {
         "HeroicLevel": 13,
@@ -1705,7 +1700,7 @@
         "HeroicLevel": 8,
         "LegLevel": 36,
         "Patron": "Keepers of Lamordia",
-        "Favor": 4
+        "Favor": 5
       },
       "Ends and Means": {
         "HeroicLevel": 8,
@@ -1741,7 +1736,7 @@
         "HeroicLevel": 8,
         "LegLevel": 36,
         "Patron": "Keepers of Lamordia",
-        "Favor": 5
+        "Favor": 6
       },
       "Zoo Creeper": {
         "HeroicLevel": 8,

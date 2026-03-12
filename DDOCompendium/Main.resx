@@ -120,6 +120,29 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>630, 17</value>
   </metadata>
+  <data name="lblEpicLives.ToolTip" xml:space="preserve">
+    <value>Epic Reincarnation gives a passive bonus that is shared and stacking between lives in the same sphere.
+Each different past life also has a unique bonus.
+One Stance may be selected for each sphere at a time.
+
+Epic Completionist: 1 Epic Destiny point per 12 total epic past lives.</value>
+  </data>
+  <data name="lblRaceLives.ToolTip" xml:space="preserve">
+    <value>Racial Reincarnation gives a bonus to a skill, an ability score, and a racial enhancement point for 1/2/3 past lives in a specific race.
+
+Racial Completionist: 3 past lives in every race, free feat.
++2 all ability scores, +2 all skills.</value>
+  </data>
+  <data name="lblIconicLives.ToolTip" xml:space="preserve">
+    <value>Iconic Reincarnation gives an iconic feat, as well as the appropriate class feat as though a True Reincarnation was also performed.
+Iconic past life feats are always available and all have a passive bonus.  Only one Iconic Past Life Stance may be selected at a time.</value>
+  </data>
+  <data name="lblClassLives.ToolTip" xml:space="preserve">
+    <value>True Reincarnation gives a free feat and unlock another feats for all future lives.
+
+Class Completionist: 1 past life of each class.  Archetypes count as their base class.
+Free, granted at level 3: +2 all ability scores, +2 all skills</value>
+  </data>
   <metadata name="contextmenuQuestCompletion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.datagridQuests = new System.Windows.Forms.DataGridView();
             this.tcTabs = new System.Windows.Forms.TabControl();
@@ -47,6 +48,7 @@
             this.datagridWildernesses = new System.Windows.Forms.DataGridView();
             this.tabCharacters = new System.Windows.Forms.TabPage();
             this.splitcontainerCharacters = new System.Windows.Forms.SplitContainer();
+            this.btnReincarnateChar = new System.Windows.Forms.Button();
             this.lblCharSelect = new System.Windows.Forms.Label();
             this.btnDelChar = new System.Windows.Forms.Button();
             this.cmboCharSelect = new System.Windows.Forms.ComboBox();
@@ -295,7 +297,8 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnReincarnateChar = new System.Windows.Forms.Button();
+            this.numArcaneTrickster = new System.Windows.Forms.NumericUpDown();
+            this.label69 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -424,6 +427,7 @@
             this.tabSettings.SuspendLayout();
             this.contextmenuQuestCompletion.SuspendLayout();
             this.contextmenuSagaCompletion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numArcaneTrickster)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerMain
@@ -452,36 +456,36 @@
             this.datagridQuests.AllowUserToResizeRows = false;
             this.datagridQuests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridQuests.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datagridQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridQuests.DefaultCellStyle = dataGridViewCellStyle2;
             this.datagridQuests.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridQuests.EnableHeadersVisualStyles = false;
             this.datagridQuests.Location = new System.Drawing.Point(0, 0);
             this.datagridQuests.Name = "datagridQuests";
             this.datagridQuests.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridQuests.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datagridQuests.RowHeadersVisible = false;
             this.datagridQuests.Size = new System.Drawing.Size(771, 661);
             this.datagridQuests.TabIndex = 0;
@@ -592,36 +596,36 @@
             this.datagridWildernesses.AllowUserToResizeRows = false;
             this.datagridWildernesses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagridWildernesses.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridWildernesses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridWildernesses.DefaultCellStyle = dataGridViewCellStyle5;
             this.datagridWildernesses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridWildernesses.EnableHeadersVisualStyles = false;
             this.datagridWildernesses.Location = new System.Drawing.Point(0, 0);
             this.datagridWildernesses.Name = "datagridWildernesses";
             this.datagridWildernesses.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridWildernesses.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.datagridWildernesses.RowHeadersVisible = false;
             this.datagridWildernesses.Size = new System.Drawing.Size(719, 632);
             this.datagridWildernesses.TabIndex = 1;
@@ -662,6 +666,20 @@
             this.splitcontainerCharacters.Size = new System.Drawing.Size(719, 632);
             this.splitcontainerCharacters.SplitterDistance = 65;
             this.splitcontainerCharacters.TabIndex = 4;
+            // 
+            // btnReincarnateChar
+            // 
+            this.btnReincarnateChar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReincarnateChar.ForeColor = System.Drawing.Color.Gray;
+            this.btnReincarnateChar.Location = new System.Drawing.Point(441, 25);
+            this.btnReincarnateChar.Name = "btnReincarnateChar";
+            this.btnReincarnateChar.Size = new System.Drawing.Size(82, 23);
+            this.btnReincarnateChar.TabIndex = 4;
+            this.btnReincarnateChar.Text = "Reincarnate";
+            this.toolTip1.SetToolTip(this.btnReincarnateChar, "Removes all quest and saga progress for the selected character.\r\nDoes not touch p" +
+        "ast lives tracking - these must be updated manually.");
+            this.btnReincarnateChar.UseVisualStyleBackColor = true;
+            this.btnReincarnateChar.Click += new System.EventHandler(this.btnReincarnateChar_Click);
             // 
             // lblCharSelect
             // 
@@ -1701,6 +1719,8 @@
             // tabCharLives
             // 
             this.tabCharLives.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabCharLives.Controls.Add(this.numArcaneTrickster);
+            this.tabCharLives.Controls.Add(this.label69);
             this.tabCharLives.Controls.Add(this.numDarkBargainer);
             this.tabCharLives.Controls.Add(this.label61);
             this.tabCharLives.Controls.Add(this.label68);
@@ -1856,7 +1876,7 @@
             this.numDarkBargainer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDarkBargainer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDarkBargainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDarkBargainer.Location = new System.Drawing.Point(361, 89);
+            this.numDarkBargainer.Location = new System.Drawing.Point(361, 377);
             this.numDarkBargainer.Name = "numDarkBargainer";
             this.numDarkBargainer.Size = new System.Drawing.Size(35, 23);
             this.numDarkBargainer.TabIndex = 184;
@@ -1867,11 +1887,13 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(271, 90);
+            this.label61.Location = new System.Drawing.Point(271, 378);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(87, 15);
             this.label61.TabIndex = 185;
             this.label61.Text = "Dark Bargainer";
+            this.toolTip1.SetToolTip(this.label61, "Passive: +1 Saves vs Enchantments\r\nStance: +1 Necromancy DC, +3 Negative Spell Po" +
+        "wer");
             // 
             // label68
             // 
@@ -1882,6 +1904,7 @@
             this.label68.Size = new System.Drawing.Size(54, 15);
             this.label68.TabIndex = 187;
             this.label68.Text = "Dhampir";
+            this.toolTip1.SetToolTip(this.label68, "Hide, Strength");
             // 
             // numDhampir
             // 
@@ -1904,6 +1927,7 @@
             this.label57.Size = new System.Drawing.Size(90, 15);
             this.label57.TabIndex = 183;
             this.label57.Text = "Dragon Disciple";
+            this.toolTip1.SetToolTip(this.label57, "+1 Attack, -1 SP cost of Maximize");
             // 
             // numDragonDisciple
             // 
@@ -1926,6 +1950,7 @@
             this.lblEpicLives.Size = new System.Drawing.Size(37, 19);
             this.lblEpicLives.TabIndex = 181;
             this.lblEpicLives.Text = "Epic";
+            this.toolTip1.SetToolTip(this.lblEpicLives, resources.GetString("lblEpicLives.ToolTip"));
             // 
             // lblRaceLives
             // 
@@ -1936,6 +1961,7 @@
             this.lblRaceLives.Size = new System.Drawing.Size(41, 19);
             this.lblRaceLives.TabIndex = 180;
             this.lblRaceLives.Text = "Race";
+            this.toolTip1.SetToolTip(this.lblRaceLives, resources.GetString("lblRaceLives.ToolTip"));
             // 
             // lblIconicLives
             // 
@@ -1946,6 +1972,7 @@
             this.lblIconicLives.Size = new System.Drawing.Size(49, 19);
             this.lblIconicLives.TabIndex = 179;
             this.lblIconicLives.Text = "Iconic";
+            this.toolTip1.SetToolTip(this.lblIconicLives, resources.GetString("lblIconicLives.ToolTip"));
             // 
             // lblArchetypeLives
             // 
@@ -1956,16 +1983,19 @@
             this.lblArchetypeLives.Size = new System.Drawing.Size(80, 19);
             this.lblArchetypeLives.TabIndex = 178;
             this.lblArchetypeLives.Text = "Archetype";
+            this.toolTip1.SetToolTip(this.lblArchetypeLives, "Archetypes have a unique free feat but count as their base class for the purchase" +
+        "able feat.");
             // 
             // lblClassLives
             // 
             this.lblClassLives.AutoSize = true;
             this.lblClassLives.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassLives.Location = new System.Drawing.Point(61, 34);
+            this.lblClassLives.Location = new System.Drawing.Point(41, 34);
             this.lblClassLives.Name = "lblClassLives";
             this.lblClassLives.Size = new System.Drawing.Size(41, 19);
             this.lblClassLives.TabIndex = 177;
             this.lblClassLives.Text = "Class";
+            this.toolTip1.SetToolTip(this.lblClassLives, resources.GetString("lblClassLives.ToolTip"));
             // 
             // label62
             // 
@@ -1976,16 +2006,20 @@
             this.label62.Size = new System.Drawing.Size(88, 15);
             this.label62.TabIndex = 176;
             this.label62.Text = "Ancient Power";
+            this.toolTip1.SetToolTip(this.label62, "Passive: +3 HP, +4 HP per 10 character levels\r\nStance: +2 Attack, with 2-handed w" +
+        "eapon also +2 damage");
             // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(24, 67);
+            this.label45.Location = new System.Drawing.Point(4, 67);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(61, 15);
             this.label45.TabIndex = 16;
             this.label45.Text = "Alchemist";
+            this.toolTip1.SetToolTip(this.label45, "Free: +1 Tranmutation DC, +20 SP\r\nFeat: +1 UMD, 1/rest restore small amount of SP" +
+        "");
             // 
             // numAncientPower
             // 
@@ -2005,7 +2039,7 @@
             this.numAlchemist.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numAlchemist.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAlchemist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numAlchemist.Location = new System.Drawing.Point(88, 65);
+            this.numAlchemist.Location = new System.Drawing.Point(68, 65);
             this.numAlchemist.Name = "numAlchemist";
             this.numAlchemist.Size = new System.Drawing.Size(35, 23);
             this.numAlchemist.TabIndex = 15;
@@ -2022,13 +2056,15 @@
             this.label63.Size = new System.Drawing.Size(117, 15);
             this.label63.TabIndex = 174;
             this.label63.Text = "Colors of the Queen";
+            this.toolTip1.SetToolTip(this.label63, "Passive: +3 HP, +4 HP per 10 character levels\r\nStance: All attacks and spells hav" +
+        "e 7% chance to produce random effect.  Can trigger once per 30/20/10s");
             // 
             // numArtificer
             // 
             this.numArtificer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numArtificer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numArtificer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numArtificer.Location = new System.Drawing.Point(88, 89);
+            this.numArtificer.Location = new System.Drawing.Point(68, 89);
             this.numArtificer.Name = "numArtificer";
             this.numArtificer.Size = new System.Drawing.Size(35, 23);
             this.numArtificer.TabIndex = 17;
@@ -2053,11 +2089,13 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(33, 90);
+            this.label44.Location = new System.Drawing.Point(13, 90);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(52, 15);
             this.label44.TabIndex = 18;
             this.label44.Text = "Artificer";
+            this.toolTip1.SetToolTip(this.label44, "Free: +1 all INT skills and UMD\r\nFeat: 15% to not use wand charge, 10/rest Enchan" +
+        "t Armor or Enchant Weapons");
             // 
             // label67
             // 
@@ -2068,13 +2106,15 @@
             this.label67.Size = new System.Drawing.Size(72, 15);
             this.label67.TabIndex = 172;
             this.label67.Text = "Fast Healing";
+            this.toolTip1.SetToolTip(this.label67, "Passive: +3 HP, +4 HP per 10 character levels\r\nStance: Each minute, heal 5 HP + 5" +
+        " HP per character level.  Healing increased per stack, frequency remains same.");
             // 
             // numBarbarian
             // 
             this.numBarbarian.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numBarbarian.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBarbarian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numBarbarian.Location = new System.Drawing.Point(88, 113);
+            this.numBarbarian.Location = new System.Drawing.Point(68, 113);
             this.numBarbarian.Name = "numBarbarian";
             this.numBarbarian.Size = new System.Drawing.Size(35, 23);
             this.numBarbarian.TabIndex = 19;
@@ -2099,11 +2139,12 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(26, 114);
+            this.label43.Location = new System.Drawing.Point(6, 114);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(59, 15);
             this.label43.TabIndex = 20;
             this.label43.Text = "Barbarian";
+            this.toolTip1.SetToolTip(this.label43, "Free: +10HP\r\nFeat: +20HP, +2 Intimidate, +1 Barbarian Rage use");
             // 
             // label58
             // 
@@ -2114,13 +2155,14 @@
             this.label58.Size = new System.Drawing.Size(74, 15);
             this.label58.TabIndex = 170;
             this.label58.Text = "Dragon Lord";
+            this.toolTip1.SetToolTip(this.label58, "+1 Melee Damage, +1 Breath Weapon DC");
             // 
             // numBard
             // 
             this.numBard.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numBard.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numBard.Location = new System.Drawing.Point(88, 137);
+            this.numBard.Location = new System.Drawing.Point(68, 137);
             this.numBard.Name = "numBard";
             this.numBard.Size = new System.Drawing.Size(35, 23);
             this.numBard.TabIndex = 21;
@@ -2145,11 +2187,13 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(53, 138);
+            this.label42.Location = new System.Drawing.Point(33, 138);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(32, 15);
             this.label42.TabIndex = 22;
             this.label42.Text = "Bard";
+            this.toolTip1.SetToolTip(this.label42, "Free: +2 Saves vs Enchantments and Illusions\r\nFeat: +1 all CHA skills, +1 Enchant" +
+        "ment DC, 3/rest Inspire Courage");
             // 
             // label55
             // 
@@ -2160,13 +2204,14 @@
             this.label55.Size = new System.Drawing.Size(65, 15);
             this.label55.TabIndex = 166;
             this.label55.Text = "Wild Mage";
+            this.toolTip1.SetToolTip(this.label55, "+3 Universal Spell Power");
             // 
             // numCleric
             // 
             this.numCleric.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numCleric.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCleric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numCleric.Location = new System.Drawing.Point(88, 161);
+            this.numCleric.Location = new System.Drawing.Point(68, 161);
             this.numCleric.Name = "numCleric";
             this.numCleric.Size = new System.Drawing.Size(35, 23);
             this.numCleric.TabIndex = 23;
@@ -2191,11 +2236,13 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(48, 162);
+            this.label41.Location = new System.Drawing.Point(28, 162);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(37, 15);
             this.label41.TabIndex = 24;
             this.label41.Text = "Cleric";
+            this.toolTip1.SetToolTip(this.label41, "Free: +1 Conjuration DC, +1 Turn Undead charge, +2 Turn Undead level\r\nFeat: +2 He" +
+        "al, 5/rest Healing Word");
             // 
             // label100
             // 
@@ -2206,13 +2253,14 @@
             this.label100.Size = new System.Drawing.Size(70, 15);
             this.label100.TabIndex = 164;
             this.label100.Text = "Doubleshot";
+            this.toolTip1.SetToolTip(this.label100, "Passive: +3 HP, +4 HP per 10 character levels\r\nStance: +3% Doubleshot");
             // 
             // numDruid
             // 
             this.numDruid.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDruid.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDruid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDruid.Location = new System.Drawing.Point(88, 185);
+            this.numDruid.Location = new System.Drawing.Point(68, 185);
             this.numDruid.Name = "numDruid";
             this.numDruid.Size = new System.Drawing.Size(35, 23);
             this.numDruid.TabIndex = 25;
@@ -2237,11 +2285,13 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(48, 187);
+            this.label40.Location = new System.Drawing.Point(28, 187);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(37, 15);
             this.label40.TabIndex = 26;
             this.label40.Text = "Druid";
+            this.toolTip1.SetToolTip(this.label40, "Free: +2 ability scores for summons, charmed creatures, and hirelings\r\nFeat: +2 e" +
+        "lemental resistances, 3/rest Flame Blade");
             // 
             // label101
             // 
@@ -2252,13 +2302,14 @@
             this.label101.Size = new System.Drawing.Size(119, 15);
             this.label101.TabIndex = 162;
             this.label101.Text = "Trap Damage Absorb";
+            this.toolTip1.SetToolTip(this.label101, "Passive: +2 AC\r\nStance: +3% Trap Damage Absorption");
             // 
             // numFavSoul
             // 
             this.numFavSoul.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numFavSoul.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numFavSoul.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numFavSoul.Location = new System.Drawing.Point(88, 209);
+            this.numFavSoul.Location = new System.Drawing.Point(68, 209);
             this.numFavSoul.Name = "numFavSoul";
             this.numFavSoul.Size = new System.Drawing.Size(35, 23);
             this.numFavSoul.TabIndex = 27;
@@ -2283,11 +2334,12 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(34, 211);
+            this.label51.Location = new System.Drawing.Point(14, 211);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(51, 15);
             this.label51.TabIndex = 28;
             this.label51.Text = "Fav Soul";
+            this.toolTip1.SetToolTip(this.label51, "Free: +1 Spell Penetration, +20 SP\r\nFeat: +2 Diplomacy, 10/rest Avenging Light");
             // 
             // label102
             // 
@@ -2298,13 +2350,14 @@
             this.label102.Size = new System.Drawing.Size(86, 15);
             this.label102.TabIndex = 160;
             this.label102.Text = "Ancient Tactics";
+            this.toolTip1.SetToolTip(this.label102, "Passive: +2 AC\r\nStance: +2 Tactics DC, +1 Assassinate DC");
             // 
             // numFighter
             // 
             this.numFighter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numFighter.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numFighter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numFighter.Location = new System.Drawing.Point(88, 233);
+            this.numFighter.Location = new System.Drawing.Point(68, 233);
             this.numFighter.Name = "numFighter";
             this.numFighter.Size = new System.Drawing.Size(35, 23);
             this.numFighter.TabIndex = 29;
@@ -2329,11 +2382,13 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(39, 234);
+            this.label50.Location = new System.Drawing.Point(19, 234);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(46, 15);
             this.label50.TabIndex = 30;
             this.label50.Text = "Fighter";
+            this.toolTip1.SetToolTip(this.label50, "Free: +1 Attack, +1 Tactical Feat DC\r\nFeat: +2 Intimidate, +1 Max Dex Bonus, 3/re" +
+        "st +4 Attack and increase BAB to character level for 60s");
             // 
             // label103
             // 
@@ -2344,13 +2399,14 @@
             this.label103.Size = new System.Drawing.Size(73, 15);
             this.label103.TabIndex = 158;
             this.label103.Text = "Fortification";
+            this.toolTip1.SetToolTip(this.label103, "Passive: +2 AC\r\nStance: +10% Fortification");
             // 
             // numMonk
             // 
             this.numMonk.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numMonk.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMonk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numMonk.Location = new System.Drawing.Point(88, 257);
+            this.numMonk.Location = new System.Drawing.Point(68, 257);
             this.numMonk.Name = "numMonk";
             this.numMonk.Size = new System.Drawing.Size(35, 23);
             this.numMonk.TabIndex = 31;
@@ -2375,11 +2431,13 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(47, 258);
+            this.label49.Location = new System.Drawing.Point(27, 258);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(38, 15);
             this.label49.TabIndex = 32;
             this.label49.Text = "Monk";
+            this.toolTip1.SetToolTip(this.label49, "Free: +1 Damage\r\nFeat: +2 Concentration, +0.5W to Handwraps, 1/rest Evasion for 2" +
+        "0s");
             // 
             // label104
             // 
@@ -2390,13 +2448,14 @@
             this.label104.Size = new System.Drawing.Size(76, 15);
             this.label104.TabIndex = 156;
             this.label104.Text = "Skill Mastery";
+            this.toolTip1.SetToolTip(this.label104, "Passive: +2 AC\r\nStance: +1 all skills");
             // 
             // numPaladin
             // 
             this.numPaladin.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numPaladin.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPaladin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numPaladin.Location = new System.Drawing.Point(88, 281);
+            this.numPaladin.Location = new System.Drawing.Point(68, 281);
             this.numPaladin.Name = "numPaladin";
             this.numPaladin.Size = new System.Drawing.Size(35, 23);
             this.numPaladin.TabIndex = 33;
@@ -2421,11 +2480,12 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(39, 282);
+            this.label48.Location = new System.Drawing.Point(19, 282);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(46, 15);
             this.label48.TabIndex = 34;
             this.label48.Text = "Paladin";
+            this.toolTip1.SetToolTip(this.label48, "Free: +10% Positive Healing Amplification\r\nFeat: +2 Heal, 3/rest Divine Favor");
             // 
             // label105
             // 
@@ -2436,13 +2496,14 @@
             this.label105.Size = new System.Drawing.Size(77, 15);
             this.label105.TabIndex = 154;
             this.label105.Text = "Doublestrike";
+            this.toolTip1.SetToolTip(this.label105, "Passive: +2 AC\r\nStance: +3% Doublestrike");
             // 
             // numRanger
             // 
             this.numRanger.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numRanger.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRanger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numRanger.Location = new System.Drawing.Point(88, 305);
+            this.numRanger.Location = new System.Drawing.Point(68, 305);
             this.numRanger.Name = "numRanger";
             this.numRanger.Size = new System.Drawing.Size(35, 23);
             this.numRanger.TabIndex = 35;
@@ -2467,11 +2528,13 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(40, 306);
+            this.label47.Location = new System.Drawing.Point(20, 306);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(45, 15);
             this.label47.TabIndex = 36;
             this.label47.Text = "Ranger";
+            this.toolTip1.SetToolTip(this.label47, "Free: +2 Damage with Ranged Weapons, +2 elemental resistances\r\nFeat: +2 Spot, 3/r" +
+        "est Barkskin");
             // 
             // label106
             // 
@@ -2482,13 +2545,14 @@
             this.label106.Size = new System.Drawing.Size(100, 15);
             this.label106.TabIndex = 152;
             this.label106.Text = "Ancient Blessings";
+            this.toolTip1.SetToolTip(this.label106, "Passive: +3 PRR\r\nStance: +5 Positive/Negative/Repair Healing Amplification");
             // 
             // numRogue
             // 
             this.numRogue.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numRogue.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRogue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numRogue.Location = new System.Drawing.Point(88, 329);
+            this.numRogue.Location = new System.Drawing.Point(68, 329);
             this.numRogue.Name = "numRogue";
             this.numRogue.Size = new System.Drawing.Size(35, 23);
             this.numRogue.TabIndex = 37;
@@ -2513,11 +2577,13 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(44, 331);
+            this.label46.Location = new System.Drawing.Point(24, 331);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(41, 15);
             this.label46.TabIndex = 38;
             this.label46.Text = "Rogue";
+            this.toolTip1.SetToolTip(this.label46, "Free: +2 saves vs traps, +1 sneak attack damage\r\nFeat: +1 all skills, 3/rest leve" +
+        "l-based buff to Hide, Move Silently, sneak attack damage, sneak attack hit");
             // 
             // label107
             // 
@@ -2528,13 +2594,15 @@
             this.label107.Size = new System.Drawing.Size(75, 15);
             this.label107.TabIndex = 150;
             this.label107.Text = "Block Energy";
+            this.toolTip1.SetToolTip(this.label107, "Passive: +3 PRR\r\nStance: While blocking, +10% damage absorption for Acid/Cold/Ele" +
+        "ctric/Fire");
             // 
             // numSorcerer
             // 
             this.numSorcerer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numSorcerer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSorcerer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numSorcerer.Location = new System.Drawing.Point(88, 353);
+            this.numSorcerer.Location = new System.Drawing.Point(68, 353);
             this.numSorcerer.Name = "numSorcerer";
             this.numSorcerer.Size = new System.Drawing.Size(35, 23);
             this.numSorcerer.TabIndex = 39;
@@ -2559,11 +2627,13 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(31, 354);
+            this.label54.Location = new System.Drawing.Point(11, 354);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(54, 15);
             this.label54.TabIndex = 40;
             this.label54.Text = "Sorcerer";
+            this.toolTip1.SetToolTip(this.label54, "Free: +1 Evocation DC, +20 SP\r\nFeat: +10 SP and +5 SP per level, 10/rest Arcane P" +
+        "rodigy");
             // 
             // label108
             // 
@@ -2574,13 +2644,14 @@
             this.label108.Size = new System.Drawing.Size(37, 15);
             this.label108.TabIndex = 148;
             this.label108.Text = "Brace";
+            this.toolTip1.SetToolTip(this.label108, "Passive: +3 PRR\r\nStance: +1 all Saves");
             // 
             // numWarlock
             // 
             this.numWarlock.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numWarlock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWarlock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numWarlock.Location = new System.Drawing.Point(88, 377);
+            this.numWarlock.Location = new System.Drawing.Point(68, 377);
             this.numWarlock.Name = "numWarlock";
             this.numWarlock.Size = new System.Drawing.Size(35, 23);
             this.numWarlock.TabIndex = 41;
@@ -2605,11 +2676,12 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(34, 378);
+            this.label53.Location = new System.Drawing.Point(14, 378);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(51, 15);
             this.label53.TabIndex = 42;
             this.label53.Text = "Warlock";
+            this.toolTip1.SetToolTip(this.label53, "Free: +3 MRR\r\nFeat: +3 Spellcraft, 10/rest Confuse");
             // 
             // label109
             // 
@@ -2620,13 +2692,14 @@
             this.label109.Size = new System.Drawing.Size(86, 15);
             this.label109.TabIndex = 146;
             this.label109.Text = "Life and Death";
+            this.toolTip1.SetToolTip(this.label109, "Passive: +3 PRR\r\nStance: +10 Positive and Negative Spell Power");
             // 
             // numWizard
             // 
             this.numWizard.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numWizard.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWizard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numWizard.Location = new System.Drawing.Point(88, 401);
+            this.numWizard.Location = new System.Drawing.Point(68, 401);
             this.numWizard.Name = "numWizard";
             this.numWizard.Size = new System.Drawing.Size(35, 23);
             this.numWizard.TabIndex = 43;
@@ -2651,11 +2724,12 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(40, 403);
+            this.label52.Location = new System.Drawing.Point(20, 403);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(45, 15);
             this.label52.TabIndex = 44;
             this.label52.Text = "Wizard";
+            this.toolTip1.SetToolTip(this.label52, "Free: +2 Spell Penetration and wand DC\r\nFeat: +1 spell DC, 10/rest Magic Missile");
             // 
             // label110
             // 
@@ -2666,6 +2740,8 @@
             this.label110.Size = new System.Drawing.Size(82, 15);
             this.label110.TabIndex = 144;
             this.label110.Text = "Eclipse Power";
+            this.toolTip1.SetToolTip(this.label110, "Passive: +1% Absorption for Acid/Cold/Electric/Fire\r\nStance: +1 Spell Penetration" +
+        "");
             // 
             // numStormsinger
             // 
@@ -2702,6 +2778,7 @@
             this.label66.Size = new System.Drawing.Size(74, 15);
             this.label66.TabIndex = 52;
             this.label66.Text = "Stormsinger";
+            this.toolTip1.SetToolTip(this.label66, "+5 Lightning Spell Power, +5 Sonic Spell Power");
             // 
             // label111
             // 
@@ -2712,6 +2789,7 @@
             this.label111.Size = new System.Drawing.Size(113, 15);
             this.label111.TabIndex = 142;
             this.label111.Text = "Ancient Knowledge";
+            this.toolTip1.SetToolTip(this.label111, "Passive: +1% Absorption for Acid/Cold/Electric/Fire\r\nStance: +3 MRR");
             // 
             // numDarkApostate
             // 
@@ -2748,6 +2826,7 @@
             this.label65.Size = new System.Drawing.Size(85, 15);
             this.label65.TabIndex = 54;
             this.label65.Text = "Dark Apostate";
+            this.toolTip1.SetToolTip(this.label65, "+5% Negative Healing Amplification, +5 Negative Spell Power");
             // 
             // label112
             // 
@@ -2758,6 +2837,8 @@
             this.label112.Size = new System.Drawing.Size(99, 15);
             this.label112.TabIndex = 140;
             this.label112.Text = "Enchant Weapon";
+            this.toolTip1.SetToolTip(this.label112, "Passive: +1% Absorption for Acid/Cold/Electric/Fire\r\nStance: +1 Enhancement Bonus" +
+        " to mainhand weapon");
             // 
             // numBlightcaster
             // 
@@ -2794,6 +2875,7 @@
             this.label64.Size = new System.Drawing.Size(71, 15);
             this.label64.TabIndex = 56;
             this.label64.Text = "Blightcaster";
+            this.toolTip1.SetToolTip(this.label64, "+5 Acid and Poison Spell Power");
             // 
             // label113
             // 
@@ -2804,6 +2886,8 @@
             this.label113.Size = new System.Drawing.Size(89, 15);
             this.label113.TabIndex = 138;
             this.label113.Text = "Energy Criticals";
+            this.toolTip1.SetToolTip(this.label113, "Passive: +1% Absorption for Acid/Cold/Electric/Fire\r\nStance: +3% Spell Crit Chanc" +
+        "e for Acid/Cold/Electric/Fire/Sonic");
             // 
             // numSacredFist
             // 
@@ -2840,6 +2924,7 @@
             this.label60.Size = new System.Drawing.Size(65, 15);
             this.label60.TabIndex = 64;
             this.label60.Text = "Sacred Fist";
+            this.toolTip1.SetToolTip(this.label60, "+5 Positive Healing Amplification, +5 Positive Spell Power");
             // 
             // label114
             // 
@@ -2850,6 +2935,8 @@
             this.label114.Size = new System.Drawing.Size(89, 15);
             this.label114.TabIndex = 136;
             this.label114.Text = "Arcane Alacrity";
+            this.toolTip1.SetToolTip(this.label114, "Passive: +1% Absorption for Acid/Cold/Electric/Fire\r\nStance: 3/6/10% Spell Cooldo" +
+        "wn Reduction");
             // 
             // numDarkHunter
             // 
@@ -2886,16 +2973,18 @@
             this.label59.Size = new System.Drawing.Size(74, 15);
             this.label59.TabIndex = 66;
             this.label59.Text = "Dark Hunter";
+            this.toolTip1.SetToolTip(this.label59, "+1 to hit and damage with Sneak Attack");
             // 
             // label85
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(438, 427);
+            this.label85.Location = new System.Drawing.Point(438, 379);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(40, 15);
             this.label85.TabIndex = 134;
             this.label85.Text = "Tabaxi";
+            this.toolTip1.SetToolTip(this.label85, "Tumble, Dexterity");
             // 
             // numAcolyte
             // 
@@ -2915,7 +3004,7 @@
             this.numTabaxi.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTabaxi.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTabaxi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTabaxi.Location = new System.Drawing.Point(481, 425);
+            this.numTabaxi.Location = new System.Drawing.Point(481, 377);
             this.numTabaxi.Name = "numTabaxi";
             this.numTabaxi.Size = new System.Drawing.Size(35, 23);
             this.numTabaxi.TabIndex = 133;
@@ -2927,28 +3016,30 @@
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(172, 378);
+            this.label56.Location = new System.Drawing.Point(111, 378);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(48, 15);
+            this.label56.Size = new System.Drawing.Size(109, 15);
             this.label56.TabIndex = 72;
-            this.label56.Text = "Acolyte";
+            this.label56.Text = "Acolyte of the Skin";
+            this.toolTip1.SetToolTip(this.label56, "+1 MRR, +5 Fire Spell Power");
             // 
             // label86
             // 
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(435, 402);
+            this.label86.Location = new System.Drawing.Point(435, 354);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(43, 15);
             this.label86.TabIndex = 132;
             this.label86.Text = "Shifter";
+            this.toolTip1.SetToolTip(this.label86, "Spot, Dexterity");
             // 
             // numRazorclaw
             // 
             this.numRazorclaw.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numRazorclaw.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRazorclaw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numRazorclaw.Location = new System.Drawing.Point(361, 137);
+            this.numRazorclaw.Location = new System.Drawing.Point(361, 113);
             this.numRazorclaw.Name = "numRazorclaw";
             this.numRazorclaw.Size = new System.Drawing.Size(35, 23);
             this.numRazorclaw.TabIndex = 79;
@@ -2961,7 +3052,7 @@
             this.numShifter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numShifter.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numShifter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numShifter.Location = new System.Drawing.Point(481, 401);
+            this.numShifter.Location = new System.Drawing.Point(481, 353);
             this.numShifter.Name = "numShifter";
             this.numShifter.Size = new System.Drawing.Size(35, 23);
             this.numShifter.TabIndex = 131;
@@ -2973,28 +3064,30 @@
             // 
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(297, 138);
+            this.label82.Location = new System.Drawing.Point(297, 114);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(61, 15);
             this.label82.TabIndex = 80;
             this.label82.Text = "Razorclaw";
+            this.toolTip1.SetToolTip(this.label82, "Passive: +1 Will Saves\r\nStance: +1 Attack and Damage with Melee Weapons");
             // 
             // label87
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(412, 378);
+            this.label87.Location = new System.Drawing.Point(412, 426);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(66, 15);
             this.label87.TabIndex = 130;
             this.label87.Text = "Warforged";
+            this.toolTip1.SetToolTip(this.label87, "Repair, Constitution");
             // 
             // numScoundrel
             // 
             this.numScoundrel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numScoundrel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numScoundrel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numScoundrel.Location = new System.Drawing.Point(361, 161);
+            this.numScoundrel.Location = new System.Drawing.Point(361, 137);
             this.numScoundrel.Name = "numScoundrel";
             this.numScoundrel.Size = new System.Drawing.Size(35, 23);
             this.numScoundrel.TabIndex = 81;
@@ -3007,7 +3100,7 @@
             this.numWarforged.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numWarforged.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWarforged.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numWarforged.Location = new System.Drawing.Point(481, 377);
+            this.numWarforged.Location = new System.Drawing.Point(481, 425);
             this.numWarforged.Name = "numWarforged";
             this.numWarforged.Size = new System.Drawing.Size(35, 23);
             this.numWarforged.TabIndex = 129;
@@ -3019,28 +3112,30 @@
             // 
             this.label81.AutoSize = true;
             this.label81.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(297, 162);
+            this.label81.Location = new System.Drawing.Point(297, 138);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(61, 15);
             this.label81.TabIndex = 82;
             this.label81.Text = "Scoundrel";
+            this.toolTip1.SetToolTip(this.label81, "Passive: +1 Reflex Save\r\nStance: 10% Enhancement bonus to Movement Speed");
             // 
             // label88
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(432, 355);
+            this.label88.Location = new System.Drawing.Point(432, 403);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(46, 15);
             this.label88.TabIndex = 128;
             this.label88.Text = "Tiefling";
+            this.toolTip1.SetToolTip(this.label88, "Spellcraft, Charisma");
             // 
             // numMorninglord
             // 
             this.numMorninglord.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numMorninglord.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMorninglord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numMorninglord.Location = new System.Drawing.Point(361, 185);
+            this.numMorninglord.Location = new System.Drawing.Point(361, 161);
             this.numMorninglord.Name = "numMorninglord";
             this.numMorninglord.Size = new System.Drawing.Size(35, 23);
             this.numMorninglord.TabIndex = 83;
@@ -3053,7 +3148,7 @@
             this.numTiefling.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTiefling.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTiefling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTiefling.Location = new System.Drawing.Point(481, 353);
+            this.numTiefling.Location = new System.Drawing.Point(481, 401);
             this.numTiefling.Name = "numTiefling";
             this.numTiefling.Size = new System.Drawing.Size(35, 23);
             this.numTiefling.TabIndex = 127;
@@ -3065,11 +3160,12 @@
             // 
             this.label80.AutoSize = true;
             this.label80.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(283, 186);
+            this.label80.Location = new System.Drawing.Point(283, 162);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(75, 15);
             this.label80.TabIndex = 84;
             this.label80.Text = "Morninglord";
+            this.toolTip1.SetToolTip(this.label80, "Passive: +3 Positive Spell Power\r\nStance: +10 Light and Alignment Spell Power");
             // 
             // label89
             // 
@@ -3080,13 +3176,14 @@
             this.label89.Size = new System.Drawing.Size(46, 15);
             this.label89.TabIndex = 126;
             this.label89.Text = "Human";
+            this.toolTip1.SetToolTip(this.label89, "Haggle, Wisdom");
             // 
             // numPDK
             // 
             this.numPDK.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numPDK.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPDK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numPDK.Location = new System.Drawing.Point(361, 257);
+            this.numPDK.Location = new System.Drawing.Point(361, 233);
             this.numPDK.Name = "numPDK";
             this.numPDK.Size = new System.Drawing.Size(35, 23);
             this.numPDK.TabIndex = 89;
@@ -3111,11 +3208,13 @@
             // 
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(329, 258);
+            this.label77.Location = new System.Drawing.Point(329, 234);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(29, 15);
             this.label77.TabIndex = 90;
             this.label77.Text = "PDK";
+            this.toolTip1.SetToolTip(this.label77, "Passive: +3 PRR\r\nAction Boost: group +10/15/20% to Movement Speed and +1/2/3 to S" +
+        "aves for 20s");
             // 
             // label90
             // 
@@ -3126,13 +3225,14 @@
             this.label90.Size = new System.Drawing.Size(51, 15);
             this.label90.TabIndex = 124;
             this.label90.Text = "Half-Orc";
+            this.toolTip1.SetToolTip(this.label90, "Intimidate, Strength");
             // 
             // numTrailblazer
             // 
             this.numTrailblazer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numTrailblazer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTrailblazer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numTrailblazer.Location = new System.Drawing.Point(361, 281);
+            this.numTrailblazer.Location = new System.Drawing.Point(361, 257);
             this.numTrailblazer.Name = "numTrailblazer";
             this.numTrailblazer.Size = new System.Drawing.Size(35, 23);
             this.numTrailblazer.TabIndex = 91;
@@ -3157,11 +3257,12 @@
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(296, 282);
+            this.label76.Location = new System.Drawing.Point(296, 258);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(62, 15);
             this.label76.TabIndex = 92;
             this.label76.Text = "Trailblazer";
+            this.toolTip1.SetToolTip(this.label76, "Passive: +1 saves vs traps\r\nStance: +1 Trip DC");
             // 
             // label91
             // 
@@ -3172,13 +3273,14 @@
             this.label91.Size = new System.Drawing.Size(45, 15);
             this.label91.TabIndex = 122;
             this.label91.Text = "Half-Elf";
+            this.toolTip1.SetToolTip(this.label91, "Diplomacy, Charisma");
             // 
             // numBladeforged
             // 
             this.numBladeforged.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numBladeforged.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBladeforged.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numBladeforged.Location = new System.Drawing.Point(361, 305);
+            this.numBladeforged.Location = new System.Drawing.Point(361, 281);
             this.numBladeforged.Name = "numBladeforged";
             this.numBladeforged.Size = new System.Drawing.Size(35, 23);
             this.numBladeforged.TabIndex = 93;
@@ -3203,11 +3305,12 @@
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(285, 306);
+            this.label75.Location = new System.Drawing.Point(285, 282);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(73, 15);
             this.label75.TabIndex = 94;
             this.label75.Text = "Bladeforged";
+            this.toolTip1.SetToolTip(this.label75, "Passive: +5% Fortification\r\nStance: +10 Repair Spell Power");
             // 
             // label92
             // 
@@ -3218,13 +3321,14 @@
             this.label92.Size = new System.Drawing.Size(47, 15);
             this.label92.TabIndex = 120;
             this.label92.Text = "Halfling";
+            this.toolTip1.SetToolTip(this.label92, "Move Silently, Dexterity");
             // 
             // numScourge
             // 
             this.numScourge.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numScourge.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numScourge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numScourge.Location = new System.Drawing.Point(361, 329);
+            this.numScourge.Location = new System.Drawing.Point(361, 305);
             this.numScourge.Name = "numScourge";
             this.numScourge.Size = new System.Drawing.Size(35, 23);
             this.numScourge.TabIndex = 95;
@@ -3249,11 +3353,12 @@
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(308, 330);
+            this.label74.Location = new System.Drawing.Point(308, 306);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(50, 15);
             this.label74.TabIndex = 96;
             this.label74.Text = "Scourge";
+            this.toolTip1.SetToolTip(this.label74, "Passive: +1 Fortitude Save\r\nStance: +2% Doublestrike");
             // 
             // label93
             // 
@@ -3264,13 +3369,14 @@
             this.label93.Size = new System.Drawing.Size(47, 15);
             this.label93.TabIndex = 118;
             this.label93.Text = "Gnome";
+            this.toolTip1.SetToolTip(this.label93, "UMD, Intelligence");
             // 
             // numShadarkai
             // 
             this.numShadarkai.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numShadarkai.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numShadarkai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numShadarkai.Location = new System.Drawing.Point(361, 353);
+            this.numShadarkai.Location = new System.Drawing.Point(361, 329);
             this.numShadarkai.Name = "numShadarkai";
             this.numShadarkai.Size = new System.Drawing.Size(35, 23);
             this.numShadarkai.TabIndex = 97;
@@ -3295,11 +3401,13 @@
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(295, 355);
+            this.label73.Location = new System.Drawing.Point(295, 331);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(63, 15);
             this.label73.TabIndex = 98;
             this.label73.Text = "Shadar-kai";
+            this.toolTip1.SetToolTip(this.label73, "Passive: +1% Dodge\r\nStance: When below half health and get hit, gain 25% Incorpor" +
+        "eality for 6/12/18s, once per 2 minutes");
             // 
             // label94
             // 
@@ -3310,13 +3418,14 @@
             this.label94.Size = new System.Drawing.Size(20, 15);
             this.label94.TabIndex = 116;
             this.label94.Text = "Elf";
+            this.toolTip1.SetToolTip(this.label94, "Spot, Dexterity\r\nWood Elf counts as Elf");
             // 
             // numChaosmancer
             // 
             this.numChaosmancer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numChaosmancer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numChaosmancer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numChaosmancer.Location = new System.Drawing.Point(361, 377);
+            this.numChaosmancer.Location = new System.Drawing.Point(361, 353);
             this.numChaosmancer.Name = "numChaosmancer";
             this.numChaosmancer.Size = new System.Drawing.Size(35, 23);
             this.numChaosmancer.TabIndex = 99;
@@ -3341,11 +3450,12 @@
             // 
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(278, 378);
+            this.label72.Location = new System.Drawing.Point(278, 354);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(80, 15);
             this.label72.TabIndex = 100;
             this.label72.Text = "Chaosmancer";
+            this.toolTip1.SetToolTip(this.label72, "Passive: +3 Universal Spell Power\r\nActive: 1/2/3 charges of Fey Step");
             // 
             // label95
             // 
@@ -3356,13 +3466,14 @@
             this.label95.Size = new System.Drawing.Size(44, 15);
             this.label95.TabIndex = 114;
             this.label95.Text = "Eladrin";
+            this.toolTip1.SetToolTip(this.label95, "Listen, Dexterity");
             // 
             // numDeepGnome
             // 
             this.numDeepGnome.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.numDeepGnome.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDeepGnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numDeepGnome.Location = new System.Drawing.Point(361, 425);
+            this.numDeepGnome.Location = new System.Drawing.Point(361, 401);
             this.numDeepGnome.Name = "numDeepGnome";
             this.numDeepGnome.Size = new System.Drawing.Size(35, 23);
             this.numDeepGnome.TabIndex = 103;
@@ -3387,11 +3498,12 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(279, 427);
+            this.label70.Location = new System.Drawing.Point(279, 403);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(79, 15);
             this.label70.TabIndex = 104;
             this.label70.Text = "Deep Gnome";
+            this.toolTip1.SetToolTip(this.label70, "Passive: +3 MRR\r\nStance: +1 Illusion DC, +5 Acid Spell Power");
             // 
             // label96
             // 
@@ -3402,6 +3514,7 @@
             this.label96.Size = new System.Drawing.Size(40, 15);
             this.label96.TabIndex = 112;
             this.label96.Text = "Dwarf";
+            this.toolTip1.SetToolTip(this.label96, "Balance, Constitution");
             // 
             // numAasimar
             // 
@@ -3438,6 +3551,7 @@
             this.label99.Size = new System.Drawing.Size(51, 15);
             this.label99.TabIndex = 106;
             this.label99.Text = "Aasimar";
+            this.toolTip1.SetToolTip(this.label99, "Heal, Wisdom");
             // 
             // label97
             // 
@@ -3448,6 +3562,7 @@
             this.label97.Size = new System.Drawing.Size(37, 15);
             this.label97.TabIndex = 110;
             this.label97.Text = "Drow";
+            this.toolTip1.SetToolTip(this.label97, "Search, Intelligence");
             // 
             // numDragonborn
             // 
@@ -3484,6 +3599,7 @@
             this.label98.Size = new System.Drawing.Size(72, 15);
             this.label98.TabIndex = 108;
             this.label98.Text = "Dragonborn";
+            this.toolTip1.SetToolTip(this.label98, "Spellcraft, Charisma");
             // 
             // tabCharFavor
             // 
@@ -3670,19 +3786,28 @@
             this.toolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
             // 
-            // btnReincarnateChar
+            // numArcaneTrickster
             // 
-            this.btnReincarnateChar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReincarnateChar.ForeColor = System.Drawing.Color.Gray;
-            this.btnReincarnateChar.Location = new System.Drawing.Point(441, 25);
-            this.btnReincarnateChar.Name = "btnReincarnateChar";
-            this.btnReincarnateChar.Size = new System.Drawing.Size(82, 23);
-            this.btnReincarnateChar.TabIndex = 4;
-            this.btnReincarnateChar.Text = "Reincarnate";
-            this.toolTip1.SetToolTip(this.btnReincarnateChar, "Removes all quest and saga progress for the selected character.\r\nDoes not touch p" +
-        "ast lives tracking - these must be updated manually.");
-            this.btnReincarnateChar.UseVisualStyleBackColor = true;
-            this.btnReincarnateChar.Click += new System.EventHandler(this.btnReincarnateChar_Click);
+            this.numArcaneTrickster.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numArcaneTrickster.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numArcaneTrickster.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.numArcaneTrickster.Location = new System.Drawing.Point(223, 329);
+            this.numArcaneTrickster.Name = "numArcaneTrickster";
+            this.numArcaneTrickster.Size = new System.Drawing.Size(35, 23);
+            this.numArcaneTrickster.TabIndex = 188;
+            this.numArcaneTrickster.Tag = "Arcane Trickster";
+            this.numArcaneTrickster.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(127, 330);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(94, 15);
+            this.label69.TabIndex = 189;
+            this.label69.Text = "Arcane Trickster";
+            this.toolTip1.SetToolTip(this.label69, "+3 Force Spell Power, +1 Illusion DC");
             // 
             // Main
             // 
@@ -3829,6 +3954,7 @@
             this.tabSettings.PerformLayout();
             this.contextmenuQuestCompletion.ResumeLayout(false);
             this.contextmenuSagaCompletion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numArcaneTrickster)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4096,6 +4222,8 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.NumericUpDown numDhampir;
         private System.Windows.Forms.Button btnReincarnateChar;
+        private System.Windows.Forms.NumericUpDown numArcaneTrickster;
+        private System.Windows.Forms.Label label69;
     }
 }
 
