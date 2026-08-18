@@ -1991,6 +1991,41 @@
         }
       }
     },
+    "The Dragons' Hand": {
+      "SortLevels": [ 10, 36, 36],
+      "Quests": {
+        "Going Rogue": {
+          "HeroicLevel": 10,
+          "LegLevel": 36,
+          "Patron": "Agents of Argonnessen",
+          "Favor": 4
+        },
+        "Wish Upon a Card": {
+          "HeroicLevel": 10,
+          "LegLevel": 36,
+          "Patron": "Agents of Argonnessen",
+          "Favor": 4
+        },
+        "Burning Down the House": {
+          "HeroicLevel": 10,
+          "LegLevel": 36,
+          "Patron": "Agents of Argonnessen",
+          "Favor": 4
+        },
+        "Thrall of Duty": {
+          "HeroicLevel": 10,
+          "LegLevel": 36,
+          "Patron": "Agents of Argonnessen",
+          "Favor": 5
+        },
+        "The Final Draw": {
+          "HeroicLevel": 10,
+          "LegLevel": 36,
+          "Patron": "Agents of Argonnessen",
+          "Favor": 4
+        }
+      }
+    },
     "Mists of Ravenloft": {
       "SortLevels": [ 10, 31, 31 ],
       "Quests": {
@@ -2085,6 +2120,97 @@
           "LegLevelRange": "31 (20-35)",
           "HeroicMap": "Map_of_The_Land_of_Barovia",
           "LegMap": "Map_of_The_Land_of_Barovia"
+        }
+      }
+    },
+    "Terror of Demogorgon": {
+      "SortLevels": [ 11, 37, 37 ],
+      "Quests": {
+        "Demon in the Rough": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "Tower of Vengeance": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "A Blood Pact": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 6
+        },
+        "Hideous to Behold": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 6
+        },
+        "The Price of an Egg": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "For Want of a Heart": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "Flocked Together": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "The Fetid Wedding": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 6
+        },
+        "Stealing from Sorcere": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "Back to the Abyss": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "A Long Way to Mushrooms": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "If It Wasn't For Bad Luck": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        },
+        "Raiding the Raiders": {
+          "HeroicLevel": 11,
+          "LegLevel": 37,
+          "Patron": "Battlehammer Expedition",
+          "Favor": 5
+        }
+      },
+      "Wildernesses": {
+        "The Darklake": {
+          "HeroicLevelRange": "11 (8-15)",
+          "LegLevelRange": "37 (20-40)",
+          "HeroicMap": "Map_of_The_Darklake",
+          "LegMap": "Map_of_The_Darklake"
         }
       }
     },
@@ -3272,20 +3398,23 @@
       }
     },
     "Slice of Life": {
-      "SortLevels": [ 18, 18, 18 ],
+      "SortLevels": [ 18, 34, 34 ],
       "Quests": {
         "Fred's First Date": {
           "HeroicLevel": 18,
+          "LegLevel": 34,
           "Patron": "Morgrave University",
           "Favor": 6
         },
         "This Old Haunt": {
           "HeroicLevel": 18,
+          "LegLevel": 34,
           "Patron": "Morgrave University",
           "Favor": 6
         },
         "Too Many Cooks": {
           "HeroicLevel": 18,
+          "LegLevel": 34,
           "Patron": "Morgrave University",
           "Favor": 6
         }

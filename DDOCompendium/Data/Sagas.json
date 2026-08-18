@@ -571,5 +571,51 @@
       [ "36", "Zoo Creeper" ],
       [ "36", "A Light in the Attic" ]
     ]
+  },
+  {
+    "Id": "29",
+    "Name": [ "Terror of Demogorgon (Heroic)" ],
+    "SortLevel": 11,
+    "NPC": [ "Haruhak Deepgrift" ],
+    "TomeLevel": [ 1 ],
+    "SpecialRewards": [ "Rare Lunar and Solar Gems, Black Globe of Slime" ],
+    "Quests": [
+      [ "Lvl", "Quest", "Terror of Demogorgon (Heroic)" ],
+      [ "11", "Demon in the Rough" ],
+      [ "11", "Tower of Vengeance" ],
+      [ "11", "A Blood Pact" ],
+      [ "11", "Hideous to Behold" ],
+      [ "11", "The Price of an Egg" ],
+      [ "11", "For Want of a Heart" ],
+      [ "11", "Flocked Together" ],
+      [ "11", "The Fetid Wedding" ],
+      [ "11", "Stealing from Sorcere" ],
+      [ "11", "Back to the Abyss" ],
+      [ "11", "A Long Way to Mushrooms" ],
+      [ "11", "If It Wasn't For Bad Luck" ]
+    ]
+  },
+  {
+    "Id": "30",
+    "Name": [ "Terror of Demogorgon (Legendary)" ],
+    "SortLevel": 37,
+    "NPC": [ "Eramura Orefinder" ],
+    "TomeLevel": [ 3 ],
+    "SpecialRewards": [ "Rare Lunar and Solar Gems, Black Globe of Slime, Terror of Demogorgon minor artifacts (E or TE)" ],
+    "Quests": [
+      [ "Lvl", "Quest", "Terror of Demogorgon (Legendary)" ],
+      [ "37", "Demon in the Rough" ],
+      [ "37", "Tower of Vengeance" ],
+      [ "37", "A Blood Pact" ],
+      [ "37", "Hideous to Behold" ],
+      [ "37", "The Price of an Egg" ],
+      [ "37", "For Want of a Heart" ],
+      [ "37", "Flocked Together" ],
+      [ "37", "The Fetid Wedding" ],
+      [ "37", "Stealing from Sorcere" ],
+      [ "37", "Back to the Abyss" ],
+      [ "37", "A Long Way to Mushrooms" ],
+      [ "37", "If It Wasn't For Bad Luck" ]
+    ]
   }
 ]
